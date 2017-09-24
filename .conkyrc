@@ -29,19 +29,20 @@ conky.config = {
 	use_spacer = 'none',
 	short_units = true,
 	color1 = '#b0bec5',
-    color2 = '#efefef'
+    color2 = '#efefef',
+	color3 = '#848f94'
 }
 
 -- Output
 ---------
 conky.text = [[
-${color1}Kernel: ${color2}$kernel | \
+${color1}Kernel: ${color2}$kernel ${color3}| \
 ${color1}CPU1: ${color2}${cpu cpu1}% \
-${color1}CPU2: ${color2}${cpu cpu2}% | \
-${color1}Ram: ${color2}${memperc}% | \
-${color1}Swap: ${color2}${swapperc}% | \
-${color1}HDD: ${color1}used ${color2}${fs_used /} ${color1}tot ${color2}${fs_size /} | \
-${color1}Net: Down ${color2}${downspeed enp0s25} ${color1}Up ${color2}${upspeed enp0s25} | \
-${color1}Uptime: ${color2}${uptime} | \
+${color1}CPU2: ${color2}${cpu cpu2}% ${color3}| \
+${color1}Ram: ${color2}${memperc}% \
+${color1}Swap: ${color2}${swapperc}% ${color3}| \
+${color1}HDD: ${color1}used ${color2}${fs_used /} ${color1}tot ${color2}${fs_size /} ${color3}| \
+${color1}Net: Dl ${color2}${downspeed enp0s25} ${color1}Up ${color2}${upspeed enp0s25} ${color3}| \
+${color1}Uptime: ${color2}${uptime} ${color3}| \
 ${color1}Top: ${color2}${top name 1}${top cpu 1}${top mem 1}
 ]]
