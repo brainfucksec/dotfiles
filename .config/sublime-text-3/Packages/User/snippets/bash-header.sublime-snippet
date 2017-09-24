@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+#!/usr/bin/env bash
+]]></content>
+	<tabTrigger>bash</tabTrigger>
+    <description>Bash header</description>
+</snippet>

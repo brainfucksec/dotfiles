@@ -1,0 +1,3 @@
+[
+  { "keys": ["ctrl+n"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+]

@@ -1,0 +1,17 @@
+! COLORS
+rofi.color-enabled:                  true
+rofi.color-normal:                   argb:00000000,  #FFFFFF , argb:00000000,  #00BCD4 ,  #FFFFFF
+rofi.color-urgent:                   argb:00000000,  #03A9F4 , argb:00000000,  #03A9F4 ,  #CFD8DC
+rofi.color-active:                   argb:00000000,  #4DB5AB , argb:00000000,  #4DB5AB ,  #CFD8DC
+rofi.color-window:                   argb:ee263238,  #4DB5AB ,  #2F3D44
+rofi.separator-style:                solid
+
+! FONTS
+rofi.font:
+
+! DISPLAY
+rofi.bw: 0
+rofi.opacity: 100
+rofi.width: 30
+rofi.lines: 15
+rofi.columns: 1

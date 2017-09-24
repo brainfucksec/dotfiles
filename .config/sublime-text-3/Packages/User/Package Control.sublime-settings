@@ -1,0 +1,28 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"All Autocomplete",
+		"Anaconda",
+		"AriaTemplates Highlighter",
+		"ARM Assembly",
+		"ayu",
+		"C Improved",
+		"C++ Starting Kit",
+		"Color Highlighter",
+		"ColorPicker",
+		"Compare Side-By-Side",
+		"Markdown Preview",
+		"Material Theme",
+		"MIPS Syntax",
+		"Non Text Files",
+		"Package Control",
+		"PackageResourceViewer",
+		"SideBarEnhancements",
+		"x86 and x86_64 Assembly"
+	]
+}

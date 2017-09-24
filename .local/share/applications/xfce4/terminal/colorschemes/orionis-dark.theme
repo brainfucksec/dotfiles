@@ -1,0 +1,11 @@
+[Scheme]
+Name=Orionis dark
+ColorForeground=#BFCED5
+ColorBackground=#1F2A2D
+ColorCursor=#8F9A9D
+ColorBold=#8F9A9D
+ColorPalette=#2F3A3D;#974F6C;#5B935B;#9A8F0C;#4D8AB3;#AD6E8F;#52A6AD;#DFE1E3;#1F2A2D;#9D7427;#5F6163;#5F6A6D;#8F9193;#7E7EAD;#8F9A9D;#EFF1F3
+TabActivityColor=#5B935B
+ColorSelectionBackground=#2F3A3D
+ColorSelection=#8F9A9D
+
