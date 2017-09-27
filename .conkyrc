@@ -1,6 +1,6 @@
 --[[
 .conkyrc - conky configuration file
-Version: 0.27
+Version: 0.28
 Description: Configuration file for display minimal, one line, conky
 Author: Brainfuck
 Dependencies: Ohsnap fonts
@@ -28,9 +28,9 @@ conky.config = {
 	font = 'misc ohsnap:size=9',
 	use_spacer = 'none',
 	short_units = true,
-	color1 = '#b0bec5',
-    color2 = '#efefef',
-	color3 = '#848f94'
+	color1 = '#738699',
+    color2 = '#fafafa',
+	color3 = '#66737f'
 }
 
 -- Output
