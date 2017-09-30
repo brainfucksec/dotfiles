@@ -1,16 +1,16 @@
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.9.2 - mer  6 set 2017, 13.21.31
+" Version: 0.10 - sat 30 sep 2017, 17.42.58
 " Author: Brainfuck
 "
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 
 
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " => General
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Load plugins with Pathogen
 execute pathogen#infect()
 
@@ -20,9 +20,9 @@ filetype plugin on
 filetype indent on
 
 
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " => VIM UI
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Set ctermbg to none
 highlight NonText ctermbg=none
 
@@ -57,9 +57,9 @@ set showcmd
 autocmd BufWritePre * :%s/\s\+$//e
 
 
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " => Colors and fonts
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
 
@@ -89,27 +89,27 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, swap file off
 set nobackup
 set noswapfile
 
 
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " => Memory, CPU
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Keep more info in memory to speed thing up
 set hidden
 set history=100
 
 
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " => Text, tabs, indent
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-"set expandtab
+set expandtab
 
 " Smart when using tabs ;)
 set smarttab
@@ -153,24 +153,39 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
+" ALE plugin settings:
+let g:ale_enabled = 1
 
-""""""""""""""""""""""""""""""""""""""""""""
+" Run linter only after save the file
+let g:ale_lint_on_text_changed = 'never'
+
+" Don't run linter after open a file
+let g:ale_lint_on_enter = 0
+
+" Navigate between errors
+nmap <silent> <C-k> <Plug>
+nmap <silent> <C-j> <Plug>
+
+
+"""""""""""""""""""""""""""""""""""""""""""
 " => Status line
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
 
-" lightline plugin settings
+" lightline plugin settings:
+" Disable mode information under status line
 set noshowmode
 
+" Set colorscheme
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ }
 
 
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " => Keymapping
-""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""
 " Reload vim config without restart
 map \r :source ~/.vimrc<CR>
 
@@ -189,4 +204,3 @@ inoremap <leader>s <C-c>:w<cr>
 
 " Open NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
-
