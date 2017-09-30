@@ -1,0 +1,57 @@
+Before:
+  call ale#test#SetDirectory('/testplugin/test/fixers')
+
+After:
+  let g:ale_has_override = {}
+  call ale#test#RestoreDirectory()
+
+Execute(The path to eslint.js should be run on Unix):
+  call ale#test#SetFilename('../eslint-test-files/react-app/subdir/testfile.js')
+
+  AssertEqual
+  \ {
+  \   'read_temporary_file': 1,
+  \   'command':
+  \     ale#Escape(simplify(g:dir . '/../eslint-test-files/react-app/node_modules/eslint/bin/eslint.js'))
+  \     . ' -c ' . ale#Escape(simplify(g:dir . '/../eslint-test-files/react-app/.eslintrc.js'))
+  \     . ' --fix %t',
+  \ },
+  \ ale#fixers#eslint#Fix(bufnr(''))
+
+Execute(The lower priority configuration file in a nested directory should be preferred):
+  call ale#test#SetFilename('../eslint-test-files/react-app/subdir-with-config/testfile.js')
+
+  AssertEqual
+  \ {
+  \   'read_temporary_file': 1,
+  \   'command':
+  \     ale#Escape(simplify(g:dir . '/../eslint-test-files/react-app/node_modules/eslint/bin/eslint.js'))
+  \     . ' -c ' . ale#Escape(simplify(g:dir . '/../eslint-test-files/react-app/subdir-with-config/.eslintrc'))
+  \     . ' --fix %t',
+  \ },
+  \ ale#fixers#eslint#Fix(bufnr(''))
+
+Execute(package.json should be used as a last resort):
+  call ale#test#SetFilename('../eslint-test-files/react-app/subdir-with-package-json/testfile.js')
+
+  AssertEqual
+  \ {
+  \   'read_temporary_file': 1,
+  \   'command':
+  \     ale#Escape(simplify(g:dir . '/../eslint-test-files/react-app/node_modules/eslint/bin/eslint.js'))
+  \     . ' -c ' . ale#Escape(simplify(g:dir . '/../eslint-test-files/react-app/.eslintrc.js'))
+  \     . ' --fix %t',
+  \ },
+  \ ale#fixers#eslint#Fix(bufnr(''))
+
+  call ale#test#SetFilename('../eslint-test-files/package.json')
+
+  AssertEqual
+  \ {
+  \   'read_temporary_file': 1,
+  \   'command':
+  \     ale#Escape(simplify(g:dir . '/../eslint-test-files/node_modules/.bin/eslint'))
+  \     . ' -c ' . ale#Escape(simplify(g:dir . '/../eslint-test-files/package.json'))
+  \     . ' --fix %t',
+  \ },
+  \ ale#fixers#eslint#Fix(bufnr(''))
