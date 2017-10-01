@@ -10,6 +10,7 @@
 	"font_face": "Hermit",
 	"font_size": 10,
 	"hot_exit": false,
+	"scroll_speed": 3.0,
 	"ignored_packages":
 	[
 		"Vintage"
