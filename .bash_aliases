@@ -28,7 +28,7 @@ alias tor-start='sudo systemctl start tor.service'
 alias tor-status='sudo systemctl status tor.service'
 alias tor-restart='sudo systemctl restart tor.service'
 alias tor-stop='sudo systemctl stop tor.service'
-alias vpn-conf='sudo openvpn --config'
+alias vpn-cfg='sudo openvpn --config'
 
 
 # directories
@@ -84,3 +84,4 @@ function extract {
     done
 fi
 }
+
