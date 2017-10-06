@@ -10,7 +10,6 @@
 	"font_face": "Hermit",
 	"font_size": 10,
 	"hot_exit": false,
-	"scroll_speed": 3.0,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -30,6 +29,7 @@
 		"*.pdf"
 	],
 	"prevent_bin_preview": true,
+	"scroll_speed": 3.0,
 	"theme": "ayu-dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
