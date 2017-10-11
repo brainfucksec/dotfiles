@@ -20,8 +20,8 @@
         <value type="int" value="6"/>
       </property>
       <property name="length" type="uint" value="100"/>
-      <property name="size" type="uint" value="32"/>
-      <property name="background-alpha" type="uint" value="50"/>
+      <property name="size" type="uint" value="28"/>
+      <property name="background-alpha" type="uint" value="100"/>
       <property name="enter-opacity" type="uint" value="100"/>
       <property name="background-style" type="uint" value="1"/>
       <property name="background-color" type="array">

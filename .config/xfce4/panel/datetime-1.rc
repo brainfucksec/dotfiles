@@ -1,0 +1,6 @@
+layout=2
+date_font=Roboto 12
+time_font=Bitstream Vera Sans 8
+date_format=──[  %a %d %b   %T  ]──
+time_format=%F  -  %T
+
