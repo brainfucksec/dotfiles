@@ -48,7 +48,7 @@ alias eq='pulseaudio-equalizer-gtk'
 
 ## systemctl commands
 # running services
-alias scstart='sudo systemctl -t service -a --state running --no-page --no-legend'
+alias scrun='sudo systemctl -t service -a --state running --no-page --no-legend'
 
 # failed units
 alias scfailed='sudo systemctl --failed | head -n -6 | tail -n -1'
