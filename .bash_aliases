@@ -48,28 +48,28 @@ alias eq='pulseaudio-equalizer-gtk'
 
 ## systemctl commands
 # running services
-alias scrs='sudo systemctl -t service -a --state running --no-page --no-legend'
+alias scstart='sudo systemctl -t service -a --state running --no-page --no-legend'
 
 # failed units
-alias scf='sudo systemctl --failed | head -n -6 | tail -n -1'
+alias scfailed='sudo systemctl --failed | head -n -6 | tail -n -1'
 
 # status of service
-alias scs='sudo systemctl status'
+alias scstatus='sudo systemctl status'
 
 # start service
-function scst {
+function scstart {
     sudo systemctl start "$1"
     sudo systemctl status "$1"
 }
 
 # stop service
-function scsp {
+function scstop {
     sudo systemctl stop "$1"
     sudo systemctl status "$1"
 }
 
 # restart service
-function scrt {
+function screstart {
     sudo systemctl restart "$1"
     sudo systemctl status "$1"
 }
