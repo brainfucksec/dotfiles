@@ -48,6 +48,7 @@
         <value type="string" value="pidgin"/>
         <value type="string" value="applet networkmanager"/>
         <value type="string" value="soulseekqt"/>
+        <value type="string" value="clipman"/>
         <value type="string" value="zulumount"/>
         <value type="string" value="transmission"/>
         <value type="string" value="copyq"/>
@@ -98,6 +99,11 @@
       <property name="show-only-minimized" type="bool" value="false"/>
       <property name="include-all-monitors" type="bool" value="false"/>
       <property name="grouping" type="uint" value="0"/>
+    </property>
+    <property name="clipman" type="empty">
+      <property name="tweaks" type="empty">
+        <property name="never-confirm-history-clear" type="bool" value="false"/>
+      </property>
     </property>
   </property>
 </channel>
