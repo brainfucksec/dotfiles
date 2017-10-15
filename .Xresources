@@ -1,13 +1,15 @@
+!! xscreensaver
+
 xscreensaver.splash: false
 
 !font settings
-xscreensaver.Dialog.headingFont:        -*-arial-bold-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-arial-medium-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-arial-medium-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-arial-medium-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-arial-bold-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-arial-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-arial-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.headingFont:        -*-terminus-bold-r-*-*-16-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-terminus-bold-r-*-*-16-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-terminus-bold-r-*-*-16-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-16-*-*-*-*-*-*-*
 
 !general dialog box (affects main hostname, username, password text)
 xscreensaver.Dialog.foreground:         #ECEFF1
