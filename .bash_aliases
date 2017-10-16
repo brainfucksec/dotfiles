@@ -11,19 +11,25 @@ alias ....='cd ../../..'
 alias cd-='cd -'
 alias mkdir='mkdir -p -v'
 alias cpr='cp -Rv'
-alias cpinfo='rsync -r --info=progress2'
+alias cprs='rsync -r --info=progress2'
 alias ch='printf "\033c"'
 alias src='source ~/.bashrc'
 alias ex='extract'
 
 
 # system administration
+alias scstart='sudo systemctl start'
+alias scstop='sudo systemctl stop'
+alias scstatus='sudo systemctl status'
+alias screstart='sudo systemctl restart'
+alias scrun='sudo systemctl -t service -a --state running --no-page --no-legend'
+alias scfailed='sudo systemctl --failed | head -n -6 | tail -n -1'
 alias free='free -mt'
 alias ps='ps auxf'
 alias ht='htop'
 alias cputemp='sensors | grep Core'
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
-alias updaterepo='sudo reflector --verbose -c Germany -c Italy -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias updaterepo='sudo reflector --verbose -c Germany -c Italy -c Netherlands --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias vpncfg='sudo openvpn --config'
 
 
@@ -44,35 +50,6 @@ alias fm='thunar $PWD'
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias st='/usr/bin/subl'
 alias eq='pulseaudio-equalizer-gtk'
-
-
-## systemctl commands
-# running services
-alias scrun='sudo systemctl -t service -a --state running --no-page --no-legend'
-
-# failed units
-alias scfailed='sudo systemctl --failed | head -n -6 | tail -n -1'
-
-# status of service
-alias scstatus='sudo systemctl status'
-
-# start service
-function scstart {
-    sudo systemctl start "$1"
-    sudo systemctl status "$1"
-}
-
-# stop service
-function scstop {
-    sudo systemctl stop "$1"
-    sudo systemctl status "$1"
-}
-
-# restart service
-function screstart {
-    sudo systemctl restart "$1"
-    sudo systemctl status "$1"
-}
 
 
 # function extract for common archive formats
