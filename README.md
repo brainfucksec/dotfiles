@@ -14,8 +14,8 @@
 
 
 **Arch Linux Xfce - clean**
-![alt text](https://i.hizliresim.com/a1D5NR.png)
+![alt text](https://i.hizliresim.com/JOq5gj.png)
 
 **Arch Linux Xfce - dirty**
-![alt text](https://i.hizliresim.com/POoqNv.png)
+![alt text](https://i.hizliresim.com/ZOMryk.png)
 
