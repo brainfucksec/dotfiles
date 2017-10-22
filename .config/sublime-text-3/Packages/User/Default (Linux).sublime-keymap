@@ -1,3 +1,11 @@
 [
-  { "keys": ["ctrl+n"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+    // goto -> N line
+    { "keys": ["ctrl+n"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+    // indent / unindent
+    { "keys": ["ctrl+."], "command": "indent" },
+    { "keys": ["ctrl+,"], "command": "unindent" },
+
+    // select lines
+    { "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
+    { "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
 ]

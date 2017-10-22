@@ -3,7 +3,6 @@
 */
 {
     "anaconda_linting_behaviour": "save-only",
-    "anaconda_linter_phantoms": true,
     "anaconda_gutter_theme": "alpha",
     "anaconda_linter_mark_style": "solid_underline",
     "enable_signatures_tooltip": false,
