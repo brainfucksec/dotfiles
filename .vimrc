@@ -130,16 +130,11 @@ let g:indentLine_char = '|'
 " => Autocompletion, linting
 """""""""""""""""""""""""""""""""""""""""""
 " Completion popup settings (:help 'completeopt')
-set completeopt+=menuone,noinsert,noselect
+set completeopt-=preview
+set completeopt+=longest,menuone,noinsert,noselect
 
 " MUComplete plugin settings:
-"""""""""""""""""""""""""""""
 let g:mucomplete#enable_auto_at_startup = 1
-
-" Completion popup settings (:help 'completeopt')
-set completeopt+=longest,menuone,noinsert,noselect
-set completeopt-=preview
-
 inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
 inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
 inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
@@ -151,7 +146,6 @@ set shortmess+=c
 set belloff+=ctrlg
 
 " ALE plugin settings:
-""""""""""""""""""""""
 let g:ale_enabled = 1
 
 " Run linter only after save the file
@@ -165,7 +159,6 @@ nmap <silent> <C-k> <Plug>
 nmap <silent> <C-j> <Plug>
 
 " Omnicompletion languages plugins:
-"""""""""""""""""""""""""""""""""""
 " Python - jedi-vim
 let g:jedi#popup_on_dot = 1
 
