@@ -129,7 +129,6 @@ let g:indentLine_char = '|'
 """""""""""""""""""""""""""""""""""""""""""
 " => Autocompletion, linting
 """""""""""""""""""""""""""""""""""""""""""
-
 " supertab plugin
 let g:SuperTabDefaultCompletionType = ""
 
