@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.20 - sun 05 nov 2017, 11.55.29
+" Version: 0.21 - sun 05 nov 2017, 18.01.16
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -129,10 +129,29 @@ let g:indentLine_char = '|'
 """""""""""""""""""""""""""""""""""""""""""
 " => Autocompletion, linting
 """""""""""""""""""""""""""""""""""""""""""
-" supertab plugin
-let g:SuperTabDefaultCompletionType = ""
+" Completion popup settings (:help 'completeopt')
+set completeopt+=menuone,noinsert,noselect
+
+" MUComplete plugin settings:
+"""""""""""""""""""""""""""""
+let g:mucomplete#enable_auto_at_startup = 1
+
+" Completion popup settings (:help 'completeopt')
+set completeopt+=longest,menuone,noinsert,noselect
+set completeopt-=preview
+
+inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
+inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
+inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
+
+" Shut off completion messages
+set shortmess+=c
+
+" If Vim beeps during completion
+set belloff+=ctrlg
 
 " ALE plugin settings:
+""""""""""""""""""""""
 let g:ale_enabled = 1
 
 " Run linter only after save the file
@@ -144,6 +163,15 @@ let g:ale_lint_on_enter = 0
 " Navigate between errors
 nmap <silent> <C-k> <Plug>
 nmap <silent> <C-j> <Plug>
+
+" Omnicompletion languages plugins:
+"""""""""""""""""""""""""""""""""""
+" Python - jedi-vim
+let g:jedi#popup_on_dot = 1
+
+" C/C++, Objective C/C++ - clang-complete
+let g:clang_library_path = '/usr/lib/libclang.so.5.0'
+let g:clang_complete_auto = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""
