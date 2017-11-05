@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.10 - sat 30 sep 2017, 17.42.58
+" Version: 0.20 - sun 05 nov 2017, 11.55.29
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -125,33 +125,13 @@ set wrap "Wrap lines
 " indentLine plugin: indent lines style
 let g:indentLine_char = '|'
 
-" neocomplete plugin settings:
-" Enable autostart
-let g:neocomplete#enable_at_startup = 1
 
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
+"""""""""""""""""""""""""""""""""""""""""""
+" => Autocompletion, linting
+"""""""""""""""""""""""""""""""""""""""""""
 
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+" supertab plugin
+let g:SuperTabDefaultCompletionType = ""
 
 " ALE plugin settings:
 let g:ale_enabled = 1
@@ -204,3 +184,4 @@ inoremap <leader>s <C-c>:w<cr>
 
 " Open NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+
