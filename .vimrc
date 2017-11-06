@@ -131,7 +131,7 @@ let g:indentLine_char = '|'
 """""""""""""""""""""""""""""""""""""""""""
 " Completion popup settings (:help 'completeopt')
 set completeopt-=preview
-set completeopt+=longest,menuone,noinsert,noselect
+set completeopt+=menuone,noinsert,noselect
 
 " MUComplete plugin settings:
 let g:mucomplete#enable_auto_at_startup = 1
@@ -162,7 +162,8 @@ nmap <silent> <C-j> <Plug>
 " Python - jedi-vim
 let g:jedi#popup_on_dot = 1
 
-" C/C++, Objective C/C++ - clang-complete
+" C/C++ - clang-complete
+" path of clang library file
 let g:clang_library_path = '/usr/lib/libclang.so.5.0'
 let g:clang_complete_auto = 1
 
