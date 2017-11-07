@@ -122,8 +122,9 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-" indentLine plugin: indent lines style
-let g:indentLine_char = '|'
+" indentLine plugin settings: indent lines style
+let g:indentLine_char = '│'
+let g:indentLine_setColors = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -160,7 +161,7 @@ nmap <silent> <C-j> <Plug>
 
 " Omnicompletion languages plugins:
 " Python - jedi-vim
-let g:jedi#popup_on_dot = 1
+let g:jedi#popup_on_dot = 0
 
 " C/C++ - clang-complete
 " path of clang library file
