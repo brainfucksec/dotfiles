@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+printf "%s\\n\\n" "Updating git packages, please wait..."
+
+# update all git packages through directories
+find . -name ".git" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull;
