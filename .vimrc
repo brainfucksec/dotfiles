@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.21 - sun 05 nov 2017, 18.01.16
+" Version: 0.30 - sat 06 jan 2018, 10.22.16
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -11,13 +11,18 @@
 """""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""
-" Load plugins with Pathogen
-execute pathogen#infect()
+" Don't try to be vi compatible
+set nocompatible
 
 " Enable filetype plugins
 filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+
+" Load plugins with Pathogen
+execute pathogen#infect()
+
+" Turn on syntax highlighting
+syntax on
 
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -60,21 +65,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 """""""""""""""""""""""""""""""""""""""""""
 " => Colors and fonts
 """""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
+" Terminal options
+set t_Co=256
+set termguicolors
 
 " Colorscheme
-set termguicolors
 let ayucolor="dark"
 colorscheme ayu
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions+=e
-	set t_Co=256
-    set guitablabel=%M\ %t
-endif
 
 " Extend background color to the whole screen (xfce4-terminal fix)
 set t_ut=
@@ -161,7 +158,8 @@ nmap <silent> <C-j> <Plug>
 
 " Omnicompletion languages plugins:
 " Python - jedi-vim
-let g:jedi#popup_on_dot = 0
+" Don't display call signatures in real-time
+let g:jedi#show_call_signatures = "0"
 
 " C/C++ - clang-complete
 " path of clang library file
@@ -204,6 +202,10 @@ map <right> <nop>
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
 
-" Open NERDTree with Ctrl+n
+" NerdTree plugin settings:
+" Open NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+
+" Show hidden files
+let NERDTreeShowHidden=1
 
