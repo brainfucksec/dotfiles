@@ -21,13 +21,13 @@ filetype plugin indent on
 " Load plugins with Pathogen
 execute pathogen#infect()
 
-" Turn on syntax highlighting
-syntax on
-
 
 """""""""""""""""""""""""""""""""""""""""""
 " => VIM UI
 """""""""""""""""""""""""""""""""""""""""""
+" Turn on syntax highlighting
+syntax on
+
 " Set ctermbg to none
 highlight NonText ctermbg=none
 
