@@ -8,7 +8,7 @@
 
 # default prompt
 #PS1='[\u@\h \W]\$ '
-PS1='┌──[ \[\e[0;92m\]\u\[\e[m\] ]───[ \[\e[0;92m\]\h\[\e[m\] ] \[\e[1;94m\][\w]\[\e[m\]
+PS1='┌──[ \[\e[0;97m\]\u\[\e[m\] ]───[ \[\e[0;97m\]\h\[\e[m\] ] \[\e[1;94m\][\w]\[\e[m\]
 └────╼ '
 
 # enable color support of ls and also add handy aliases
