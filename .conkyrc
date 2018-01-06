@@ -25,12 +25,12 @@ conky.config = {
 	alignment = 'top_middle',
 	update_interval = 3,
 	use_xft = true,
-	font = 'misc ohsnap:size=9',
+	font = 'misc ohsnap:bold:size=9',
 	use_spacer = 'none',
 	short_units = true,
-	color1 = '#90a4ae', --grey1
-    color2 = '#fafafa', --white
-	color3 = '#738699'  --grey2
+	color1 = '#00060c', --blue
+    color2 = '#f9f9f9', --white
+	color3 = '#05274e'  --light-blue
 }
 
 -- Output
