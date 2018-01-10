@@ -10,12 +10,11 @@
 * Other: conky, rofi, zathura
 * GTK3 Theme: [Adapta-Nokto](https://github.com/adapta-project/adapta-gtk-theme)
 * Icons Theme: [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-* Wallpaper: [mountains_snow_1920x1080.jpg](https://lut.im/aNrOuDuN1o/O5Gp8K4SJzmHYcBI.jpg)
+* Wallpaper: [golden_gate_bridge_1920x1080](https://lut.im/SY7Dshpf0o/5ojKxevW39Pmewat.jpg)
 
 
 **Arch Linux Xfce - clean**
-![alt text](https://lut.im/LkG3VQPgkA/hvbQGockSjRUCaRm.png)
+![alt text](https://lut.im/otiAyA1EOB/wbSWXy1aeMou6gGV.png)
 
 **Arch Linux Xfce - dirty**
-![alt text](https://lut.im/EQYaIeZqFI/okQgahHoCd5lxRDF.png)
-
+![alt text](https://lut.im/9OxkjMeHIs/9oa8aH2IAjTOZL16.png)
