@@ -28,9 +28,9 @@ conky.config = {
 	font = 'misc ohsnap:size=9',
 	use_spacer = 'none',
 	short_units = true,
-	color1 = '#00060c', --blue
-    color2 = '#f9f9f9', --white
-	color3 = '#05274e'  --light-blue
+	color1 = '#8599a7', --grey1
+    color2 = '#cedae0', --white
+	color3 = '#8193a1'  --grey2
 }
 
 -- Output
