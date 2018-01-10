@@ -14,7 +14,7 @@
 
 
 **Arch Linux Xfce - clean**
-![alt text](https://lut.im/otiAyA1EOB/wbSWXy1aeMou6gGV.png)
+![alt text](https://lut.im/LN37H1r40y/TYHTOK3rLbgAfGk3.png)
 
 **Arch Linux Xfce - dirty**
 ![alt text](https://lut.im/9OxkjMeHIs/9oa8aH2IAjTOZL16.png)
