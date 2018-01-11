@@ -1,8 +1,21 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
 
-printf "%s\\n\\n" "Updating git packages, please wait..."
+readonly cur_dir=$(pwd)
+
+
+printf "%s\\n" "[*] Updating git packages, please wait..."
 
 # update all git packages through directories
-find . -name ".git" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull;
+for i in $(find . -name ".git" | cut -c 3-); do
+    printf "\\n\\n" "$i"
+
+    cd "$i"
+    cd ..
+
+    git pull
+
+    cd "$cur_dir"
+done
+
+printf "\\n%s\\n" "[*] Complete!"
