@@ -1,38 +1,17 @@
-/*
-	Preferences-sublime-settings - User
-	Last Update: 2017-10-15 23:56
-*/
 {
-	"font_face": "Hermit",
-	"font_size": 10,
 	"auto_complete": true,
 	"auto_complete_delay": 10,
 	"auto_complete_selector": "source - comment",
-	"word_wrap": "true",
-	"caret_extra_width": 2,
-	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"ensure_newline_at_eof_on_save": true,
-	"hot_exit": false,
-	"scroll_speed": 3.0,
-	"theme": "ayu-dark.sublime-theme",
-	"color_scheme": "Packages/User/Color Highlighter/themes/ayu-dark.tmTheme",
-	"ui_big_tabs": true,
-	"ui_fix_tab_labels": true,
-	"ui_font_size_small": true,
-	"ui_separator": true,
-	"ui_sidebar_highlight_row": true,
-	"ui_wide_scrollbars": true,
 	"bold_folder_labels": true,
-	"update_check": false,
+	"caret_extra_width": 2,
+	"color_scheme": "Packages/User/Color Highlighter/themes/ayu-dark.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Hermit",
+	"font_size": 10,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
-	],
-	"indent_guide_options":
-	[
-		"draw_normal",
-		"draw_active"
 	],
 	"open_externally_patterns":
 	[
@@ -41,7 +20,20 @@
 		"*.png",
 		"*.gif",
 		"*.zip",
-		"*.pdf"
+		"*.pdf",
+		"*.mp3"
 	],
-	"prevent_bin_preview": true
+	"prevent_bin_preview": true,
+	"scroll_speed": 3.0,
+	"theme": "ayu-dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"ui_big_tabs": true,
+	"ui_fix_tab_labels": true,
+	"ui_font_size_small": true,
+	"ui_separator": true,
+	"ui_sidebar_highlight_row": true,
+	"ui_wide_scrollbars": true,
+	"update_check": false,
+	"word_wrap": "true"
 }
