@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.30 - sat 06 jan 2018, 10.22.16
+" Version: 0.40 - wed 17 jan 2018, 13.56.11
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -165,6 +165,9 @@ let g:jedi#show_call_signatures = "0"
 " path of clang library file
 let g:clang_library_path = '/usr/lib/libclang.so.5.0'
 let g:clang_complete_auto = 1
+
+" JavaScript - vim-javascript
+let g:javascript_plugin_flow = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""
