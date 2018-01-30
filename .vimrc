@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.40 - wed 17 jan 2018, 13.56.11
+" Version: 0.41 - mon 29 jan 2018, 07.07.16
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -133,9 +133,6 @@ set completeopt+=menuone,noinsert,noselect
 
 " MUComplete plugin settings:
 let g:mucomplete#enable_auto_at_startup = 1
-inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
-inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
-inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
 
 " Shut off completion messages
 set shortmess+=c
