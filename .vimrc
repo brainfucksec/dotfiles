@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.41 - mon 29 jan 2018, 07.07.16
+" Version: 0.50 - tue 30 jan 2018, 13.11.19
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -165,6 +165,9 @@ let g:clang_complete_auto = 1
 
 " JavaScript - vim-javascript
 let g:javascript_plugin_flow = 1
+
+" HTML - vim-closetag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
 """""""""""""""""""""""""""""""""""""""""""
