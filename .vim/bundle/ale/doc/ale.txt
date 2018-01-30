@@ -57,6 +57,7 @@ CONTENTS                                                         *ale-contents*
       hadolint............................|ale-dockerfile-hadolint|
     elixir................................|ale-elixir-options|
       mix.................................|ale-elixir-mix|
+      dialyxir............................|ale-elixir-dialyxir|
     elm...................................|ale-elm-options|
       elm-format..........................|ale-elm-elm-format|
       elm-make............................|ale-elm-elm-make|
@@ -81,6 +82,7 @@ CONTENTS                                                         *ale-contents*
     graphql...............................|ale-graphql-options|
       eslint..............................|ale-graphql-eslint|
       gqlint..............................|ale-graphql-gqlint|
+      prettier............................|ale-graphql-prettier|
     handlebars............................|ale-handlebars-options|
       ember-template-lint.................|ale-handlebars-embertemplatelint|
     haskell...............................|ale-haskell-options|
@@ -111,7 +113,9 @@ CONTENTS                                                         *ale-contents*
       standard............................|ale-javascript-standard|
       xo..................................|ale-javascript-xo|
     json..................................|ale-json-options|
+      fixjson.............................|ale-json-fixjson|
       jsonlint............................|ale-json-jsonlint|
+      jq..................................|ale-json-jq|
       prettier............................|ale-json-prettier|
     kotlin................................|ale-kotlin-options|
       kotlinc.............................|ale-kotlin-kotlinc|
@@ -125,8 +129,10 @@ CONTENTS                                                         *ale-contents*
     llvm..................................|ale-llvm-options|
       llc.................................|ale-llvm-llc|
     lua...................................|ale-lua-options|
+      luac................................|ale-lua-luac|
       luacheck............................|ale-lua-luacheck|
     markdown..............................|ale-markdown-options|
+      prettier............................|ale-markdown-prettier|
       write-good..........................|ale-markdown-write-good|
     nroff.................................|ale-nroff-options|
       write-good..........................|ale-nroff-write-good|
@@ -149,6 +155,8 @@ CONTENTS                                                         *ale-contents*
       phpcs...............................|ale-php-phpcs|
       phpmd...............................|ale-php-phpmd|
       phpstan.............................|ale-php-phpstan|
+    po....................................|ale-po-options|
+      write-good..........................|ale-po-write-good|
     pod...................................|ale-pod-options|
       write-good..........................|ale-pod-write-good|
     proto.................................|ale-proto-options|
@@ -299,9 +307,9 @@ Notes:
 * Dafny: `dafny`!!
 * Dart: `dartanalyzer`!!, `language_server`
 * Dockerfile: `hadolint`
-* Elixir: `credo`, `dogma`!!
+* Elixir: `credo`, `dialyxir`, `dogma`!!
 * Elm: `elm-format, elm-make`
-* Erb: `erb`, `erubis`
+* Erb: `erb`, `erubi`, `erubis`
 * Erlang: `erlc`, `SyntaxErl`
 * Fish: `fish` (-n flag)
 * Fortran: `gcc`
@@ -310,7 +318,7 @@ Notes:
 * Git Commit Messages: `gitlint`
 * GLSL: glslang, `glslls`
 * Go: `gofmt`, `goimports`, `go vet`, `golint`, `gotype`, `gometalinter`!!, `go build`!!, `gosimple`!!, `staticcheck`!!
-* GraphQL: `eslint`, `gqlint`
+* GraphQL: `eslint`, `gqlint`, `prettier`
 * Haml: `haml-lint`
 * Handlebars: `ember-template-lint`
 * Haskell: `brittany`, `ghc`, `stack-ghc`, `stack-build`!!, `ghc-mod`, `stack-ghc-mod`, `hlint`, `hdevtools`, `hfmt`
@@ -318,15 +326,15 @@ Notes:
 * Idris: `idris`
 * Java: `checkstyle`, `javac`, `google-java-format`
 * JavaScript: `eslint`, `flow`, `jscs`, `jshint`, `prettier`, `prettier-eslint`, `prettier-standard`, `standard`, `xo`
-* JSON: `jsonlint`, `prettier`
+* JSON: `fixjson`, `jsonlint`, `jq`, `prettier`
 * Kotlin: `kotlinc`, `ktlint`
 * LaTeX (tex): `alex`!!, `chktex`, `lacheck`, `proselint`, `redpen`, `vale`, `write-good`
 * Less: `lessc`, `prettier`, `stylelint`
 * LLVM: `llc`
-* Lua: `luacheck`
+* Lua: `luac`, `luacheck`
 * Mail: `alex`!!, `proselint`, `vale`
 * Make: `checkmake`
-* Markdown: `alex`!!, `mdl`, `proselint`, `redpen`, `remark-lint`, `vale`, `write-good`
+* Markdown: `alex`!!, `mdl`, `prettier`, `proselint`, `redpen`, `remark-lint`, `vale`, `write-good`
 * MATLAB: `mlint`
 * Nim: `nim check`!!
 * nix: `nix-instantiate`
@@ -336,6 +344,7 @@ Notes:
 * OCaml: `merlin` (see |ale-ocaml-merlin|), `ols`
 * Perl: `perl -c`, `perl-critic`
 * PHP: `hack`, `hackfmt`, `langserver`, `phan`, `php -l`, `phpcs`, `phpmd`, `phpstan`, `phpcbf`
+* PO: `alex`!!, `msgfmt`, `proselint`, `write-good`
 * Pod: `alex`!!, `proselint`, `write-good`
 * proto: `protoc-gen-lint`
 * Pug: `pug-lint`
@@ -1301,6 +1310,11 @@ g:ale_set_quickfix                                         *g:ale_set_quickfix*
 
   Problems from every buffer ALE has checked will be included in the quickfix
   list, which can be checked with |:copen|. Problems will be de-duplicated.
+
+  This feature should not be used in combination with tools for searching for
+  matches and commands like |:cfdo|, as ALE will replace the quickfix list
+  pretty frequently. If you wish to use such tools, you should populate the
+  loclist instead.
 
 
 g:ale_set_signs                                               *g:ale_set_signs*

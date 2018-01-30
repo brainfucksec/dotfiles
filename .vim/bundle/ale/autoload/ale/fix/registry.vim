@@ -45,7 +45,7 @@ let s:default_registry = {
 \   },
 \   'prettier': {
 \       'function': 'ale#fixers#prettier#Fix',
-\       'suggested_filetypes': ['javascript', 'typescript', 'json', 'css', 'scss', 'less'],
+\       'suggested_filetypes': ['javascript', 'typescript', 'json', 'css', 'scss', 'less', 'markdown', 'graphql'],
 \       'description': 'Apply prettier to a file.',
 \   },
 \   'prettier_eslint': {
@@ -158,6 +158,16 @@ let s:default_registry = {
 \       'function': 'ale#fixers#google_java_format#Fix',
 \       'suggested_filetypes': ['java'],
 \       'description': 'Fix Java files with google-java-format.',
+\   },
+\   'fixjson': {
+\       'function': 'ale#fixers#fixjson#Fix',
+\       'suggested_filetypes': ['json'],
+\       'description': 'Fix JSON files with fixjson.',
+\   },
+\   'jq': {
+\       'function': 'ale#fixers#jq#Fix',
+\       'suggested_filetypes': ['json'],
+\       'description': 'Fix JSON files with jq.',
 \   },
 \}
 
