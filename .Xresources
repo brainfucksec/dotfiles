@@ -1,15 +1,18 @@
-!! xscreensaver
+!! xscreensaver configuration file
 
 xscreensaver.splash: false
 
 !font settings
-xscreensaver.Dialog.headingFont:        -*-terminus-bold-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-terminus-bold-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-16-*-*-*-*-*-*-*
+xscreensaver.Dialog.headingFont:        -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
+!xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
+
+! terminus asterisks are not beautiful
+xscreensaver.passwd.passwdFont: *-courier-medium-r-*-*-*-140-*-*-*-iso8859-1
 
 !general dialog box (affects main hostname, username, password text)
 xscreensaver.Dialog.foreground:         #ECEFF1
@@ -29,7 +32,7 @@ xscreensaver.Dialog.shadowThickness:    2
 !timeout bar (background is actually determined by Dialog.text.background)
 xscreensaver.passwd.thermometer.foreground:  #00BCD4
 xscreensaver.passwd.thermometer.background:  #00BCD4
-xscreensaver.passwd.thermometer.width:       8
+xscreensaver.passwd.thermometer.width:       0
 
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %Y, %a %d %b - %R
