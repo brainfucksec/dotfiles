@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.50 - tue 30 jan 2018, 13.11.19
+" Version: 0.52 - 2018/02/15
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -89,6 +89,9 @@ set ffs=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""
 " => Files, backups
 """""""""""""""""""""""""""""""""""""""""""
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
 " Turn backup off, swap file off
 set nobackup
 set noswapfile
@@ -119,7 +122,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-" indentLine plugin settings: indent lines style
+" indentLine: indent lines style
 let g:indentLine_char = '│'
 let g:indentLine_setColors = 0
 
@@ -131,7 +134,7 @@ let g:indentLine_setColors = 0
 set completeopt-=preview
 set completeopt+=menuone,noinsert,noselect
 
-" MUComplete plugin settings:
+" MUComplete
 let g:mucomplete#enable_auto_at_startup = 1
 
 " Shut off completion messages
@@ -140,7 +143,8 @@ set shortmess+=c
 " If Vim beeps during completion
 set belloff+=ctrlg
 
-" ALE plugin settings:
+
+" ALE
 let g:ale_enabled = 1
 
 " Run linter only after save the file
@@ -153,18 +157,22 @@ let g:ale_lint_on_enter = 0
 nmap <silent> <C-k> <Plug>
 nmap <silent> <C-j> <Plug>
 
+
 " Omnicompletion languages plugins:
 " Python - jedi-vim
 " Don't display call signatures in real-time
 let g:jedi#show_call_signatures = "0"
+
 
 " C/C++ - clang-complete
 " path of clang library file
 let g:clang_library_path = '/usr/lib/libclang.so.5.0'
 let g:clang_complete_auto = 1
 
-" JavaScript - vim-javascript
+
+"JavaScript - vim-javascript
 let g:javascript_plugin_flow = 1
+
 
 " HTML - vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
@@ -176,7 +184,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 " Always show the status line
 set laststatus=2
 
-" lightline plugin settings:
+" lightline
 " Disable mode information under status line
 set noshowmode
 
@@ -205,7 +213,8 @@ map <right> <nop>
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
 
-" NerdTree plugin settings:
+
+" NerdTree
 " Open NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
