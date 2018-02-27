@@ -17,4 +17,4 @@
 ![alt text](https://lut.im/LN37H1r40y/TYHTOK3rLbgAfGk3.png)
 
 **Arch Linux Xfce - dirty**
-![alt text](https://lut.im/9OxkjMeHIs/9oa8aH2IAjTOZL16.png)
+![alt text](https://lut.im/dOlpfcJZqm/AYERY9E9sWSQ5HTd.png)
