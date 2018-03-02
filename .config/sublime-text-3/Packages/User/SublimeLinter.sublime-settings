@@ -1,0 +1,17 @@
+// SublimeLinter Settings - User
+{
+    "lint_mode": "load_save",
+
+    "styles": [
+        {
+            "mark_style": "outline",
+            "mark_style": "solid_underline",
+            "priority": 1,
+            "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
+            "icon": "dot",
+            "types": [
+                "warning"
+            ]
+        }
+    ]
+}
