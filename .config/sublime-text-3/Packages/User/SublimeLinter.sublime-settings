@@ -1,6 +1,23 @@
 // SublimeLinter Settings - User
 {
     "lint_mode": "load_save",
+    "linters": {
+        "pylint": {
+            "@disable": false,
+            "args": [],
+            "disable": "",
+            "enable": "",
+            "excludes": [],
+            "paths": [],
+            "rcfile": "",
+            "show-codes": false
+        },
+        "jshint": {
+            "@diable": false,
+            "jshint strict": true,
+            "jslint vars": true
+        }
+    },
 
     "styles": [
         {
@@ -10,7 +27,8 @@
             "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
             "icon": "dot",
             "types": [
-                "warning"
+                "warning",
+                "error"
             ]
         }
     ]

@@ -13,6 +13,10 @@
 	[
 		"Vintage"
 	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
 	"open_externally_patterns":
 	[
 		"*.jpg",
