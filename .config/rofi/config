@@ -7,11 +7,11 @@ rofi.color-window:                   argb:ee263238,  #4DB5AB ,  #2F3D44
 rofi.separator-style:                solid
 
 ! FONTS
-rofi.font: misc Tamsyn 12
+!rofi.font: misc Tamsyn 12
 
 ! DISPLAY
 rofi.bw: 0
-rofi.opacity: 50
-rofi.width: 24
-rofi.lines: 13
+rofi.opacity: 70
+rofi.width: 30
+rofi.lines: 10
 rofi.columns: 1
