@@ -21,13 +21,20 @@
 
     "styles": [
         {
-            "mark_style": "outline",
             "mark_style": "solid_underline",
             "priority": 1,
             "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
             "icon": "dot",
             "types": [
-                "warning",
+                "warning"
+            ]
+        },
+        {
+            "mark_style": "solid_underline",
+            "priority": 1,
+            "scope": "region.redish markup.deleted.sublime_linter markup.error.sublime_linter",
+            "icon": "dot",
+            "types": [
                 "error"
             ]
         }
