@@ -8,4 +8,8 @@
     // select lines
     { "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
     { "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
+
+    // comment lines
+    { "keys": ["ctrl+7"], "command": "toggle_comment", "args": { "block": false} },
+    { "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": { "block": true} },
 ]
