@@ -55,7 +55,7 @@ set number
 " Highlight matching parenthesis
 set showmatch
 
-" Highlight python self, when followed by a comma, a period or a parenth
+" Highlight python self, when followed by a comma, a period or a bracket
 augroup PythonCustomization
    :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
 augroup END
