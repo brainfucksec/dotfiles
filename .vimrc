@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.52 - 2018/02/15
+" Version: 0.53 - 2018/04/10
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -54,6 +54,11 @@ set number
 
 " Highlight matching parenthesis
 set showmatch
+
+" Highlight python self, when followed by a comma, a period or a parenth
+augroup PythonCustomization
+   :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+augroup END
 
 " Show command in bottom bar
 set showcmd
@@ -163,16 +168,13 @@ nmap <silent> <C-j> <Plug>
 " Don't display call signatures in real-time
 let g:jedi#show_call_signatures = "0"
 
-
 " C/C++ - clang-complete
 " path of clang library file
-let g:clang_library_path = '/usr/lib/libclang.so.5.0'
+let g:clang_library_path = '/usr/lib/libclang.so.6.0'
 let g:clang_complete_auto = 1
-
 
 "JavaScript - vim-javascript
 let g:javascript_plugin_flow = 1
-
 
 " HTML - vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
