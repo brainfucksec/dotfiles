@@ -66,6 +66,7 @@
       <property name="&lt;Super&gt;t" type="string" value="xfce4-terminal"/>
       <property name="&lt;Super&gt;n" type="string" value="xfce4-clipman"/>
       <property name="&lt;Super&gt;d" type="string" value="rofi -show run -font &quot;roboto regular 11&quot;"/>
+      <property name="&lt;Super&gt;e" type="string" value="xfce4-terminal -e vim"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
