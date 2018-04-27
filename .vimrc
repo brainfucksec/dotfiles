@@ -2,7 +2,7 @@
 "
 " .vimrc - vim configuration file
 "
-" Version: 0.53 - 2018/04/10
+" Version: 0.54 - 2018/04/27
 " Author: Brainfuck
 "
 """""""""""""""""""""""""""""""""""""""""""
@@ -217,8 +217,11 @@ inoremap <leader>s <C-c>:w<cr>
 
 
 " NerdTree
+" Open NERDTree automatically
+autocmd vimenter * NERDTree
+
 " Open NerdTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
 
 " Show hidden files
 let NERDTreeShowHidden=1
