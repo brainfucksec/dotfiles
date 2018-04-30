@@ -1,30 +1,55 @@
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
 "
-" .vimrc - vim configuration file
+" ##     ## #### ##     ## ########   ######
+" ##     ##  ##  ###   ### ##     ## ##    ##
+" ##     ##  ##  #### #### ##     ## ##
+" ##     ##  ##  ## ### ## ########  ##
+"  ##   ##   ##  ##     ## ##   ##   ##
+"   ## ##    ##  ##     ## ##    ##  ##    ##
+"    ###    #### ##     ## ##     ##  ######
 "
-" Version: 0.54 - 2018/04/27
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" vim configuration file
+"
+" Version: 0.55 - 2018/04/30 22:22:47
 " Author: Brainfuck
 "
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" General
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Don't try to be vi compatible
 set nocompatible
 
-" Enable filetype plugins
+" Enable filetype detection
 filetype on
+
+" Enable filetype-specific plugins then indent
 filetype plugin indent on
+
+" Change leader to a comma because the backslash is too far away
+" That means all \x commands turn into ,x
+" The mapleader has to be set before plugin manager starts loading all
+" the plugins.
+let mapleader = ","
+let g:mapleader = ","
 
 " Load plugins with Pathogen
 execute pathogen#infect()
 
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => VIM UI
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" VIM UI
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Turn on syntax highlighting
 syntax on
 
@@ -55,21 +80,30 @@ set number
 " Highlight matching parenthesis
 set showmatch
 
-" Highlight python self, when followed by a comma, a period or a bracket
-augroup PythonCustomization
-   :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
-augroup END
-
 " Show command in bottom bar
 set showcmd
 
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Highlight python self, when followed by a comma, a period or a bracket
+augroup PythonCustomization
+   :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+augroup END
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => Colors and fonts
-"""""""""""""""""""""""""""""""""""""""""""
+" Visual line marking 80 characters (vim 7.3).
+if v:version >= 703
+    set textwidth=80
+    set colorcolumn=+1
+endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Colors and fonts
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Terminal options
 set t_Co=256
 set termguicolors
@@ -87,14 +121,14 @@ set encoding=utf8
 " Fonts (if not set, use default terminal fonts)
 "set gfn=Monospace\ 11
 
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
 
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Files, backups
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups
-"""""""""""""""""""""""""""""""""""""""""""
-" Use Unix as the standard file type
+" Use Unix for new files and autodetect the rest
 set ffs=unix,dos,mac
 
 " Turn backup off, swap file off
@@ -102,21 +136,31 @@ set nobackup
 set noswapfile
 
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => Memory, CPU
-"""""""""""""""""""""""""""""""""""""""""""
-" Keep more info in memory to speed thing up
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Memory, CPU
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
 set hidden
+
+" Sets how many lines of history VIM has to remember
 set history=100
 
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => Text, tabs, indent
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Text, tabs, indent
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Use spaces instead of tabs
 set expandtab
 
-" Smart when using tabs ;)
+" Insert spaces for tabs according to shiftwidth
 set smarttab
 
 " 1 tab == 4 spaces
@@ -132,9 +176,12 @@ let g:indentLine_char = '│'
 let g:indentLine_setColors = 0
 
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => Autocompletion, linting
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Autocompletion, linting
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Completion popup settings (:help 'completeopt')
 set completeopt-=preview
 set completeopt+=menuone,noinsert,noselect
@@ -149,7 +196,7 @@ set shortmess+=c
 set belloff+=ctrlg
 
 
-" ALE
+" ALE (Linter)
 let g:ale_enabled = 1
 
 " Run linter only after save the file
@@ -180,9 +227,13 @@ let g:javascript_plugin_flow = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => Status line
-"""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Status line
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Always show the status line
 set laststatus=2
 
@@ -196,9 +247,12 @@ let g:lightline = {
       \ }
 
 
-"""""""""""""""""""""""""""""""""""""""""""
-" => Keymapping
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Keymapping
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Reload vim config without restart
 map \r :source ~/.vimrc<CR>
 
@@ -225,4 +279,3 @@ autocmd vimenter * NERDTree
 
 " Show hidden files
 let NERDTreeShowHidden=1
-
