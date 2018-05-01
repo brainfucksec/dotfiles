@@ -19,7 +19,7 @@
 * Other: conky, rofi, zathura
 * GTK3 Theme: [Adapta-Nokto](https://github.com/adapta-project/adapta-gtk-theme)
 * Icons Theme: [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-* Vim Colorscheme: [ayu](https://github.com/ayu-theme/ayu-vim)
+* Vim Color Scheme: [ayu](https://github.com/ayu-theme/ayu-vim)
 * Wallpaper: [golden_gate_bridge_1920x1080](https://imgur.com/Sq9fwG4.jpg)
 
 
