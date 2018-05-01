@@ -1,4 +1,13 @@
-## dotfiles
+```
+
+██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗
+██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝
+██║  ██║██║   ██║   ██║   █████╗  ██║██║     █████╗  ███████╗
+██║  ██║██║   ██║   ██║   ██╔══╝  ██║██║     ██╔══╝  ╚════██║
+██████╔╝╚██████╔╝   ██║   ██║     ██║███████╗███████╗███████║
+╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝
+
+```
 
 
 ### My Arch Linux dotfiles
@@ -10,11 +19,17 @@
 * Other: conky, rofi, zathura
 * GTK3 Theme: [Adapta-Nokto](https://github.com/adapta-project/adapta-gtk-theme)
 * Icons Theme: [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-* Wallpaper: [golden_gate_bridge_1920x1080](https://lut.im/SY7Dshpf0o/5ojKxevW39Pmewat.jpg)
+* Vim Colorscheme: [ayu](https://github.com/ayu-theme/ayu-vim)
+* Wallpaper: [golden_gate_bridge_1920x1080](https://imgur.com/Sq9fwG4.jpg)
 
 
 **Arch Linux Xfce - clean**
-![alt text](https://lut.im/LN37H1r40y/TYHTOK3rLbgAfGk3.png)
+![alt text](https://imgur.com/Y5PyQYf.jpg)
 
 **Arch Linux Xfce - dirty**
-![alt text](https://i.hizliresim.com/nOnWNg.png)
+![alt text](https://imgur.com/gZG2SUx.jpg)
+
+**Vim**
+![alt text](https://imgur.com/XL8h0RD.jpg)
+
+
