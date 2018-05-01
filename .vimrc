@@ -12,16 +12,16 @@
 "
 " vim configuration file
 "
-" Version: 0.55 - 2018/04/30 22:22:47
+" Version: 0.60 - 2018/05/01 11:58:47
 " Author: Brainfuck
 "
+" https://github.com/brainfucksec
+"
 """""""""""""""""""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
-" General
-"
+" => General
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Don't try to be vi compatible
@@ -45,9 +45,7 @@ execute pathogen#infect()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
-" VIM UI
-"
+" => VIM UI
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Turn on syntax highlighting
@@ -91,17 +89,15 @@ augroup PythonCustomization
    :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
 augroup END
 
-" Visual line marking 80 characters (vim 7.3).
+" Line lenght marker 80 columns (vim >= 7.3).
 if v:version >= 703
     set textwidth=80
-    set colorcolumn=+1
+    set colorcolumn=+1 "highlight 1 column after 'textwidth'
 endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
-" Colors and fonts
-"
+" => Colors and fonts
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Terminal options
@@ -123,9 +119,7 @@ set encoding=utf8
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
-" Files, backups
-"
+" => Files, backups
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Use Unix for new files and autodetect the rest
@@ -137,9 +131,7 @@ set noswapfile
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
-" Memory, CPU
-"
+" => Memory, CPU
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " This makes vim act like all other editors, buffers can
@@ -152,9 +144,7 @@ set history=100
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
-" Text, tabs, indent
-"
+" => Text, tabs, indent
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Use spaces instead of tabs
@@ -177,9 +167,7 @@ let g:indentLine_setColors = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
-" Autocompletion, linting
-"
+" => Autocompletion, linting
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Completion popup settings (:help 'completeopt')
@@ -210,28 +198,36 @@ nmap <silent> <C-k> <Plug>
 nmap <silent> <C-j> <Plug>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""
 " Omnicompletion languages plugins:
-" Python - jedi-vim
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+" Python
+" - jedi-vim
 " Don't display call signatures in real-time
 let g:jedi#show_call_signatures = "0"
 
-" C/C++ - clang-complete
+
+" C/C++
+" - clang-complete
 " path of clang library file
 let g:clang_library_path = '/usr/lib/libclang.so.6.0'
 let g:clang_complete_auto = 1
 
-"JavaScript - vim-javascript
+
+" JavaScript
+" - vim-javascript
 let g:javascript_plugin_flow = 1
 
-" HTML - vim-closetag
+
+" HTML/CSS
+" - vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
 " Status line
-"
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Always show the status line
@@ -248,12 +244,10 @@ let g:lightline = {
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-"
 " Keymapping
-"
 """""""""""""""""""""""""""""""""""""""""""""""
 
-" Reload vim config without restart
+" Reload vim config with Ctrl+r without restart
 map \r :source ~/.vimrc<CR>
 
 " Cancel a search with Ctrl+l
