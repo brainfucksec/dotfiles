@@ -38,10 +38,13 @@
     <property name="plugin-2" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="thunar"/>
-        <value type="string" value="transmission"/>
+        <value type="string" value="simplescreenrecorder"/>
+        <value type="string" value="orage"/>
+        <value type="string" value="pidgin"/>
+        <value type="string" value="soulseekqt"/>
         <value type="string" value="clipman"/>
         <value type="string" value="zulumount"/>
-        <value type="string" value="pidgin"/>
+        <value type="string" value="transmission"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="size-max" type="uint" value="22"/>
@@ -73,6 +76,7 @@
     </property>
     <property name="plugin-13" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="vlc"/>
     </property>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">

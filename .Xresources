@@ -36,3 +36,4 @@ xscreensaver.passwd.thermometer.width:       0
 
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %Y, %a %d %b - %R
+

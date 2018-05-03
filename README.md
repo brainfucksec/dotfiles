@@ -16,20 +16,20 @@
 * Dock: xfce4-panel
 * Terminal : xfce4-terminal
 * Editors: Vim, Sublime Text 3
-* Other: conky, rofi, zathura
+* Other: rofi, zathura
 * GTK3 Theme: [Adapta-Nokto](https://github.com/adapta-project/adapta-gtk-theme)
-* Icons Theme: [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-* Vim Color Scheme: [ayu](https://github.com/ayu-theme/ayu-vim)
-* Wallpaper: [golden_gate_bridge_1920x1080](https://imgur.com/Sq9fwG4.jpg)
+* Icons Theme: [Papirus-Adapta-Nokto](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
+* Wallpaper: [nature_road_1920x1200](https://alpha.wallhaven.cc/wallpaper/405584)
 
 
 **Arch Linux Xfce - clean**
-![alt text](https://imgur.com/Y5PyQYf.jpg)
+![alt text](https://imgur.com/UtLTTWj.jpg)
 
 **Arch Linux Xfce - dirty**
-![alt text](https://imgur.com/gZG2SUx.jpg)
+![alt text](https://imgur.com/bDs68cS.jpg)
 
 **Vim**
-![alt text](https://imgur.com/XL8h0RD.jpg)
+![alt text](https://imgur.com/jF9mZ61)
 
-
+**Sublime Text 3**
+![alt text](https://imgur.com/uVtIROg)
