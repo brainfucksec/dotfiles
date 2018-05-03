@@ -26,7 +26,7 @@
 ![alt text](https://imgur.com/UtLTTWj.jpg)
 
 **Arch Linux Xfce - dirty**
-![alt text](https://imgur.com/bDs68cS.jpg)
+![alt text](https://imgur.com/t9v0nZl.jpg)
 
 **Vim**
 ![alt text](https://imgur.com/jF9mZ61)
