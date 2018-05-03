@@ -26,10 +26,10 @@
 ![alt text](https://imgur.com/UtLTTWj.jpg)
 
 **Arch Linux Xfce - dirty**
-![alt text](https://imgur.com/t9v0nZl.jpg)
+![alt text](https://imgur.com/0w2uwme.jpg)
 
 **Vim**
-![alt text](https://imgur.com/jF9mZ61)
+![alt text](https://imgur.com/jF9mZ61.jpg)
 
 **Sublime Text 3**
-![alt text](https://imgur.com/uVtIROg)
+![alt text](https://imgur.com/uVtIROg.jpg)
