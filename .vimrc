@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.60 - 2018/05/01 11:58:47
+" Version: 0.61 - 2018/05/14 10:12:07
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec
@@ -38,7 +38,6 @@ filetype plugin indent on
 " The mapleader has to be set before plugin manager starts loading all
 " the plugins.
 let mapleader = ","
-let g:mapleader = ","
 
 " Load plugins with Pathogen
 execute pathogen#infect()
@@ -89,11 +88,10 @@ augroup PythonCustomization
    :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
 augroup END
 
-" Line lenght marker 80 columns (vim >= 7.3).
-if v:version >= 703
-    set textwidth=80
-    set colorcolumn=+1 "highlight 1 column after 'textwidth'
-endif
+" Line lenght marker 80 columns
+set textwidth=80
+"highlight 1 column after 'textwidth'
+set colorcolumn=+1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -266,10 +264,10 @@ inoremap <leader>s <C-c>:w<cr>
 
 " NerdTree
 " Open NERDTree automatically
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 " Open NerdTree with Ctrl+n
-"map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Show hidden files
 let NERDTreeShowHidden=1
