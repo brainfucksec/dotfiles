@@ -12,10 +12,10 @@
 "
 " vim configuration file
 "
-" Version: 0.61 - 2018/05/14 10:12:07
+" Version: 0.62 - 2018/05/24 12:24:24
 " Author: Brainfuck
 "
-" https://github.com/brainfucksec
+" https://github.com/brainfucksec/dotfiles
 "
 """""""""""""""""""""""""""""""""""""""""""""""
 
@@ -106,14 +106,8 @@ set termguicolors
 let ayucolor="dark"
 colorscheme ayu
 
-" Extend background color to the whole screen (xfce4-terminal fix)
-set t_ut=
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
-
-" Fonts (if not set, use default terminal fonts)
-"set gfn=Monospace\ 11
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -221,7 +215,6 @@ let g:javascript_plugin_flow = 1
 " HTML/CSS
 " - vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
