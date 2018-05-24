@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2017-11-30 20:32+0900
+" Modified:   2018-03-19 20:59+0900
 " License:    MIT
 
 
@@ -61,6 +61,7 @@ hi! PmenuSel ctermbg=240 ctermfg=255 guibg=#5b6389 guifg=#eff0f4
 hi! PmenuThumb ctermbg=251 guibg=#c6c8d1
 hi! PreProc ctermfg=150 guifg=#b4be82
 hi! Question ctermfg=150 guifg=#b4be82
+hi! QuickFixLine ctermbg=236 ctermfg=252 guibg=#272c42 guifg=#c6c8d1
 hi! Search ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
 hi! SignColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Special ctermfg=150 guifg=#b4be82
@@ -97,6 +98,8 @@ hi! GitGutterAdd ctermbg=235 ctermfg=150 guibg=#1e2132 guifg=#b4be82
 hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
 hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
 hi! GitGutterDelete ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
+hi! Sneak ctermbg=140 ctermfg=234 guibg=#a093c7 guifg=#161821
+hi! SneakScope ctermbg=236 ctermfg=242 guibg=#272c42 guifg=#6b7089
 hi! SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
 hi! SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
 hi! SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
@@ -123,6 +126,7 @@ hi! link sassClass Special
 hi! link shFunction Normal
 hi! link vimContinue Comment
 hi! link vimIsCommand Statement
+hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement
 hi! link xmlEndTag Statement
 hi! link xmlNamespace Statement
@@ -159,6 +163,11 @@ hi! link plug1 Normal
 hi! link plug2 Structure
 hi! link plugDash Comment
 hi! link plugMessage Special
+hi! link SignifySignAdd GitGutterAdd
+hi! link SignifySignChange GitGutterChange
+hi! link SignifySignChangeDelete GitGutterChangeDelete
+hi! link SignifySignDelete GitGutterDelete
+hi! link SignifySignDeleteFirstLine SignifySignDelete
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
 hi! link typescriptAjaxMethods Normal
@@ -172,7 +181,7 @@ hi! link typescriptNull Constant
 hi! link typescriptParens Normal
 
 if has('nvim')
-  let g:terminal_color_0 = '#161821'
+  let g:terminal_color_0 = '#1e2132'
   let g:terminal_color_1 = '#e27878'
   let g:terminal_color_2 = '#b4be82'
   let g:terminal_color_3 = '#e2a478'

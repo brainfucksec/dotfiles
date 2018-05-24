@@ -1,4 +1,4 @@
-!! xscreensaver configuration file
+!{{{ xscreensaver
 
 xscreensaver.splash: false
 
@@ -9,10 +9,7 @@ xscreensaver.Dialog.labelFont:          -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-
 xscreensaver.Dialog.unameFont:          -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
 xscreensaver.Dialog.buttonFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
 xscreensaver.Dialog.dateFont:           -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
-!xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
-
-! terminus asterisks are not beautiful
-xscreensaver.passwd.passwdFont: *-courier-medium-r-*-*-*-140-*-*-*-iso8859-1
+xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
 
 !general dialog box (affects main hostname, username, password text)
 xscreensaver.Dialog.foreground:         #ECEFF1
@@ -35,5 +32,8 @@ xscreensaver.passwd.thermometer.background:  #00BCD4
 xscreensaver.passwd.thermometer.width:       0
 
 !datestamp format--see the strftime(3) manual page for details
-xscreensaver.dateFormat:    %Y, %a %d %b - %R
+xscreensaver.dateFormat:    %Y-%m-%d  %R
+!}}}
 
+!cursor size
+Xcursor.size: 16

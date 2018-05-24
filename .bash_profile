@@ -6,8 +6,10 @@
 
 
 # PATH
-#export PATH=$PATH:/home/brainfuck/.gem/ruby/2.4.0/bin
 export PATH=$PATH:~/bin
+
+# TERM
+export TERM=xterm-256color
 
 # EDITOR
 export EDITOR=vim

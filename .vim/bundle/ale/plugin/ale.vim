@@ -32,6 +32,11 @@ if !s:has_features
     finish
 endif
 
+if has('nvim') && !has('nvim-0.2.0') && !get(g:, 'ale_use_deprecated_neovim')
+    execute 'echom ''ALE support for NeoVim versions below 0.2.0 is deprecated.'''
+    execute 'echom ''Use `let g:ale_use_deprecated_neovim = 1` to silence this warning for now.'''
+endif
+
 " This flag can be set to 0 to disable emitting conflict warnings.
 let g:ale_emit_conflict_warnings = get(g:, 'ale_emit_conflict_warnings', 1)
 
@@ -118,6 +123,9 @@ let g:ale_open_list = get(g:, 'ale_open_list', 0)
 " This flag dictates if ale keeps open loclist even if there is no error in loclist
 let g:ale_keep_list_window_open = get(g:, 'ale_keep_list_window_open', 0)
 
+" This flag dictates that quickfix windows should be opened vertically
+let g:ale_list_vertical = get(g:, 'ale_list_vertical', 0)
+
 " The window size to set for the quickfix and loclist windows
 call ale#Set('list_window_size', 10)
 
@@ -166,7 +174,10 @@ let g:ale_echo_cursor = get(g:, 'ale_echo_cursor', 1)
 let g:ale_echo_delay = get(g:, 'ale_echo_delay', 10)
 
 " This flag can be set to 0 to disable balloon support.
-call ale#Set('set_balloons', has('balloon_eval'))
+call ale#Set('set_balloons',
+\   has('balloon_eval') && has('gui_running') ||
+\   has('balloon_eval_term') && !has('gui_running')
+\)
 
 " A deprecated setting for ale#statusline#Status()
 " See :help ale#statusline#Count() for getting status reports.
@@ -241,6 +252,8 @@ command! -bar ALEToggleBuffer :call ale#toggle#ToggleBuffer(bufnr(''))
 command! -bar ALEEnableBuffer :call ale#toggle#EnableBuffer(bufnr(''))
 command! -bar ALEDisableBuffer :call ale#toggle#DisableBuffer(bufnr(''))
 command! -bar ALEResetBuffer :call ale#toggle#ResetBuffer(bufnr(''))
+" A command to stop all LSP-like clients, including tsserver.
+command! -bar ALEStopAllLSPs :call ale#lsp#reset#StopAllLSPs()
 
 " A command for linting manually.
 command! -bar ALELint :call ale#Queue(0, 'lint_file')
@@ -249,15 +262,24 @@ command! -bar ALELint :call ale#Queue(0, 'lint_file')
 command! -bar ALEInfo :call ale#debugging#Info()
 " The same, but copy output to your clipboard.
 command! -bar ALEInfoToClipboard :call ale#debugging#InfoToClipboard()
+" Copy ALE information to a file.
+command! -bar -nargs=1 ALEInfoToFile :call ale#debugging#InfoToFile(<f-args>)
 
 " Fix problems in files.
-command! -bar ALEFix :call ale#fix#Fix()
+command! -bar -nargs=* -complete=customlist,ale#fix#registry#CompleteFixers ALEFix :call ale#fix#Fix(bufnr(''), '', <f-args>)
 " Suggest registered functions to use for fixing problems.
 command! -bar ALEFixSuggest :call ale#fix#registry#Suggest(&filetype)
 
 " Go to definition for tsserver and LSP
 command! -bar ALEGoToDefinition :call ale#definition#GoTo({})
 command! -bar ALEGoToDefinitionInTab :call ale#definition#GoTo({'open_in_tab': 1})
+
+" Find references for tsserver and LSP
+command! -bar ALEFindReferences :call ale#references#Find()
+
+" Get information for the cursor.
+command! -bar ALEHover :call ale#hover#Show(bufnr(''), getcurpos()[1],
+                                            \ getcurpos()[2], {})
 
 " <Plug> mappings for commands
 nnoremap <silent> <Plug>(ale_previous) :ALEPrevious<Return>
@@ -279,9 +301,11 @@ nnoremap <silent> <Plug>(ale_detail) :ALEDetail<Return>
 nnoremap <silent> <Plug>(ale_fix) :ALEFix<Return>
 nnoremap <silent> <Plug>(ale_go_to_definition) :ALEGoToDefinition<Return>
 nnoremap <silent> <Plug>(ale_go_to_definition_in_tab) :ALEGoToDefinitionInTab<Return>
+nnoremap <silent> <Plug>(ale_find_references) :ALEFindReferences<Return>
+nnoremap <silent> <Plug>(ale_hover) :ALEHover<Return>
 
 " Set up autocmd groups now.
-call ale#toggle#InitAuGroups()
+call ale#autocmd#InitAuGroups()
 
 " Housekeeping
 
@@ -295,9 +319,19 @@ augroup END
 " Backwards Compatibility
 
 function! ALELint(delay) abort
+    if !get(g:, 'ale_deprecation_ale_lint', 0)
+        execute 'echom ''ALELint() is deprecated, use ale#Queue() instead.'''
+        let g:ale_deprecation_ale_lint = 1
+    endif
+
     call ale#Queue(a:delay)
 endfunction
 
 function! ALEGetStatusLine() abort
+    if !get(g:, 'ale_deprecation_ale_get_status_line', 0)
+        execute 'echom ''ALEGetStatusLine() is deprecated.'''
+        let g:ale_deprecation_ale_get_status_line = 1
+    endif
+
     return ale#statusline#Status()
 endfunction

@@ -4,7 +4,7 @@
 call ale#Set('typescript_tslint_executable', 'tslint')
 call ale#Set('typescript_tslint_config_path', '')
 call ale#Set('typescript_tslint_rules_dir', '')
-call ale#Set('typescript_tslint_use_global', 0)
+call ale#Set('typescript_tslint_use_global', get(g:, 'ale_use_global_executables', 0))
 call ale#Set('typescript_tslint_ignore_empty_files', 0)
 
 function! ale_linters#typescript#tslint#GetExecutable(buffer) abort
@@ -70,7 +70,7 @@ function! ale_linters#typescript#tslint#GetCommand(buffer) abort
     \  : ''
 
     return ale#path#BufferCdString(a:buffer)
-    \   . ale_linters#typescript#tslint#GetExecutable(a:buffer)
+    \   . ale#Escape(ale_linters#typescript#tslint#GetExecutable(a:buffer))
     \   . ' --format json'
     \   . l:tslint_config_option
     \   . l:tslint_rules_option

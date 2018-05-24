@@ -1,5 +1,5 @@
 favorites=virtualbox.desktop,keepassx2.desktop,zuluMount.desktop,start-tor-browser.desktop,exo-terminal-emulator.desktop,net.sourceforge.liferea.desktop,cherrytree.desktop,pulseaudio-equalizer.desktop,vlc.desktop
-recent=xfce-ui-settings.desktop,cherrytree.desktop,pulseaudio-equalizer.desktop,vlc.desktop,net.sourceforge.liferea.desktop,transmission-qt.desktop,zuluMount.desktop,keepassx2.desktop,xfce-mouse-settings.desktop,bleachbit.desktop
+recent=vlc.desktop,cherrytree.desktop,simplescreenrecorder.desktop,pulseaudio-equalizer.desktop,firefox.desktop,exo-terminal-emulator.desktop,net.sourceforge.liferea.desktop,transmission-qt.desktop,exo-file-manager.desktop,keepassx2.desktop
 button-title=Applicazioni
 button-icon=/home/brainfuck/media/images/logos/arch start buttons by gabriela2400/start-here monochrome light.png
 button-single-row=false
@@ -17,7 +17,7 @@ recent-items-max=10
 favorites-in-recent=true
 display-recent-default=false
 position-search-alternate=true
-position-commands-alternate=false
+position-commands-alternate=true
 position-categories-alternate=true
 menu-width=475
 menu-height=588

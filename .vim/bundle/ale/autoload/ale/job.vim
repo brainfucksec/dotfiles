@@ -119,7 +119,7 @@ function! s:VimCloseCallback(channel) abort
     if job_status(l:job) is# 'dead'
         try
             if !empty(l:info) && has_key(l:info, 'exit_cb')
-                call ale#util#GetFunction(l:info.exit_cb)(l:job_id, l:info.exit_code)
+                call ale#util#GetFunction(l:info.exit_cb)(l:job_id, get(l:info, 'exit_code', 1))
             endif
         finally
             " Automatically forget about the job after it's done.
@@ -208,7 +208,7 @@ function! ale#job#PrepareCommand(buffer, command) abort
         return 'cmd /s/c "' . l:command . '"'
     endif
 
-    if &shell =~? 'fish$'
+    if &shell =~? 'fish$\|pwsh$'
         return ['/bin/sh', '-c', l:command]
     endif
 

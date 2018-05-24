@@ -8,7 +8,7 @@ let g:ale_python_flake8_executable =
 let s:default_options = get(g:, 'ale_python_flake8_args', '')
 let g:ale_python_flake8_options =
 \   get(g:, 'ale_python_flake8_options', s:default_options)
-let g:ale_python_flake8_use_global = get(g:, 'ale_python_flake8_use_global', 0)
+let g:ale_python_flake8_use_global = get(g:, 'ale_python_flake8_use_global', get(g:, 'ale_use_global_executables', 0))
 
 function! s:UsingModule(buffer) abort
     return ale#Var(a:buffer, 'python_flake8_options') =~# ' *-m flake8'
@@ -39,6 +39,7 @@ function! ale_linters#python#flake8#VersionCheck(buffer) abort
 endfunction
 
 function! ale_linters#python#flake8#GetCommand(buffer, version_output) abort
+    let l:cd_string = ale#path#BufferCdString(a:buffer)
     let l:executable = ale_linters#python#flake8#GetExecutable(a:buffer)
     let l:version = ale#semver#GetVersion(l:executable, a:version_output)
 
@@ -50,7 +51,8 @@ function! ale_linters#python#flake8#GetCommand(buffer, version_output) abort
 
     let l:options = ale#Var(a:buffer, 'python_flake8_options')
 
-    return ale#Escape(l:executable)
+    return l:cd_string
+    \   . ale#Escape(l:executable)
     \   . (!empty(l:options) ? ' ' . l:options : '')
     \   . ' --format=default'
     \   . l:display_name_args . ' -'
@@ -105,11 +107,16 @@ function! ale_linters#python#flake8#Handle(buffer, lines) abort
         \   'type': 'W',
         \}
 
-        if l:code[:0] is# 'F' || l:code is# 'E999'
-            let l:item.type = 'E'
+        if l:code[:0] is# 'F'
+            if l:code isnot# 'F401'
+                let l:item.type = 'E'
+            endif
         elseif l:code[:0] is# 'E'
             let l:item.type = 'E'
-            let l:item.sub_type = 'style'
+
+            if l:code isnot# 'E999' && l:code isnot# 'E112'
+                let l:item.sub_type = 'style'
+            endif
         elseif l:code[:0] is# 'W'
             let l:item.sub_type = 'style'
         endif

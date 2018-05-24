@@ -30,6 +30,3 @@
 
 **Vim**
 ![alt text](https://imgur.com/jF9mZ61.jpg)
-
-**Sublime Text 3**
-![alt text](https://imgur.com/uVtIROg.jpg)
