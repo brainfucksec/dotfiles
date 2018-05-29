@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.62 - 2018/05/24 12:24:24
+" Version: 0.70 - 2018/05/29 11:35:50
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -38,9 +38,6 @@ filetype plugin indent on
 " The mapleader has to be set before plugin manager starts loading all
 " the plugins.
 let mapleader = ","
-
-" Load plugins with Pathogen
-execute pathogen#infect()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -166,14 +163,36 @@ let g:indentLine_setColors = 0
 set completeopt-=preview
 set completeopt+=menuone,noinsert,noselect
 
-" MUComplete
-let g:mucomplete#enable_auto_at_startup = 1
-
 " Shut off completion messages
 set shortmess+=c
 
 " If Vim beeps during completion
 set belloff+=ctrlg
+
+
+" Omnicompletion languages plugins:
+" Python
+" - jedi-vim
+" Don't display call signatures in real-time
+let g:jedi#show_call_signatures = "0"
+
+" C/C++
+" - clang-complete
+" path of clang library file
+let g:clang_library_path = '/usr/lib/libclang.so.6.0'
+let g:clang_complete_auto = 1
+
+" JavaScript
+" - vim-javascript
+let g:javascript_plugin_flow = 1
+
+" HTML/CSS
+" - vim-closetag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+
+" MUcomplete
+let g:mucomplete#enable_auto_at_startup = 1
 
 
 " ALE (Linter)
@@ -191,30 +210,52 @@ nmap <silent> <C-j> <Plug>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
-" Omnicompletion languages plugins:
+" Status line
 """""""""""""""""""""""""""""""""""""""""""""""
 
-" Python
-" - jedi-vim
-" Don't display call signatures in real-time
-let g:jedi#show_call_signatures = "0"
+" Always show the status line
+set laststatus=2
+
+" lightline
+" Disable mode information under status line
+set noshowmode
+
+" Set colorscheme
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
 
 
-" C/C++
-" - clang-complete
-" path of clang library file
-let g:clang_library_path = '/usr/lib/libclang.so.6.0'
-let g:clang_complete_auto = 1
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Keymapping
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+" Reload vim config with Ctrl+r without restart
+map \r :source ~/.vimrc<CR>
+
+" Cancel a search with Ctrl+l
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" Don't use arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" Fast saving
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <C-c>:w<cr>
 
 
-" JavaScript
-" - vim-javascript
-let g:javascript_plugin_flow = 1
+" NerdTree
+" Open NERDTree automatically
+"autocmd vimenter * NERDTree
 
+" Open NerdTree with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
 
-" HTML/CSS
-" - vim-closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+" Show hidden files
+let NERDTreeShowHidden=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
