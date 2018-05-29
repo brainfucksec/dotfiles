@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.71 - 2018/05/29 12:21:35
+" Version: 0.72 - 2018/05/29 15:41:35
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -87,6 +87,13 @@ augroup END
 set textwidth=80
 "highlight 1 column after 'textwidth'
 set colorcolumn=+1
+
+" netrw file browser settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 2
+let g:netrw_altv = 1
+let g:netrw_winsize = 15
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -290,13 +297,6 @@ map <right> <nop>
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
 
+" Open netrw with Ctrl+n
+map <C-n> :Vexplore<CR>
 
-" NerdTree
-" Open NERDTree automatically
-"autocmd vimenter * NERDTree
-
-" Open NerdTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
-
-" Show hidden files
-let NERDTreeShowHidden=1
