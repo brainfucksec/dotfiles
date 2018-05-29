@@ -88,13 +88,6 @@ set textwidth=80
 "highlight 1 column after 'textwidth'
 set colorcolumn=+1
 
-" netrw file browser settings
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 2
-let g:netrw_altv = 1
-let g:netrw_winsize = 15
-
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and fonts
@@ -248,55 +241,6 @@ map <right> <nop>
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
 
-
 " NerdTree
-" Open NERDTree automatically
-"autocmd vimenter * NERDTree
-
 " Open NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
-
-" Show hidden files
-let NERDTreeShowHidden=1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""
-" Status line
-"""""""""""""""""""""""""""""""""""""""""""""""
-
-" Always show the status line
-set laststatus=2
-
-" lightline
-" Disable mode information under status line
-set noshowmode
-
-" Set colorscheme
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""
-" Keymapping
-"""""""""""""""""""""""""""""""""""""""""""""""
-
-" Reload vim config with Ctrl+r without restart
-map \r :source ~/.vimrc<CR>
-
-" Cancel a search with Ctrl+l
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-
-" Don't use arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-
-" Fast saving
-nnoremap <leader>s :w<cr>
-inoremap <leader>s <C-c>:w<cr>
-
-" Open netrw with Ctrl+n
-map <C-n> :Vexplore<CR>
-
