@@ -56,9 +56,8 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
-" Disable beeping (aka bell) and window flashing
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
+" No flashing or beeping at all
+set visualbell t_vb=
 
 " Add a bit extra margin to the left
 "set foldcolumn=1
