@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.70 - 2018/05/29 11:35:50
+" Version: 0.71 - 2018/05/29 12:21:35
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -56,11 +56,9 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
+" Disable beeping (aka bell) and window flashing
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " Add a bit extra margin to the left
 "set foldcolumn=1
@@ -165,9 +163,6 @@ set completeopt+=menuone,noinsert,noselect
 
 " Shut off completion messages
 set shortmess+=c
-
-" If Vim beeps during completion
-set belloff+=ctrlg
 
 
 " Omnicompletion languages plugins:
