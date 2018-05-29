@@ -28,7 +28,7 @@ alias ps='ps auxf'
 alias ht='htop'
 alias cputemp='sensors | grep Core'
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
-alias updaterepo='sudo reflector --verbose -c Germany -c Italy -c Netherlands --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias updaterepo='sudo reflector --verbose -c Germany -c Netherlands -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias vpncfg='sudo openvpn --config'
 
 
@@ -39,7 +39,7 @@ alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
 alias tmp='cd ~/tmp'
 alias p='cd ~/programming'
-alias pr='cd ~/programming/projects'
+alias dev='cd ~/programming/dev'
 alias g='cd ~/programming/git'
 alias v='cd /opt/vpn/'
 alias fm='thunar $PWD'
@@ -47,8 +47,6 @@ alias fm='thunar $PWD'
 
 # applications
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
-alias st='/usr/bin/subl'
-alias eq='pulseaudio-equalizer-gtk'
 
 
 # function extract for common archive formats
