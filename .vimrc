@@ -161,8 +161,10 @@ set shortmess+=c
 
 " Omnicompletion languages plugins:
 " Python
-" - pythom-mode
+" - python-mode
 let g:pymode_python = 'python3'
+let g:pymode_lint_cwindow = 0
+let g:pymode_lint_ignore = ["E303", "W",]
 
 " C/C++
 " - clang-complete
