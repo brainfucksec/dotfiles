@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.72 - 2018/05/29 15:41:35
+" Version: 0.74 - 2018/05/30 11:31:49
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -76,11 +76,6 @@ set showcmd
 
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
-
-" Highlight python self, when followed by a comma, a period or a bracket
-augroup PythonCustomization
-   :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
-augroup END
 
 " Line lenght marker 80 columns
 set textwidth=80
@@ -166,9 +161,8 @@ set shortmess+=c
 
 " Omnicompletion languages plugins:
 " Python
-" - jedi-vim
-" Don't display call signatures in real-time
-let g:jedi#show_call_signatures = "0"
+" - pythom-mode
+let g:pymode_python = 'python3'
 
 " C/C++
 " - clang-complete
