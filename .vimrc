@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.74 - 2018/05/30 11:31:49
+" Version: 0.75 - 2018/05/31 20:31:49
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -160,11 +160,6 @@ set shortmess+=c
 
 
 " Omnicompletion languages plugins:
-" Python
-" - python-mode
-let g:pymode_python = 'python3'
-let g:pymode_lint_cwindow = 0
-let g:pymode_lint_ignore = ["E303", "W",]
 
 " C/C++
 " - clang-complete
