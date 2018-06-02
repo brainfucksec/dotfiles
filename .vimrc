@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""
 "
 " ##     ## #### ##     ## ########   ######
 " ##     ##  ##  ###   ### ##     ## ##    ##
@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.75 - 2018/05/31 20:31:49
+" Version: 0.76 - 2018/06/01 18:58:49
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -57,7 +57,9 @@ set hlsearch
 set incsearch
 
 " No flashing or beeping at all
-set visualbell t_vb=
+set noerrorbells
+set visualbell
+set t_vb=
 
 " Add a bit extra margin to the left
 "set foldcolumn=1
@@ -152,14 +154,16 @@ let g:indentLine_setColors = 0
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Completion popup settings (:help 'completeopt')
-set completeopt-=preview
-set completeopt+=menuone,noinsert,noselect
+set completeopt+=menuone,noselect,noinsert
 
 " Shut off completion messages
 set shortmess+=c
 
 
 " Omnicompletion languages plugins:
+" Python
+" - jedi-vim
+let g:jedi#show_call_signatures = "0"
 
 " C/C++
 " - clang-complete
@@ -178,6 +182,9 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 " MUcomplete
 let g:mucomplete#enable_auto_at_startup = 1
+
+" endwise compatibility
+imap <Plug>MyCR <Plug>(MUcompleteCR)
 
 
 " ALE (Linter)
