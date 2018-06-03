@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.76 - 2018/06/01 18:58:49
+" Version: 0.77 - 2018/06/03 09:24:04
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -162,8 +162,10 @@ set shortmess+=c
 
 " Omnicompletion languages plugins:
 " Python
-" - jedi-vim
-let g:jedi#show_call_signatures = "0"
+" - python-mode
+let g:pymode_python = 'python3'
+let g:pymode_lint_cwindow = 0
+let g:pymode_doc = 0
 
 " C/C++
 " - clang-complete
