@@ -202,7 +202,7 @@ nmap <silent> <C-j> <Plug>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
-" Status line
+" => Status line
 """"""""""""""""""""""""""""""""""""""""""""""
 
 " Always show the status line
@@ -219,7 +219,7 @@ let g:lightline = {
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
-" Keymapping
+" => Keymapping
 """"""""""""""""""""""""""""""""""""""""""""""
 
 " Reload vim config with Ctrl+r without restart
