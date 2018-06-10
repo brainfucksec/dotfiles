@@ -1,0 +1,111 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+
+[colors]
+background = #14191f
+background-alt = #191f26
+foreground = #e6e1cf
+foreground-alt = #ffb454
+primary = #50b4e6
+secondary = #738699
+alert = #ff3333
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[bar/top]
+monitor = VGA-1
+width = 100%
+height = 24
+offset-x = 0
+offset-y = 0a
+locale = it_IT.UTF-8
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 0
+overline-color = #f00
+underline-size = 1
+underline-color = ${colors.primary}
+
+border-bottom-size = 0
+border-bottom-color = ${colors.primary}
+
+padding-left = 1
+padding-right = 1
+module-margin-left = 0
+module-margin-right = 1
+
+font-0 = "misc ohsnap:pixelsize=12;0"
+font-1 = unifont:pixelsize=8:Tewi:fontformat=truetype;0
+font-2 = FontAwesome:pixelsize=11;2
+font-3 = WunconSiji:pixelsize=14;0
+
+modules-left = i3
+modules-center = date
+modules-right = cpu memory
+
+tray-position = right
+tray-padding = 2
+
+
+[module/i3]
+type = internal/i3
+
+strip-wsnumbers = true
+
+label-focused = %{F#50b4e6}%icon%%{F-}
+;label-focused-foreground =
+label-focused-padding = 1
+label-focused-underline = ${colors.primary}
+
+label-unfocused = %icon%
+label-unfocused-padding = 1
+label-unfocused-foreground = ${colors.secondary}
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
+
+label-visible = %icon%
+label-visible-padding = 1
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
+
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage%%
+
+
+[module/memory]
+type = internal/memory
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+interval = 2
+label = %percentage_used%%
+
+
+[module/date]
+type = internal/date
+interval = 1
+date = %a %d %b
+time = %H:%M:%S
+label = %{F#738699}────[%{F-} %{F#50b4e6}%date%%{F-}%{F#dcdcdc} %time%%{F-} %{F#738699}]────%{F-}
