@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.77 - 2018/06/09 10:13:10
+" Version: 0.78 - 2018/06/15 19:05:39
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -107,6 +107,9 @@ set encoding=utf8
 
 " Use Unix for new files and autodetect the rest
 set ffs=unix,dos,mac
+
+" Force Markdown syntax
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Turn backup off, swap file off
 set nobackup
