@@ -28,10 +28,10 @@
 **Arch Linux Xfce - dirty**
 ![alt text](https://imgur.com/gHXgdti.jpg)
 
-Arch Linux i3 gaps - clean
+**Arch Linux i3 gaps - clean**
 ![alt text](https://imgur.com/9pL6S8y.jpg)
 
-Arch Linux i3 gaps - dirty
+**Arch Linux i3 gaps - dirty**
 ![alt text](https://imgur.com/7mKO3bt.jpg)
 
 **Vim**
