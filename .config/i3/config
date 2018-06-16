@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.2.2 - 2018/06/10
+# Version: 0.2.3 - 2018/06/16
 #
 # Author: Brainfuck
 #
@@ -14,10 +14,10 @@
 # Colors
 ###################################
 # class                  border  backgr  text     indicator child_border
-client.focused           #263238 #2f3d44 #cfd8dc  #263268   #263268
-client.focused_inactive  #151b1e #2f3d44 #b2babd  #151b1e   #151b1e
-client.unfocused         #151b1e #222d32 #b2babd  #2f3d44   #151b1e
-client.urgent            #03a9f4 #2f3d44 #ffffff  #2f3d44   #03a9f4
+client.focused           #738699 #191f26 #d9d7ce  #738699   #738699
+client.focused_inactive  #14191f #191f26 #b2babd  #14191f   #14191f
+client.unfocused         #14191f #151a1f #b2babd  #14191f   #14191f
+client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 
 
 ###################################
@@ -173,11 +173,13 @@ bindsym $mod+Shift+0 move container to workspace 10
 # force a window on a named workspace
 #assign [class="Termite"] 1
 assign [class="Firefox"] 2
+assign [class="Virtualbox"] 5
 assign [class="Zathura"] 6
 
 # enable floating mode for selected windows
 for_window [class="Lxappearance"] floating enable border pixel 2
 for_window [class="Tor Browser"] floating enable border pixel 2
+for_window [class="Virtualbox"] floating enable border pixel 2
 
 
 ###################################
@@ -186,6 +188,7 @@ for_window [class="Tor Browser"] floating enable border pixel 2
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id termite -e vim
 bindsym $mod+F3 exec --no-startup-id lxappearance
+bindsym $mod+F4 exec --no-startup-id virtualbox
 bindsym $mod+r exec --no-startup-id termite -x ranger
 bindsym $mod+d exec rofi -show run -font "misc tamsyn 12"
 bindsym $mod+t exec --no-startup-id -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
