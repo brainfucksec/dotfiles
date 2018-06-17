@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""
 "
 " ##     ## #### ##     ## ########   ######
 " ##     ##  ##  ###   ### ##     ## ##    ##
@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.78 - 2018/06/15 19:05:39
+" Version: 0.79 - 2018/06/17 15:57:55
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -109,7 +109,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Force Markdown syntax
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufRead,BufNew *.md set filetype=markdown
 
 " Turn backup off, swap file off
 set nobackup
@@ -173,6 +173,9 @@ let g:jedi#show_call_signatures = "0"
 " path of clang library file
 let g:clang_library_path = '/usr/lib/libclang.so.6.0'
 let g:clang_complete_auto = 1
+" workaround for auto-pairs issue with clang_complete
+let g:AutoPairsMapCR = 0
+imap <silent><CR> <CR><Plug>AutoPairsReturn
 
 " JavaScript
 " - vim-javascript
