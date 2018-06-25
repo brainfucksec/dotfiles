@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""
 "
 " ##     ## #### ##     ## ########   ######
 " ##     ##  ##  ###   ### ##     ## ##    ##
@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.79 - 2018/06/17 15:57:55
+" Version: 0.80 - 2018/06/25 20:54:43
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -142,6 +142,10 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+
+" html/javascript 1 tab == 2 spaces
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 set ai "Auto indent
 set si "Smart indent
