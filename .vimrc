@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.80 - 2018/06/25 20:54:43
+" Version: 0.81 - 2018/06/26 09:28:43
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -84,6 +84,10 @@ set textwidth=80
 "highlight 1 column after 'textwidth'
 set colorcolumn=+1
 
+" Remove line lenght marker for HTML/Javascript
+autocmd FileType html setlocal textwidth=0
+autocmd FileType javascript setlocal textwidth=0
+
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " => Colors and fonts
@@ -143,7 +147,7 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" html/javascript 1 tab == 2 spaces
+" HTML/JavaScript 1 tab == 2 spaces
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
