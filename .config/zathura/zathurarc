@@ -1,5 +1,5 @@
 # Zathura configuration file
-# See man `man zathurarc'
+# See man `man zathurarc`
 
 ## settings
 # window
@@ -19,7 +19,7 @@ set pages-per-row 1
 set scroll-page-aware true
 
 # scroll velocity
-set scroll-step 40
+set scroll-step 70
 
 # enable copy to clipboard
 set selection-clipboard clipboard
@@ -78,14 +78,14 @@ set guioptions "sv"
 set font "roboto 11"
 
 # colors
-set default-bg "#0d1012"
-set default-fg "#ade0f8"
+set default-bg "#0b0d0f"
+set default-fg "#e8f6fd"
 
-set statusbar-fg "#ade0f8"
+set statusbar-fg "#e8f6fd"
 set statusbar-bg "#161b1d"
 
 set inputbar-bg "#161b1d" #00 currently not used
-set inputbar-fg "#ade0f8"
+set inputbar-fg " #e8f6fd"
 
 set notification-bg "#1b5d80"
 set notification-fg "#ffffff"
@@ -112,9 +112,9 @@ set index-active-fg "#ffffff"
 set index-active-bg "#1f6b93"
 
 set recolor-lightcolor "#161b1d"
-set recolor-darkcolor "#ade0f8"
+set recolor-darkcolor "#e8f6fd"
 set recolor "true"
 
 # setting recolor-keep true will keep any color your pdf has.
 # if it is false, it'll just be black and white
-set recolor-keephue "false"
+set recolor-keep "false"
