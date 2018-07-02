@@ -52,7 +52,7 @@ font-3 = WunconSiji:pixelsize=14;0
 
 modules-left = i3
 modules-center = date
-modules-right = cpu memory eth
+modules-right = volume cpu memory eth
 
 tray-position = right
 tray-padding = 2
@@ -113,6 +113,24 @@ label-connected-foreground = ${colors.primary}
 
 label-disconnected = not connected
 label-disconnected-foreground = #ff5555
+
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+label-volume = ""
+label-volume-foreground = ${root.foreground}
+label-muted = 
+
+bar-volume-width = 10
+bar-volume-gradient = true
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
 
 
 [module/date]

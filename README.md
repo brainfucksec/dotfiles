@@ -29,10 +29,10 @@
 ![alt text](https://imgur.com/gHXgdti.jpg)
 
 **Arch Linux i3 gaps - clean**
-![alt text](https://imgur.com/9pL6S8y.jpg)
+![alt text](https://imgur.com/0Un0AmB.jpg)
 
 **Arch Linux i3 gaps - dirty**
-![alt text](https://imgur.com/7mKO3bt.jpg)
+![alt text](https://imgur.com/BILaLQE.jpg)
 
 **Vim**
 ![alt text](https://imgur.com/6kR9FfR.jpg)
