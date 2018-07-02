@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.84 - 2018/06/28 09:00:43
+" Version: 0.85 - 2018/07/02 08:40:58
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -84,8 +84,9 @@ set textwidth=80
 "highlight 1 column after 'textwidth'
 set colorcolumn=+1
 
-" Remove line lenght marker for HTML
+" Remove line lenght marker for HTML and txt files
 autocmd FileType html setlocal textwidth=0
+autocmd BufRead,BufNew *.txt setlocal textwidth=0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
