@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.2.3 - 2018/06/16
+# Version: 0.2.4 - 2018/07/02
 #
 # Author: Brainfuck
 #
@@ -194,6 +194,9 @@ bindsym $mod+d exec rofi -show run -font "misc tamsyn 12"
 bindsym $mod+t exec --no-startup-id -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
 bindsym Print exec scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/media/images/screenshots/'
 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 
 ###################################

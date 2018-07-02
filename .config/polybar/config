@@ -52,7 +52,7 @@ font-3 = WunconSiji:pixelsize=14;0
 
 modules-left = i3
 modules-center = date
-modules-right = cpu memory
+modules-right = cpu memory eth
 
 tray-position = right
 tray-padding = 2
@@ -97,10 +97,22 @@ label = %percentage%%
 
 [module/memory]
 type = internal/memory
+interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
-interval = 2
 label = %percentage_used%%
+
+
+[module/eth]
+type = internal/network
+interface = enp0s3
+interval = 3.0
+
+label-connected = " "
+label-connected-foreground = ${colors.primary}
+
+label-disconnected = not connected
+label-disconnected-foreground = #ff5555
 
 
 [module/date]
