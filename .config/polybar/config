@@ -17,6 +17,8 @@ primary = #50b4e6
 secondary = #738699
 alert = #ff3333
 
+green = #4cbf99
+
 [global/wm]
 margin-top = 0
 margin-bottom = 0
@@ -24,9 +26,9 @@ margin-bottom = 0
 [bar/top]
 monitor = VGA-1
 width = 100%
-height = 24
+height = 26
 offset-x = 0
-offset-y = 0a
+offset-y = 0
 locale = it_IT.UTF-8
 
 background = ${colors.background}
@@ -47,7 +49,7 @@ module-margin-right = 1
 
 font-0 = "misc ohsnap:pixelsize=12;0"
 font-1 = unifont:pixelsize=8:Tewi:fontformat=truetype;0
-font-2 = FontAwesome:pixelsize=11;2
+font-2 = FontAwesome:pixelsize=10;2
 font-3 = WunconSiji:pixelsize=14;0
 
 modules-left = i3
@@ -124,7 +126,14 @@ label-volume-foreground = ${root.foreground}
 label-muted = 
 
 bar-volume-width = 10
-bar-volume-gradient = true
+bar-volume-foreground-0 = ${colors.green}
+bar-volume-foreground-1 = ${colors.green}
+bar-volume-foreground-2 = ${colors.green}
+bar-volume-foreground-3 = ${colors.green}
+bar-volume-foreground-4 = ${colors.green}
+bar-volume-foreground-5 = ${colors.green}
+bar-volume-foreground-6 = ${colors.green}
+bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
@@ -138,4 +147,4 @@ type = internal/date
 interval = 1
 date = %a %d %b
 time = %H:%M:%S
-label = %{F#738699}────[%{F-} %{F#50b4e6}%date%%{F-}%{F#dcdcdc} %time%%{F-} %{F#738699}]────%{F-}
+label = %{F#50b4e6}%date%%{F-}%{F#dcdcdc} %time%%{F-}
