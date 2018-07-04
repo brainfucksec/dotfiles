@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.85 - 2018/07/02 08:40:58
+" Version: 0.86 - 2018/07/04 23:33:58
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -84,8 +84,8 @@ set textwidth=80
 "highlight 1 column after 'textwidth'
 set colorcolumn=+1
 
-" Remove line lenght marker for HTML and txt files
-autocmd FileType html setlocal textwidth=0
+" Remove line lenght marker for selected filetypes
+autocmd FileType xml,html,xhtml,javascript setlocal textwidth=0
 autocmd BufRead,BufNew *.txt setlocal textwidth=0
 
 
@@ -147,8 +147,8 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" HTML 1 tab == 2 spaces
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+" 1 tab == 2 spaces for selected filetypes
+autocmd FileType xml,html,xhtml setlocal shiftwidth=2 tabstop=2
 
 set ai "Auto indent
 set si "Smart indent
