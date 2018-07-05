@@ -32,7 +32,7 @@
 ![alt text](https://imgur.com/0Un0AmB.jpg)
 
 **Arch Linux i3 gaps - dirty**
-![alt text](https://imgur.com/BILaLQE.jpg)
+![alt text](https://i.redd.it/mdteztpqs5811.png)
 
 **Vim**
 ![alt text](https://imgur.com/6kR9FfR.jpg)
