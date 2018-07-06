@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.86 - 2018/07/04 23:33:58
+" Version: 0.87 - 2018/07/06 13:13:13
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -149,6 +149,7 @@ set tabstop=4
 
 " 1 tab == 2 spaces for selected filetypes
 autocmd FileType xml,html,xhtml setlocal shiftwidth=2 tabstop=2
+autocmd BufRead,BufNew *.css setlocal shiftwidth=2 tabstop=2
 
 set ai "Auto indent
 set si "Smart indent
