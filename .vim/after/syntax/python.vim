@@ -304,6 +304,10 @@ hi def link cBoolean Boolean
 "hi def link cBraces Delimiter
 
 
+" -----------------------------------------------------------------------------
+"  Custom highlighting (change colors according to your color scheme)
+" -----------------------------------------------------------------------------
+
 " Highlight operators
 syn match Operator "[-+&|=!\/~*%&^?<>]"
 hi Operator guifg=#E6B673
