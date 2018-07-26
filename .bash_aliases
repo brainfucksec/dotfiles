@@ -29,7 +29,6 @@ alias ht='htop'
 alias cputemp='sensors | grep Core'
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
 alias updaterepo='sudo reflector --verbose -c Germany -c Netherlands -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias vpncfg='sudo openvpn --config'
 
 
 # directories
@@ -41,12 +40,13 @@ alias tmp='cd ~/tmp'
 alias p='cd ~/programming'
 alias dev='cd ~/programming/dev'
 alias g='cd ~/programming/git'
-alias v='cd /opt/vpn/'
+alias v='cd /opt/vpn/config'
 alias fm='thunar $PWD'
 
 
 # applications
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
+alias sp="strongpass"
 
 
 # function extract for common archive formats
