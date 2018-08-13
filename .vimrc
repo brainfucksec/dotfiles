@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""
 "
 " ##     ## #### ##     ## ########   ######
 " ##     ##  ##  ###   ### ##     ## ##    ##
@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.87 - 2018/07/06 13:13:13
+" Version: 0.88 - 2018/08/13 22:43:25
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -171,6 +171,27 @@ set completeopt+=menuone,noselect,noinsert
 set shortmess+=c
 
 
+" MUcomplete
+let g:mucomplete#enable_auto_at_startup = 1
+
+" endwise compatibility
+imap <Plug>MyCR <Plug>(MUcompleteCR)
+
+
+" ALE (Linter)
+let g:ale_enabled = 1
+
+" Run linter only after save the file
+let g:ale_lint_on_text_changed = 'never'
+
+" Don't run linter after open a file
+let g:ale_lint_on_enter = 0
+
+" Navigate between errors
+nmap <silent> <C-k> <Plug>
+nmap <silent> <C-j> <Plug>
+
+
 " Omnicompletion languages plugins:
 " Python
 " - jedi-vim
@@ -192,27 +213,6 @@ let g:javascript_plugin_flow = 1
 " HTML/CSS
 " - vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-
-
-" MUcomplete
-let g:mucomplete#enable_auto_at_startup = 1
-
-" endwise compatibility
-imap <Plug>MyCR <Plug>(MUcompleteCR)
-
-
-" ALE (Linter)
-let g:ale_enabled = 1
-
-" Run linter only after save the file
-let g:ale_lint_on_text_changed = 'never'
-
-" Don't run linter after open a file
-let g:ale_lint_on_enter = 0
-
-" Navigate between errors
-nmap <silent> <C-k> <Plug>
-nmap <silent> <C-j> <Plug>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
