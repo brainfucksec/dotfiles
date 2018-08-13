@@ -143,7 +143,6 @@
       <property name="&lt;Alt&gt;space" type="string" value="popup_menu_key"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Super&gt;m" type="string" value="show_desktop_key"/>
-      <property name="&lt;Super&gt;minus" type="string" value="prev_workspace_key"/>
       <property name="&lt;Super&gt;plus" type="string" value="next_workspace_key"/>
       <property name="&lt;Super&gt;1" type="string" value="workspace_1_key"/>
       <property name="&lt;Super&gt;2" type="string" value="workspace_2_key"/>
@@ -182,10 +181,10 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;i" type="string" value="maximize_vert_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;o" type="string" value="maximize_window_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;m" type="string" value="hide_window_key"/>
-      <property name="&lt;Super&gt;Left" type="string" value="tile_up_left_key"/>
-      <property name="&lt;Super&gt;Right" type="string" value="tile_up_right_key"/>
-      <property name="&lt;Super&gt;comma" type="string" value="tile_down_left_key"/>
-      <property name="&lt;Super&gt;period" type="string" value="tile_down_right_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;ccedilla" type="string" value="tile_up_left_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;degree" type="string" value="tile_up_right_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;semicolon" type="string" value="tile_down_left_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;colon" type="string" value="tile_down_right_key"/>
     </property>
   </property>
   <property name="providers" type="array">
