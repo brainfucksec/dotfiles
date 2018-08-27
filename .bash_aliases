@@ -28,19 +28,20 @@ alias ps='ps auxf'
 alias ht='htop'
 alias cputemp='sensors | grep Core'
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
-alias updaterepo='sudo reflector --verbose -c Germany -c Netherlands -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias updaterepo='sudo reflector --verbose -c Germany -c Netherlands -c Sweden --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 
 # directories
 alias h='cd ~/'
-alias dk='cd ~/Desktop'
 alias dc='cd ~/documents'
+alias dk='cd ~/Desktop'
 alias dl='cd ~/downloads'
-alias tmp='cd ~/tmp'
 alias p='cd ~/programming'
-alias dev='cd ~/programming/dev'
-alias g='cd ~/programming/git'
+alias pd='cd ~/programming/dev'
+alias pg='cd ~/programming/git'
+alias tmp='cd ~/tmp'
 alias v='cd /opt/vpn/config'
+alias vp='cd ~/.vim/pack/plugins/start'
 alias fm='thunar $PWD'
 
 
