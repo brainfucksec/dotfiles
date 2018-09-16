@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.2.4 - 2018/07/02
+# Version: 0.2.5 - 2018/09/16
 #
 # Author: Brainfuck
 #
@@ -180,7 +180,7 @@ assign [class="Zathura"] 6
 for_window [class="Lxappearance"] floating enable border pixel 2
 for_window [class="Tor Browser"] floating enable border pixel 2
 for_window [class="Virtualbox"] floating enable border pixel 2
-
+for_window [class="Bleachbit"] floating enable border pixel 2
 
 ###################################
 # My Shortcuts
@@ -192,7 +192,7 @@ bindsym $mod+F4 exec --no-startup-id virtualbox
 bindsym $mod+r exec --no-startup-id termite -x ranger
 bindsym $mod+d exec rofi -show run -font "misc tamsyn 12"
 bindsym $mod+t exec --no-startup-id -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
-bindsym Print exec scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/media/images/screenshots/'
+bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/media/images/screenshots/'
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
@@ -212,4 +212,4 @@ exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/mountains_snow_1920x1080.jpg
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/nasa_2560x1440.jpg

@@ -18,6 +18,7 @@ secondary = #738699
 alert = #ff3333
 
 green = #4cbf99
+red = #ff5555
 
 [global/wm]
 margin-top = 0
@@ -49,12 +50,12 @@ module-margin-right = 1
 
 font-0 = "misc ohsnap:pixelsize=12;0"
 font-1 = unifont:pixelsize=8:Tewi:fontformat=truetype;0
-font-2 = FontAwesome:pixelsize=10;2
+font-2 = FontAwesome:pixelsize=11;2
 font-3 = WunconSiji:pixelsize=14;0
 
 modules-left = i3
 modules-center = date
-modules-right = volume cpu memory eth
+modules-right = volume cpu memory eth powermenu
 
 tray-position = right
 tray-padding = 2
@@ -110,11 +111,33 @@ type = internal/network
 interface = enp0s3
 interval = 3.0
 
-label-connected = " "
-label-connected-foreground = ${colors.primary}
+label-connected = %{F#50b4e6} %{F-}eth
+;label-connected-foreground = ${colors.primary}
 
-label-disconnected = not connected
-label-disconnected-foreground = #ff5555
+label-disconnected = "eth off"
+label-disconnected-foreground = ${colors.red}
+
+
+[module/netstat]
+type = internal/network
+interface = enp0s3
+interval 3.0
+label-connected = %{F#ff0000}up %{F-}%upspeed% %{F#00ff00}dl %{F-}%downspeed%
+
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = %{F#50b4e6}
+label-close =  cancel
+label-separator = |
+
+menu-0-0 = reboot
+menu-0-0-exec = reboot
+menu-0-1 = poweroff
+menu-0-1-exec = poweroff
 
 
 [module/volume]
@@ -148,3 +171,38 @@ interval = 1
 date = %a %d %b
 time = %H:%M:%S
 label = %{F#50b4e6}%date%%{F-}%{F#dcdcdc} %time%%{F-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
