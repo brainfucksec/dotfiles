@@ -39,5 +39,5 @@
 ![alt text](https://imgur.com/6kR9FfR.jpg)
 
 
-:warning: **These are dotfiles that I use in my systems, please don't copy/paste or install if you do not know exactly what you are doing.**
+:warning::  **These are dotfiles that I use in my systems, please don't copy/paste or install if you do not know exactly what you are doing.**
 
