@@ -96,7 +96,7 @@ upload() {
     local tmpfile=$(mktemp -t transferXXX)
     if tty -s; then
         local basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
-        curl -H "Max-Days: 1" --progress-bar  --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile
+        curl -H "Max-Days: 1" --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile
     else
         curl -H "Max-Days: 1" --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile
     fi
