@@ -172,7 +172,7 @@ set shortmess+=c
 
 
 " MUcomplete
-let g:mucomplete#enable_auto_at_startup = 1
+"let g:mucomplete#enable_auto_at_startup = 1
 
 " endwise compatibility
 imap <Plug>MyCR <Plug>(MUcompleteCR)
@@ -242,8 +242,8 @@ map \r :source ~/.vimrc<CR>
 " Cancel a search with Ctrl+l
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-" Avoiding the Esc key
-:imap jj <Esc>
+" Make jj do esc
+inoremap jj <Esc>
 
 " Don't use arrow keys
 map <up> <nop>
