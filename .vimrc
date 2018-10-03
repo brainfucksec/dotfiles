@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.88 - 2018/08/13 22:43:25
+" Version: 0.90 - 2018/10/03 09:37:56
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -200,7 +200,7 @@ let g:jedi#show_call_signatures = "0"
 " C/C++
 " - clang-complete
 " path of clang library file
-let g:clang_library_path = '/usr/lib/libclang.so.6.0'
+let g:clang_library_path = '/usr/lib/libclang.so.7'
 let g:clang_complete_auto = 1
 " workaround for auto-pairs issue with clang_complete
 let g:AutoPairsMapCR = 0
@@ -241,6 +241,9 @@ map \r :source ~/.vimrc<CR>
 
 " Cancel a search with Ctrl+l
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" Avoiding the Esc key
+:imap jj <Esc>
 
 " Don't use arrow keys
 map <up> <nop>
