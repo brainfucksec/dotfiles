@@ -225,8 +225,11 @@ exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+# dunst notification-daemon
+exec --no-startup-id dunst
+
 # wallpaper
 exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/space/nasa_2560x1440.jpg
 
 # xscreensaver
-exec --no-startup-id xscreensaver -no-splash &
+exec --no-startup-id xscreensaver -nosplash
