@@ -19,7 +19,7 @@ alert = #ff3333
 
 green = #4cbf99
 red = #ff5555
-
+a
 [global/wm]
 margin-top = 0
 margin-bottom = 0
@@ -66,28 +66,21 @@ type = internal/i3
 
 strip-wsnumbers = true
 
-label-focused = %{F#50b4e6}%icon%%{F-}
-;label-focused-foreground =
+label-focused = [%name%]
+label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
 label-focused-underline = ${colors.primary}
 
-label-unfocused = %icon%
+label-unfocused = [%name%]
 label-unfocused-padding = 1
 label-unfocused-foreground = ${colors.secondary}
 
-label-urgent = %icon%
+label-urgent = [%name%]
 label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 1
 
-label-visible = %icon%
+label-visible = [%name%]
 label-visible-padding = 1
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-default = 
 
 
 [module/cpu]
@@ -108,7 +101,7 @@ label = %percentage_used%%
 
 [module/eth]
 type = internal/network
-interface = enp0s3
+interface = enp0s25
 interval = 3.0
 
 label-connected = %{F#50b4e6} %{F-}eth
@@ -120,7 +113,7 @@ label-disconnected-foreground = ${colors.red}
 
 [module/netstat]
 type = internal/network
-interface = enp0s3
+interface = enp0s25
 interval 3.0
 label-connected = %{F#ff0000}up %{F-}%upspeed% %{F#00ff00}dl %{F-}%downspeed%
 

@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.2.5 - 2018/09/16
+# Version: 0.3.0 - 2018/10/05
 #
 # Author: Brainfuck
 #
@@ -40,8 +40,8 @@ workspace 2 gaps outer 0
 # Back and forth workplace switching
 workspace_auto_back_and_forth yes
 
-# Use Mouse+Ctrl to drag floating windows to their wanted position
-floating_modifier Ctrl
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -76,8 +76,8 @@ bindsym $mod+z mode "resize"
 # Mod4 = Super Key
 set $mod Mod4
 
-# start a terminal (termite)
-bindsym $mod+Return exec --no-startup-id termite
+# start a terminal
+bindsym $mod+Return exec --no-startup-id xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+P kill
@@ -145,6 +145,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 ###################################
 # Workspaces
 ###################################
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -175,28 +176,41 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="Firefox"] 2
 assign [class="Virtualbox"] 5
 assign [class="Zathura"] 6
+assign [class="vlc"] 7
 
 # enable floating mode for selected windows
 for_window [class="Lxappearance"] floating enable border pixel 2
 for_window [class="Tor Browser"] floating enable border pixel 2
 for_window [class="Virtualbox"] floating enable border pixel 2
 for_window [class="Bleachbit"] floating enable border pixel 2
+for_window [class="vlc"] floating enable border pixel 2
+
 
 ###################################
 # My Shortcuts
 ###################################
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id termite -e vim
-bindsym $mod+F3 exec --no-startup-id lxappearance
-bindsym $mod+F4 exec --no-startup-id virtualbox
-bindsym $mod+r exec --no-startup-id termite -x ranger
+bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e vim
+bindsym $mod+F3 exec --no-startup-id thunar
+bindsym $mod+F4 exec --no-startup-id lxappearance
+bindsym $mod+F5 exec --no-startup-id vlc
+bindsym $mod+F6 exec --no-startup-id virtualbox
+bindsym $mod+F7 exec --no-startup-id liferea
+bindsym $mod+F8 exec --no-startup-id cherrytree
+bindsym $mod+F9 exec --no-startup-id pidgin
+bindsym $mod+F10 exec --no-startup-id qtox
+
+bindsym $mod+x exec xscreensaver-command -lock
+bindsym $mod+r exec --no-startup-id xfce4-terminal -x ranger
 bindsym $mod+d exec rofi -show run -font "misc tamsyn 12"
-bindsym $mod+t exec --no-startup-id -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/media/images/screenshots/'
+bindsym $mod+t exec --no-startup-id -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
+bindsym $mod+p exec --no-startup-id pavucontrol
 
 
 ###################################
@@ -212,4 +226,7 @@ exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/nasa_2560x1440.jpg
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/space/nasa_2560x1440.jpg
+
+# xscreensaver
+exec --no-startup-id xscreensaver -no-splash &
