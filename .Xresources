@@ -12,23 +12,23 @@ xscreensaver.Dialog.dateFont:           -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-
 xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
 
 !general dialog box (affects main hostname, username, password text)
-xscreensaver.Dialog.foreground:         #ECEFF1
-xscreensaver.Dialog.background:         #3E515A
-xscreensaver.Dialog.topShadowColor:     #2A373E
-xscreensaver.Dialog.bottomShadowColor:  #2A373E
-xscreensaver.Dialog.Button.foreground:  #ECEFF1
-xscreensaver.Dialog.Button.background:  #00BCD4
+xscreensaver.Dialog.foreground:         #FFFFFF
+xscreensaver.Dialog.background:         #0D131A
+xscreensaver.Dialog.topShadowColor:     #161E26
+xscreensaver.Dialog.bottomShadowColor:  #161E26
+xscreensaver.Dialog.Button.foreground:  #FFFFFF
+xscreensaver.Dialog.Button.background:  #161E26
 
 !username/password input box and date text colour
-xscreensaver.Dialog.text.foreground:    #ECEFF1
-xscreensaver.Dialog.text.background:    #2A373E
+xscreensaver.Dialog.text.foreground:    #FFFFFF
+xscreensaver.Dialog.text.background:    #161E26
 xscreensaver.Dialog.internalBorderWidth:24
 xscreensaver.Dialog.borderWidth:        0
 xscreensaver.Dialog.shadowThickness:    2
 
 !timeout bar (background is actually determined by Dialog.text.background)
-xscreensaver.passwd.thermometer.foreground:  #00BCD4
-xscreensaver.passwd.thermometer.background:  #00BCD4
+xscreensaver.passwd.thermometer.foreground:  #161E26
+xscreensaver.passwd.thermometer.background:  #161E26
 xscreensaver.passwd.thermometer.width:       0
 
 !datestamp format--see the strftime(3) manual page for details
