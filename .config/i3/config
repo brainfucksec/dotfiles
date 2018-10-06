@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.4.0 - 2018/10/06
+# Version: 0.4.1 - 2018/10/06
 #
 # Author: Brainfuck
 #
@@ -146,16 +146,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 # Workspaces
 ###################################
 
-# customize workspaces name
-
-set $ws1    term
-set $ws2    web
-set $ws3    file
-set $ws4    code
-set $ws5    study
-set $ws6    vbox
-set $ws7    music
-
+# customize workspace name
+set $ws1 1:1 
+set $ws2 2:2 
+set $ws3 3:3 
+set $ws4 4:4 
+set $ws5 5:5 
+set $ws6 6:6 
+set $ws7 7:7 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -184,10 +182,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 ## workspaces assignment
 # force a window on a named workspace
 #assign [class="Termite"] 1
-assign [class="Firefox"] $ws2
+assign [class="Firefox"]    $ws2
 assign [class="Virtualbox"] $ws6
-assign [class="Zathura"] $ws6
-assign [class="vlc"] $ws7
+assign [class="Zathura"]    $ws6
+assign [class="vlc"]        $ws7
 
 # enable floating mode for selected windows
 for_window [class="Lxappearance"] floating enable border pixel 2
@@ -195,6 +193,8 @@ for_window [class="Tor Browser"] floating enable border pixel 2
 for_window [class="Virtualbox"] floating enable border pixel 2
 for_window [class="Bleachbit"] floating enable border pixel 2
 for_window [class="vlc"] floating enable border pixel 2
+for_window [class="Pulseaudio-equalizer"] floating enable border pixel 2
+for_window [class="Pavucontrol"] floating enable border pixel 2
 
 
 ###################################
