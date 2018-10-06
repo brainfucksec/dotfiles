@@ -9,7 +9,7 @@
 
 
 [colors]
-background = #14191f
+background = #0d131a
 background-alt = #191f26
 foreground = #e6e1cf
 foreground-alt = #ffb454
@@ -19,12 +19,14 @@ alert = #ff3333
 
 green = #4cbf99
 red = #ff5555
-a
+
+
 [global/wm]
 margin-top = 0
 margin-bottom = 0
 
-[bar/top]
+
+[bar/mybar]
 monitor = VGA-1
 width = 100%
 height = 26
@@ -164,38 +166,3 @@ interval = 1
 date = %a %d %b
 time = %H:%M:%S
 label = %{F#50b4e6}%date%%{F-}%{F#dcdcdc} %time%%{F-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

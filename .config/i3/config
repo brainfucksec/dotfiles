@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.3.0 - 2018/10/05
+# Version: 0.4.0 - 2018/10/06
 #
 # Author: Brainfuck
 #
@@ -146,26 +146,37 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 # Workspaces
 ###################################
 
+# customize workspaces name
+
+set $ws1    term
+set $ws2    web
+set $ws3    file
+set $ws4    code
+set $ws5    study
+set $ws6    vbox
+set $ws7    music
+
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
@@ -173,10 +184,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 ## workspaces assignment
 # force a window on a named workspace
 #assign [class="Termite"] 1
-assign [class="Firefox"] 2
-assign [class="Virtualbox"] 5
-assign [class="Zathura"] 6
-assign [class="vlc"] 7
+assign [class="Firefox"] $ws2
+assign [class="Virtualbox"] $ws6
+assign [class="Zathura"] $ws6
+assign [class="vlc"] $ws7
 
 # enable floating mode for selected windows
 for_window [class="Lxappearance"] floating enable border pixel 2
