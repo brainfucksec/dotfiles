@@ -17,7 +17,7 @@ Setup
 ```
 Bar                   > polybar
 Compositor            > compton
-File Manager          > thunar
+File Manager          > thunar, ranger
 Media Player          > vlc
 Program Launcher      > rofi
 PDF Viewer            > zathura
@@ -34,6 +34,8 @@ Wallpaper             > nasa_2560x1440.jpg: https://imgur.com/wTt2gMz.jpg
 
 **Arch Linux i3 gaps - dirty**
 ![alt text](https://imgur.com/mNJqeeO.png)
+
+![alt text](https://imgur.com/t3Yedkq.png)
 
 
 :warning: WARNING :warning: **These are dotfiles that I use in my systems, please don't copy/paste or install if you do not know exactly what you are doing.**
