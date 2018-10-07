@@ -25,8 +25,6 @@ Text Editor           > vim
 Terminal Emulator     > xfce4-terminal
 Window Manager        > i3-gaps
 
-Color Scheme          > ayu: https://github.com/ayu-theme
-Wallpaper             > nasa_2560x1440.jpg: https://imgur.com/wTt2gMz.jpg
 ```
 
 **Arch Linux i3 gaps - clean**
