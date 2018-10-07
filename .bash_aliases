@@ -13,6 +13,8 @@ alias cpr='cp -Rv'
 alias cprs='rsync -varpzh --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
+alias mm='udisksctl mount -b'
+alias um='udisksctl unmount -b'
 alias ex='extract'
 
 
@@ -39,10 +41,10 @@ alias dl='cd ~/downloads'
 alias p='cd ~/programming'
 alias pd='cd ~/programming/dev'
 alias pg='cd ~/programming/git'
-alias tmp='cd ~/tmp'
+alias t='cd ~/tmp'
 alias v='cd /opt/vpn/config'
 alias vp='cd ~/.vim/pack/plugins/start'
-alias fm='thunar $PWD'
+alias fm="thunar '$PWD'"
 
 
 # applications
