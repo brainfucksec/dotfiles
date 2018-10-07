@@ -13,8 +13,6 @@ alias cpr='cp -Rv'
 alias cprs='rsync -varpzh --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
-alias mm='udisksctl mount -b'
-alias um='udisksctl unmount -b'
 alias ex='extract'
 
 
@@ -35,6 +33,7 @@ alias updaterepo='sudo reflector --verbose -c Germany -c Netherlands -c Sweden -
 
 # directories
 alias h='cd ~/'
+alias a='cd ~/archive'
 alias dc='cd ~/documents'
 alias dk='cd ~/Desktop'
 alias dl='cd ~/downloads'
@@ -89,7 +88,7 @@ extract() {
 
 # function for upload files on https://transfer.sh
 upload() {
-    if [ $# -eq 0 ]; then
+    if [ "$#" -eq 0 ]; then
         echo -e "No arguments specified."
         echo "Usage: upload <filename>"
         return 1
@@ -98,11 +97,11 @@ upload() {
     local tmpfile=$(mktemp -t transferXXX)
     if tty -s; then
         local basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
-        curl -H "Max-Days: 1" --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile
+        curl -H "Max-Days: 1" --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> "$tmpfile"
     else
-        curl -H "Max-Days: 1" --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile
+        curl -H "Max-Days: 1" --progress-bar --upload-file "-" "https://transfer.sh/$1" >> "$tmpfile"
     fi
     echo -e ''
-    less -FX $tmpfile
-    rm -f $tmpfile
+    less -FX "$tmpfile"
+    rm -f "$tmpfile"
 }
