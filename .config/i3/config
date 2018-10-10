@@ -203,11 +203,11 @@ for_window [class="Pavucontrol"] floating enable border pixel 2
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e vim
 bindsym $mod+F3 exec --no-startup-id thunar
-bindsym $mod+F4 exec --no-startup-id lxappearance
-bindsym $mod+F5 exec --no-startup-id vlc
-bindsym $mod+F6 exec --no-startup-id virtualbox
-bindsym $mod+F7 exec --no-startup-id liferea
-bindsym $mod+F8 exec --no-startup-id cherrytree
+bindsym $mod+F4 exec --no-startup-id vlc
+bindsym $mod+F5 exec --no-startup-id cherrytree
+bindsym $mod+F6 exec --no-startup-id liferea
+bindsym $mod+F7 exec --no-startup-id virtualbox
+bindsym $mod+F8 exec --no-startup-id lxappearance
 bindsym $mod+F9 exec --no-startup-id pidgin
 bindsym $mod+F10 exec --no-startup-id qtox
 
@@ -215,7 +215,7 @@ bindsym $mod+x exec xscreensaver-command -lock
 bindsym $mod+r exec --no-startup-id xfce4-terminal -x ranger
 bindsym $mod+d exec rofi -show run -font "misc tamsyn 12"
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/media/images/screenshots/'
-bindsym $mod+t exec --no-startup-id -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
+bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
@@ -240,7 +240,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id dunst
 
 # wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/space/nasa_2560x1440.jpg
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/lake_and_mountains_1920x1200.jpg
 
 # xscreensaver
 exec --no-startup-id xscreensaver -nosplash
