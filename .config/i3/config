@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.4.2 - 2018/10/10
+# Version: 0.4.3 - 2018/10/13
 #
 # Author: Brainfuck
 #
@@ -34,8 +34,12 @@ for_window [class="^.*"] border pixel 2
 new_window pixel 2
 gaps inner 6
 gaps outer 2
+
+# toggle gaps on selected workspaces
 workspace 2 gaps inner 0
 workspace 2 gaps outer 0
+workspace 6 gaps inner 0
+workspace 6 gaps outer 0
 
 # Back and forth workplace switching
 workspace_auto_back_and_forth yes
@@ -187,6 +191,8 @@ assign [class="Firefox"]    $ws2
 assign [class="Virtualbox"] $ws6
 assign [class="Zathura"]    $ws5
 assign [class="vlc"]        $ws7
+assign [class="qTox"]       $ws8
+assign [class="Pidgin"]     $ws8
 
 # enable floating mode for selected windows
 for_window [class="Lxappearance"] floating enable border pixel 2
@@ -196,6 +202,8 @@ for_window [class="Bleachbit"] floating enable border pixel 2
 for_window [class="vlc"] floating enable border pixel 2
 for_window [class="Pulseaudio-equalizer"] floating enable border pixel 2
 for_window [class="Pavucontrol"] floating enable border pixel 2
+for_window [class="qTox"] floating enable border pixel 2
+for_window [class="Pidgin"] floating enable border pixel 2
 
 
 ###################################
