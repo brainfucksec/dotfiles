@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.4.3 - 2018/10/13
+# Version: 0.4.4 - 2018/10/14
 #
 # Author: Brainfuck
 #
@@ -186,13 +186,15 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## workspaces assignment
 # force a window on a named workspace
-#assign [class="Termite"] 1
+# get window class name: xprop |awk '/WM_CLASS/{print $4}'
+#assign [class="Termite"] $ws1
 assign [class="Firefox"]    $ws2
 assign [class="Virtualbox"] $ws6
 assign [class="Zathura"]    $ws5
 assign [class="vlc"]        $ws7
 assign [class="qTox"]       $ws8
 assign [class="Pidgin"]     $ws8
+
 
 # enable floating mode for selected windows
 for_window [class="Lxappearance"] floating enable border pixel 2
@@ -203,7 +205,7 @@ for_window [class="vlc"] floating enable border pixel 2
 for_window [class="Pulseaudio-equalizer"] floating enable border pixel 2
 for_window [class="Pavucontrol"] floating enable border pixel 2
 for_window [class="qTox"] floating enable border pixel 2
-for_window [class="Pidgin"] floating enable border pixel 2
+for_window [class="PIdgin"] floating enable border pixel 2
 
 
 ###################################
