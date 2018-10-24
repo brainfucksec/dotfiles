@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.4.4 - 2018/10/14
+# Version: 0.5.0 - 2018/10/24
 #
 # Author: Brainfuck
 #
@@ -152,11 +152,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 
 # customize workspace name
 set $ws1 1:1 
-set $ws2 2:2 
+set $ws2 2:2 
 set $ws3 3:3 
 set $ws4 4:4 
 set $ws5 5:5 
-set $ws6 6:6 
+set $ws6 6:6 
 set $ws7 7:7 
 set $ws8 8:8 
 
@@ -187,8 +187,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 ## workspaces assignment
 # force a window on a named workspace
 # get window class name: xprop |awk '/WM_CLASS/{print $4}'
-#assign [class="Termite"] $ws1
+#assign [class="Xfce4-terminal"] $ws1
 assign [class="Firefox"]    $ws2
+assign [class="Liferea"]    $ws2
 assign [class="Virtualbox"] $ws6
 assign [class="Zathura"]    $ws5
 assign [class="vlc"]        $ws7
@@ -223,7 +224,7 @@ bindsym $mod+F9 exec --no-startup-id pidgin
 bindsym $mod+F10 exec --no-startup-id qtox
 
 bindsym $mod+x exec xscreensaver-command -lock
-bindsym $mod+r exec --no-startup-id xfce4-terminal -x ranger
+bindsym $mod+r exec --no-startup-id xfce4-terminal -e ranger
 bindsym $mod+d exec rofi -show run
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
 bindsym --release $mod+q exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
