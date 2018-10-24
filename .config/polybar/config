@@ -124,7 +124,7 @@ label-warn-foreground = ${colors.alert}
 [module/memory]
 type = internal/memory
 interval = 1
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 label = %percentage_used%%
 
@@ -169,9 +169,9 @@ menu-0-2-exec = poweroff
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = ""
+label-volume =
 label-volume-foreground = ${root.foreground}
-label-muted = 
+label-muted =  
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.green}
@@ -180,7 +180,9 @@ bar-volume-foreground-2 = ${colors.green}
 bar-volume-foreground-3 = ${colors.green}
 bar-volume-foreground-4 = ${colors.green}
 bar-volume-foreground-5 = ${colors.green}
-bar-volume-foreground-6 = ${colors.red}
+bar-volume-foreground-6 = ${colors.green}
+bar-volume-foreground-7 = ${colors.green}
+bar-volume-foreground-8 = ${colors.alert}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
