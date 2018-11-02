@@ -84,24 +84,3 @@ extract() {
         done
     fi
 }
-
-
-# function for upload files on https://transfer.sh
-upload() {
-    if [ "$#" -eq 0 ]; then
-        echo -e "No arguments specified."
-        echo "Usage: upload <filename>"
-        return 1
-    fi
-
-    local tmpfile=$(mktemp -t transferXXX)
-    if tty -s; then
-        local basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
-        curl -H "Max-Days: 1" --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> "$tmpfile"
-    else
-        curl -H "Max-Days: 1" --progress-bar --upload-file "-" "https://transfer.sh/$1" >> "$tmpfile"
-    fi
-    echo -e ''
-    less -FX "$tmpfile"
-    rm -f "$tmpfile"
-}

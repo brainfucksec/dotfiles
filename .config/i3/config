@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.5.0 - 2018/10/24
+# Version: 0.5.1 - 2018/11/02
 #
 # Author: Brainfuck
 #
@@ -152,9 +152,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 
 # customize workspace name
 set $ws1 1:1 
-set $ws2 2:2 
+set $ws2 2:2 
 set $ws3 3:3 
-set $ws4 4:4 
+set $ws4 4:4 
 set $ws5 5:5 
 set $ws6 6:6 
 set $ws7 7:7 
@@ -190,7 +190,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="Xfce4-terminal"] $ws1
 assign [class="Firefox"]    $ws2
 assign [class="Liferea"]    $ws2
-assign [class="Virtualbox"] $ws6
+assign [class="Manager"]    $ws6 # VirtualBox
 assign [class="Zathura"]    $ws5
 assign [class="vlc"]        $ws7
 assign [class="qTox"]       $ws8
@@ -200,7 +200,6 @@ assign [class="Pidgin"]     $ws8
 # enable floating mode for selected windows
 for_window [class="Lxappearance"] floating enable border pixel 2
 for_window [class="Tor Browser"] floating enable border pixel 2
-for_window [class="Virtualbox"] floating enable border pixel 2
 for_window [class="Bleachbit"] floating enable border pixel 2
 for_window [class="vlc"] floating enable border pixel 2
 for_window [class="Pulseaudio-equalizer"] floating enable border pixel 2
