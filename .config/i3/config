@@ -30,8 +30,8 @@ font xft:Tamsyn 12
 default_orientation horizontal
 
 # i3-gaps settings
-for_window [class="^.*"] border pixel 3
-new_window pixel 3
+for_window [class="^.*"] border pixel 2
+new_window pixel 2
 gaps inner 6
 gaps outer 2
 
@@ -198,14 +198,14 @@ assign [class="Pidgin"]     $ws8
 
 
 # enable floating mode for selected windows
-for_window [class="Lxappearance"] floating enable border pixel 3
-for_window [class="Tor Browser"] floating enable border pixel 3
-for_window [class="Bleachbit"] floating enable border pixel 3
-for_window [class="vlc"] floating enable border pixel 3
-for_window [class="Pulseaudio-equalizer"] floating enable border pixel 3
-for_window [class="Pavucontrol"] floating enable border pixel 3
-for_window [class="qTox"] floating enable border pixel 3
-for_window [class="Pidgin"] floating enable border pixel 3
+for_window [class="Lxappearance"] floating enable border pixel 2
+for_window [class="Tor Browser"] floating enable border pixel 2
+for_window [class="Bleachbit"] floating enable border pixel 2
+for_window [class="vlc"] floating enable border pixel 2
+for_window [class="Pulseaudio-equalizer"] floating enable border pixel 2
+for_window [class="Pavucontrol"] floating enable border pixel 2
+for_window [class="qTox"] floating enable border pixel 2
+for_window [class="Pidgin"] floating enable border pixel 2
 
 
 ###################################

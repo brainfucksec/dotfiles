@@ -24,3 +24,6 @@ fi
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
+
+# Import colorscheme from 'wal' asynchronously
+(cat ~/.cache/wal/sequences &)
