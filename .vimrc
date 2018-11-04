@@ -83,8 +83,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 set colorcolumn=80
 
 " Remove line lenght marker for selected filetypes
-autocmd FileType xml,html,xhtml,javascript setlocal textwidth=0
-autocmd BufRead,BufNew *.txt setlocal textwidth=0
+autocmd FileType xml,html,xhtml,javascript setlocal colorcolumn=0
+autocmd BufRead,BufNew *.txt setlocal colorcolumn=0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
