@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 0.90 - 2018/10/03 09:37:56
+" Version: 1.0 - 2018/11/04 12:11:56
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -79,10 +79,8 @@ set showcmd
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Line lenght marker 80 columns
-set textwidth=80
-"highlight 1 column after 'textwidth'
-set colorcolumn=+1
+" Line lenght marker at 80 columns
+set colorcolumn=80
 
 " Remove line lenght marker for selected filetypes
 autocmd FileType xml,html,xhtml,javascript setlocal textwidth=0
@@ -242,8 +240,8 @@ map \r :source ~/.vimrc<CR>
 " Cancel a search with Ctrl+l
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-" Make jj do esc
-inoremap jj <Esc>
+" Make kk do esc
+inoremap kk <Esc>
 
 " Don't use arrow keys
 map <up> <nop>
