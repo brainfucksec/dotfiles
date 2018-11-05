@@ -1,4 +1,5 @@
 /**
+ * rofi theme
  * Author: Brainfuck
  */
 * {
@@ -8,7 +9,7 @@
     red:                         #FF3333;
     orange:                      #E7C547;
     blue:                        #36A3D9;
-    grey:						 #31383E;
+    grey:						 #45515C;
     font:            			 "misc Tamsyn 12";
 
     selected-normal-foreground:  @foreground;
@@ -33,6 +34,7 @@
     selected-active-background:  @blue;
     active-background:           @orange;
 }
+
 #window {
     border:     2;
     border-color: @grey;
@@ -43,74 +45,92 @@
     background-color: @background;
     width: 420;
 }
+
 #mainbox {
     border:  1;
     padding: 1;
 }
+
 #message {
     border:     1px dash 0px 0px ;
     text-color: @separatorcolor;
     padding:    2px 0px 0px ;
 }
+
 #textbox {
     text-color: @foreground;
 }
+
 #listview {
     fixed-height: 0;
     border:       2px 0px 0px ;
     padding:      2px 0px 0px ;
     text-color: @separatorcolor;
 }
+
 #element {
     border: 1;
 }
+
 #element.normal.normal {
     text-color: @normal-foreground;
     background-color: @normal-background;
 }
+
 #element.normal.urgent {
     text-color: @urgent-foreground;
     background-color: @urgent-background;
 }
+
 #element.normal.active {
     text-color: @active-foreground;
     background-color: @active-background;
 }
+
 #element.selected.normal {
     text-color: @selected-normal-foreground;
     background-color: @selected-normal-background;
 }
+
 #element.selected.urgent {
     text-color: @selected-urgent-foreground;
     background-color: @selected-urgent-background;
 }
+
 #element.selected.active {
     text-color: @selected-active-foreground;
     background-color: @selected-active-background;
 }
+
 #element.alternate.normal {
     text-color: @alternate-normal-foreground;
     background-color: @alternate-normal-background;
 }
+
 #element.alternate.urgent {
     text-color: @alternate-urgent-foreground;
     background-color: @alternate-urgent-background;
 }
+
 #element.alternate.active {
     text-color: @alternate-active-foreground;
     background-color: @alternate-active-background;
 }
+
 #sidebar {
     border: 2px dash 0px 0px ;
 }
+
 #button selected {
     text-color: @selected-normal-foreground;
     background-color: @selected-normal-background;
 }
+
 #inputbar {
     spacing: 0;
     border: 1px ;
 }
+
 #button normal {
     text-color: @foreground;
 }
@@ -118,6 +138,7 @@
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
+
 #textbox-prompt-colon {
     expand:     false;
     str:        ":";
