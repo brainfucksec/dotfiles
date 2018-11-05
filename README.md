@@ -33,5 +33,8 @@ Window Manager        > i3-gaps
 **Arch Linux i3 gaps - dirty**
 ![alt text](https://imgur.com/Hfl9t9M.png)
 
+**Vim**
+![alt text](https://imgur.com/1zouZUw.png)
+
 
 :warning: WARNING :warning: **These are dotfiles that I use in my systems, please don't copy/paste or install if you do not know exactly what you are doing.**
