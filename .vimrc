@@ -93,11 +93,11 @@ autocmd BufRead,BufNew *.txt setlocal colorcolumn=0
 
 " Terminal options
 set t_Co=256
-set termguicolors
+"set termguicolors
 
 " Colorscheme
-let ayucolor="dark"
-colorscheme ayu
+"let ayucolor="dark"
+colorscheme wal
 
 " Set utf8 as standard encoding
 set encoding=utf8
@@ -155,7 +155,7 @@ set wrap "Wrap lines
 
 " indentLine: indent lines style
 let g:indentLine_char = '│'
-let g:indentLine_setColors = 0
+"let g:indentLine_setColors = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -226,7 +226,7 @@ set noshowmode
 
 " Set colorscheme
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': '16color',
       \ }
 
 
