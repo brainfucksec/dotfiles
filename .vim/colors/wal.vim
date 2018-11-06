@@ -18,7 +18,7 @@ let g:colors_name = 'wal'
 " set t_Co=16
 hi Normal ctermbg=0 ctermfg=7
 hi NonText ctermbg=NONE ctermfg=0
-hi Comment ctermbg=NONE ctermfg=8
+hi Comment ctermbg=NONE ctermfg=2
 hi Constant ctermbg=NONE ctermfg=3
 hi Error ctermbg=1 ctermfg=7
 hi Identifier ctermbg=NONE ctermfg=1 cterm=BOLD
@@ -26,8 +26,7 @@ hi Ignore ctermbg=8 ctermfg=0
 hi PreProc ctermbg=NONE ctermfg=3
 hi Special ctermbg=NONE ctermfg=6
 hi Statement ctermbg=NONE ctermfg=1
-hi PythonSelf ctermbg=NONE ctermfg=1
-hi String ctermbg=NONE ctermfg=2
+hi String ctermbg=NONE ctermfg=7
 hi Number ctermbg=NONE ctermfg=3
 hi Todo ctermbg=2 ctermfg=0
 hi Type ctermbg=NONE ctermfg=3
@@ -80,7 +79,7 @@ hi SpellLocal ctermbg=NONE ctermfg=5 cterm=underline
 hi SpellRare ctermbg=NONE ctermfg=6 cterm=underline
 hi Boolean ctermbg=NONE ctermfg=5
 hi Character ctermbg=NONE ctermfg=1
-hi Conditional ctermbg=NONE ctermfg=5
+hi Conditional ctermbg=NONE ctermfg=4
 hi Define ctermbg=NONE ctermfg=5
 hi Delimiter ctermbg=NONE ctermfg=5
 hi Float ctermbg=NONE ctermfg=5
@@ -172,6 +171,7 @@ hi pythonFunction ctermbg=NONE ctermfg=4
 hi pythonRepeat ctermbg=NONE ctermfg=5
 hi pythonStatement ctermbg=NONE ctermfg=1 cterm=Bold
 hi pythonBuiltIn ctermbg=NONE ctermfg=4
+hi pythonSelf ctermbg=NONE ctermfg=1
 hi phpMemberSelector ctermbg=NONE ctermfg=7
 hi phpComparison ctermbg=NONE ctermfg=7
 hi phpParent ctermbg=NONE ctermfg=7
