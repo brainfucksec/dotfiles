@@ -92,7 +92,7 @@ extract() {
 # mount device with udisksctl
 mountdev() {
     if ! udisksctl mount -b "/dev/$1"; then
-        echo "Usage: mountdev sdX"
+        echo "Usage: mountdev sdXX"
         return 1
     fi
 }
@@ -100,7 +100,7 @@ mountdev() {
 # unmount and eject device
 unmountdev() {
     if ! udisksctl unmount -b "/dev/$1"; then
-        echo "Usage: unmountdev sdX"
+        echo "Usage: unmountdev sdXX"
         return 1
     else
         sleep 1
