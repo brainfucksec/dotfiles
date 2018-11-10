@@ -14,9 +14,12 @@ alias cprs='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 alias ex='extract'
+alias m='mountdev'
+alias um='unmountdev'
 
 
 # system administration
+alias sc='sudo systemctl'
 alias scstart='sudo systemctl start'
 alias scstop='sudo systemctl stop'
 alias scstatus='sudo systemctl status'
@@ -79,8 +82,28 @@ extract() {
                 esac
             else
                 echo "'$n' - file does not exist"
-            return 1
+                return 1
             fi
         done
+    fi
+}
+
+
+# mount device with udisksctl
+mountdev() {
+    if ! udisksctl mount -b "/dev/$1"; then
+        echo "Usage: mountdev sdX"
+        return 1
+    fi
+}
+
+# unmount and eject device
+unmountdev() {
+    if ! udisksctl unmount -b "/dev/$1"; then
+        echo "Usage: unmountdev sdX"
+        return 1
+    else
+        sleep 1
+        udisksctl power-off -b "/dev/$1"
     fi
 }
