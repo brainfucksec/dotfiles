@@ -37,7 +37,7 @@ hi TabLine ctermbg=NONE ctermfg=8
 hi TabLineFill ctermbg=NONE ctermfg=8
 hi TabLineSel ctermbg=4 ctermfg=0
 hi TermCursorNC ctermbg=3 ctermfg=0
-hi VertSplit ctermbg=0 ctermfg=1
+hi VertSplit ctermbg=1 ctermfg=0
 hi Title ctermbg=NONE ctermfg=4
 hi CursorLine ctermbg=8 ctermfg=0
 hi LineNr ctermbg=NONE ctermfg=8
