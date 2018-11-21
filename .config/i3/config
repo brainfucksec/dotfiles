@@ -1,18 +1,20 @@
-###################################
+##########################################
 #
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.6.0 - 2018/11/04
+# Version: 0.7.0 - 2018/11/21
 #
 # Author: Brainfuck
 #
-###################################
+# https://github.com/brainfucksec/dotfiles
+#
+##########################################
 
 
-###################################
+##########################################
 # Colors
-###################################
+##########################################
 # class                  border  backgr  text     indicator child_border
 client.focused           #738699 #191f26 #d9d7ce  #738699   #738699
 client.focused_inactive  #14191f #191f26 #b2babd  #14191f   #14191f
@@ -20,14 +22,14 @@ client.unfocused         #14191f #151a1f #b2babd  #14191f   #14191f
 client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 
 
-###################################
+##########################################
 # Windows style
-###################################
+##########################################
 # font for window titles. ISO 10646 = Unicode
 font xft:Tamsyn 12
 
 # set default orientation, <horizontal|vertical|auto>
-default_orientation horizontal
+default_orientation auto
 
 # i3-gaps settings
 for_window [class="^.*"] border pixel 2
@@ -74,9 +76,9 @@ mode "resize" {
 bindsym $mod+z mode "resize"
 
 
-###################################
+##########################################
 # Keybindings
-###################################
+##########################################
 # Mod4 = Super Key
 set $mod Mod4
 
@@ -146,9 +148,9 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
-###################################
+##########################################
 # Workspaces
-###################################
+##########################################
 
 # customize workspace name
 set $ws1 1:1 
@@ -186,13 +188,18 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## workspaces assignment
 # force a window on a named workspace
+#
 # get window class name: xprop |awk '/WM_CLASS/{print $4}'
 #assign [class="Xfce4-terminal"] $ws1
 assign [class="Firefox"]    $ws2
 assign [class="Liferea"]    $ws2
-assign [class="Manager"]    $ws6 # VirtualBox
+# VirtualBox Manager
+assign [class="Manager"]    $ws6
 assign [class="Zathura"]    $ws5
 assign [class="vlc"]        $ws7
+assign [class="Pulseaudio-equalizer"] $ws7
+assign [class="Pavucontrol"]          $ws7
+assign [class="SimpleScreenRecorder"] $ws7
 assign [class="qTox"]       $ws8
 assign [class="Pidgin"]     $ws8
 
@@ -204,13 +211,14 @@ for_window [class="Bleachbit"] floating enable border pixel 2
 for_window [class="vlc"] floating enable border pixel 2
 for_window [class="Pulseaudio-equalizer"] floating enable border pixel 2
 for_window [class="Pavucontrol"] floating enable border pixel 2
+for_window [class="SimpleScreenRecorder"] floating enable border pixel 2
 for_window [class="qTox"] floating enable border pixel 2
 for_window [class="Pidgin"] floating enable border pixel 2
 
 
-###################################
+##########################################
 # My Shortcuts
-###################################
+##########################################
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e vim
 bindsym $mod+F3 exec --no-startup-id thunar
@@ -241,9 +249,9 @@ bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
 bindsym $mod+p exec --no-startup-id pavucontrol
 
 
-###################################
+##########################################
 # Start Up commands
-###################################
+##########################################
 # keyboard layout
 exec --no-startup-id setxkbmap it
 
