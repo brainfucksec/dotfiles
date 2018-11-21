@@ -1,7 +1,7 @@
 # Zathura configuration file
 # See man `man zathurarc`
 
-## settings
+## Settings
 # window
 set window-height 1024
 set window-width 768
@@ -28,7 +28,7 @@ set selection-clipboard clipboard
 #set zoom-min 10
 
 
-## key bindings
+## Key bindings
 # map <C-[> abort # Still doesn't work :(
 map [normal]     <F11> toggle_fullscreen
 map [fullscreen] <F11> toggle_fullscreen
@@ -69,8 +69,13 @@ map [fullscreen] <C-u> scroll half-up
 map [fullscreen] <C-o> jumplist backward
 map [fullscreen] <C-i> jumplist forward
 
+# My shortcuts
+map g reload
+map c recolor
+map i toggle_index
 
-## gui settings
+
+## GUI settings
 ## zathurarc-dark
 set guioptions "sv"
 
