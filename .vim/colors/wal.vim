@@ -1,7 +1,8 @@
-" wal.vim -- Vim color scheme.
-" Author:       Dylan Araps
-" Webpage:      https://github.com/dylanaraps/wal
-" Description:  A colorscheme that uses your terminal colors, made to work with 'wal'.
+" wal.vim -- Vim color scheme
+" Author:   Dylan Arapsa
+" Fork:     Brainfuck
+" Description:  A colorscheme that uses your terminal colors, made to work with 'pywal'.
+" Webpage: https://github.com/dylanaraps/pywal
 
 hi clear
 set background=dark
@@ -61,7 +62,7 @@ hi DiffText ctermbg=NONE ctermfg=4
 hi IncSearch ctermbg=3 ctermfg=0
 hi Search ctermbg=3 ctermfg=0
 hi Directory ctermbg=NONE ctermfg=4
-hi MatchParen ctermbg=8 ctermfg=0
+hi MatchParen ctermbg=2 ctermfg=0
 hi ColorColumn ctermbg=1 ctermfg=0
 hi signColumn ctermbg=NONE ctermfg=4
 hi ErrorMsg ctermbg=NONE ctermfg=8
