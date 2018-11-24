@@ -51,7 +51,9 @@ alias fm="thunar '$PWD'"
 
 # applications
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
-alias sp="strongpass"
+alias sp='strongpass'
+alias r='ranger'
+alias bb='bleachbit -c --preset'
 
 
 # function extract for common archive formats
@@ -92,7 +94,7 @@ extract() {
 # mount device with udisksctl
 mountdev() {
     if ! udisksctl mount -b "/dev/$1"; then
-        echo "Usage: mountdev sdXX"
+        echo "Usage: mountdev sdxX"
         return 1
     fi
 }
@@ -100,7 +102,7 @@ mountdev() {
 # unmount and eject device
 unmountdev() {
     if ! udisksctl unmount -b "/dev/$1"; then
-        echo "Usage: unmountdev sdXX"
+        echo "Usage: unmountdev sdxX"
         return 1
     else
         sleep 1
