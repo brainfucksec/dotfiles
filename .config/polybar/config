@@ -16,7 +16,7 @@
 [colors]
 background = #030a13
 background-alt = #191f26
-foreground = #d4dfe8
+foreground = #c8d3db
 foreground-alt = #ffb454
 primary = #50b4e6
 secondary = #738699
@@ -200,4 +200,4 @@ type = internal/date
 interval = 1
 date = %a %d %b
 time = %H:%M:%S
-label = %{F#50b4e6}%date%%{F-}%{F#d4dfe8} %time%%{F-}
+label = %{F#50b4e6}%date%%{F-}%{F#c8d3db} %time%%{F-}
