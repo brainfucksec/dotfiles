@@ -3,7 +3,7 @@
 ; polybar configuration file
 ; --------------------------
 ;
-; Version: 0.1.0 - 2018/10/12
+; Version: 0.1.1 - 2018/11/26
 ;
 ; Author: Brainfuck
 ;
@@ -14,14 +14,14 @@
 ; colors
 ;=====================================================
 [colors]
-background = #0d131a
+background = #030a13
 background-alt = #191f26
-foreground = #e6e1cf
+foreground = #d4dfe8
 foreground-alt = #ffb454
 primary = #50b4e6
 secondary = #738699
 alert = #ff3333
-green = #40bf80
+green = #2ace66
 
 
 ;=====================================================
@@ -153,9 +153,11 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = %{F#50b4e6}
-label-close = cancel
+label-open =
+label-open-foreground = ${colors.primary}
+label-close = back
 label-separator = |
+label-separator-foreground = ${colors.secondary}
 
 menu-0-0 = lock
 menu-0-0-exec = xscreensaver-command -lock
@@ -182,7 +184,8 @@ bar-volume-foreground-4 = ${colors.green}
 bar-volume-foreground-5 = ${colors.green}
 bar-volume-foreground-6 = ${colors.green}
 bar-volume-foreground-7 = ${colors.green}
-bar-volume-foreground-8 = ${colors.alert}
+bar-volume-foreground-8 = ${colors.green}
+bar-volume-foreground-9 = ${colors.alert}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -197,4 +200,4 @@ type = internal/date
 interval = 1
 date = %a %d %b
 time = %H:%M:%S
-label = %{F#50b4e6}%date%%{F-}%{F#dcdcdc} %time%%{F-}
+label = %{F#50b4e6}%date%%{F-}%{F#d4dfe8} %time%%{F-}
