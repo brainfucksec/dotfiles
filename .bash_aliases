@@ -20,7 +20,6 @@ alias um='unmountdev'
 
 
 # system administration
-alias sc='sudo systemctl'
 alias scstart='sudo systemctl start'
 alias scstop='sudo systemctl stop'
 alias scstatus='sudo systemctl status'
@@ -109,5 +108,6 @@ unmountdev() {
     else
         sleep 1
         udisksctl power-off -b "/dev/$1"
+        echo  "Ejected '/dev/$1'"
     fi
 }
