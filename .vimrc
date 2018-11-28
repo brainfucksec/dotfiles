@@ -12,7 +12,7 @@
 "
 " vim configuration file
 "
-" Version: 1.0 - 2018/11/04 12:11:56
+" Version: 1.1 - 2018/11/28 13:18:46
 " Author: Brainfuck
 "
 " https://github.com/brainfucksec/dotfiles
@@ -84,7 +84,7 @@ set colorcolumn=80
 
 " Remove line lenght marker for selected filetypes
 autocmd FileType xml,html,xhtml,javascript setlocal colorcolumn=0
-autocmd BufRead,BufNew *.txt setlocal colorcolumn=0
+autocmd BufRead,BufNew *.txt,*.md setlocal colorcolumn=0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
