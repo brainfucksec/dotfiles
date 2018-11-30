@@ -4,6 +4,7 @@ alias la='ls -alFh'
 alias l1='ls -1F'
 alias l1m='ls -1 | more'
 alias lm='ls | more'
+alias ln='ls | cat -n'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -15,8 +16,8 @@ alias cprs='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 alias ex='extract'
-alias m='mountdev'
-alias um='unmountdev'
+alias md='mountdev'
+alias umd='unmountdev'
 
 
 # system administration
@@ -108,6 +109,6 @@ unmountdev() {
     else
         sleep 1
         udisksctl power-off -b "/dev/$1"
-        echo  "Ejected '/dev/$1'"
+        echo  "Ejected /dev/$1"
     fi
 }
