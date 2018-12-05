@@ -3,7 +3,7 @@
 # i3wm configuration file (i3-gaps)
 # ---------------------------------
 #
-# Version: 0.7.1 - 2018/11/24
+# Version: 0.7.2 - 2018/12/05
 #
 # Author: Brainfuck
 #
@@ -83,7 +83,7 @@ bindsym $mod+z mode "resize"
 set $mod Mod4
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id xfce4-terminal
+bindsym $mod+Return exec --no-startup-id termite
 
 # kill focused window
 bindsym $mod+Shift+P kill
@@ -190,7 +190,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # force a window on a named workspace
 #
 # get window class name: xprop |awk '/WM_CLASS/{print $4}'
-#assign [class="Xfce4-terminal"] $ws1
+#assign [class="Termite"]    $ws1
 assign [class="Firefox"]    $ws2
 assign [class="Liferea"]    $ws2
 # VirtualBox Manager
@@ -220,7 +220,7 @@ for_window [class="Pidgin"] floating enable border pixel 2
 # My Shortcuts
 ##########################################
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e vim
+bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic vim"
 bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id cherrytree
@@ -231,7 +231,7 @@ bindsym $mod+F9 exec --no-startup-id pidgin
 bindsym $mod+F10 exec --no-startup-id qtox
 
 bindsym $mod+x exec xscreensaver-command -lock
-bindsym $mod+r exec --no-startup-id xfce4-terminal -e ranger
+bindsym $mod+r exec --no-startup-id termite -e "bash -ic ranger"
 bindsym $mod+d exec rofi -show run
 bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
 
