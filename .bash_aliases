@@ -16,8 +16,8 @@ alias cprs='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 alias ex='extract'
-alias md='mountdev'
-alias umd='unmountdev'
+alias m='mountdev'
+alias um='unmountdev'
 
 
 # system administration
@@ -55,6 +55,7 @@ alias fm="thunar '$PWD'"
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias sp='strongpass'
 alias r='ranger'
+alias f='feh --start-at'
 alias bb='bleachbit -c --preset'
 
 
@@ -109,6 +110,6 @@ unmountdev() {
     else
         sleep 1
         udisksctl power-off -b "/dev/$1"
-        echo  "Ejected /dev/$1"
+        echo  "Ejected /dev/$1."
     fi
 }
