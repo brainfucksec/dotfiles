@@ -3,10 +3,8 @@
 ; polybar configuration file
 ; --------------------------
 ;
-; Version: 0.1.1 - 2018/11/26
-;
 ; Author: Brainfuck
-;
+; Version: 0.1.2 - 2018/12/17
 ;=====================================================
 
 
@@ -22,14 +20,6 @@ primary = #50b4e6
 secondary = #738699
 alert = #ff3333
 green = #2ace66
-
-
-;=====================================================
-; global wm settings
-;=====================================================
-[global/wm]
-margin-top = 0
-margin-bottom = 0
 
 
 ;=====================================================
@@ -56,6 +46,7 @@ border-bottom-color = ${colors.primary}
 
 padding-left = 1
 padding-right = 1
+
 module-margin-left = 0
 module-margin-right = 1
 
@@ -70,6 +61,14 @@ modules-right = volume cpu temperature memory eth powermenu
 
 tray-position = right
 tray-padding = 1
+
+
+;=====================================================
+; global wm settings
+;=====================================================
+[global/wm]
+margin-top = 0
+margin-bottom = 0
 
 
 ;=====================================================
