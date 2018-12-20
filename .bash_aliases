@@ -55,7 +55,7 @@ alias fm="thunar '$PWD'"
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias sp='strongpass'
 alias r='ranger'
-alias f='feh --start-at'
+alias f='feh -g 640x480 -d -S filename'
 alias bb='bleachbit -c --preset'
 
 
