@@ -4,7 +4,8 @@
 ; --------------------------
 ;
 ; Author: Brainfuck
-; Version: 0.1.2 - 2018/12/17
+; Version: 0.1.3 - 2018/12/22
+; Website: https://github.com/brainfucksec/dotfiles
 ;=====================================================
 
 
@@ -14,10 +15,10 @@
 [colors]
 background = #030a13
 background-alt = #191f26
-foreground = #c8d3db
+foreground = #bfcad2
 foreground-alt = #ffb454
-primary = #50b4e6
-secondary = #738699
+primary = #2ace66
+secondary = #637886
 alert = #ff3333
 green = #2ace66
 
@@ -28,7 +29,7 @@ green = #2ace66
 [bar/mybar]
 monitor = VGA-1
 width = 100%
-height = 26
+height = 28
 offset-x = 0
 offset-y = 0
 locale = it_IT.UTF-8
@@ -133,7 +134,7 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-label-connected = %{F#50b4e6} %{F-}eth
+label-connected = %{F#2ace66} %{F-}eth
 ;label-connected-foreground = ${colors.primary}
 
 label-disconnected = "eth off"
@@ -199,4 +200,4 @@ type = internal/date
 interval = 1
 date = %a %d %b
 time = %H:%M:%S
-label = %{F#50b4e6}%date%%{F-}%{F#c8d3db} %time%%{F-}
+label = %{F#2ace66}%date%%{F-}%{F#bfcad2} %time%%{F-}
