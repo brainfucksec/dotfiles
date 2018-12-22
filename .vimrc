@@ -9,13 +9,12 @@
 "    ###    #### ##     ## ##     ##  ######
 "
 """"""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" => vim configuration file
 "
-" vim configuration file
-"
-" Version: 1.1 - 2018/11/28 13:18:46
+" Version: 1.2 - 2018/12/22 13:46:46
 " Author: Brainfuck
-"
-" https://github.com/brainfucksec/dotfiles
 "
 """"""""""""""""""""""""""""""""""""""""""""""
 
@@ -72,6 +71,10 @@ set number
 
 " Highlight matching parenthesis
 set showmatch
+
+" Enable folding manually with 'marker' option
+" Use default 'foldmarker' (three consecutive open/closed curly braces)
+set foldmethod=marker
 
 " Show command in bottom bar
 set showcmd
