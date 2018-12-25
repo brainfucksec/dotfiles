@@ -14,10 +14,10 @@
 ;=====================================================
 [colors]
 background = #030a13
-background-alt = #191f26
+background-alt = #1b5058
 foreground = #bfcad2
 foreground-alt = #ffb454
-primary = #2ace66
+primary = #05a15a
 secondary = #637886
 alert = #ff3333
 green = #2ace66
@@ -134,7 +134,7 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-label-connected = %{F#2ace66} %{F-}eth
+label-connected = %{F#05a15a} %{F-}eth
 ;label-connected-foreground = ${colors.primary}
 
 label-disconnected = "eth off"
@@ -200,4 +200,4 @@ type = internal/date
 interval = 1
 date = %a %d %b
 time = %H:%M:%S
-label = %{F#2ace66}%date%%{F-}%{F#bfcad2} %time%%{F-}
+label = %{F#05a15a}%date%%{F-}%{F#bfcad2} %time%%{F-}
