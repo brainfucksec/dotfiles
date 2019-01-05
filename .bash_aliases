@@ -17,7 +17,7 @@ alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 alias ex='extract'
 alias m='mountdev'
-alias um='unmountdev'
+alias u='unmountdev'
 
 
 # system administration
@@ -33,7 +33,7 @@ alias ps='ps auxf'
 alias ht='htop'
 alias cputemp='sensors | grep Core'
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
-alias updaterepo='sudo reflector --verbose -c Germany -c Netherlands -c Sweden --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias updaterepo='sudo reflector --verbose -c Sweden -c Norway -c Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 
 # directories
@@ -98,6 +98,7 @@ extract() {
 mountdev() {
     if ! udisksctl mount -b "/dev/$1"; then
         echo "Usage: mountdev sdxX"
+        echo "Example: mountdev sdc1"
         return 1
     fi
 }
@@ -106,6 +107,7 @@ mountdev() {
 unmountdev() {
     if ! udisksctl unmount -b "/dev/$1"; then
         echo "Usage: unmountdev sdxX"
+        echo "Example: unmountdev sdc1"
         return 1
     else
         sleep 1
