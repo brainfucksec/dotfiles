@@ -1,43 +1,42 @@
-##########################################
+# ===================================================================
 #
 # i3wm configuration file (i3-gaps)
-# ---------------------------------
 #
-# Version: 0.7.2 - 2018/12/05
-#
+# Version: 0.7.3 - 2019/01/20
 # Author: Brainfuck
+# Webpage: https://github.com/brainfucksec/dotfiles
 #
-# https://github.com/brainfucksec/dotfiles
-#
-##########################################
+# ===================================================================
 
 
-##########################################
+# ===================================================================
 # Colors
-##########################################
-# class                  border  backgr  text     indicator child_border
+# ===================================================================
+
+# Class                  border  backgr  text     indicator child_border
 client.focused           #738699 #191f26 #d9d7ce  #738699   #738699
 client.focused_inactive  #14191f #191f26 #b2babd  #14191f   #14191f
 client.unfocused         #14191f #151a1f #b2babd  #14191f   #14191f
 client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 
 
-##########################################
+# ===================================================================
 # Windows style
-##########################################
-# font for window titles. ISO 10646 = Unicode
+# ===================================================================
+
+# Font for window titles
 font xft:Tamsyn 12
 
-# set default orientation, <horizontal|vertical|auto>
+# Set default orientation, <horizontal|vertical|auto>
 default_orientation auto
 
 # i3-gaps settings
 for_window [class="^.*"] border pixel 2
 new_window pixel 2
 gaps inner 6
-gaps outer 2
+gaps outer 4
 
-# toggle gaps on selected workspaces
+# Toggle gaps on selected workspaces
 workspace 2 gaps inner 0
 workspace 2 gaps outer 0
 workspace 6 gaps inner 0
@@ -49,7 +48,7 @@ workspace_auto_back_and_forth yes
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# resize window (you can also use the mouse for that)
+# Resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -76,9 +75,10 @@ mode "resize" {
 bindsym $mod+z mode "resize"
 
 
-##########################################
+# ===================================================================
 # Keybindings
-##########################################
+# ===================================================================
+
 # Mod4 = Super Key
 set $mod Mod4
 
@@ -148,77 +148,9 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
-##########################################
-# Workspaces
-##########################################
-
-# customize workspace name
-set $ws1 1:1 
-set $ws2 2:2 
-set $ws3 3:3 
-set $ws4 4:4 
-set $ws5 5:5 
-set $ws6 6:6 
-set $ws7 7:7 
-set $ws8 8:8 
-
-# switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-
-## workspaces assignment
-# force a window on a named workspace
-#
-# get window class name: xprop |awk '/WM_CLASS/{print $4}'
-#assign [class="Termite"]    $ws1
-assign [class="Firefox"]    $ws2
-assign [class="Liferea"]    $ws2
-# VirtualBox Manager
-assign [class="Manager"]    $ws6
-assign [class="Zathura"]    $ws5
-assign [class="vlc"]        $ws7
-assign [class="Pulseaudio-equalizer"] $ws7
-assign [class="Pavucontrol"]          $ws7
-assign [class="SimpleScreenRecorder"] $ws7
-assign [class="qTox"]       $ws8
-assign [class="Pidgin"]     $ws8
-
-
-# enable floating mode for selected windows
-for_window [class="Lxappearance"] floating enable border pixel 2
-for_window [class="Tor Browser"] floating enable border pixel 2
-for_window [class="Bleachbit"] floating enable border pixel 2
-for_window [class="vlc"] floating enable border pixel 2
-for_window [class="Pulseaudio-equalizer"] floating enable border pixel 2
-for_window [class="Pavucontrol"] floating enable border pixel 2
-for_window [class="SimpleScreenRecorder"] floating enable border pixel 2
-for_window [class="qTox"] floating enable border pixel 2
-for_window [class="Pidgin"] floating enable border pixel 2
-
-
-##########################################
+# ===================================================================
 # My Shortcuts
-##########################################
+# ===================================================================
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic vim"
 bindsym $mod+F3 exec --no-startup-id thunar
@@ -249,10 +181,80 @@ bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
 bindsym $mod+p exec --no-startup-id pavucontrol
 
 
-##########################################
+# ===================================================================
+# Workspaces
+# ===================================================================
+
+# Customize workspace name
+set $ws1 1:1 
+set $ws2 2:2 
+set $ws3 3:3 
+set $ws4 4:4 
+set $ws5 5:5 
+set $ws6 6:6 
+set $ws7 7:7 
+set $ws8 8:8 
+
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# Workspaces assignment
+# =====================
+#
+# Force a window on a named workspace
+# get window class namewith: `xprop | awk '/WM_CLASS/{print $4}'`
+#assign [class="Termite"]               $ws1
+assign [class="Firefox"]                $ws2
+assign [class="Liferea"]                $ws2
+# Manager == virtualbox manager
+assign [class="Manager"]                $ws6
+assign [class="Zathura"]                $ws5
+assign [class="vlc"]                    $ws7
+assign [class="Pulseaudio-equalizer"]   $ws7
+assign [class="Pavucontrol"]            $ws7
+assign [class="SimpleScreenRecorder"]   $ws7
+assign [class="qTox"]                   $ws8
+assign [class="Pidgin"]                 $ws8
+
+# enable floating mode for selected windows
+set $float floating enable border pixel 2
+for_window [class="Lxappearance"]           $float
+for_window [class="Tor Browser"]            $float
+for_window [class="Bleachbit"]              $float
+for_window [class="vlc"]                    $float
+for_window [class="Pulseaudio-equalizer"]   $float
+for_window [class="Pavucontrol"]            $float
+for_window [class="SimpleScreenRecorder"]   $float
+for_window [class="qTox"]                   $float
+for_window [class="Pidgin"]                 $float
+
+
+# ===================================================================
 # Start Up commands
-##########################################
-# keyboard layout
+# ===================================================================
+
+# Keyboard layout
 exec --no-startup-id setxkbmap it
 
 # compton
@@ -264,8 +266,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # dunst notification-daemon
 exec --no-startup-id dunst
 
-# wallpaper
+# Wallpaper
 exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/lake_and_mountains_1920x1200.jpg
 
-# xscreensaver
+# Xscreensaver
 exec --no-startup-id xscreensaver -nosplash
