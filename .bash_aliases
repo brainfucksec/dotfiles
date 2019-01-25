@@ -33,7 +33,8 @@ alias ps='ps auxf'
 alias ht='htop'
 alias cputemp='sensors | grep Core'
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
-alias updaterepo='sudo reflector --verbose -c Sweden -c Norway -c Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias updaterepo='sudo reflector --verbose -c Germany -c Sweden -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias myip='curl ipinfo.io'
 
 
 # directories
