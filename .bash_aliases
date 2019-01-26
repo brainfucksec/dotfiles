@@ -49,7 +49,6 @@ alias pg='cd ~/programming/git'
 alias t='cd ~/tmp'
 alias v='cd /opt/vpn/config'
 alias vp='cd ~/.vim/pack/plugins/start'
-alias fm="thunar '$PWD'"
 
 
 # applications
@@ -97,22 +96,26 @@ extract() {
 
 # mount device with udisksctl
 mountdev() {
-    if ! udisksctl mount -b "/dev/$1"; then
-        echo "Usage: mountdev sdxX"
+    if [[ -z "$1" ]]; then
+        echo "Usage: mountdev <sdxX>"
         echo "Example: mountdev sdc1"
         return 1
+    else
+        udisksctl mount -b "/dev/$1"
     fi
 }
 
+
 # unmount and eject device
 unmountdev() {
-    if ! udisksctl unmount -b "/dev/$1"; then
-        echo "Usage: unmountdev sdxX"
+    if [[ -z "$1" ]]; then
+        echo "Usage: unmountdev <sdxX>"
         echo "Example: unmountdev sdc1"
         return 1
     else
+        udisksctl unmount -b "/dev/$1"
         sleep 1
         udisksctl power-off -b "/dev/$1"
-        echo  "Ejected /dev/$1."
+        echo "Ejected /dev/$1."
     fi
 }
