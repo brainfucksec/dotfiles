@@ -13,8 +13,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.2 - 2018/12/22 13:46:46
+" Version: 1.3 - 2019/01/30
 " Author: Brainfuck
+" Website: https://github.com/brainfucksec/dotfiles
 "
 """"""""""""""""""""""""""""""""""""""""""""""
 
@@ -87,7 +88,6 @@ set colorcolumn=80
 
 " Remove line lenght marker for selected filetypes
 autocmd FileType xml,html,xhtml,javascript setlocal colorcolumn=0
-autocmd BufRead,BufNew *.txt,*.md setlocal colorcolumn=0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -99,7 +99,6 @@ set t_Co=256
 "set termguicolors
 
 " Colorscheme
-"let ayucolor="dark"
 colorscheme wal
 
 " Set utf8 as standard encoding
@@ -149,8 +148,7 @@ set shiftwidth=4
 set tabstop=4
 
 " 1 tab == 2 spaces for selected filetypes
-autocmd FileType xml,html,xhtml setlocal shiftwidth=2 tabstop=2
-autocmd BufRead,BufNew *.css setlocal shiftwidth=2 tabstop=2
+autocmd FileType xml,html,xhtml,css setlocal shiftwidth=2 tabstop=2
 
 set ai "Auto indent
 set si "Smart indent
