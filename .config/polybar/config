@@ -1,10 +1,10 @@
 ;=====================================================
 ;
 ; polybar configuration file
-; --------------------------
+; ==========================
 ;
 ; Author: Brainfuck
-; Version: 0.1.3 - 2018/12/22
+; Version: 0.1.4 - 2019/01/31
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=====================================================
 
@@ -15,11 +15,11 @@
 [colors]
 background = #030a13
 background-alt = #1b5058
-foreground = #bfcad2
+foreground = #b1bbc2
 foreground-alt = #ffb454
-primary = #05a15a
+primary = #07d376
 secondary = #637886
-alert = #ff3333
+alert = #2f8b99
 green = #2ace66
 
 
@@ -82,20 +82,20 @@ pin-workspaces = true
 strip-wsnumbers = true
 enable-scroll = false
 
-label-focused = [%name%]
+label-focused = %name%
 label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
 label-focused-underline = ${colors.primary}
 
-label-unfocused = [%name%]
+label-unfocused = %name%
 label-unfocused-padding = 1
 label-unfocused-foreground = ${colors.secondary}
 
-label-urgent = [%name%]
+label-urgent = %name%
 label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 1
 
-label-visible = [%name%]
+label-visible = %name%
 label-visible-padding = 1
 
 
@@ -134,7 +134,7 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-label-connected = %{F#05a15a} %{F-}eth
+label-connected = %{F#07d376} %{F-}eth
 ;label-connected-foreground = ${colors.primary}
 
 label-disconnected = "eth off"
@@ -171,7 +171,7 @@ menu-0-2-exec = poweroff
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume =
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 label-muted =  
 
@@ -186,6 +186,7 @@ bar-volume-foreground-6 = ${colors.green}
 bar-volume-foreground-7 = ${colors.green}
 bar-volume-foreground-8 = ${colors.green}
 bar-volume-foreground-9 = ${colors.alert}
+
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -200,4 +201,4 @@ type = internal/date
 interval = 1
 date = %a %d %b
 time = %H:%M:%S
-label = %{F#05a15a}%date%%{F-}%{F#bfcad2} %time%%{F-}
+label = %{F#07d376}%date%%{F-}%{F#b1bbc2} %time%%{F-}
