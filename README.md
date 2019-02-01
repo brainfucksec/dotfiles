@@ -24,10 +24,9 @@ PDF Viewer            > zathura
 Text Editor           > vim
 Terminal Emulator     > termite
 Window Manager        > i3-gaps
-
+Color Scheme:         > made with pywal
 ```
 
-![alt text](https://imgur.com/fKbyWWM.png)
+![alt text](https://imgur.com/UfVopUL.png)
 
-
-:warning: WARNING :warning: **These are dotfiles that I use in my systems, please don't copy/paste or install if you do not know exactly what you are doing.**
+![alt text](https://imgur.com/7zl5WHC.png)
