@@ -1,11 +1,13 @@
 # =========================================================
-# bash aliases
+# => bash aliases
 #
-# - Brainfuck
+# => AUthor: Brainfuck
 # =========================================================
 
 
-# common commands
+# =========================================================
+# => Common commands
+# =========================================================
 alias ll='ls -lFh'
 alias la='ls -alFh'
 alias l1='ls -1F'
@@ -24,7 +26,9 @@ alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 
 
-# system administration commands
+# =========================================================
+# => System administration commands
+# =========================================================
 # systemd service
 alias sc='systemctl'
 alias scr='systemctl daemon-reload'
@@ -49,7 +53,9 @@ alias m='mountdev'
 alias u='unmountdev'
 
 
-# personal directories
+# =========================================================
+# Directories shortcuts
+# =========================================================
 alias h='cd ~/'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
@@ -63,7 +69,9 @@ alias v='cd /opt/vpn/config'
 alias vp='cd ~/.vim/pack/plugins/start'
 
 
-# applications shortcuts
+# =========================================================
+# Applications
+# =========================================================
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias sp='strongpass'
 alias r='ranger'
