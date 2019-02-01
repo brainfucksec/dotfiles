@@ -1,4 +1,11 @@
-# basic shortcuts
+# =========================================================
+# bash aliases
+#
+# - Brainfuck
+# =========================================================
+
+
+# common commands
 alias ll='ls -lFh'
 alias la='ls -alFh'
 alias l1='ls -1F'
@@ -15,29 +22,34 @@ alias cpr='cp -Rv'
 alias cprs='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
-alias ex='extract'
-alias m='mountdev'
-alias u='unmountdev'
 
 
-# system administration
-alias scstart='sudo systemctl start'
-alias scstop='sudo systemctl stop'
-alias scstatus='sudo systemctl status'
-alias screstart='sudo systemctl restart'
-alias scrun='sudo systemctl -t service -a --state running --no-page --no-legend'
-alias scfailed='sudo systemctl --failed | head -n -6 | tail -n -1'
+# system administration commands
+# systemd service
+alias sc='systemctl'
+alias scr='systemctl daemon-reload'
+alias sca='systemctl -t service -a --state running --no-page --no-legend'
+alias scfailed='systemctl --failed | head -n -6 | tail -n -1'
+
+# memory/cpu
 alias df='df -Tha --total'
 alias free='free -mt'
 alias ps='ps auxf'
 alias ht='htop'
 alias cputemp='sensors | grep Core'
+
+# network
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
 alias updaterepo='sudo reflector --verbose -c Germany -c Sweden -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias myip='curl ipinfo.io'
+alias myip='curl http://ip-api.com'
+
+# volumes management
+alias ex='extract'
+alias m='mountdev'
+alias u='unmountdev'
 
 
-# directories
+# personal directories
 alias h='cd ~/'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
@@ -51,7 +63,7 @@ alias v='cd /opt/vpn/config'
 alias vp='cd ~/.vim/pack/plugins/start'
 
 
-# applications
+# applications shortcuts
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias sp='strongpass'
 alias r='ranger'
@@ -59,7 +71,11 @@ alias f='feh -g 640x480 -d -S filename'
 alias bb='bleachbit -c --preset'
 
 
-# function extract for common archive formats
+# =========================================================
+# Functions
+# =========================================================
+
+# Function extract for common archive formats
 extract() {
     if [[ -z "$1" ]]; then
         # display usage if no parameters given
@@ -94,7 +110,7 @@ extract() {
 }
 
 
-# mount device with udisksctl
+# Mount device with udisksctl
 mountdev() {
     if [[ -z "$1" ]]; then
         echo "Usage: mountdev <sdxX>"
@@ -106,7 +122,7 @@ mountdev() {
 }
 
 
-# unmount and eject device
+# Unmount and eject device
 unmountdev() {
     if [[ -z "$1" ]]; then
         echo "Usage: unmountdev <sdxX>"
