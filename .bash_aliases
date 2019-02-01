@@ -32,8 +32,8 @@ alias src='source ~/.bashrc'
 # systemd service
 alias sc='systemctl'
 alias scr='systemctl daemon-reload'
-alias sca='systemctl -t service -a --state running --no-page --no-legend'
-alias scfailed='systemctl --failed | head -n -6 | tail -n -1'
+alias scs='systemctl -t service -a --state running --no-page --no-legend'
+alias scf='systemctl --failed | head -n -6 | tail -n -1'
 
 # memory/cpu
 alias df='df -Tha --total'
