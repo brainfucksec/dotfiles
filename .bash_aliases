@@ -1,7 +1,5 @@
 # =========================================================
 # => bash aliases
-#
-# => AUthor: Brainfuck
 # =========================================================
 
 
@@ -30,10 +28,10 @@ alias src='source ~/.bashrc'
 # => System administration commands
 # =========================================================
 # systemd service
-alias sc='systemctl'
-alias scr='systemctl daemon-reload'
-alias scs='systemctl -t service -a --state running --no-page --no-legend'
-alias scf='systemctl --failed | head -n -6 | tail -n -1'
+alias sc='sudo systemctl'
+alias scr='sudo systemctl daemon-reload'
+alias scs='sudo systemctl -t service -a --state running --no-page --no-legend'
+alias scf='sudo systemctl --failed | head -n -6 | tail -n -1'
 
 # memory/cpu
 alias df='df -Tha --total'
@@ -45,6 +43,7 @@ alias cputemp='sensors | grep Core'
 # network
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
 alias updaterepo='sudo reflector --verbose -c Germany -c Sweden -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias gu='gitupdate'
 alias myip='curl http://ip-api.com'
 
 # volumes management
@@ -77,6 +76,7 @@ alias sp='strongpass'
 alias r='ranger'
 alias f='feh -g 640x480 -d -S filename'
 alias bb='bleachbit -c --preset'
+alias vb='vboxmanage'
 
 
 # =========================================================
@@ -141,5 +141,31 @@ unmountdev() {
         sleep 1
         udisksctl power-off -b "/dev/$1"
         echo "Ejected /dev/$1."
+    fi
+}
+
+
+# Update git packages
+gitupdate() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: gitupdate <directory path>"
+        return 1
+    else
+        local repodir="$1"
+        if [[ -d "$repodir" ]]; then
+            echo "[i] Updating git packages, it may take some time..."
+            cd "$repodir"
+            for i in $(find . -name ".git" | cut -c 3-); do
+                echo ""
+                echo "${i}" | sed -e 's/.git//g'
+                cd "$i"
+                cd ..
+                git pull
+                cd "$repodir"
+            done
+        else
+            echo "[ error ] there are no git repositories here :("
+            return 1
+        fi
     fi
 }
