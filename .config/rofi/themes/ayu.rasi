@@ -1,0 +1,147 @@
+/**
+ * rofi theme
+ * Author: Brainfuck
+ */
+* {
+    text-color:                  #E6E1CF;
+    background-color:            #090D12;
+    lightbg:                     #0F1419;
+    red:                         #FF3333;
+    orange:                      #E7C547;
+    blue:                        #36A3D9;
+    grey:						 #45515C;
+    font:            			 "misc Tamsyn 12";
+
+    selected-normal-foreground:  @foreground;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @background;
+    selected-urgent-foreground:  @foreground;
+    urgent-foreground:           @foreground;
+    alternate-urgent-background: @background;
+    active-foreground:           @foreground;
+    selected-active-foreground:  @foreground;
+    alternate-normal-foreground: @foreground;
+    alternate-active-background: @blue;
+    bordercolor:                 @lightbg;
+    normal-background:           @background;
+    selected-normal-background:  @grey;
+    separatorcolor:              @orange;
+    spacing:                     2;
+    urgent-background:           @red;
+    alternate-urgent-foreground: @foreground;
+    selected-urgent-background:  @red;
+    alternate-active-foreground: @foreground;
+    selected-active-background:  @blue;
+    active-background:           @orange;
+}
+
+#window {
+    border:     2;
+    border-color: @grey;
+    text-color: @foreground;
+    background-color: rgba ( 0, 0, 0, 0 % );
+    padding:    4;
+    text-color: @bordercolor;
+    background-color: @background;
+    width: 420;
+}
+
+#mainbox {
+    border:  1;
+    padding: 1;
+}
+
+#message {
+    border:     1px dash 0px 0px ;
+    text-color: @separatorcolor;
+    padding:    2px 0px 0px ;
+}
+
+#textbox {
+    text-color: @foreground;
+}
+
+#listview {
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    padding:      2px 0px 0px ;
+    text-color: @separatorcolor;
+}
+
+#element {
+    border: 1;
+}
+
+#element.normal.normal {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+}
+
+#element.normal.urgent {
+    text-color: @urgent-foreground;
+    background-color: @urgent-background;
+}
+
+#element.normal.active {
+    text-color: @active-foreground;
+    background-color: @active-background;
+}
+
+#element.selected.normal {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
+}
+
+#element.selected.urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+
+#element.selected.active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+}
+
+#element.alternate.normal {
+    text-color: @alternate-normal-foreground;
+    background-color: @alternate-normal-background;
+}
+
+#element.alternate.urgent {
+    text-color: @alternate-urgent-foreground;
+    background-color: @alternate-urgent-background;
+}
+
+#element.alternate.active {
+    text-color: @alternate-active-foreground;
+    background-color: @alternate-active-background;
+}
+
+#sidebar {
+    border: 2px dash 0px 0px ;
+}
+
+#button selected {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
+}
+
+#inputbar {
+    spacing: 0;
+    border: 1px ;
+}
+
+#button normal {
+    text-color: @foreground;
+}
+
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
+}
