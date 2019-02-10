@@ -13,7 +13,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.3 - 2019/01/30
+" Version: 1.4 - 2019/02/10
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -86,9 +86,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Line lenght marker at 80 columns
 set colorcolumn=80
 
-" Remove line lenght marker for selected filetypes
-autocmd FileType xml,html,xhtml,javascript setlocal colorcolumn=0
-
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " => Colors and fonts
@@ -112,12 +109,12 @@ set encoding=utf8
 " Use Unix for new files and autodetect the rest
 set ffs=unix,dos,mac
 
-" Force Markdown syntax
-autocmd BufRead,BufNew *.md set filetype=markdown
-
 " Turn backup off, swap file off
 set nobackup
 set noswapfile
+
+" Remove line lenght marker for selected filetypes
+autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal colorcolumn=0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -191,7 +188,8 @@ nmap <silent> <C-k> <Plug>
 nmap <silent> <C-j> <Plug>
 
 
-" Omnicompletion languages plugins:
+" => Omnicompletion languages plugins:
+
 " Python
 " - jedi-vim
 let g:jedi#show_call_signatures = "0"
@@ -201,6 +199,7 @@ let g:jedi#show_call_signatures = "0"
 " path of clang library file
 let g:clang_library_path = '/usr/lib/libclang.so.7'
 let g:clang_complete_auto = 1
+
 " workaround for auto-pairs issue with clang_complete
 let g:AutoPairsMapCR = 0
 imap <silent><CR> <CR><Plug>AutoPairsReturn
@@ -227,7 +226,7 @@ set noshowmode
 
 " Set colorscheme
 let g:lightline = {
-      \ 'colorscheme': '16color',
+      \ 'colorscheme': 'nord',
       \ }
 
 
@@ -241,8 +240,8 @@ map \r :source ~/.vimrc<CR>
 " Cancel a search with Ctrl+l
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-" Make kk do esc
-inoremap kk <Esc>
+" Press i to enter insert mode, and ii to exit.
+inoremap ii <Esc>
 
 " Don't use arrow keys
 map <up> <nop>
