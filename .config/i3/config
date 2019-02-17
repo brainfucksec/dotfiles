@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.8.0 - 2019/02/15
+# Version: 0.8.1 - 2019/02/17
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -15,8 +15,8 @@
 
 # Class                  border  backgr  text     indicator child_border
 client.focused           #738699 #191f26 #d9d7ce  #738699   #738699
-client.focused_inactive  #14191f #191f26 #b2babd  #14191f   #14191f
-client.unfocused         #14191f #151a1f #b2babd  #14191f   #14191f
+client.focused_inactive  #030a13 #191f26 #b2babd  #030a13   #030a13
+client.unfocused         #030a13 #151a1f #b2babd  #030a13   #030a13
 client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 
 
@@ -166,6 +166,7 @@ bindsym $mod+F10 exec --no-startup-id qtox
 bindsym $mod+x exec xscreensaver-command -lock
 bindsym $mod+d exec rofi -show run
 bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
+bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
 
 # screenshot
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
