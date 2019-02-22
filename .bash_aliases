@@ -137,8 +137,7 @@ unmountdev() {
         echo "Example: unmountdev sdc1"
         return 1
     else
-        udisksctl unmount -b "/dev/$1"
-        sleep 1
+        udisksctl unmount -b "/dev/$1" &&
         udisksctl power-off -b "/dev/$1"
         echo "Ejected /dev/$1."
     fi
@@ -163,6 +162,7 @@ gitupdate() {
                 git pull
                 cd "$repodir"
             done
+            cd "$HOME"
         else
             echo "[ error ] there are no git repositories here :("
             return 1
