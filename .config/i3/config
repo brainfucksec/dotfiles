@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.8.1 - 2019/02/17
+# Version: 0.9 - 2019/02/23
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -34,7 +34,7 @@ default_orientation auto
 for_window [class="^.*"] border pixel 2
 new_window pixel 2
 gaps inner 6
-gaps outer 4
+gaps outer 3
 
 # Toggle gaps on selected workspaces
 workspace 2 gaps inner 0
@@ -154,7 +154,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic vim"
-bindsym $mod+F3 exec --no-startup-id termite -e "bash -ic ranger"
+bindsym $mod+F3 exec --no-startup-id pcmanfm
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id cherrytree
 bindsym $mod+F6 exec --no-startup-id liferea
@@ -166,6 +166,7 @@ bindsym $mod+F10 exec --no-startup-id qtox
 bindsym $mod+x exec xscreensaver-command -lock
 bindsym $mod+d exec rofi -show run
 bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
+bindsym $mod+r exec --no-startup-id termite -e "bash -ic ranger"
 bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
 
 # screenshot
@@ -225,10 +226,11 @@ bindsym $mod+Shift+0 move container to workspace 10
 # =====================
 #
 # Force a window on a named workspace
-# get window class namewith: `xprop | awk '/WM_CLASS/{print $4}'`
+# get window class name: `xprop | awk '/WM_CLASS/{print $4}'`
 #assign [class="Termite"]                $ws1
 assign [class="Firefox"]                $ws2
 assign [class="Liferea"]                $ws2
+assign [class="Pcmanfm"]                $ws3
 # Manager == virtualbox manager
 assign [class="Manager"]                $ws9
 assign [class="Zathura"]                $ws5
