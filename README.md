@@ -17,8 +17,8 @@ Setup
 ```
 Bar                   > polybar
 Compositor            > compton
-File Manager          > thunar, ranger
-Media Player          > vlc
+File Manager          > ranger, pcmanfm
+Media Player          > ncmpcpp, vlc
 Program Launcher      > rofi
 PDF Viewer            > zathura
 Text Editor           > vim
