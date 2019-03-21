@@ -6,20 +6,20 @@
 # =========================================================
 # => Common commands
 # =========================================================
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias ll='ls -lFh'
 alias la='ls -alFh'
 alias l1='ls -1F'
 alias l1m='ls -1 | more'
 alias lm='ls | more'
 alias lsn='ls | cat -n'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias cd-='cd -'
 alias mkdir='mkdir -p -v'
 alias cp='cp -v'
 alias cpr='cp -Rv'
-alias cprs='rsync -ahv --info=progress2'
+alias rcp='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 
@@ -27,9 +27,9 @@ alias src='source ~/.bashrc'
 # =========================================================
 # => System administration commands
 # =========================================================
-# systemd service
+# systemctl
 alias sc='sudo systemctl'
-alias scr='sudo systemctl daemon-reload'
+alias scd='sudo systemctl daemon-reload'
 alias scs='sudo systemctl -t service -a --state running --no-page --no-legend'
 alias scf='sudo systemctl --failed | head -n -6 | tail -n -1'
 
@@ -44,7 +44,7 @@ alias cputemp='sensors | grep Core'
 alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
 alias updaterepo='sudo reflector --verbose -c Germany -c Sweden -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias gu='gitupdate'
-alias myip='curl http://ip-api.com'
+alias myip='curl http://ipinfo.io'
 
 # volumes management
 alias ex='extract'
