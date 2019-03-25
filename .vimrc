@@ -13,7 +13,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.4 - 2019/02/10
+" Version: 1.5 - 2019/03/25
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -160,6 +160,11 @@ let g:indentLine_char = '│'
 " => Autocompletion, linting
 """"""""""""""""""""""""""""""""""""""""""""""
 
+" => Completiion settings:
+
+" Avoids scanning of 'tags' during completion
+set complete-=t
+
 " Completion popup settings (:help 'completeopt')
 set completeopt+=menuone,noselect,noinsert
 
@@ -196,7 +201,7 @@ let g:jedi#show_call_signatures = "0"
 
 " C/C++
 " - clang-complete
-" path of clang library file
+" path of clang library file (change this after a update of clang)
 let g:clang_library_path = '/usr/lib/libclang.so.7'
 let g:clang_complete_auto = 1
 
