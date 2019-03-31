@@ -9,7 +9,7 @@
 # default prompt
 #PS1='[\u@\h \W]\$ '
 PS1='┌──[ \[\e[1;97m\]\u\[\e[m\] ]───[ \[\e[1;97m\]\h\[\e[m\] ] \[\e[1;94m\][\w]\[\e[m\]
-└───\[\e[1;97m\]>>\[\e[m\] '
+└───\[\e[1;93m\]>>\[\e[m\] '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
