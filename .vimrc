@@ -13,7 +13,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.5 - 2019/03/25
+" Version: 1.6 - 2019/04/03
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -202,7 +202,7 @@ let g:jedi#show_call_signatures = "0"
 " C/C++
 " - clang-complete
 " path of clang library file (change this after a update of clang)
-let g:clang_library_path = '/usr/lib/libclang.so.7'
+let g:clang_library_path = '/usr/lib/libclang.so.8'
 let g:clang_complete_auto = 1
 
 " workaround for auto-pairs issue with clang_complete
