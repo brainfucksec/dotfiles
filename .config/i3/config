@@ -157,7 +157,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic vim"
-bindsym $mod+F3 exec --no-startup-id pcmanfm
+bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id cherrytree
 bindsym $mod+F6 exec --no-startup-id liferea
@@ -233,7 +233,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="Termite"]                $ws1
 assign [class="Firefox"]                $ws2
 assign [class="Liferea"]                $ws3
-assign [class="Pcmanfm"]                $ws3
+assign [class="Thunar"]                 $ws3
 # Manager == virtualbox manager
 assign [class="Manager"]                $ws9
 assign [class="Zathura"]                $ws5
