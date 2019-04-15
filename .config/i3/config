@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.10 - 2019/03/31
+# Version: 0.11 - 2019/04/15
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -234,8 +234,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="Firefox"]                $ws2
 assign [class="Liferea"]                $ws3
 assign [class="Thunar"]                 $ws3
-# Manager == virtualbox manager
-assign [class="Manager"]                $ws9
 assign [class="Zathura"]                $ws5
 assign [class="vlc"]                    $ws7
 assign [class="Pulseaudio-equalizer"]   $ws7
@@ -243,6 +241,8 @@ assign [class="Pavucontrol"]            $ws7
 assign [class="SimpleScreenRecorder"]   $ws7
 assign [class="qTox"]                   $ws8
 assign [class="Pidgin"]                 $ws8
+# VirtualBox
+assign [class="Manager"]                $ws9
 
 # enable floating mode for selected windows
 set $float floating enable border pixel 3

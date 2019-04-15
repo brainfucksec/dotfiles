@@ -13,7 +13,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.6 - 2019/04/03
+" Version: 1.7 - 2019/04/16
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -162,8 +162,8 @@ let g:indentLine_char = '│'
 
 " => Completiion settings:
 
-" Avoids scanning of 'tags' during completion
-set complete-=t
+" Avoids scanning of 'tags (t)' and 'included files (i)' during completion
+set complete-=t,i
 
 " Completion popup settings (:help 'completeopt')
 set completeopt+=menuone,noselect,noinsert
