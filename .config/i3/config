@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.11 - 2019/04/15
+# Version: 0.12 - 2019/04/29
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -159,12 +159,10 @@ bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic vim"
 bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id vlc
-bindsym $mod+F5 exec --no-startup-id cherrytree
-bindsym $mod+F6 exec --no-startup-id liferea
-bindsym $mod+F7 exec --no-startup-id virtualbox
-bindsym $mod+F8 exec --no-startup-id lxappearance
-bindsym $mod+F9 exec --no-startup-id pidgin
-bindsym $mod+F10 exec --no-startup-id qtox
+bindsym $mod+F5 exec --no-startup-id liferea
+bindsym $mod+F6 exec --no-startup-id virtualbox
+bindsym $mod+F7 exec --no-startup-id lxappearance
+bindsym $mod+F8 exec --no-startup-id pidgin
 
 bindsym $mod+x exec xscreensaver-command -lock
 bindsym $mod+d exec rofi -show run
@@ -239,7 +237,6 @@ assign [class="vlc"]                    $ws7
 assign [class="Pulseaudio-equalizer"]   $ws7
 assign [class="Pavucontrol"]            $ws7
 assign [class="SimpleScreenRecorder"]   $ws7
-assign [class="qTox"]                   $ws8
 assign [class="Pidgin"]                 $ws8
 # VirtualBox
 assign [class="Manager"]                $ws9
