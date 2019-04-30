@@ -22,8 +22,6 @@ alias cpr='cp -Rv'
 alias rcp='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
-alias n='noteadd'
-alias nl='notelist'
 
 
 # =========================================================
