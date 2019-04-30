@@ -13,7 +13,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.7 - 2019/04/16
+" Version: 1.8 - 2019/04/30
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -245,8 +245,8 @@ map \r :source ~/.vimrc<CR>
 " Cancel a search with Ctrl+l
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-" Press i to enter insert mode, and ii to exit.
-inoremap ii <Esc>
+" Press kk to exit.
+inoremap kk <Esc>
 
 " Don't use arrow keys
 map <up> <nop>
