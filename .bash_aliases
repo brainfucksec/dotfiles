@@ -22,6 +22,8 @@ alias cpr='cp -Rv'
 alias rcp='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
+alias n='noteadd'
+alias nl='notelist'
 
 
 # =========================================================
@@ -42,7 +44,7 @@ alias cputemp='sensors | grep Core'
 # network
 alias uml='sudo reflector --verbose --threads 10 -c Germany -c France -c Italy --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias gu='gitupdate'
-alias myip='curl http://ipinfo.io'
+alias myip='curl -s -m 10 http://ipinfo.io'
 
 # volumes management
 alias ex='extract'
@@ -56,7 +58,6 @@ alias u='unmountdev'
 alias h='cd ~/'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
-alias n='cd ~/documents/notes'
 alias dl='cd ~/downloads'
 alias p='cd ~/programming'
 alias pd='cd ~/programming/dev'

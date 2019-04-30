@@ -107,6 +107,18 @@ gitupdate() {
 }
 
 
+# Add/edit notes
+noteadd() {
+    "$EDITOR" "$HOME/documents/notes/$*.md"
+}
+
+
+# List notes
+notelist() {
+    ls -1 "$HOME/documents/notes/"
+}
+
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
