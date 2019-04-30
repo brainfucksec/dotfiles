@@ -29,8 +29,7 @@ alias src='source ~/.bashrc'
 # =========================================================
 # systemctl
 alias sc='sudo systemctl'
-alias scd='sudo systemctl daemon-reload'
-alias scs='sudo systemctl -t service -a --state running --no-page --no-legend'
+alias scr='sudo systemctl -t service -a --state running --no-page --no-legend'
 alias scf='sudo systemctl --failed | head -n -6 | tail -n -1'
 
 # memory/cpu
@@ -41,8 +40,7 @@ alias ht='htop'
 alias cputemp='sensors | grep Core'
 
 # network
-alias showrepo='sudo cat /etc/pacman.d/mirrorlist'
-alias updaterepo='sudo reflector --verbose -c Germany -c Sweden -c France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias uml='sudo reflector --verbose --threads 10 -c Germany -c France -c Italy --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias gu='gitupdate'
 alias myip='curl http://ipinfo.io'
 
@@ -58,14 +56,11 @@ alias u='unmountdev'
 alias h='cd ~/'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
-alias dk='cd ~/Desktop'
+alias n='cd ~/documents/notes'
 alias dl='cd ~/downloads'
 alias p='cd ~/programming'
 alias pd='cd ~/programming/dev'
 alias pg='cd ~/programming/git'
-alias t='cd ~/tmp'
-alias v='cd /opt/vpn/config'
-alias vp='cd ~/.vim/pack/plugins/start'
 
 
 # =========================================================
