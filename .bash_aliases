@@ -1,5 +1,5 @@
 # =========================================================
-# => bash aliases
+# => .bash_aliases
 # =========================================================
 
 
@@ -71,3 +71,4 @@ alias r='ranger'
 alias f='feh -g 640x480 --scale-down -d -S filename'
 alias bb='bleachbit -c --preset'
 alias vb='vboxmanage'
+alias n='note'
