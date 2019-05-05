@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.12 - 2019/04/29
+# Version: 0.22 - 2019/05/05
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -230,6 +230,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # get window class name: `xprop | awk '/WM_CLASS/{print $4}'`
 #assign [class="Termite"]                $ws1
 assign [class="Firefox"]                $ws2
+assign [class="Tor"]                    $ws2
 assign [class="Liferea"]                $ws3
 assign [class="Thunar"]                 $ws3
 assign [class="Zathura"]                $ws5
