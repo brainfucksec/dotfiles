@@ -1,6 +1,8 @@
 #
 # ~/.bashrc
+# by Brainfuck
 #
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -11,12 +13,25 @@
 PS1='┌──[ \[\e[1;97m\]\u\[\e[m\] ]───[ \[\e[1;97m\]\h\[\e[m\] ] \[\e[1;94m\][\w]\[\e[m\]
 └───\[\e[1;93m\]>>\[\e[m\] '
 
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='ls --color=auto'
 fi
 
+
+# Import colorscheme from 'wal' asynchronously
+(cat ~/.cache/wal/sequences &)
+
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
 
 # Custom Functions:
 # Function extract for common archive formats
@@ -86,34 +101,22 @@ gitupdate() {
         echo "Usage: gitupdate <directory path>"
         return 1
     else
-        local repodir="$1"
-        if [[ -d "$repodir" ]]; then
+        local cwd="$1"
+        if [[ -d "$cwd" ]]; then
             echo "[i] Updating git packages, it may take some time..."
-            cd "$repodir"
-            for i in $(find . -name ".git" | cut -c 3-); do
+            cd "$cwd"
+            for i in $(find . -maxdepth 3 -name ".git" | cut -c 3-); do
                 echo ""
                 echo "${i}" | sed -e 's/.git//g'
                 cd "$i"
                 cd ..
                 git pull
-                cd "$repodir"
+                cd "$cwd"
             done
             cd "$HOME"
         else
-            echo "[ error ] there are no git repositories here :("
+            echo "[Error] there are no git repositories here :("
             return 1
         fi
     fi
 }
-
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
-
-# Import colorscheme from 'wal' asynchronously
-(cat ~/.cache/wal/sequences &)
