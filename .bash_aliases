@@ -44,7 +44,7 @@ alias uml='sudo reflector --verbose --threads 10 -c Germany -c France -c Italy -
 alias gu='gitupdate'
 alias myip='curl -s -m 10 http://ipinfo.io'
 
-# volumes management
+# archives and volumes management
 alias ex='extract'
 alias m='mountdev'
 alias u='unmountdev'
