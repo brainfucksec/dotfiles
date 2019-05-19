@@ -4,7 +4,7 @@
 ; ==========================
 ;
 ; Author: Brainfuck
-; Version: 0.1.4 - 2019/01/31
+; Version: 0.1.5 - 2019/05/19
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=====================================================
 
@@ -27,9 +27,8 @@ green = #2ace66
 ; bar settings
 ;=====================================================
 [bar/mybar]
-monitor = VGA-1
 width = 100%
-height = 28
+height = 26
 offset-x = 0
 offset-y = 0
 locale = it_IT.UTF-8
@@ -54,7 +53,7 @@ module-margin-right = 1
 font-0 = "misc ohsnap:pixelsize=12;0"
 font-1 = unifont:pixelsize=8:Tewi:fontformat=truetype;0
 font-2 = FontAwesome:pixelsize=11;2
-font-3 = WunconSiji:pixelsize=14;0
+font-3 = Siji:pixelsize=14;0
 
 modules-left = i3
 modules-center = date
@@ -156,6 +155,7 @@ format-spacing = 1
 label-open =
 label-open-foreground = ${colors.primary}
 label-close = back
+label-close-foreground = ${colors.green}
 label-separator = |
 label-separator-foreground = ${colors.secondary}
 
@@ -171,7 +171,7 @@ menu-0-2-exec = poweroff
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = %percentage%%
+label-volume =
 label-volume-foreground = ${root.foreground}
 label-muted =  
 
