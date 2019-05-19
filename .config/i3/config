@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.22 - 2019/05/05
+# Version: 0.30 - 2019/05/19
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -161,13 +161,12 @@ bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id liferea
 bindsym $mod+F6 exec --no-startup-id virtualbox
-bindsym $mod+F7 exec --no-startup-id lxappearance
-bindsym $mod+F8 exec --no-startup-id pidgin
+bindsym $mod+F7 exec --no-startup-id pidgin
+bindsym $mod+F8 exec --no-startup-id lxappearance
 
 bindsym $mod+x exec xscreensaver-command -lock
 bindsym $mod+d exec rofi -show run
 bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
-bindsym $mod+r exec --no-startup-id termite -e "bash -ic ranger"
 bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
 
 # screenshot
