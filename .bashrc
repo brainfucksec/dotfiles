@@ -1,13 +1,9 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-
-export white=$'\e[1;97m'
-export red=$'\e[1;91m'
-export green=$'\e[1;92m'
-export blue=$'\e[1;94m'
-export endc=$'\e[0m'
+# =============================================================== #
+#
+# ~/.bashrc
+# by Brainfuck
+#
+# =============================================================== #
 
 
 # If not running interactively, don't do anything
@@ -16,8 +12,8 @@ export endc=$'\e[0m'
 
 # default prompt
 #PS1='[\u@\h \W]\$ '
-PS1='┌──[${white}\u${endc}]───[${white}\h${endc}] ${blue}[\w]${endc}
-└───${white}>> ${endc}'
+PS1='┌──[\[\e[1;96m\]\u\[\e[m\]]───[\[\e[1;96m\]\h\[\e[m\]] \[\e[1;94m\][\w]\[\e[m\]
+└───\[\e[1;96m\]>>\[\e[m\] '
 
 
 # enable color support of ls and also add handy aliases
