@@ -67,7 +67,6 @@ alias pg='cd ~/programming/git'
 # =========================================================
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias sp='strongpass'
-alias r='ranger'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias bb='bleachbit -c --preset'
 alias vb='vboxmanage'

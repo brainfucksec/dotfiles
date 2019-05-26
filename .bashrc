@@ -1,7 +1,13 @@
-#
-# ~/.bashrc
-# by Brainfuck
-#
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+
+export white=$'\e[1;97m'
+export red=$'\e[1;91m'
+export green=$'\e[1;92m'
+export blue=$'\e[1;94m'
+export endc=$'\e[0m'
 
 
 # If not running interactively, don't do anything
@@ -10,8 +16,8 @@
 
 # default prompt
 #PS1='[\u@\h \W]\$ '
-PS1='┌──[ \[\e[1;97m\]\u\[\e[m\] ]───[ \[\e[1;97m\]\h\[\e[m\] ] \[\e[1;94m\][\w]\[\e[m\]
-└───\[\e[1;93m\]>>\[\e[m\] '
+PS1='┌──[${white}\u${endc}]───[${white}\h${endc}] ${blue}[\w]${endc}
+└───${white}>> ${endc}'
 
 
 # enable color support of ls and also add handy aliases
@@ -21,10 +27,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
-# Import colorscheme from 'wal' asynchronously
-(cat ~/.cache/wal/sequences &)
-
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -32,6 +34,7 @@ fi
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
+
 
 # Custom Functions:
 # Function extract for common archive formats
@@ -120,3 +123,7 @@ gitupdate() {
         fi
     fi
 }
+
+
+# Import colorscheme from 'wal' asynchronously
+(cat ~/.cache/wal/sequences &)
