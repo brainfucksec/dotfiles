@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Author: Brainfuck
-; Version: 0.3.0 - 2019/05/27
+; Version: 0.3.1 - 2019/05/27
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=================================================================
 
@@ -52,8 +52,10 @@ overline-color = #f00
 underline-size = 2
 underline-color = ${colors.primary}
 
-border-bottom-size = 0
-border-bottom-color = ${colors.primary}
+border-bottom-size = 2
+border-bottom-color = ${colors.background}
+border-top-size = 2
+border-top-color = ${colors.background}
 
 padding-left = 1
 padding-right = 1
