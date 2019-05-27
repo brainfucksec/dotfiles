@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Author: Brainfuck
-; Version: 0.2.0 - 2019/05/26
+; Version: 0.3.0 - 2019/05/27
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=================================================================
 
@@ -39,7 +39,7 @@ green = #2ace66
 ;=================================================================
 [bar/mybar]
 width = 100%
-height = 26
+height = 27
 offset-x = 0
 offset-y = 0
 locale = it_IT.UTF-8
@@ -67,8 +67,7 @@ font-2 = FontAwesome:pixelsize=11;2
 font-3 = Siji:pixelsize=14;0
 
 modules-left = i3
-modules-center = date
-modules-right = volume eth temperature cpu memory powermenu
+modules-right = volume eth vpn temperature cpu memory date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -118,20 +117,6 @@ format-prefix-foreground = ${colors.primary}
 label = %percentage%%
 
 
-[module/temperature]
-type = internal/temperature
-interval = 0.5
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input
-warn-temperature = 60
-
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.alert}
-
-
 [module/memory]
 type = internal/memory
 interval = 1
@@ -140,13 +125,26 @@ format-prefix-foreground = ${colors.primary}
 label = %percentage_used%%
 
 
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input
+warn-temperature = 60
+
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.alert}
+
+
 [module/eth]
 type = internal/network
 interface = enp0s25
 interval = 3.0
 
 label-connected = %{F#07d376} %{F-}eth
-;label-connected-foreground = ${colors.primary}
+"label-connected-foreground = ${colors.primary}
 
 label-disconnected = "eth off"
 label-disconnected-foreground = ${colors.alert}
@@ -157,6 +155,16 @@ type = internal/network
 interface = enp0s25
 interval 3.0
 label-connected = %{F#ff0000}up %{F-}%upspeed% %{F#00ff00}dl %{F-}%downspeed%
+
+
+[module/date]
+type = internal/date
+interval = 1.0
+time = %H:%M:%S
+format =  <label>
+format-foreground = ${colors.foreground}
+label = %time%
+label-foreground = ${colors.foreground}
 
 
 [module/powermenu]
@@ -183,12 +191,9 @@ menu-0-2-exec = poweroff
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-"label-volume =
 label-volume-foreground = ${root.foreground}
-"label-muted =  
 label-volume = VOL
 label-muted = MUTE
-
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.green}
@@ -209,11 +214,3 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-
-
-[module/date]
-type = internal/date
-interval = 1
-date = %a %d %b
-time = %H:%M:%S
-label = %{F#07d376}%date%%{F-}%{F#b1bbc2} %time%%{F-}
