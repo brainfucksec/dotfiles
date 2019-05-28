@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Author: Brainfuck
-; Version: 0.3.1 - 2019/05/27
+; Version: 0.3.2 - 2019/05/28
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=================================================================
 
@@ -47,26 +47,23 @@ locale = it_IT.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-overline-size = 0
-overline-color = #f00
 underline-size = 2
 underline-color = ${colors.primary}
 
-border-bottom-size = 2
+border-bottom-size = 1
 border-bottom-color = ${colors.background}
-border-top-size = 2
+border-top-size = 1
 border-top-color = ${colors.background}
 
 padding-left = 1
 padding-right = 1
-
 module-margin-left = 1
 module-margin-right = 1
 
 font-0 = "misc ohsnap:pixelsize=12;0"
 font-1 = unifont:pixelsize=8:Tewi:fontformat=truetype;0
-font-2 = FontAwesome:pixelsize=11;2
-font-3 = Siji:pixelsize=14;0
+font-2 = Siji:pixelsize=14;1
+font-3 = FontAwesome:pixelsize=11;2
 
 modules-left = i3
 modules-right = volume eth vpn temperature cpu memory date powermenu
@@ -97,7 +94,7 @@ enable-scroll = false
 label-focused = %name%
 label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
-label-focused-underline = ${colors.primary}
+;label-focused-underline = ${colors.primary}
 
 label-unfocused = %name%
 label-unfocused-padding = 1
@@ -121,7 +118,7 @@ label = %percentage%%
 
 [module/memory]
 type = internal/memory
-interval = 1
+interval = 1.0
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 label = %percentage_used%%
@@ -129,7 +126,7 @@ label = %percentage_used%%
 
 [module/temperature]
 type = internal/temperature
-interval = 0.5
+interval = 1.0
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input
 warn-temperature = 60
 
@@ -146,7 +143,7 @@ interface = enp0s25
 interval = 3.0
 
 label-connected = %{F#07d376} %{F-}eth
-"label-connected-foreground = ${colors.primary}
+;label-connected-foreground = ${colors.primary}
 
 label-disconnected = "eth off"
 label-disconnected-foreground = ${colors.alert}
@@ -163,7 +160,7 @@ label-connected = %{F#ff0000}up %{F-}%upspeed% %{F#00ff00}dl %{F-}%downspeed%
 type = internal/date
 interval = 1.0
 time = %H:%M:%S
-format =  <label>
+format =  <label>
 format-foreground = ${colors.foreground}
 label = %time%
 label-foreground = ${colors.foreground}
