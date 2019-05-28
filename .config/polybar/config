@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Author: Brainfuck
-; Version: 0.3.2 - 2019/05/28
+; Version: 0.3.3 - 2019/05/28
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=================================================================
 
@@ -66,7 +66,8 @@ font-2 = Siji:pixelsize=14;1
 font-3 = FontAwesome:pixelsize=11;2
 
 modules-left = i3
-modules-right = volume eth vpn temperature cpu memory date powermenu
+modules-center = date
+modules-right = volume eth vpn temperature cpu memory powermenu
 
 tray-position = right
 tray-padding = 2
@@ -159,11 +160,13 @@ label-connected = %{F#ff0000}up %{F-}%upspeed% %{F#00ff00}dl %{F-}%downspeed%
 [module/date]
 type = internal/date
 interval = 1.0
-time = %H:%M:%S
-format =  <label>
+date = %a %d %b %Y
+time = %H:%M
+;format =  <label>
+format = <label>
 format-foreground = ${colors.foreground}
-label = %time%
-label-foreground = ${colors.foreground}
+label = %date% %time%
+;label-foreground = ${colors.foreground}
 
 
 [module/powermenu]
