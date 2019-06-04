@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Author: Brainfuck
-; Version: 0.3.4 - 2019/05/30
+; Version: 0.3.5 - 2019/06/04
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=================================================================
 
@@ -31,7 +31,7 @@ foreground-alt = #ffb454
 primary = #07d376
 secondary = #637886
 alert = #2f8b99
-green = #2ace66
+bright_green = #05a15a
 
 
 ;=================================================================
@@ -164,8 +164,9 @@ date = %a %d %b
 time = %H:%M:%S
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.bright_green}
 label = %time%
+label-foreground = ${colors.foreground}
 
 
 [module/powermenu]
@@ -176,7 +177,7 @@ format-spacing = 1
 label-open =
 label-open-foreground = ${colors.primary}
 label-close = back
-label-close-foreground = ${colors.green}
+label-close-foreground = ${colors.primary}
 label-separator = |
 label-separator-foreground = ${colors.secondary}
 
@@ -192,20 +193,20 @@ menu-0-2-exec = poweroff
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${colors.foreground}
 label-volume = VOL
 label-muted = MUTE
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.green}
-bar-volume-foreground-1 = ${colors.green}
-bar-volume-foreground-2 = ${colors.green}
-bar-volume-foreground-3 = ${colors.green}
-bar-volume-foreground-4 = ${colors.green}
-bar-volume-foreground-5 = ${colors.green}
-bar-volume-foreground-6 = ${colors.green}
-bar-volume-foreground-7 = ${colors.green}
-bar-volume-foreground-8 = ${colors.green}
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-foreground-4 = ${colors.primary}
+bar-volume-foreground-5 = ${colors.primary}
+bar-volume-foreground-6 = ${colors.primary}
+bar-volume-foreground-7 = ${colors.primary}
+bar-volume-foreground-8 = ${colors.primary}
 bar-volume-foreground-9 = ${colors.alert}
 
 bar-volume-gradient = false
