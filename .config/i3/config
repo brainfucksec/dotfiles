@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.30 - 2019/05/19
+# Version: 0.31 - 2019/06/27
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -33,14 +33,17 @@ default_orientation auto
 # i3-gaps settings
 for_window [class="^.*"] border pixel 3
 new_window pixel 3
-gaps inner 6
-gaps outer 3
+gaps inner 8
+#gaps outer 3
 
 # Toggle gaps on selected workspaces
 workspace 2 gaps inner 0
 workspace 2 gaps outer 0
 workspace 6 gaps inner 0
 workspace 6 gaps outer 0
+
+# Only enable gaps on a workspace when there is at least one container
+#smart_gaps on
 
 # Activate smart borders (always)
 #smart_borders on
@@ -148,7 +151,7 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 
 # ===================================================================
