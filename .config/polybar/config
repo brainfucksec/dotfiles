@@ -175,7 +175,6 @@ type = custom/menu
 format-spacing = 1
 
 label-open =
-label-open-padding = 1
 label-open-foreground = ${colors.primary}
 label-close = back
 label-close-foreground = ${colors.primary}
