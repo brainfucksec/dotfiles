@@ -14,8 +14,8 @@
 ;
 ; polybar configuration file
 ;
-; Author: Brainfuck
-; Version: 0.3.5 - 2019/06/04
+; Maintainer: Brainfuck
+; Version: 0.3.6 - 2019/02/07
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=================================================================
 
@@ -164,7 +164,7 @@ date = %a %d %b
 time = %H:%M:%S
 
 format-prefix = " "
-format-prefix-foreground = ${colors.bright_green}
+format-prefix-foreground = ${colors.foreground}
 label = %time%
 label-foreground = ${colors.foreground}
 
@@ -175,6 +175,7 @@ type = custom/menu
 format-spacing = 1
 
 label-open =
+label-open-padding = 1
 label-open-foreground = ${colors.primary}
 label-close = back
 label-close-foreground = ${colors.primary}
