@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.32 - 2019/07/02
+# Version: 0.40 - 2019/07/10
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -33,7 +33,7 @@ default_orientation auto
 # i3-gaps settings
 for_window [class="^.*"] border pixel 3
 new_window pixel 3
-gaps inner 8
+gaps inner 13
 #gaps outer 3
 
 # Toggle gaps on selected workspaces

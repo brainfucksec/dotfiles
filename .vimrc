@@ -17,6 +17,7 @@
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
+"
 """"""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -259,5 +260,8 @@ nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
 
 " NerdTree
-" Open NerdTree with Ctrl+n
+" Open NERDTree automatically when vim starts up
+"autocmd vimenter * NERDTree
+
+" Open/close NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>

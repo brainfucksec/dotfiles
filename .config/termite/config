@@ -3,16 +3,19 @@ allow_bold = true
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = misc Tamsyn 12
+
+font = Misc Tamsyn 12
+
 #fullscreen = true
 geometry = 640x480
 #icon_name = terminal
 #mouse_autohide = false
 #scroll_on_output = false
 #scroll_on_keystroke = true
+
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # and setting it to a negative value means "infinite scrollback"
-scrollback_lines = 10000
+scrollback_lines = 5000
 #search_wrap = true
 #urgent_on_bell = true
 
@@ -20,7 +23,7 @@ scrollback_lines = 10000
 #browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = system
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
 cursor_shape = block
@@ -34,6 +37,9 @@ cursor_shape = block
 # set size hints for the window
 #size_hints = false
 
+# "off", "left" or "right"
+#scrollbar = off
+
 
 [colors]
 # ayu
@@ -42,7 +48,7 @@ foreground      = #e6e1cf
 foreground_bold = #e6e1cf
 cursor          = #e6e1cf
 background      = #0f1419
-#background      = rgba(15, 20, 25, 0.7)
+#background      = rgba(15, 20, 25, 0.6)
 
 # black
 color0  = #000000
