@@ -26,3 +26,6 @@ Terminal Emulator     > termite
 Window Manager        > i3-gaps
 Color Scheme:         > made with pywal
 ```
+
+![alt text](https://imgur.com/vjBOiVZ.png)
+![alt text](https://imgur.com/OZNLSTS.png)
