@@ -28,4 +28,4 @@ Color Scheme:         > made with pywal
 ```
 
 ![alt text](https://imgur.com/vjBOiVZ.png)
-![alt text](https://imgur.com/OZNLSTS.png)
+![alt text](https://imgur.com/XS6AI1D.png)
