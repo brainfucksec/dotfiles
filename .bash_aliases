@@ -42,7 +42,7 @@ alias cputemp='sensors | grep Core'
 # network
 alias uml='sudo reflector --verbose --threads 10 -c Germany -c France -c Italy --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias gu='gitupdate'
-alias myip='curl -s -m 10 http://ipinfo.io'
+alias myip='curl -s -m 10 http://ip-api.com'
 
 # archives and volumes management
 alias ex='extract'
