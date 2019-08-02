@@ -4,8 +4,8 @@ allow_bold = true
 #clickable_url = true
 #dynamic_title = true
 
-#font = SourceCodePro 10
-font = Misc Tamsyn 12
+#font = DejaVu Sans Mono 10
+font = Misc Tamsyn 11
 
 #fullscreen = true
 geometry = 640x480
