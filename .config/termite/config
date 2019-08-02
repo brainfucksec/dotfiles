@@ -1,15 +1,15 @@
 [options]
 allow_bold = true
 #audible_bell = false
-#clickable_url = true
+clickable_url = true
 #dynamic_title = true
 
 #font = DejaVu Sans Mono 10
-font = Misc Tamsyn 11
+font = Misc Tamsyn 11.16
 
 #fullscreen = true
 geometry = 640x480
-#icon_name = terminal
+icon_name = terminal
 #mouse_autohide = false
 #scroll_on_output = false
 #scroll_on_keystroke = true
@@ -30,7 +30,7 @@ cursor_blink = off
 cursor_shape = block
 
 # Hide links that are no longer valid in url select overlay mode
-#filter_unmatched_urls = true
+filter_unmatched_urls = true
 
 # Emit escape sequences for extra modified keys
 #modify_other_keys = false
@@ -85,4 +85,15 @@ color15 = #ffffff
 
 
 [hints]
+# font = PragmataPro 13
+# font = PragmataPro 11.25
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 3
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
 # vim: ft=dosini cms=#%s
