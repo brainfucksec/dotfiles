@@ -27,4 +27,4 @@ Window Manager        > i3-gaps
 Color Scheme:         > made with pywal
 ```
 
-![alt text](https://imgur.com/yZ8kagR.png)
+![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-1.png)
