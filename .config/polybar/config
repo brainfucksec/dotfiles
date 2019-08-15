@@ -7,7 +7,7 @@
 ;    ▒██▒ ░  ░░ ████▓▒░░██████▒ ░ ██▒▓░░▓█  ▀█▓ ▓█   ▓██▒░██▓ ▒██▒
 ;    ▒▓▒░ ░  ░░ ▒░▒░▒░ ░ ▒░▓  ░  ██▒▒▒ ░▒▓███▀▒ ▒▒   ▓▒█░░ ▒▓ ░▒▓░
 ;    ░▒ ░       ░ ▒ ▒░ ░ ░ ▒  ░▓██ ░▒░ ▒░▒   ░   ▒   ▒▒ ░  ░▒ ░ ▒░
-;    ░░       ░ ░ ░ ▒    ░ ░   ▒ ▒ ░░   ░    ░   ░   ▒     ░░   ░
+;    ░░       ░ ░ ░ ▒ a   ░ ░   ▒ ▒ ░░   ░    ░   ░   ▒     ░░   ░
 ;                 ░ ░      ░  ░░ ░      ░            ░  ░   ░
 ;                              ░ ░           ░
 ;
@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Maintainer: Brainfuck
-; Version: 0.3.9 - 2019/08/14
+; Version: 0.4.0 - 2019/08/15
 ; Website: https://github.com/brainfucksec/dotfiles
 ;=================================================================
 
@@ -67,7 +67,7 @@ font-3 = FontAwesome:pixelsize=11;2
 
 modules-left = i3
 modules-center = date
-modules-right = volume temperature cpu memory eth powermenu
+modules-right = volume temperature cpu memory eth netstat powermenu
 
 tray-position = right
 tray-padding = 2
@@ -154,7 +154,7 @@ label-disconnected-foreground = ${colors.alert}
 type = internal/network
 interface = enp0s25
 interval 3.0
-label-connected = %{F#ff0000}up %{F-}%upspeed% %{F#00ff00}dl %{F-}%downspeed%
+label-connected = %{F#07d376} %{F-}%downspeed% %{F#637886} %{F-}%upspeed%
 
 
 [module/date]
