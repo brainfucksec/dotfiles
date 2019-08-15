@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.41 - 2019/08/13
+# Version: 0.42 - 2019/08/14
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -14,7 +14,7 @@
 # ===================================================================
 
 # Class                  border  backgr  text     indicator child_border
-client.focused           #738699 #191f26 #d9d7ce  #738699   #738699
+client.focused           #6b8291 #191f26 #d9d7ce  #6b8291   #6b8291
 client.focused_inactive  #030a13 #191f26 #b2babd  #030a13   #030a13
 client.unfocused         #030a13 #151a1f #b2babd  #030a13   #030a13
 client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
@@ -33,7 +33,7 @@ default_orientation auto
 # i3-gaps settings
 for_window [class="^.*"] border pixel 3
 new_window pixel 3
-gaps inner 13
+gaps inner 15
 #gaps outer 3
 
 # Toggle gaps on selected workspaces
