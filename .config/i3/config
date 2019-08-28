@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.42 - 2019/08/14
+# Version: 0.43 - 2019/08/28
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -31,8 +31,8 @@ font xft:Tamsyn 11
 default_orientation auto
 
 # i3-gaps settings
-for_window [class="^.*"] border pixel 3
-new_window pixel 3
+for_window [class="^.*"] border pixel 4
+new_window pixel 4
 gaps inner 15
 #gaps outer 3
 
@@ -164,7 +164,7 @@ bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id liferea
 bindsym $mod+F6 exec --no-startup-id virtualbox
-bindsym $mod+F7 exec --no-startup-id pidgin
+bindsym $mod+F7 exec --no-startup-id gajim
 bindsym $mod+F8 exec --no-startup-id lxappearance
 
 bindsym $mod+x exec xscreensaver-command -lock
@@ -240,7 +240,7 @@ assign [class="vlc"]                    $ws7
 assign [class="Pulseaudio-equalizer"]   $ws7
 assign [class="Pavucontrol"]            $ws7
 assign [class="SimpleScreenRecorder"]   $ws7
-assign [class="Pidgin"]                 $ws8
+assign [class="Gajim"]                  $ws8
 # VirtualBox
 assign [class="Manager"]                $ws9
 
@@ -253,8 +253,7 @@ for_window [class="vlc"]                    $float
 for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
 for_window [class="SimpleScreenRecorder"]   $float
-for_window [class="qTox"]                   $float
-for_window [class="Pidgin"]                 $float
+for_window [class="Gajim"]                  $float
 
 
 # ===================================================================
@@ -265,7 +264,7 @@ for_window [class="Pidgin"]                 $float
 exec --no-startup-id setxkbmap it
 
 # compton
-exec --no-startup-id compton --config ~/.config/compton.conf
+exec --no-startup-id compton --config ~/.config/compton/compton.conf
 
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
