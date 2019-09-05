@@ -13,10 +13,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.8 - 2019/04/30
+" Version: 1.9 - 2019/09/05
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
-"
 "
 """"""""""""""""""""""""""""""""""""""""""""""
 
@@ -86,7 +85,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Line lenght marker at 80 columns
 set colorcolumn=80
-
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " => Colors and fonts
@@ -190,8 +188,8 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
 " Navigate between errors
-nmap <silent> <C-k> <Plug>
-nmap <silent> <C-j> <Plug>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 
 " => Omnicompletion languages plugins:
@@ -232,7 +230,7 @@ set noshowmode
 
 " Set colorscheme
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': '16color',
       \ }
 
 
