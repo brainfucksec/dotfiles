@@ -21,7 +21,7 @@ File Manager          > thunar
 Media Player          > ncmpcpp, vlc
 Program Launcher      > rofi
 PDF Viewer            > zathura
-Text Editor           > vim
+Text Editor           > neovim
 Terminal Emulator     > termite
 Window Manager        > i3-gaps
 Color Scheme:         > made with pywal
