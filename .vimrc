@@ -13,7 +13,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""
 " => vim configuration file
 "
-" Version: 1.9 - 2019/09/05
+" Version: 1.10 - 2019/09/06
 " Author: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -193,10 +193,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 
 " => Omnicompletion languages plugins:
-
-" Python
-" - jedi-vim
-let g:jedi#show_call_signatures = "0"
 
 " C/C++
 " - clang-complete
