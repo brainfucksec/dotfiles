@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.43 - 2019/08/28
+# Version: 0.44 - 2019/09/06
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -28,7 +28,7 @@ client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 font xft:Tamsyn 11
 
 # Set default orientation, <horizontal|vertical|auto>
-default_orientation auto
+default_orientation horizontal
 
 # i3-gaps settings
 for_window [class="^.*"] border pixel 4
@@ -159,7 +159,7 @@ bindsym $mod+Shift+e exec i3-msg exit
 # ===================================================================
 
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic vim"
+bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic nvim"
 bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id liferea
