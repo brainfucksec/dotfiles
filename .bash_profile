@@ -8,7 +8,7 @@
 export PATH="${PATH}:/home/brainfuck/bin"
 
 # EDITOR
-export EDITOR=vim
+export EDITOR=nvim
 
 # fix appearance of QT5 applications
 export QT_QPA_PLATFORMTHEME=qt5ct
