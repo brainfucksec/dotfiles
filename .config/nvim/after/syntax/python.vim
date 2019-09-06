@@ -310,7 +310,7 @@ hi def link cBoolean Boolean
 
 " Highlight operators
 syn match Operator "[-+&|=!\/~*%&^?<>]"
-hi Operator guifg=#E6B673
+hi Operator guifg=#E7C547
 
 " Highlight brackets
 "syn match Braces "[{}()\[\]]"
