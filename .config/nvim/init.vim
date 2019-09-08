@@ -203,7 +203,7 @@ set noshowmode
 
 " Set colorscheme
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': '16color',
       \ }
 
 
