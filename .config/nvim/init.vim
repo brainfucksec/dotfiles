@@ -201,10 +201,22 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 " Disable mode information under status line
 set noshowmode
 
-" Set colorscheme
+" Settings
 let g:lightline = {
-      \ 'colorscheme': '16color',
-      \ }
+    \ 'colorscheme': '16color',
+    \ 'component_function': {
+    \     'filetype': 'MyFiletype',
+    \     'fileformat': 'MyFileformat',
+    \ }
+    \ }
+
+function! MyFiletype()
+    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 
 " =========================================================
