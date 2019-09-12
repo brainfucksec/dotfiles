@@ -5,11 +5,10 @@ clickable_url = true
 #dynamic_title = true
 
 #font = DejaVu Sans Mono Book 10
-#font = Misc Tamsyn Regular 11
-font = Tamzen Regular 11
+font = Dina 9
 
 #fullscreen = true
-geometry = 640x480
+#geometry = 640x480
 icon_name = terminal
 #mouse_autohide = false
 #scroll_on_output = false
@@ -50,7 +49,7 @@ foreground      = #e6e1cf
 foreground_bold = #e6e1cf
 cursor          = #e6e1cf
 background      = #0f1419
-#background      = rgba(15, 20, 25, 0.6)
+#background      = rgba(15, 20, 25, 0.8)
 
 # black
 color0  = #000000
