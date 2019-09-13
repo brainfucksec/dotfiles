@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.44 - 2019/09/06
+# Version: 0.45 - 2019/09/13
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -24,8 +24,8 @@ client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 # Windows style
 # ===================================================================
 
-# Font for window titles
-font xft:Tamsyn 11
+# Font for window titles (not used wit gaps)
+font xft:Dina 8
 
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal
@@ -231,7 +231,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Force a window on a named workspace
 # get window class name: `xprop | awk '/WM_CLASS/{print $4}'`
 #assign [class="Termite"]                $ws1
-assign [class="Firefox"]                $ws2
+assign [class="firefox"]                $ws2
 assign [class="Tor"]                    $ws2
 assign [class="Liferea"]                $ws3
 assign [class="Thunar"]                 $ws3
