@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.45 - 2019/09/13
+# Version: 0.47 - 2019/09/14
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -25,7 +25,7 @@ client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 # ===================================================================
 
 # Font for window titles (not used wit gaps)
-font xft:Dina 8
+font xft:Terminus 9
 
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal
@@ -183,7 +183,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
-bindsym $mod+p exec --no-startup-id pavucontrol
+bindsym $mod+p exec --no-startup-id termite -e "bash -ic pamix"
 
 
 # ===================================================================

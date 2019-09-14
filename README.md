@@ -19,6 +19,7 @@ Bar                   > polybar
 Compositor            > compton
 File Manager          > thunar
 Media Player          > ncmpcpp, vlc
+Image Viewer          > feh
 Program Launcher      > rofi
 PDF Viewer            > zathura
 Text Editor           > neovim
