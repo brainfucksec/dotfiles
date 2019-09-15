@@ -5,7 +5,8 @@ clickable_url = true
 #dynamic_title = true
 
 #font = DejaVu Sans Mono Book 10
-font = Dina 9
+font = Misc Tamsyn 11
+#font = Dina 9
 
 #fullscreen = true
 #geometry = 640x480

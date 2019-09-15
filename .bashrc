@@ -32,7 +32,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 
-# Custom Functions:
+## Functions:
 # Function extract for common archive formats
 extract() {
     if [[ -z "$1" ]]; then

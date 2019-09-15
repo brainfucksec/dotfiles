@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Maintainer: Brainfuck
-; Version: 0.4.1 - 2019/09/06
+; Version: 0.4.2 - 2019/09/06
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
 
@@ -153,7 +153,7 @@ label-disconnected-foreground = ${colors.alert}
 [module/netstat]
 type = internal/network
 interface = enp0s25
-interval 3.0
+interval = 3.0
 label-connected = %{F#07d376} %{F-}%downspeed% %{F#637886} %{F-}%upspeed%
 
 
@@ -164,8 +164,6 @@ interval = 1.0
 date = %a %d %b %Y
 time = %H:%M:%S
 
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground}
 label = %date% %time%
 label-foreground = ${colors.primary}
 

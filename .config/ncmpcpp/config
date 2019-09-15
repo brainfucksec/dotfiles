@@ -22,7 +22,7 @@ visualizer_output_name = "my_fifo"
 visualizer_in_stereo = "no"
 visualizer_sync_interval = "30"
 visualizer_type = "spectrum" (spectrum/wave)
-visualizer_look = "▋▋"
+visualizer_look = "█▋"
 visualizer_color = "green"
 
 ## delays

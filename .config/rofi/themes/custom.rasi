@@ -10,7 +10,7 @@
     orange:                      #E7C547;
     blue:                        #36A3D9;
     grey:						 #4F606B;
-    font:            			 "misc Tamsyn 12";
+    font:            			 "Misc Tamsyn 11";
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
