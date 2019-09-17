@@ -1,11 +1,16 @@
-# =========================================================
-# => .bash_aliases
-# =========================================================
+# ==============================================================
+#
+# $HOME/.bash_aliases FILE
+# By Brainfuck [brainfucksec]
+#
+# Last modified: Tue Sep 17 19:02:56 CEST 2019
+#
+# ==============================================================
 
 
-# =========================================================
-# => Common commands
-# =========================================================
+# ==============================================================
+# == Common commands
+# ==============================================================
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -24,9 +29,12 @@ alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 
 
-# =========================================================
-# => System administration commands
-# =========================================================
+# ==============================================================
+# == System administration commands
+#
+# Functions defined on $HOME/.bashrc FILE
+# ==============================================================
+
 # systemctl
 alias sc='sudo systemctl'
 alias scr='sudo systemctl -t service -a --state running --no-page --no-legend'
@@ -40,7 +48,7 @@ alias ht='htop'
 alias cputemp='sensors | grep Core'
 
 # network
-alias uml='sudo reflector --verbose --threads 10 -c Germany -c France -c Italy --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias uml='sudo reflector --verbose --threads 15 -c Germany -c Sweden -c Italy --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias gu='gitupdate'
 alias myip='curl -s http://ipinfo.io'
 
@@ -50,9 +58,9 @@ alias m='mountdev'
 alias u='unmountdev'
 
 
-# =========================================================
-# Directories shortcuts
-# =========================================================
+# ==============================================================
+# == Directories shortcuts
+# ==============================================================
 alias h='cd ~/'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
@@ -62,9 +70,9 @@ alias pd='cd ~/programming/dev'
 alias pg='cd ~/programming/git'
 
 
-# =========================================================
-# Applications
-# =========================================================
+# ==============================================================
+# == Applications
+# ==============================================================
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias sp='strongpass'
 alias fl='feh -g 640x480 --scale-down -d -S filename'

@@ -1,20 +1,29 @@
-# =============================================================== #
+# ==============================================================
 #
-# ~/.bashrc
-# by Brainfuck
+# $HOME/.bashrc FILE
+# By Brainfuck (brainfucksec)
 #
-# =============================================================== #
+# Last modified: Tue Sep 17 19:11:44 CEST 2019
+#
+# ==============================================================
 
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 
-# default prompt
+# ==============================================================
+# == Default prompt
+# ==============================================================
+
 #PS1='[\u@\h \W]\$ '
 PS1='┌──[\[\e[1;96m\]\u\[\e[m\]]───[\[\e[1;96m\]\h\[\e[m\]] \[\e[1;94m\][\w]\[\e[m\]
 └───\[\e[1;96m\]>>\[\e[m\] '
 
+
+# ==============================================================
+# == Colors
+# ==============================================================
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -23,16 +32,25 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
-# Alias definitions.
+# ==============================================================
+# == Alias definitions
+#
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# ==============================================================
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
 
-## Functions:
+# ==============================================================
+# == Functions
+#
+# If you want to make this file smaller, these functions can
+# be converted into scripts and removed from here.
+# ==============================================================
+
 # Function extract for common archive formats
 extract() {
     if [[ -z "$1" ]]; then
