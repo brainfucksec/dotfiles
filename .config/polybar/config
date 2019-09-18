@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Maintainer: Brainfuck
-; Version: 0.4.2 - 2019/09/06
+; Version: 0.4.3 - 2019/09/18
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
 
@@ -48,15 +48,15 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 underline-size = 2
-underline-color = ${colors.primary}
+;underline-color = ${colors.primary}
 
 border-bottom-size = 1
 border-bottom-color = ${colors.background}
 border-top-size = 1
 border-top-color = ${colors.background}
 
-padding-left = 1
-padding-right = 1
+padding-left = 2
+padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
@@ -95,7 +95,7 @@ enable-scroll = false
 label-focused = %name%
 label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
-;label-focused-underline = ${colors.primary}
+label-focused-underline = ${colors.primary}
 
 label-unfocused = %name%
 label-unfocused-padding = 1
@@ -170,7 +170,6 @@ label-foreground = ${colors.primary}
 
 [module/powermenu]
 type = custom/menu
-
 format-spacing = 1
 
 label-open = 
