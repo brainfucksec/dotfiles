@@ -32,7 +32,8 @@ alias src='source ~/.bashrc'
 # ==============================================================
 # == System administration commands
 #
-# Functions defined on $HOME/.bashrc FILE
+# Aliases for functions defined on $HOME/.bashrc FILE
+# and for executables in ~/bin and ~/usr/local/bin directories
 # ==============================================================
 
 # systemctl
@@ -48,7 +49,7 @@ alias ht='htop'
 alias cputemp='sensors | grep Core'
 
 # network
-alias uml='sudo reflector --verbose --threads 15 -c Germany -c Sweden -c Italy --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias um='update-mirrorlist'
 alias gu='gitupdate'
 alias myip='curl -s http://ipinfo.io'
 
