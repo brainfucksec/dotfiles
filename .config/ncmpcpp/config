@@ -37,7 +37,7 @@ song_window_title_format = "{%a-%t}"
 
 ## columns settings
 #song_columns_list_format = "(80f)[white]{t|f} (20)[yellow]{a} (8)[yellow]{l} (40)[yellow]{b}"
-song_columns_list_format = "(60)[white]{t|f} (8)[yellow]{l} (8)[white]{a}"
+song_columns_list_format = "(60)[white]{t|f} (10)[yellow]{l} (40)[white]{a}"
 
 ## various settings
 playlist_separate_albums = "no"
