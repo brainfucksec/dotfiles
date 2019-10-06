@@ -49,7 +49,6 @@ alias ht='htop'
 alias cputemp='sensors | grep Core'
 
 # network
-alias um='update-mirrorlist'
 alias gu='gitupdate'
 alias myip='curl -s http://ipinfo.io'
 
@@ -72,7 +71,7 @@ alias pg='cd ~/programming/git'
 
 
 # ==============================================================
-# == Applications
+# == Applications shortcuts
 # ==============================================================
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias sp='strongpass'
@@ -80,3 +79,4 @@ alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias bb='bleachbit -c --preset'
 alias vb='vboxmanage'
 alias n='note'
+alias z='zathura --fork'
