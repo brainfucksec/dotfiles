@@ -2,7 +2,7 @@
 #
 # i3wm configuration file (i3-gaps)
 #
-# Version: 0.47 - 2019/09/14
+# Version: 0.50 - 2019/10/06
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -25,7 +25,7 @@ client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 # ===================================================================
 
 # Font for window titles (not used wit gaps)
-font xft:Terminus 9
+font xft:Dina 9
 
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal
@@ -39,8 +39,10 @@ gaps inner 15
 # Toggle gaps on selected workspaces
 workspace 2 gaps inner 0
 workspace 2 gaps outer 0
-workspace 6 gaps inner 0
-workspace 6 gaps outer 0
+workspace 8 gaps inner 0
+workspace 8 gaps outer 0
+workspace 9 gaps inner 0
+workspace 9 gaps outer 0
 
 # Only enable gaps on a workspace when there is at least one container
 #smart_gaps on
@@ -196,9 +198,9 @@ set $ws2 2:2 
 set $ws3 3:3 
 set $ws4 4:4 
 set $ws5 5:5 
-set $ws6 6:6 
-set $ws7 7:7 
-set $ws8 8:8 
+set $ws6 6:6 
+set $ws7 7:7 
+set $ws8 8:8 
 set $ws9 9:9 
 
 # Switch to workspace
@@ -236,11 +238,11 @@ assign [class="Tor"]                    $ws2
 assign [class="Liferea"]                $ws3
 assign [class="Thunar"]                 $ws3
 assign [class="Zathura"]                $ws5
-assign [class="vlc"]                    $ws7
-assign [class="Pulseaudio-equalizer"]   $ws7
-assign [class="Pavucontrol"]            $ws7
-assign [class="SimpleScreenRecorder"]   $ws7
-assign [class="Gajim"]                  $ws8
+assign [class="vlc"]                    $ws6
+assign [class="Pulseaudio-equalizer"]   $ws6
+assign [class="Pavucontrol"]            $ws6
+assign [class="SimpleScreenRecorder"]   $ws6
+assign [class="Gajim"]                  $ws7
 # VirtualBox
 assign [class="Manager"]                $ws9
 
