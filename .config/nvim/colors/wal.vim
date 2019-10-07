@@ -28,7 +28,7 @@ hi PreProc ctermbg=NONE ctermfg=3
 hi Special ctermbg=NONE ctermfg=6
 hi Statement ctermbg=NONE ctermfg=1
 hi String ctermbg=NONE ctermfg=1
-hi Number ctermbg=NONE ctermfg=3
+hi Number ctermbg=NONE ctermfg=4
 hi Todo ctermbg=2 ctermfg=0
 hi Type ctermbg=NONE ctermfg=1
 hi Underlined ctermbg=NONE ctermfg=1 cterm=underline
