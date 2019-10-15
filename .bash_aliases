@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck [brainfucksec]
 #
-# Last modified: Tue Sep 17 19:02:56 CEST 2019
+# Last modified: Tue Oct 15 23:28:45 CEST 2019
 #
 # ==============================================================
 
@@ -73,10 +73,9 @@ alias pg='cd ~/programming/git'
 # ==============================================================
 # == Applications shortcuts
 # ==============================================================
-alias ytmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
+alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias sp='strongpass'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
-alias bb='bleachbit -c --preset'
 alias vb='vboxmanage'
 alias n='note'
 alias z='zathura --fork'
