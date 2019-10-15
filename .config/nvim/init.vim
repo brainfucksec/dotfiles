@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.1.0-dev - 2019/09/06
+" Version: 0.1.1-2 - 2019/10/15
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -177,10 +177,14 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Omnicompletion languages plugins
 " ================================
 
+" Python
+" - semshi
+
+
 " C/C++
 " - clang-complete
 " path of clang library file (change this after a update of clang)
-let g:clang_library_path = '/usr/lib/libclang.so.8'
+let g:clang_library_path = '/usr/lib/libclang.so.9'
 let g:clang_complete_auto = 1
 
 " JavaScript
@@ -203,13 +207,14 @@ set noshowmode
 
 " Settings
 let g:lightline = {
-    \ 'colorscheme': '16color',
+    \ 'colorscheme': 'wal',
     \ 'component_function': {
     \     'filetype': 'MyFiletype',
     \     'fileformat': 'MyFileformat',
     \ }
     \ }
 
+" functions for vim-devicons
 function! MyFiletype()
     return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
