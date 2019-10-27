@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Maintainer: Brainfuck
-; Version: 0.4.3 - 2019/09/18
+; Version: 0.5.0 - 2019/10/27
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
 
@@ -43,6 +43,7 @@ height = 28
 offset-x = 0
 offset-y = 0
 locale = it_IT.UTF-8
+;locale = en_US.UTF-8
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -67,7 +68,7 @@ font-3 = FontAwesome:pixelsize=11;2
 
 modules-left = i3
 modules-center = date
-modules-right = volume temperature cpu memory eth netstat powermenu
+modules-right = volume temperature cpu memory eth time powermenu
 
 tray-position = right
 tray-padding = 2
@@ -159,13 +160,20 @@ label-connected = %{F#07d376} %{F-}%downspeed% %{F#637886} %{F-}%upspeed%
 
 [module/date]
 type = internal/date
-interval = 1.0
-
-date = %a %d %b %Y
-time = %H:%M:%S
-
-label = %date% %time%
+;interval = 1.0
+date = %a %d %B %Y
+label = %date%
 label-foreground = ${colors.primary}
+
+
+[module/time]
+type = internal/date
+interval = 1.0
+time = %H:%M:%S
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %time%
+label-foreground = ${colors.foreground}
 
 
 [module/powermenu]
@@ -191,9 +199,9 @@ menu-0-2-exec = poweroff
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume-foreground = ${colors.foreground}
-label-volume = VOL
-label-muted = MUTE
+label-volume-foreground = ${colors.primary}
+label-volume = ""
+label-muted = ""
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.primary}
