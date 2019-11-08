@@ -1,9 +1,9 @@
 # ==============================================================
 #
 # $HOME/.bash_aliases FILE
-# By Brainfuck [brainfucksec]
+# By Brainfuck (brainfucksec)
 #
-# Last modified: Sun Oct 20 19:31:26 CEST 2019
+# Last modified: Fri Nov  8 11:06:53 CET 2019
 #
 # ==============================================================
 
@@ -22,8 +22,8 @@ alias l1m='ls -1 | more'
 alias lm='ls | more'
 alias lsn='ls | cat -n'
 alias mkdir='mkdir -p -v'
-alias cp='cp -v'
-alias cpr='cp -Rv'
+alias cpv='cp -v'
+alias cpr='cp -R'
 alias rcp='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
@@ -37,9 +37,9 @@ alias src='source ~/.bashrc'
 # ==============================================================
 
 # systemctl
-alias sc='sudo systemctl'
-alias scr='sudo systemctl -t service -a --state running --no-page --no-legend'
-alias scf='sudo systemctl --failed | head -n -6 | tail -n -1'
+alias sc='systemctl'
+alias scr='systemctl -t service -a --state running --no-page --no-legend'
+alias scf='systemctl --failed | head -n -6 | tail -n -1'
 
 # memory/cpu
 alias df='df -Tha --total'
