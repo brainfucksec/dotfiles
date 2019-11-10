@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Fri Nov  8 11:06:53 CET 2019
+# Last modified: Sun Nov 10 08:08:49 CET 2019
 #
 # ==============================================================
 
@@ -37,6 +37,7 @@ alias src='source ~/.bashrc'
 # ==============================================================
 
 # systemctl
+alias ssc='sudo systemctl'
 alias sc='systemctl'
 alias scr='systemctl -t service -a --state running --no-page --no-legend'
 alias scf='systemctl --failed | head -n -6 | tail -n -1'
