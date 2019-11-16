@@ -1,15 +1,23 @@
+!{{{ Font hinting
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.rgba:       rgb
+Xft.hintstyle:  hintslight
+!}}}
+
 !{{{ Xscreensaver
 
 xscreensaver.splash: false
 
 !font settings
-xscreensaver.Dialog.headingFont:        -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.headingFont:        -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
 
 !general dialog box (affects main hostname, username, password text)
 xscreensaver.Dialog.foreground:         #ddddee
