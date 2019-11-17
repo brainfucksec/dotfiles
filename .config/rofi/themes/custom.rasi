@@ -9,8 +9,8 @@
     red:                         #FF3333;
     orange:                      #E7C547;
     blue:                        #36A3D9;
-    grey:						 #4F606B;
-    font:            			 "Misc Tamsyn 11";
+    grey:						 #184850;
+    font:                        "Terminus 10";
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
@@ -19,7 +19,7 @@
     urgent-foreground:           @foreground;
     alternate-urgent-background: @background;
     active-foreaground:           @foreground;
-    selected-active-foreground:  @foreground;
+    selected-active-foreground:  @background;
     alternate-normal-foreground: @foreground;
     alternate-active-background: @blue;
     bordercolor:                 @lightbg;
@@ -49,7 +49,7 @@
 
 #mainbox {
     border:  1;
-    padding: 1;
+    padding: 4;
 }
 
 #message {
