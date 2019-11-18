@@ -1,0 +1,16 @@
+#
+# youtube-dl configuration file
+#
+
+# Always extract audio
+--extract-audio
+
+# Specify audio format: "best", "aac", "mp3" ecc, "best" by default
+--audio-format mp3
+
+# Specify ffmpeg/avconv audio quality, insert a value between 0 (better) and 9 (worse)
+--audio-quality 0
+
+# Output filename template, see the "OUTPUT TEMPLATE" for all the info
+-o '%(title)s.%(ext)s'
+
