@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Tue Sep 17 19:11:44 CEST 2019
+# Last modified: Fri Nov 22 08:42:59 CET 2019
 #
 # ==============================================================
 
@@ -11,14 +11,25 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
 
 # ==============================================================
 # == Default prompt
 # ==============================================================
 
 #PS1='[\u@\h \W]\$ '
-PS1='┌──[\[\e[1;93m\]\u\[\e[m\]]───[\[\e[1;93m\]\h\[\e[m\]] \[\e[1;94m\][\w]\[\e[m\]
-└──\[\e[1;93m\]>>\[\e[m\] '
+PS1='┌──[\[\e[1;96m\]\u\[\e[m\]]───[\[\e[1;96m\]\h\[\e[m\]] \[\e[1;94m\][\w]\[\e[m\]
+└──╼ '
 
 
 # ==============================================================
