@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 1.0 - 2019/10/26
+# Version: 1.1 - 2019/11/24
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -282,8 +282,8 @@ for_window [class="Gajim"]                  $float
 # Keyboard layout
 exec --no-startup-id setxkbmap it
 
-# compton
-exec --no-startup-id compton --config ~/.config/compton/compton.conf
+# picom
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh

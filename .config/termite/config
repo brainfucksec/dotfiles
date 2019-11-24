@@ -4,8 +4,8 @@ allow_bold = true
 clickable_url = true
 #dynamic_title = true
 
-#font = Source Code Pro 10
-font = Terminus 10
+#font = Terminus 10
+font = Hermit 10
 
 #fullscreen = true
 #geometry = 640x480
@@ -48,8 +48,8 @@ filter_unmatched_urls = true
 foreground      = #e6e1cf
 foreground_bold = #e6e1cf
 cursor          = #e6e1cf
-background      = #0f1419
-#background      = rgba(15, 20, 25, 0.7)
+#background      = #0f1419
+background      = rgba(15, 20, 25, 0.7)
 
 # black
 color0  = #000000
