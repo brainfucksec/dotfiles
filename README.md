@@ -16,7 +16,7 @@ Setup
 -----
 ```
 Bar                   > polybar
-Compositor            > compton
+Compositor            > picom
 File Manager          > thunar
 Media Player          > ncmpcpp, vlc
 Image Viewer          > feh
@@ -30,4 +30,3 @@ Color Scheme:         > made with pywal
 
 ![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot.png)
 
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/neovim.png)
