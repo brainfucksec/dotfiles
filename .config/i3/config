@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.0 - 2019/12/04
+# Version: 2.1 - 2019/12/05
 # Author: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
@@ -25,7 +25,7 @@ client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
 # ===================================================================
 
 # Font for window titles (not used wit gaps)
-font xft:Dina 9
+#font xft:Iosevka Medium 10
 
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal

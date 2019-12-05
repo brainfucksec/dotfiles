@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Maintainer: Brainfuck
-; Version: 0.6.0 - 2019/12/04
+; Version: 0.6.1 - 2019/12/05
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
 
@@ -62,7 +62,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = "Iosevka Medium:pixelsize=10;1"
-font-1 = unifont:pixelsize=8:Tewi:fontformat=truetype;0
+font-1 = unifont:pixelsize=9:Tewi:fontformat=truetype;0
 font-2 = "Font Awesome 5 Free Solid:pixelsize=8;0"
 
 modules-left = i3

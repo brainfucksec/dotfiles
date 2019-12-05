@@ -10,7 +10,7 @@
     orange:                      #E7C547;
     blue:                        #36A3D9;
     grey:						 #184850;
-    font:                        "Terminus 10";
+    font:                        "Fira Code Medium 10";
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
@@ -18,7 +18,7 @@
     selected-urgent-foreground:  @foreground;
     urgent-foreground:           @foreground;
     alternate-urgent-background: @background;
-    active-foreaground:           @foreground;
+    active-foreaground:          @foreground;
     selected-active-foreground:  @background;
     alternate-normal-foreground: @foreground;
     alternate-active-background: @blue;
