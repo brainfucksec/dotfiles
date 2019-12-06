@@ -61,7 +61,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "Iosevka Medium:pixelsize=10;1"
+font-0 = "Misc Ohsnap:pixelsize=12;0"
 font-1 = unifont:pixelsize=9:Tewi:fontformat=truetype;0
 font-2 = "Font Awesome 5 Free Solid:pixelsize=8;0"
 
