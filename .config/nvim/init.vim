@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.1.1-2 - 2019/10/15
+" Version: 0.1.3 - 2019/12/22
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -177,10 +177,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Omnicompletion languages plugins
 " ================================
 
-" Python
-" - semshi
-
-
 " C/C++
 " - clang-complete
 " path of clang library file (change this after a update of clang)
@@ -194,6 +190,14 @@ let g:javascript_plugin_flow = 1
 " HTML/CSS
 " - vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" Python
+" - jedi-vim
+" use tabs when going to a definition etc
+let g:jedi#use_tabs_not_buffers = 1
+
+" Disable docstring window to popup during completion
+autocmd FileType python setlocal completeopt-=preview
 
 
 " =========================================================
