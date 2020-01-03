@@ -3,13 +3,13 @@
  * Author: Brainfuck
  */
 * {
-    text-color:                  #B1BBC2;
-    background-color:            #030A13;
-    lightbg:                     #030A13;
+    text-color:                  #cea29e;
+    background-color:            #0c0c0d;
+    lightbg:                     #554344;
     red:                         #FF3333;
     orange:                      #E7C547;
     blue:                        #36A3D9;
-    grey:						 #184850;
+    grey:						 #8c504b;
     font:                        "Fira Code Medium 10";
 
     selected-normal-foreground:  @foreground;

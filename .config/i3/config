@@ -2,8 +2,8 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.1 - 2019/12/05
-# Author: Brainfuck
+# Maintainer: Brainfuck
+# Version: 2.2 - 2020/01/03
 # Webpage: https://github.com/brainfucksec/dotfiles
 #
 # ===================================================================
@@ -14,18 +14,18 @@
 # ===================================================================
 
 # Class                  border  backgr  text     indicator child_border
-client.focused           #6b8291 #191f26 #d9d7ce  #6b8291   #6b8291
-client.focused_inactive  #030a13 #191f26 #b2babd  #030a13   #030a13
-client.unfocused         #030a13 #151a1f #b2babd  #030a13   #030a13
-client.urgent            #59c2ff #191f26 #ffffff  #191f26   #59c2ff
+client.focused           #8c504b #0c0c0d #cea29e  #8c504b   #8c504b
+client.focused_inactive  #0c0c0d #0c0c0d #554344  #0c0c0d   #0c0c0d
+client.unfocused         #0c0c0d #0c0c0d #554344  #0c0c0d   #0c0c0d
+client.urgent            #90716e #0c0c0d #cea29e  #90716e   #90716e
 
 
 # ===================================================================
 # Windows style
 # ===================================================================
 
-# Font for window titles (not used wit gaps)
-#font xft:Iosevka Medium 10
+# Font for window titles
+font xft:Misc Ohsnap 12
 
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal
@@ -211,7 +211,7 @@ set $ws4 4:4 
 set $ws5 5:5 
 set $ws6 6:6 
 set $ws7 7:7 
-set $ws8 8:8 
+set $ws8 8:8 
 set $ws9 9:9 
 set $ws10 10:10 
 
@@ -292,7 +292,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id dunst
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/lake_and_mountains_1920x1200.jpg
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/clouds_lake_1920x1200.png
 
 # Xscreensaver
 exec --no-startup-id xscreensaver -nosplash

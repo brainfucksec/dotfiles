@@ -15,7 +15,7 @@
 ; polybar configuration file
 ;
 ; Maintainer: Brainfuck
-; Version: 0.6.1 - 2019/12/05
+; Version: 0.6.2 - 2020/01/03
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
 
@@ -24,14 +24,12 @@
 ; colors
 ;===============================================================
 [colors]
-background = #030a13
-background-alt = #1b5058
-foreground = #b1bbc2
-foreground-alt = #ffb454
-primary = #07d376
-secondary = #637886
-alert = #2f8b99
-bright_green = #05a15a
+background = #0c0c0d
+foreground = #cea29e
+;foreground-alt = #ffb454
+primary = #8c504b
+secondary = #584040
+alert = #90716e
 
 
 ;===============================================================
@@ -143,10 +141,10 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-label-connected = %{F#07d376} %{F-}eth
+label-connected = %{F#8C504B} %{F-}eth
 ;label-connected-foreground = ${colors.primary}
 
-label-disconnected = "eth off"
+label-disconnected = "[!] eth off"
 label-disconnected-foreground = ${colors.alert}
 
 
@@ -154,7 +152,7 @@ label-disconnected-foreground = ${colors.alert}
 type = internal/network
 interface = enp0s25
 interval = 3.0
-label-connected = %{F#07d376} %{F-}%downspeed% %{F#637886} %{F-}%upspeed%
+label-connected = %{F#8C504B} %{F-}%downspeed% %{F#4A3535} %{F-}%upspeed%
 
 
 [module/date]
