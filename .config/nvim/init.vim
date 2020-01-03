@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.1.3 - 2019/12/22
+" Version: 0.1.4 - 2020/01/03
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -40,8 +40,9 @@ let mapleader = ","
 " Turn on syntax highlighting
 syntax on
 
-" Set ctermbg to none
-highlight NonText ctermbg=none
+" Set transparent background
+"highlight Normal guibg=NONE ctermbg=NONE
+
 
 " Add a bit extra margin to the left
 "set foldcolumn=1
