@@ -26,7 +26,8 @@
 [colors]
 background = #030a13
 foreground = #b1bbc2
-primary = #05a15a
+;primary = #05a15a
+primary = 2ace66
 secondary = #637886
 alert = #1b5058
 

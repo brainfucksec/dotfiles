@@ -113,7 +113,7 @@ set history=100
 
 " Faster scrolling
 set ttyfast
-set lazyredraw
+"set lazyredraw
 
 
 " =========================================================
