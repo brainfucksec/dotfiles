@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.1.4 - 2020/01/03
+" Version: 0.2.0 - 2020/01/04
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -32,6 +32,9 @@ filetype on
 " the plugins.
 let mapleader = ","
 
+" Enable mouse scrolling
+set mouse=a
+
 
 " =========================================================
 " nvim UI
@@ -42,7 +45,6 @@ syntax on
 
 " Set transparent background
 "highlight Normal guibg=NONE ctermbg=NONE
-
 
 " Add a bit extra margin to the left
 "set foldcolumn=1
@@ -65,6 +67,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Line lenght marker at 80 columns
 set colorcolumn=80
+
+" Open vertical split to the right
+set splitright
+
+" Open horizontal split to the bottom
+set splitbelow
 
 
 " =========================================================
@@ -106,6 +114,10 @@ set hidden
 " Sets how many lines of history neovim has to remember
 set history=100
 
+" Faster scrolling
+set ttyfast
+set lazyredraw
+
 
 " =========================================================
 " Text, tabs, indent
@@ -123,6 +135,9 @@ autocmd FileType xml,html,xhtml,css setlocal shiftwidth=2 tabstop=2
 
 set si "Smart indent
 set wrap "Wrap lines
+
+" Stop annying auto commenting on new lines
+au BufEnter * set fo-=c fo-=r fo-=o
 
 
 " indentLine
