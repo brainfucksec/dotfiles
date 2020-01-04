@@ -27,4 +27,5 @@ Color Scheme:         > made with pywal
 ```
 
 ![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-1.png)
-
+![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-2.png)
+![alt text](https://github.com/brainfucksec/dotfiles/blob/master/neovim.png)
