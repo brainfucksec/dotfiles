@@ -48,6 +48,6 @@ xscreensaver.dateFormat:    %Y-%m-%d  %R
 
 
 !{{{ X11 Cursor
-Xcursor.theme: Breeze-Obsidian
+Xcursor.theme: Breeze-Blue
 Xcursor.size: 16
 !}}}
