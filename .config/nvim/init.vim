@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.2.0 - 2020/01/04
+" Version: 0.2.1 - 2020/01/04
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -31,9 +31,6 @@ filetype on
 " The mapleader has to be set before plugin manager starts loading all
 " the plugins.
 let mapleader = ","
-
-" Enable mouse scrolling
-set mouse=a
 
 
 " =========================================================
@@ -266,6 +263,12 @@ map <right> <nop>
 " Fast saving
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
+
+" Move around splits using Ctrl + {h,j,k,l}
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 
 " NerdTree
