@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.6.4 - 2020/01/04
+; Version: 0.6.4-2 - 2020/01/04
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -29,7 +29,9 @@ foreground = #b1bbc2
 ;primary = #05a15a
 primary = 2ace66
 secondary = #637886
-alert = #1b5058
+alert = #83e97b
+color1 = #2f8d9b
+color2= #1b5058
 
 
 ;===============================================================
@@ -202,15 +204,15 @@ label-muted = "mute"
 label-muted-foreground = "${colors.alert}"
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.primary}
-bar-volume-foreground-1 = ${colors.primary}
-bar-volume-foreground-2 = ${colors.primary}
-bar-volume-foreground-3 = ${colors.primary}
-bar-volume-foreground-4 = ${colors.primary}
-bar-volume-foreground-5 = ${colors.primary}
-bar-volume-foreground-6 = ${colors.primary}
-bar-volume-foreground-7 = ${colors.primary}
-bar-volume-foreground-8 = ${colors.primary}
+bar-volume-foreground-0 = ${colors.color1}
+bar-volume-foreground-1 = ${colors.color1}
+bar-volume-foreground-2 = ${colors.color1}
+bar-volume-foreground-3 = ${colors.color1}
+bar-volume-foreground-4 = ${colors.color1}
+bar-volume-foreground-5 = ${colors.color1}
+bar-volume-foreground-6 = ${colors.color1}
+bar-volume-foreground-7 = ${colors.color1}
+bar-volume-foreground-8 = ${colors.color1}
 bar-volume-foreground-9 = ${colors.alert}
 
 bar-volume-gradient = false
