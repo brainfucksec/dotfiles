@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.6.3 - 2020/01/04
+; Version: 0.6.4 - 2020/01/04
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -24,13 +24,12 @@
 ; colors
 ;===============================================================
 [colors]
-background = #0c0c0d
-foreground = #cea29e
-primary = #8c504b
-secondary = #584040
-alert = #90716e
-color1 = #554344
-color2 = #704947
+background = #030a13
+foreground = #b1bbc2
+primary = #05a15a
+secondary = #637886
+alert = #1b5058
+
 
 ;===============================================================
 ; bar settings
@@ -91,9 +90,9 @@ strip-wsnumbers = true
 enable-scroll = false
 
 label-focused = %name%
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
-label-focused-underline = ${colors.foreground}
+label-focused-underline = ${colors.primary}
 
 label-unfocused = %name%
 label-unfocused-padding = 1
@@ -141,7 +140,7 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-label-connected = %{F#8C504B} %{F-}eth
+label-connected = %{F#05a15a} %{F-}eth
 ;label-connected-foreground = ${colors.primary}
 
 label-disconnected = "[!] eth off"

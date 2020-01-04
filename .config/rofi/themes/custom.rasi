@@ -3,14 +3,15 @@
  * Author: Brainfuck
  */
 * {
-    text-color:                  #cea29e;
-    background-color:            #0c0c0d;
+    text-color:                  #b1bbc2;
+    background-color:            #030a13;
     lightbg:                     #554344;
     red:                         #FF3333;
     orange:                      #E7C547;
     blue:                        #36A3D9;
-    grey:						 #8c504b;
+    grey:						 #1b5058; //foreground selected
     font:                        "Fira Code Medium 10";
+    //font:                        "Terminus 10";
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
