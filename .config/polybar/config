@@ -14,8 +14,8 @@
 ;
 ; polybar configuration file
 ;
+; Version: 0.6.3 - 2020/01/04
 ; Maintainer: Brainfuck
-; Version: 0.6.2 - 2020/01/03
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
 
@@ -26,11 +26,11 @@
 [colors]
 background = #0c0c0d
 foreground = #cea29e
-;foreground-alt = #ffb454
 primary = #8c504b
 secondary = #584040
 alert = #90716e
-
+color1 = #554344
+color2 = #704947
 
 ;===============================================================
 ; bar settings
@@ -46,7 +46,7 @@ locale = en_US.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-underline-size = 2
+underline-size = 3
 ;underline-color = ${colors.primary}
 
 border-bottom-size = 1
@@ -91,9 +91,9 @@ strip-wsnumbers = true
 enable-scroll = false
 
 label-focused = %name%
-label-focused-foreground = ${colors.primary}
+label-focused-foreground = ${colors.foreground}
 label-focused-padding = 1
-label-focused-underline = ${colors.primary}
+label-focused-underline = ${colors.foreground}
 
 label-unfocused = %name%
 label-unfocused-padding = 1
@@ -158,7 +158,7 @@ label-connected = %{F#8C504B} %{F-}%downspeed% %{F#4A3535} %{F-}%upspeed%
 [module/date]
 type = internal/date
 ;interval = 1.0
-date = %a %d %B %Y
+date = %a %d %b %Y
 label = %date%
 label-foreground = ${colors.foreground}
 
