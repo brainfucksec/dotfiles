@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Sun Nov 10 08:08:49 CET 2019
+# Last modified: Sun Jan  5 11:13:20 CET 2020
 #
 # ==============================================================
 
@@ -17,7 +17,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ll='ls -lFh'
 alias la='ls -alFh'
-alias l1='ls -1F'
+alias l1='ls -1F --group-directories-first'
 alias l1m='ls -1 | more'
 alias lm='ls | more'
 alias lsn='ls | cat -n'
@@ -79,5 +79,6 @@ alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias sp='strongpass'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias vb='vboxmanage'
-alias n='note'
+alias nt='note'
+alias n='nnn'
 alias z='zathura --fork'

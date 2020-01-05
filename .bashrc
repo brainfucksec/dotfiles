@@ -3,8 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Fri Nov 22 08:42:59 CET 2019
-#
+# Last modified: Sun Jan  5 11:15:47 CET 2020
 # ==============================================================
 
 
@@ -22,7 +21,6 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-
 # ==============================================================
 # == Default prompt
 # ==============================================================
@@ -30,7 +28,6 @@ HISTFILESIZE=2000
 #PS1='[\u@\h \W]\$ '
 PS1='┌──[\[\e[1;96m\]\u\[\e[m\]]───[\[\e[1;96m\]\h\[\e[m\]] \[\e[1;94m\][\w]\[\e[m\]
 └───╼ \[\e[1;96m\]\$\[\e[m\] '
-
 
 # ==============================================================
 # == Colors
@@ -42,7 +39,6 @@ if [ -x /usr/bin/dircolors ]; then
 	alias ls='ls --color=auto'
 fi
 
-
 # ==============================================================
 # == Alias definitions
 #
@@ -53,7 +49,6 @@ fi
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
-
 
 # ==============================================================
 # == Functions
@@ -96,7 +91,6 @@ extract() {
     fi
 }
 
-
 # Mount device with udisksctl
 mountdev() {
     if [[ -z "$1" ]]; then
@@ -107,7 +101,6 @@ mountdev() {
         udisksctl mount -b "/dev/$1"
     fi
 }
-
 
 # Unmount and eject device
 unmountdev() {
@@ -121,7 +114,6 @@ unmountdev() {
         echo "Ejected /dev/$1."
     fi
 }
-
 
 # Update git packages
 gitupdate() {
@@ -148,7 +140,6 @@ gitupdate() {
         fi
     fi
 }
-
 
 # Import colorscheme from 'wal' asynchronously
 (cat ~/.cache/wal/sequences &)
