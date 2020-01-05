@@ -2,10 +2,9 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.3 - 2020/01/04
+# Version: 2.3.1 - 2020/01/05
 # Maintainer: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
-#
 # ===================================================================
 
 
@@ -17,7 +16,7 @@
 client.focused           #637886 #637886 #b1bbc2  #637886   #637886
 client.focused_inactive  #1b5058 #1b5058 #b1bbc2  #1b5058   #1b5058
 client.unfocused         #030a13 #030a13 #b1bbc2  #030a13   #030a13
-client.urgent            #637886 #637886 #030a13  #637886   #637886
+client.urgent            #2e8997 #2e8997 #030a13  #2e8997   #2e8997
 
 
 # ===================================================================
@@ -292,7 +291,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id dunst
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/clouds_lake_1920x1200.png
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/lake_and_mountains_1920x1200.jpg
 
 # Xscreensaver
 exec --no-startup-id xscreensaver -nosplash
