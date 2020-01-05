@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.2.1 - 2020/01/04
+" Version: 0.2.2 - 2020/01/05
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -113,7 +113,7 @@ set history=100
 
 " Faster scrolling
 set ttyfast
-"set lazyredraw
+set lazyredraw
 
 
 " =========================================================
