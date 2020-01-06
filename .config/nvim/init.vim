@@ -40,10 +40,6 @@ let mapleader = ","
 " Turn on syntax highlighting
 syntax on
 
-" Set transparent background
-au ColorScheme * hi Normal ctermbg=none guibg=none
-au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
-
 " Add a bit extra margin to the left
 "set foldcolumn=1
 
@@ -80,6 +76,10 @@ set splitbelow
 " Terminal options
 set t_Co=256
 "set termguicolors
+
+" Set transparent background
+"au ColorScheme * hi Normal ctermbg=none guibg=none
+"au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
 " Colorscheme
 colorscheme wal
