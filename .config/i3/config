@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.3.3 - 2020/01/06
+# Version: 2.3.4 - 2020/01/09
 # Maintainer: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 # ===================================================================
@@ -13,8 +13,8 @@
 # ===================================================================
 
 # Class                  border  backgr  text     indicator child_border
-client.focused           #1b5058 #1b5058 #b1bbc2  #1b5058   #1b5058
-client.focused_inactive  #030a13 #030a13 #4f606b  #030a13   #030a13
+client.focused           #637886 #637886 #b1bbc2  #637886   #637886
+client.focused_inactive  #1b5058 #1b5058 #4f606b  #1b5058   #1b5058
 client.unfocused         #030a13 #030a13 #b1bbc2  #030a13   #030a13
 client.urgent            #2e8997 #2e8997 #b1bbc2  #2e8997   #2e8997
 
