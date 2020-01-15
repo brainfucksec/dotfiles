@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Sun Jan  5 11:15:47 CET 2020
+# Last modified: Wed Jan 15 14:40:04 CET 2020
 # ==============================================================
 
 
@@ -94,6 +94,7 @@ extract() {
 # Mount device with udisksctl
 mountdev() {
     if [[ -z "$1" ]]; then
+        echo "mountdev: No argument supplied"
         echo "Usage: mountdev <sdxX>"
         echo "Example: mountdev sdc1"
         return 1
@@ -105,6 +106,7 @@ mountdev() {
 # Unmount and eject device
 unmountdev() {
     if [[ -z "$1" ]]; then
+        echo "unmountdev: No argument supplied"
         echo "Usage: unmountdev <sdxX>"
         echo "Example: unmountdev sdc1"
         return 1
@@ -118,6 +120,7 @@ unmountdev() {
 # Update git packages
 gitupdate() {
     if [[ -z "$1" ]]; then
+        echo "gitupdate: Argument required"
         echo "Usage: gitupdate <directory path>"
         return 1
     else
