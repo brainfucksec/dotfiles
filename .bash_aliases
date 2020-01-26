@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Sun Jan  5 11:13:20 CET 2020
+# Last modified: Sun Jan 26 16:45:51 CET 2020
 #
 # ==============================================================
 
@@ -24,7 +24,7 @@ alias lsn='ls | cat -n'
 alias mkdir='mkdir -p -v'
 alias cpv='cp -v'
 alias cpr='cp -R'
-alias rcp='rsync -ahv --info=progress2'
+alias cpp='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 
@@ -79,6 +79,5 @@ alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias sp='strongpass'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias vb='vboxmanage'
-alias nt='note'
-alias n='nnn'
+alias n='note'
 alias z='zathura --fork'
