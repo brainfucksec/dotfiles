@@ -1,12 +1,11 @@
 ```
-    .___      __    _____.__.__
-  __| _/_____/  |__/ ____\__|  |   ____   ______
- / __ |/  _ \   __\   __\|  |  | _/ __ \ /  ___/
-/ /_/ (  <_> )  |  |  |  |  |  |_\  ___/ \___ \
-\____ |\____/|__|  |__|  |__|____/\___  >____  >
-     \/                               \/     \/
+ #####   ####  ##### ###### # #      ######  ####
+ #    # #    #   #   #      # #      #      #
+ #    # #    #   #   #####  # #      #####   ####
+ #    # #    #   #   #      # #      #           #
+ #    # #    #   #   #      # #      #      #    #
+ #####   ####    #   #      # ###### ######  ####
 ```
-
 
 ## My Arch Linux dotfiles
 
@@ -26,6 +25,5 @@ Window Manager        > i3-gaps
 Color Scheme:         > made with pywal
 ```
 
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-1.png)
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-2.png)
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/neovim.png)
+![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot.png)
+
