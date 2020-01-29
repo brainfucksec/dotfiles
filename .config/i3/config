@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.3.4 - 2020/01/09
+# Version: 2.4.0 - 2020/01/29
 # Maintainer: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 # ===================================================================
@@ -14,7 +14,7 @@
 
 # Class                  border  backgr  text     indicator child_border
 client.focused           #637886 #637886 #b1bbc2  #637886   #637886
-client.focused_inactive  #1b5058 #1b5058 #4f606b  #1b5058   #1b5058
+client.focused_inactive  #030a13 #030a13 #b1bbc2  #030a13   #030a13
 client.unfocused         #030a13 #030a13 #b1bbc2  #030a13   #030a13
 client.urgent            #2e8997 #2e8997 #b1bbc2  #2e8997   #2e8997
 
@@ -27,7 +27,7 @@ client.urgent            #2e8997 #2e8997 #b1bbc2  #2e8997   #2e8997
 font xft:Misc Ohsnap 12
 
 # Set default orientation, <horizontal|vertical|auto>
-default_orientation horizontal
+default_orientation auto
 
 # i3-gaps settings
 for_window [class="^.*"] border pixel 4
@@ -209,9 +209,9 @@ set $ws3 3:3 
 set $ws4 4:4 
 set $ws5 5:5 
 set $ws6 6:6 
-set $ws7 7:7 
-set $ws8 8:8 
-set $ws9 9:9 
+set $ws7 7:7 
+set $ws8 8:8 
+set $ws9 9:9 
 set $ws10 10:10 
 
 # switch to workspace
@@ -258,9 +258,10 @@ assign [class="vlc"]                    $ws6
 assign [class="Pulseaudio-equalizer"]   $ws6
 assign [class="Pavucontrol"]            $ws6
 assign [class="SimpleScreenRecorder"]   $ws6
-assign [class="Gajim"]                  $ws7
 # VirtualBox
-assign [class="Manager"]                $ws8
+assign [class="Manager"]                $ws7
+assign [class="Machine"]                $ws8
+assign [class="Gajim"]                  $ws7
 
 # enable floating mode for selected windows
 set $float floating enable border pixel 3
