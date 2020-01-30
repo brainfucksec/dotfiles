@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.4.0 - 2020/01/29
+# Version: 2.4.1 - 2020/01/30
 # Maintainer: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 # ===================================================================
@@ -38,10 +38,10 @@ gaps inner 15
 # Toggle gaps on selected workspaces
 workspace 2 gaps inner 0
 workspace 2 gaps outer 0
+workspace 7 gaps inner 0
+workspace 7 gaps outer 0
 workspace 8 gaps inner 0
 workspace 8 gaps outer 0
-workspace 9 gaps inner 0
-workspace 9 gaps outer 0
 
 # Only enable gaps on a workspace when there is at least one container
 #smart_gaps on
@@ -258,10 +258,9 @@ assign [class="vlc"]                    $ws6
 assign [class="Pulseaudio-equalizer"]   $ws6
 assign [class="Pavucontrol"]            $ws6
 assign [class="SimpleScreenRecorder"]   $ws6
-# VirtualBox
+# VirtualBox Manager
 assign [class="Manager"]                $ws7
-assign [class="Machine"]                $ws8
-assign [class="Gajim"]                  $ws7
+assign [class="Gajim"]                  $ws9
 
 # enable floating mode for selected windows
 set $float floating enable border pixel 3
