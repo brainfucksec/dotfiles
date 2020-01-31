@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Sun Jan 26 16:45:51 CET 2020
+# Last modified: Fri Jan 31 06:31:18 CET 2020
 #
 # ==============================================================
 
@@ -63,7 +63,7 @@ alias u='unmountdev'
 # == Directories shortcuts
 # ==============================================================
 alias h='cd ~/'
-alias gm='cd /run/media/"$(whoami)"'
+alias gm='cd /run/media/"$(whoami)" && ls -1'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
