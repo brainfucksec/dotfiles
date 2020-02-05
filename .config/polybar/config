@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.0 - 2020/02/05
+; Version: 0.8.1 - 2020/02/05
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -142,8 +142,6 @@ interface = enp0s25
 interval = 3.0
 
 label-connected = %{F#2ace66} %{F-}eth
-;label-connected-foreground = ${colors.primary}
-
 label-disconnected = "[!] eth off"
 label-disconnected-foreground = ${colors.alert}
 
@@ -177,9 +175,9 @@ label-foreground = ${colors.foreground}
 type = custom/menu
 format-spacing = 1
 
-label-open = 
+label-open = ""
 label-open-foreground = ${colors.primary}
-label-close =  undo
+label-close = " undo"
 label-close-foreground = ${colors.primary}
 label-separator = |
 label-separator-foreground = ${colors.secondary}
@@ -216,7 +214,7 @@ bar-volume-foreground-9 = ${colors.alert}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
+bar-volume-fill = ━
+bar-volume-fill-font = 1
+bar-volume-empty = ━
 bar-volume-empty-font = 2
