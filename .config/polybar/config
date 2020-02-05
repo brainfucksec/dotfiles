@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.7.0 - 2020/01/29
+; Version: 0.8.0 - 2020/02/05
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -24,11 +24,10 @@
 ; colors
 ;===============================================================
 [colors]
-background = #030a13
-foreground = #b1bbc2
-;primary = #05a15a
-primary = #2ace66
-secondary = #637886
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+primary = ${xrdb:color4:#222}
+secondary = ${xrdb:color6:#222}
 alert = #2e8997
 color1= #05a15a
 
@@ -197,8 +196,8 @@ menu-0-2-exec = poweroff
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume-foreground = ${colors.primary}
 label-volume = ""
+label-volume-foreground = ${colors.primary}
 label-muted = "mute"
 label-muted-foreground = "${colors.alert}"
 
