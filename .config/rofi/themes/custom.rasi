@@ -3,13 +3,13 @@
  * Author: Brainfuck
  */
 * {
-    text-color:                  #b1bbc2;
-    background-color:            #030a13;
+    text-color:                  #9abac7;
+    background-color:            #070b10;
     lightbg:                     #554344;
     red:                         #FF3333;
-    orange:                      #E7C547;
+    orange:                      #4976a1;
     blue:                        #36A3D9;
-    grey:						 #1b5058; //foreground selected
+    grey:						 #274f71; //foreground selected
     font:                        "Fira Code Medium 10";
     //font:                        "Terminus 10";
 
@@ -37,15 +37,15 @@
 }
 
 #window {
-    border:     2;
+    border:     4;
     border-color: @grey;
     text-color: @foreground;
     background-color: rgba ( 0, 0, 0, 0 % );
     padding:    4;
     text-color: @bordercolor;
     background-color: @background;
-    width: 650;
-    height: 250;
+    width: 460;
+    height: 420;
 }
 
 #mainbox {
