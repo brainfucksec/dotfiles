@@ -6,7 +6,8 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Terminus 10
+font = Fira Code Medium 10
+#font = Terminus 10
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -14,7 +15,7 @@ font = Terminus 10
 #scroll_on_keystroke = true
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # and setting it to a negative value means "infinite scrollback"
-scrollback_lines = 5000
+scrollback_lines = 1000
 #search_wrap = true
 #urgent_on_bell = true
 #hyperlinks = false
@@ -23,7 +24,7 @@ scrollback_lines = 5000
 #browser = xdg-open
 
 # "system", "on" or "off"
-#cursor_blink = system
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
 #cursor_shape = block
@@ -51,7 +52,7 @@ scrollbar = off
 #background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+background = rgba(63, 63, 63, 0.8)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f

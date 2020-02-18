@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.1 - 2020/02/05
+; Version: 0.8.2 - 2020/02/18
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -26,10 +26,10 @@
 [colors]
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
-primary = ${xrdb:color4:#222}
-secondary = ${xrdb:color6:#222}
-alert = #2e8997
-color1= #05a15a
+primary = ${xrdb:color6:#222}
+secondary = ${xrdb:color4:#222}
+alert = ${xrdb:color5:#222}
+blue = ${xrdb:color4:#222}
 
 
 ;===============================================================
@@ -141,7 +141,7 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-label-connected = %{F#2ace66} %{F-}eth
+label-connected = %{F#4d959e} %{F-}eth
 label-disconnected = "[!] eth off"
 label-disconnected-foreground = ${colors.alert}
 
@@ -200,15 +200,15 @@ label-muted = "mute"
 label-muted-foreground = "${colors.alert}"
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.color1}
-bar-volume-foreground-1 = ${colors.color1}
-bar-volume-foreground-2 = ${colors.color1}
-bar-volume-foreground-3 = ${colors.color1}
-bar-volume-foreground-4 = ${colors.color1}
-bar-volume-foreground-5 = ${colors.color1}
-bar-volume-foreground-6 = ${colors.color1}
-bar-volume-foreground-7 = ${colors.color1}
-bar-volume-foreground-8 = ${colors.color1}
+bar-volume-foreground-0 = ${colors.blue}
+bar-volume-foreground-1 = ${colors.blue}
+bar-volume-foreground-2 = ${colors.blue}
+bar-volume-foreground-3 = ${colors.blue}
+bar-volume-foreground-4 = ${colors.blue}
+bar-volume-foreground-5 = ${colors.blue}
+bar-volume-foreground-6 = ${colors.blue}
+bar-volume-foreground-7 = ${colors.blue}
+bar-volume-foreground-8 = ${colors.blue}
 bar-volume-foreground-9 = ${colors.alert}
 
 bar-volume-gradient = false
