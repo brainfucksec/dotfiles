@@ -18,8 +18,8 @@
 #
 # Class                  border  backgr  text     indicator child_border
 client.focused           #6b828b #6b828b #9abac7  #6b828b   #6b828b
-client.focused_inactive  #274f71 #274f71 #9abac7  #274f71   #274f71
-client.unfocused         #274f71 #274f71 #9abac7  #274f71   #274f71
+client.focused_inactive  #070b10 #070b10 #9abac7  #070b10   #070b10
+client.unfocused         #070b10 #070b10 #9abac7  #070b10   #070b10
 client.urgent            #4976a1 #4976a1 #9abac7  #4976a1   #4976a1
 
 
