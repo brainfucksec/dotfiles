@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.2 - 2020/02/18
+; Version: 0.8.3 - 2020/02/19
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -29,7 +29,6 @@ foreground = ${xrdb:color7:#222}
 primary = ${xrdb:color6:#222}
 secondary = ${xrdb:color4:#222}
 alert = ${xrdb:color5:#222}
-blue = ${xrdb:color4:#222}
 
 
 ;===============================================================
@@ -111,7 +110,7 @@ label-visible-padding = 1
 type = internal/cpu
 interval = 1.0
 format-prefix = " "
-format-prefix-foreground = ${colors.primary}
+format-prefix-foreground = ${colors.secondary}
 label = %percentage%%
 
 
@@ -119,7 +118,7 @@ label = %percentage%%
 type = internal/memory
 interval = 1.0
 format-prefix = " "
-format-prefix-foreground = ${colors.primary}
+format-prefix-foreground = ${colors.secondary}
 label = %percentage_used%%
 
 
@@ -130,18 +129,17 @@ hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input
 warn-temperature = 60
 
 format-prefix = " "
-format-prefix-foreground = ${colors.primary}
+format-prefix-foreground = ${colors.secondary}
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.alert}
+label-warn-foreground = ${colors.secondary}
 
 
 [module/eth]
 type = internal/network
 interface = enp0s25
 interval = 3.0
-
-label-connected = %{F#4d959e} %{F-}eth
+label-connected = %{F#35658E} %{F-}eth
 label-disconnected = "[!] eth off"
 label-disconnected-foreground = ${colors.alert}
 
@@ -166,7 +164,7 @@ type = internal/date
 interval = 1.0
 time = %H:%M:%S
 format-prefix = " "
-format-prefix-foreground = ${colors.primary}
+format-prefix-foreground = ${colors.secondary}
 label = %time%
 label-foreground = ${colors.foreground}
 
@@ -176,9 +174,9 @@ type = custom/menu
 format-spacing = 1
 
 label-open = ""
-label-open-foreground = ${colors.primary}
+label-open-foreground = ${colors.secondary}
 label-close = " undo"
-label-close-foreground = ${colors.primary}
+label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.secondary}
 
@@ -195,20 +193,20 @@ type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = ""
-label-volume-foreground = ${colors.primary}
+label-volume-foreground = ${colors.secondary}
 label-muted = "mute"
 label-muted-foreground = "${colors.alert}"
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.blue}
-bar-volume-foreground-1 = ${colors.blue}
-bar-volume-foreground-2 = ${colors.blue}
-bar-volume-foreground-3 = ${colors.blue}
-bar-volume-foreground-4 = ${colors.blue}
-bar-volume-foreground-5 = ${colors.blue}
-bar-volume-foreground-6 = ${colors.blue}
-bar-volume-foreground-7 = ${colors.blue}
-bar-volume-foreground-8 = ${colors.blue}
+bar-volume-foreground-0 = ${colors.secondary}
+bar-volume-foreground-1 = ${colors.secondary}
+bar-volume-foreground-2 = ${colors.secondary}
+bar-volume-foreground-3 = ${colors.secondary}
+bar-volume-foreground-4 = ${colors.secondary}
+bar-volume-foreground-5 = ${colors.secondary}
+bar-volume-foreground-6 = ${colors.secondary}
+bar-volume-foreground-7 = ${colors.secondary}
+bar-volume-foreground-8 = ${colors.secondary}
 bar-volume-foreground-9 = ${colors.alert}
 
 bar-volume-gradient = false
