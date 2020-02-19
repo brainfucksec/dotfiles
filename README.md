@@ -29,4 +29,4 @@ Color Scheme:         > made with pywal
 
 Wallpaper: https://whvn.cc/0j7lpm
 
-Thanks to ![/r/unixporn](https://www.reddit.com/r/unixporn/) subreddit users!
+Thanks to [/r/unixporn](https://www.reddit.com/r/unixporn/) subreddit users!
