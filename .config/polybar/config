@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.3 - 2020/02/19
+; Version: 0.8.4 - 2020/02/21
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -28,7 +28,7 @@ background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 primary = ${xrdb:color6:#222}
 secondary = ${xrdb:color5:#222}
-alert = ${xrdb:color1:#222}
+alert = ${xrdb:color4:#222}
 
 
 ;===============================================================
@@ -36,7 +36,7 @@ alert = ${xrdb:color1:#222}
 ;===============================================================
 [bar/mybar]
 width = 100%
-height = 30
+height = 28
 offset-x = 0
 offset-y = 0
 ;locale = it_IT.UTF-8
@@ -64,7 +64,7 @@ font-2 = "Font Awesome 5 Free Solid:pixelsize=8;0"
 
 modules-left = i3
 modules-center = date
-modules-right = volume temperature cpu memory eth time powermenu
+modules-right = volume cpu temperature memory wired-network time powermenu
 
 tray-position = right
 tray-padding = 2
@@ -119,7 +119,8 @@ type = internal/memory
 interval = 1.0
 format-prefix = " "
 format-prefix-foreground = ${colors.secondary}
-label = %percentage_used%%
+;label = %percentage_used%%
+label = %gb_used% / %gb_total%
 
 
 [module/temperature]
@@ -135,21 +136,23 @@ label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 
-[module/eth]
+[module/wired-network]
 type = internal/network
 interface = enp0s25
 interval = 3.0
+
+;label-connected = %{F#4976a1} %{F-}eth
+;label-disconnected = "[!] eth off"
+;label-disconnected-foreground = ${colors.alert}
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
 
 label-connected = %{F#4976a1} %{F-}eth
-label-disconnected = "[!] eth off"
+;label-connected-foreground = ${colors.secondary}
+
+label-disconnected = [!] not connected
 label-disconnected-foreground = ${colors.alert}
-
-
-[module/netstat]
-type = internal/network
-interface = enp0s25
-interval = 3.0
-label-connected = %{F#8C504B} %{F-}%downspeed% %{F#4A3535} %{F-}%upspeed%
 
 
 [module/date]

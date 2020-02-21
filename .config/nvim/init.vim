@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.2.4 - 2020/01/05
+" Version: 0.2.5 - 2020/02/21
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -234,6 +234,7 @@ let g:lightline = {
     \     'fileformat': 'MyFileformat',
     \ }
     \ }
+
 
 " functions for vim-devicons
 function! MyFiletype()
