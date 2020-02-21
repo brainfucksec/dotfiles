@@ -1,14 +1,3 @@
-!{{{ Fonts settings (Applications without fontconfig support)
-!Xft.dpi: 96
-!Xft.autohint: 0
-!Xft.lcdfilter: lcddefault
-!Xft.hintstyle: hintslight
-!Xft.hinting: 1
-!Xft.antialias: 1
-!Xft.rgba: rgb
-!}}}
-
-
 !{{{ Xscreensaver
 
 xscreensaver.splash: false
@@ -45,7 +34,6 @@ xscreensaver.passwd.thermometer.width:       0
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %Y-%m-%d  %R
 !}}}
-
 
 !{{{ X11 Cursor
 Xcursor.theme: Breeze-Blue
