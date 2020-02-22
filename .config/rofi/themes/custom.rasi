@@ -10,8 +10,8 @@
     orange:                      #4976a1;
     blue:                        #36A3D9;
     grey:						 #274f71; //foreground selected
-    font:                        "Fira Code Medium 10";
     //font:                        "Terminus 10";
+    font:                        "Fira Code Medium 10";
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
@@ -147,3 +147,5 @@
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
+
+/* vim:ft=css
