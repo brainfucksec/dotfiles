@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.4 - 2020/02/21
+; Version: 0.8.5 - 2020/02/22
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -63,8 +63,7 @@ font-1 = unifont:pixelsize=9:Tewi:fontformat=truetype;0
 font-2 = "Font Awesome 5 Free Solid:pixelsize=8;0"
 
 modules-left = i3
-modules-center = date
-modules-right = volume cpu temperature memory wired-network time powermenu
+modules-right = volume cpu temperature memory wired-network date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -157,19 +156,15 @@ label-disconnected-foreground = ${colors.alert}
 
 [module/date]
 type = internal/date
-;interval = 1.0
-date = %a %d %b %Y
-label = %date%
-label-foreground = ${colors.foreground}
-
-
-[module/time]
-type = internal/date
 interval = 1.0
-time = %H:%M:%S
+date = %Y-%m-%d%
+time = %H:%M
+time-alt = %H:%M:%S
+
 format-prefix = " "
 format-prefix-foreground = ${colors.secondary}
-label = %time%
+
+label = %date% %time%
 label-foreground = ${colors.foreground}
 
 
@@ -195,10 +190,12 @@ menu-0-2-exec = poweroff
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = ""
-label-volume-foreground = ${colors.secondary}
-label-muted = "mute"
+;format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume>
+label-volume = %{F#4976a1}%{F-} %percentage%%
+label-volume-foreground = ${colors.foreground}
+
+label-muted = " mute"
 label-muted-foreground = "${colors.alert}"
 
 bar-volume-width = 10
