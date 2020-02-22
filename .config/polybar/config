@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.5 - 2020/02/22
+; Version: 0.8.6 - 2020/02/22
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -28,7 +28,7 @@ background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 primary = ${xrdb:color6:#222}
 secondary = ${xrdb:color5:#222}
-alert = ${xrdb:color4:#222}
+alert = ${xrdb:color8:#222}
 
 
 ;===============================================================
@@ -45,7 +45,7 @@ locale = en_US.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-underline-size = 3
+underline-size = 4
 ;underline-color = ${colors.primary}
 
 border-bottom-size = 1
@@ -59,7 +59,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = "Misc Ohsnap:pixelsize=12;0"
-font-1 = unifont:pixelsize=9:Tewi:fontformat=truetype;0
+font-1 = unifont:pixelsize=10:Tewi:fontformat=truetype;0
 font-2 = "Font Awesome 5 Free Solid:pixelsize=8;0"
 
 modules-left = i3
@@ -157,9 +157,10 @@ label-disconnected-foreground = ${colors.alert}
 [module/date]
 type = internal/date
 interval = 1.0
-date = %Y-%m-%d%
+date = %Y-%m-%d
 time = %H:%M
-time-alt = %H:%M:%S
+date-alt = %a %d %b %H:%M:%S
+
 
 format-prefix = " "
 format-prefix-foreground = ${colors.secondary}
