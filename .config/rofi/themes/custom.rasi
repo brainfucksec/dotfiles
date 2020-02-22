@@ -37,6 +37,8 @@
 }
 
 #window {
+    location:   south west;
+    anchor:   south west;
     border:     4;
     border-color: @grey;
     text-color: @foreground;
@@ -44,8 +46,11 @@
     padding:    4;
     text-color: @bordercolor;
     background-color: @background;
-    width: 460;
-    height: 420;
+    width: 440;
+    height: 480;
+    children:   [mainbox];
+    x-offset:   14px;
+    y-offset:   -16px;
 }
 
 #mainbox {
