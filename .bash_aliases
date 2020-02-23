@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Fri Jan 31 06:31:18 CET 2020
+# Last modified: Sun Feb 23 19:04:40 CET 2020
 #
 # ==============================================================
 
@@ -68,9 +68,7 @@ alias gm='cd /run/media/"$(whoami)" && ls -1'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
-alias p='cd ~/programming'
-alias pd='cd ~/programming/dev'
-alias pg='cd ~/programming/git'
+alias c='cd ~/code'
 
 
 # ==============================================================

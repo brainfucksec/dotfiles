@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.2.5 - 2020/02/21
+" Version: 0.3.0 - 2020/02/23
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -195,26 +195,26 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ================================
 
 " C/C++
-" - clang-complete
+" clang-complete
 " path of clang library file (change this after a update of clang)
 let g:clang_library_path = '/usr/lib/libclang.so.9'
 let g:clang_complete_auto = 1
 
-" JavaScript
-" - vim-javascript
-let g:javascript_plugin_flow = 1
-
-" HTML/CSS
-" - vim-closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-
 " Python
-" - jedi-vim
+" jedi-vim
 " use tabs when going to a definition etc
 let g:jedi#use_tabs_not_buffers = 1
 
 " Disable docstring window to popup during completion
 autocmd FileType python setlocal completeopt-=preview
+
+" JavaScript
+" vim-javascript
+let g:javascript_plugin_flow = 1
+
+" HTML/CSS
+" vim-closetag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
 " =========================================================
@@ -237,13 +237,13 @@ let g:lightline = {
 
 
 " functions for vim-devicons
-function! MyFiletype()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! MyFileformat()
-    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
+"function! MyFiletype()
+"    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+"endfunction
+"
+"function! MyFileformat()
+"    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+"endfunction
 
 
 " =========================================================
