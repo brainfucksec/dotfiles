@@ -3,15 +3,13 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Sun Feb 23 19:04:40 CET 2020
-#
+# Last modified: Tue Feb 25 07:56:55 CET 2020
 # ==============================================================
 
 
 # ==============================================================
 # == Common commands
 # ==============================================================
-alias grep='grep --color=auto'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -36,7 +34,6 @@ alias src='source ~/.bashrc'
 # Aliases for functions defined on $HOME/.bashrc FILE
 # and for executables in ~/bin and ~/usr/local/bin directories
 # ==============================================================
-
 # systemctl
 alias ssc='sudo systemctl'
 alias sc='systemctl'
