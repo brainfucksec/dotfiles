@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.4.0 - 2020/02/27
+" Version: 0.4.1 - 2020/02/27
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -215,6 +215,11 @@ let g:javascript_plugin_flow = 1
 " HTML/CSS
 " vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" Go
+" vim-go
+" disable `auto |:GoFmt|` on save
+let g:go_fmt_autosave = 0
 
 
 " =========================================================
