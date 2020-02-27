@@ -3,9 +3,24 @@
 # $HOME/.bashrc FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Thu Feb 27 10:51:39 CET 2020
+# Last modified: Thu Feb 27 16:28:16 CET 2020
 # ==============================================================
 
+
+# Define colors
+export red=$'\e[1;91m'
+export green=$'\e[1;92m'
+export white=$'\e[1;97m'
+export cyan=$'\e[1;96m'
+export blue=$'\e[1;94m'
+export endc=$'\e[0m'
+
+# Set color for current user
+if [[ "$UID" -eq 0 ]]; then
+    usercolor="${red}"
+else
+    usercolor="${cyan}"
+fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -26,8 +41,8 @@ HISTFILESIZE=2000
 # ==============================================================
 
 #PS1='[\u@\h \W]\$ '
-PS1='┌──[\[\e[1;96m\]\u\[\e[m\]]───[\[\e[1;96m\]\h\[\e[m\]] \[\e[1;94m\][\w]\[\e[m\]
-└───╼ \[\e[1;96m\]\$\[\e[m\] '
+PS1='┌──[\[${usercolor}\]\u\[${endc}\]]───[\[${usercolor}\]\H\[${endc}\]] \[${blue}[\w]\[${endc}\]
+└───╼ \[${usercolor}\]\$\[${endc}\] '
 
 # ==============================================================
 # Colors
