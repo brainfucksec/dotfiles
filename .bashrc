@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Tue Feb 25 07:56:55 CET 2020
+# Last modified: Thu Feb 27 10:51:39 CET 2020
 # ==============================================================
 
 
@@ -22,16 +22,15 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # ==============================================================
-# == Default prompt
+# Default prompt
 # ==============================================================
-
 
 #PS1='[\u@\h \W]\$ '
 PS1='┌──[\[\e[1;96m\]\u\[\e[m\]]───[\[\e[1;96m\]\h\[\e[m\]] \[\e[1;94m\][\w]\[\e[m\]
 └───╼ \[\e[1;96m\]\$\[\e[m\] '
 
 # ==============================================================
-# == Colors
+# Colors
 # ==============================================================
 
 # enable color support of ls and grep and also add handy aliases
@@ -42,7 +41,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # ==============================================================
-# == Alias definitions
+# Alias definitions:
 #
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -53,7 +52,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # ==============================================================
-# == Functions
+# Functions:
 #
 # If you want to make this file smaller, these functions can
 # be converted into scripts and removed from here.
@@ -105,7 +104,7 @@ mountdev() {
     fi
 }
 
-# Unmount and eject device
+# Unmount and eject device with udisksctl
 unmountdev() {
     if [[ -z "$1" ]]; then
         echo "unmountdev: No argument supplied"

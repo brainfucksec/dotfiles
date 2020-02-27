@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.3.0 - 2020/02/23
+" Version: 0.4.0 - 2020/02/27
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -131,8 +131,11 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 
-" 1 tab == 2 spaces for selected filetypes
+" 2 spaces for selected filetypes
 autocmd FileType xml,html,xhtml,css setlocal shiftwidth=2 tabstop=2
+
+" 8 spaces for `go` filetypes
+autocmd FileType go setlocal shiftwidth=8 tabstop=8
 
 set si "Smart indent
 set wrap "Wrap lines
@@ -140,9 +143,9 @@ set wrap "Wrap lines
 " Stop annying auto commenting on new lines
 au BufEnter * set fo-=c fo-=r fo-=o
 
-
 " indentLine
 " ==========
+"
 " indent lines style
 let g:indentLine_char = '│'
 "let g:indentLine_setColors = 0
@@ -151,9 +154,6 @@ let g:indentLine_char = '│'
 " =========================================================
 " Autocompletion, linting
 " =========================================================
-
-" General settings for completion
-" ================================
 
 " Avoids scanning of 'tags (t)' and 'included files (i)' during completion
 set complete-=t,i
@@ -193,7 +193,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Omnicompletion languages plugins
 " ================================
-
+"
 " C/C++
 " clang-complete
 " path of clang library file (change this after a update of clang)
@@ -223,6 +223,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 " lightline
 " =========
+"
 " Disable mode information under status line
 set noshowmode
 
@@ -278,6 +279,7 @@ nnoremap <C-l> <C-w>l
 
 " NerdTree
 " ========
+"
 " Open NERDTree automatically when neovim starts up
 "autocmd vimenter * NERDTree
 
