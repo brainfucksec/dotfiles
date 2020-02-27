@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.4.1 - 2020/02/27
+" Version: 0.4.3 - 2020/02/27
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -194,32 +194,34 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Omnicompletion languages plugins
 " ================================
 "
-" C/C++
-" clang-complete
+" C/C++ -> clang-complete
 " path of clang library file (change this after a update of clang)
 let g:clang_library_path = '/usr/lib/libclang.so.9'
 let g:clang_complete_auto = 1
 
-" Python
-" jedi-vim
+" Python -> jedi-vim
 " use tabs when going to a definition etc
 let g:jedi#use_tabs_not_buffers = 1
 
 " Disable docstring window to popup during completion
 autocmd FileType python setlocal completeopt-=preview
 
-" JavaScript
-" vim-javascript
+" JavaScript -> vim-javascript
 let g:javascript_plugin_flow = 1
 
-" HTML/CSS
-" vim-closetag
+" HTML/CSS -> vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
-" Go
-" vim-go
+" Go -> vim-go
 " disable `auto |:GoFmt|` on save
 let g:go_fmt_autosave = 0
+
+" enable some features for syntax highlighting
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
 
 
 " =========================================================
