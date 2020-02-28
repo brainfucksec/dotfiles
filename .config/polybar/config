@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.6 - 2020/02/22
+; Version: 0.8.7 - 2020/02/28
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -28,7 +28,7 @@ background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 primary = ${xrdb:color6:#222}
 secondary = ${xrdb:color5:#222}
-alert = ${xrdb:color8:#222}
+alert = ${xrdb:color1:#222}
 
 
 ;===============================================================
@@ -139,10 +139,6 @@ label-warn-foreground = ${colors.secondary}
 type = internal/network
 interface = enp0s25
 interval = 3.0
-
-;label-connected = %{F#4976a1} %{F-}eth
-;label-disconnected = "[!] eth off"
-;label-disconnected-foreground = ${colors.alert}
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
