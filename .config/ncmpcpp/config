@@ -37,7 +37,7 @@ song_window_title_format = "{%a-%t}"
 
 ## columns settings
 #song_columns_list_format = "(80f)[white]{t|f} (20)[yellow]{a} (8)[yellow]{l} (40)[yellow]{b}"
-song_columns_list_format = "(60)[white]{t|f} (10)[yellow]{l} (40)[white]{a}"
+song_columns_list_format = "(60)[white]{t|f} (10)[blue]{l} (40)[red]{a}"
 
 ## various settings
 playlist_separate_albums = "no"
@@ -56,15 +56,15 @@ allow_for_physical_item_deletion = "no"
 ## colors definitions
 colors_enabled = "yes"
 empty_tag_color = "white"
-header_window_color = "yellow"
+header_window_color = "blue"
 volume_color = "white"
-state_line_color = "red"
+state_line_color = "green"
 state_flags_color = "blue"
 main_window_color = "blue"
 color1 = "blue"
 color2 = "white"
-progressbar_color = "red"
-progressbar_elapsed_color = "blue"
+progressbar_color = "green"
+progressbar_elapsed_color = "cyan"
 statusbar_color = "blue"
 alternative_ui_separator_color = "black"
 window_border_color = "red"
