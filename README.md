@@ -29,7 +29,7 @@ Color Scheme:         > made with pywal
 
 ![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot.png)
 
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/nvim-screenshot.png)
+![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-neovim.png)
 
 Wallpaper: https://whvn.cc/0j7lpm
 
