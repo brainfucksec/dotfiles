@@ -1,26 +1,11 @@
 # ==============================================================
 #
 # $HOME/.bashrc FILE
-# By Brainfuck (brainfucksec)
+# By Brainfuck
 #
-# Last modified: Thu Feb 27 16:28:16 CET 2020
+# Last modified: Sun Mar  8 10:02:47 CET 2020
 # ==============================================================
 
-
-# Define colors
-export red=$'\e[1;91m'
-export green=$'\e[1;92m'
-export white=$'\e[1;97m'
-export cyan=$'\e[1;96m'
-export blue=$'\e[1;94m'
-export endc=$'\e[0m'
-
-# Set color for current user
-if [[ "$UID" -eq 0 ]]; then
-    usercolor="${red}"
-else
-    usercolor="${cyan}"
-fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -40,8 +25,23 @@ HISTFILESIZE=2000
 # Default prompt
 # ==============================================================
 
+# define colors
+export red=$'\e[1;91m'
+export green=$'\e[1;92m'
+export white=$'\e[1;97m'
+export cyan=$'\e[1;96m'
+export blue=$'\e[1;94m'
+export endc=$'\e[0m'
+
+# set color for current user
+if [[ "$UID" -eq 0 ]]; then
+    usercolor="${red}"
+else
+    usercolor="${white}"
+fi
+
 #PS1='[\u@\h \W]\$ '
-PS1='┌──[\[${usercolor}\]\u\[${endc}\]]───[\[${usercolor}\]\H\[${endc}\]] \[${blue}[\w]\[${endc}\]
+PS1='┌──[\[${usercolor}\]\u\[${endc}\]]───[\[${usercolor}\]\h\[${endc}\]] \[${blue}[\w]\[${endc}\]
 └───╼ \[${usercolor}\]\$\[${endc}\] '
 
 # ==============================================================
@@ -70,7 +70,8 @@ fi
 # Functions:
 #
 # If you want to make this file smaller, these functions can
-# be converted into scripts and removed from here.
+# be converted into scripts and removed from here (i.e. ~/bin
+# folder).
 # ==============================================================
 
 # Function extract for common archive formats

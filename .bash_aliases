@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Tue Feb 25 07:56:55 CET 2020
+# Last modified: Sun Mar  8 09:49:31 CET 2020
 # ==============================================================
 
 
@@ -17,16 +17,17 @@ alias .....='cd ../../../..'
 alias ll='ls -lFh'
 alias la='ls -alFh'
 alias l1='ls -1F --group-directories-first'
+alias lh='ls -ld .??*'
 alias l1m='ls -1 | more'
 alias lm='ls | more'
 alias lsn='ls | cat -n'
 alias mkdir='mkdir -p -v'
+alias cp='cp --preserve=all'
 alias cpv='cp -v'
 alias cpr='cp -R'
 alias cpp='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
-
 
 # ==============================================================
 # == System administration commands
@@ -56,7 +57,6 @@ alias ex='extract'
 alias m='mountdev'
 alias u='unmountdev'
 
-
 # ==============================================================
 # == Directories shortcuts
 # ==============================================================
@@ -65,8 +65,8 @@ alias gm='cd /run/media/"$(whoami)" && ls -1'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
-alias c='cd ~/code'
-
+alias c='cd ~/code/dev'
+alias cg='cd ~/code/git'
 
 # ==============================================================
 # == Applications shortcuts
@@ -77,3 +77,4 @@ alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias vb='vboxmanage'
 alias n='note'
 alias z='zathura --fork'
+alias v='nvim'
