@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.6.0 - 2020/01/03
+# Version: 2.7.0 - 2020/03/09
 # Maintainer: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 # ===================================================================
@@ -39,8 +39,8 @@ for_window [class="^.*"] border pixel 2
 
 #gaps inner 15
 #gaps outer 3
-gaps inner 20
-gaps outer 10
+gaps inner 16
+gaps outer 4
 
 
 # Toggle gaps on selected workspaces
@@ -178,7 +178,8 @@ bindsym $mod+Shift+e exec i3-msg exit
 # Applications
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic nvim"
-bindsym $mod+F3 exec --no-startup-id thunar
+#bindsym $mod+F3 exec --no-startup-id thunar
+bindsym $mod+F3 exec --no-startup-id termite -e "bash -ic f"
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id liferea
 bindsym $mod+F6 exec --no-startup-id virtualbox
