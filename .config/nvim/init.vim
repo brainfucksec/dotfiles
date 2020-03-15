@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.4.3 - 2020/02/27
+" Version: 0.5.0 - 2020/03/15
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -217,11 +217,12 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 let g:go_fmt_autosave = 0
 
 " enable some features for syntax highlighting
-let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
+let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+
 
 
 " =========================================================
@@ -242,7 +243,6 @@ let g:lightline = {
     \     'fileformat': 'MyFileformat',
     \ }
     \ }
-
 
 " functions for vim-devicons
 "function! MyFiletype()
@@ -292,3 +292,10 @@ nnoremap <C-l> <C-w>l
 
 " Open/close NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+
+
+" tagbar
+" ======
+"
+" Open/close tagbar with Ctrl+m
+nmap <C-m> :TagbarToggle<CR>
