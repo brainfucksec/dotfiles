@@ -3,12 +3,12 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Sun Mar  8 09:49:31 CET 2020
+# Last modified: Wed Mar 18 07:05:42 CET 2020
 # ==============================================================
 
 
 # ==============================================================
-# == Common commands
+# Common commands
 # ==============================================================
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -30,7 +30,7 @@ alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 
 # ==============================================================
-# == System administration commands
+# System administration commands:
 #
 # Aliases for functions defined on $HOME/.bashrc FILE
 # and for executables in ~/bin and ~/usr/local/bin directories
@@ -58,7 +58,7 @@ alias m='mountdev'
 alias u='unmountdev'
 
 # ==============================================================
-# == Directories shortcuts
+# Directories shortcuts
 # ==============================================================
 alias h='cd ~/'
 alias gm='cd /run/media/"$(whoami)" && ls -1'
@@ -69,7 +69,7 @@ alias c='cd ~/code/dev'
 alias cg='cd ~/code/git'
 
 # ==============================================================
-# == Applications shortcuts
+# Applications shortcuts
 # ==============================================================
 alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias sp='strongpass'
@@ -77,4 +77,4 @@ alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias vb='vboxmanage'
 alias n='note'
 alias z='zathura --fork'
-alias v='nvim'
+alias e='nvim'
