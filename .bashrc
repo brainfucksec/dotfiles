@@ -24,7 +24,6 @@ HISTFILESIZE=2000
 # ==============================================================
 # Default prompt
 # ==============================================================
-
 # define colors
 export red=$'\e[1;91m'
 export green=$'\e[1;92m'
@@ -47,7 +46,6 @@ PS1='┌──[\[${usercolor}\]\u\[${endc}\]]───[\[${usercolor}\]\h\[${end
 # ==============================================================
 # Colors
 # ==============================================================
-
 # enable color support of ls and grep and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -73,7 +71,6 @@ fi
 # be converted into scripts and removed from here (i.e. ~/bin
 # folder).
 # ==============================================================
-
 # Function extract for common archive formats
 extract() {
     if [[ -z "$1" ]]; then
