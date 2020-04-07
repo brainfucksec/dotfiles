@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.5.0 - 2020/03/15
+" Version: 0.5.1 - 2020/04/07
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -132,7 +132,7 @@ set shiftwidth=4
 set tabstop=4
 
 " 2 spaces for selected filetypes
-autocmd FileType xml,html,xhtml,css setlocal shiftwidth=2 tabstop=2
+autocmd FileType xml,html,xhtml,css,javascript setlocal shiftwidth=2 tabstop=2
 
 " 8 spaces for `go` filetypes
 autocmd FileType go setlocal shiftwidth=8 tabstop=8
