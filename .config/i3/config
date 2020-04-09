@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.7.0 - 2020/03/09
+# Version: 2.7.1 - 2020/04/09
 # Maintainer: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 # ===================================================================
@@ -142,7 +142,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+o fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -178,22 +178,21 @@ bindsym $mod+Shift+e exec i3-msg exit
 # Applications
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic nvim"
-#bindsym $mod+F3 exec --no-startup-id thunar
-bindsym $mod+F3 exec --no-startup-id termite -e "bash -ic f"
+bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id vlc
 bindsym $mod+F5 exec --no-startup-id liferea
 bindsym $mod+F6 exec --no-startup-id virtualbox
-bindsym $mod+F7 exec --no-startup-id gajim
+bindsym $mod+F7 exec --no-startup-id qtox
 bindsym $mod+F8 exec --no-startup-id lxappearance
 bindsym $mod+x exec xscreensaver-command -lock
 bindsym $mod+d exec rofi -show run
+# fff file manager
+bindsym $mod+f exec --no-startup-id termite -e "bash -ic f"
 bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
 bindsym $mod+u exec --no-startup-id android-file-transfer
-
 # screenshot
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
-
 # screenshot with selection
 bindsym --release $mod+q exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
 
@@ -269,7 +268,7 @@ assign [class="Pavucontrol"]            $ws6
 assign [class="SimpleScreenRecorder"]   $ws6
 # VirtualBox Manager
 assign [class="Manager"]                $ws7
-assign [class="Gajim"]                  $ws10
+assign [class="qTox"]                   $ws10
 
 # enable floating mode for selected windows
 set $float floating enable border
@@ -280,7 +279,7 @@ for_window [class="vlc"]                    $float
 for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
 for_window [class="SimpleScreenRecorder"]   $float
-for_window [class="Gajim"]                  $float
+for_window [class="qTox"]                   $float
 
 
 # ===================================================================
