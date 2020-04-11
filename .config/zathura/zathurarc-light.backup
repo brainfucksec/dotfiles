@@ -82,7 +82,7 @@ set guioptions "sv"
 set font "Cantarell Bold 10"
 
 # Colors
-# Dark theme
+# Light theme
 set default-bg "#0b0d0f"
 set default-fg "#e8f6fd"
 
@@ -117,8 +117,8 @@ set index-bg "#161b1d"
 set index-active-fg "#ffffff"
 set index-active-bg "#1f6b93"
 
-set recolor-lightcolor "#161b1d"
-set recolor-darkcolor "#e8f6fd"
+set recolor-lightcolor "#ffffff"
+set recolor-darkcolor "#000000"
 set recolor "true"
 
 # setting recolor-keep true will keep any color your pdf has.
