@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck (brainfucksec)
 #
-# Last modified: Wed Mar 18 07:05:42 CET 2020
+# Last modified: Sun Apr 12 07:12:09 CEST 2020
 # ==============================================================
 
 
@@ -48,14 +48,13 @@ alias ps='ps auxf'
 alias ht='htop'
 alias cputemp='sensors | grep Core'
 
-# network
-alias gu='gitupdate'
-alias myip='curl -s http://ipinfo.io'
-
 # archives and volumes management
 alias ex='extract'
 alias m='mountdev'
 alias u='unmountdev'
+
+# other
+alias myip='curl -s http://ipinfo.io'
 
 # ==============================================================
 # Directories shortcuts
@@ -65,16 +64,15 @@ alias gm='cd /run/media/"$(whoami)" && ls -1'
 alias a='cd ~/archive'
 alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
-alias c='cd ~/code/dev'
-alias cg='cd ~/code/git'
+alias c='cd ~/code'
 
 # ==============================================================
 # Applications shortcuts
 # ==============================================================
-alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
-alias sp='strongpass'
-alias fl='feh -g 640x480 --scale-down -d -S filename'
-alias vb='vboxmanage'
 alias n='note'
 alias z='zathura --fork'
 alias e='nvim'
+alias fl='feh -g 640x480 --scale-down -d -S filename'
+alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
+alias vb='vboxmanage'
+alias gu='gitupdate'
