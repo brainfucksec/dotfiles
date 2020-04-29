@@ -193,7 +193,7 @@ alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #
 alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}"
 #
-current_item_prefix = $(red)$r
+current_item_prefix = $(green)$r
 #
 #current_item_suffix = $/r$(end)
 #
@@ -527,9 +527,9 @@ main_window_color = "white"
 #
 #color2 = green
 #
-progressbar_color = "green"
+progressbar_color = "black"
 #
-progressbar_elapsed_color = "white"
+progressbar_elapsed_color = "blue"
 #
 #statusbar_color = default
 #

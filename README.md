@@ -14,7 +14,7 @@ Setup
 ```
 Bar                   > polybar
 Compositor            > picom
-File Manager          > nnn
+File Manager          > fff
 Media Player          > ncmpcpp, vlc
 Image Viewer          > feh
 Program Launcher      > rofi
@@ -24,7 +24,7 @@ Terminal Emulator     > termite
 Window Manager        > i3-gaps
 Browser               > firefox, w3m
 Process Viewer        > htop, gotop
-Color Scheme:         > made with pywal with some hanges
+Color Scheme:         > made with pywal with some changes
 ```
 
 ![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot.png)

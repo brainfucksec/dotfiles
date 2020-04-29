@@ -2,7 +2,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.7.1 - 2020/04/09
+# Version: 2.8.0 - 2020/04/29
 # Maintainer: Brainfuck
 # Webpage: https://github.com/brainfucksec/dotfiles
 # ===================================================================
@@ -177,13 +177,11 @@ bindsym $mod+Shift+e exec i3-msg exit
 
 # Applications
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id termite -e "bash -ic nvim"
-bindsym $mod+F3 exec --no-startup-id thunar
-bindsym $mod+F4 exec --no-startup-id vlc
-bindsym $mod+F5 exec --no-startup-id liferea
-bindsym $mod+F6 exec --no-startup-id virtualbox
-bindsym $mod+F7 exec --no-startup-id qtox
-bindsym $mod+F8 exec --no-startup-id lxappearance
+bindsym $mod+F2 exec --no-startup-id vlc
+bindsym $mod+F3 exec --no-startup-id liferea
+bindsym $mod+F4 exec --no-startup-id virtualbox
+bindsym $mod+F5 exec --no-startup-id qtox
+bindsym $mod+F6 exec --no-startup-id keepassxc
 bindsym $mod+x exec xscreensaver-command -lock
 bindsym $mod+d exec rofi -show run
 # fff file manager
@@ -257,7 +255,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 #assign [class="Termite"]                $ws1
 assign [class="firefox"]                $ws2
 assign [class="Tor"]                    $ws2
-assign [class="Thunar"]                 $ws3
 assign [class="Liferea"]                $ws3
 # android-file-transfer
 assign [class="aft-linux-qt"]           $ws3

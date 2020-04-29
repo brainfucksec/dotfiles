@@ -13,7 +13,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.5.2 - 2020/04/17
+" Version: 0.5.3 - 2020/04/29
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -195,8 +195,8 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ================================
 "
 " C/C++ -> clang-complete
-" path of clang library file (change this after a update of clang)
-let g:clang_library_path = '/usr/lib/libclang.so.9'
+" path to directory where library can be found
+let g:clang_library_path = '/usr/lib'
 let g:clang_complete_auto = 1
 
 " Python -> jedi-vim

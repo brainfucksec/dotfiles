@@ -1,5 +1,6 @@
 /**
- * rofi theme
+ * rofi color theme
+ * custom
  * Author: Brainfuck
  */
 * {
@@ -9,9 +10,9 @@
     red:                         #FF3333;
     orange:                      #4976a1;
     blue:                        #36A3D9;
-    grey:						 #274f71; //foreground selected
+    grey:						             #274f71; //foreground selected
     //font:                        "Terminus 10";
-    font:                        "Fira Code Medium 10";
+    font:                        "GohuFont 11";
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
@@ -37,24 +38,20 @@
 }
 
 #window {
-    location:   south west;
-    anchor:   south west;
-    border:     4;
+    border: 2;
     border-color: @grey;
     text-color: @foreground;
     background-color: rgba ( 0, 0, 0, 0 % );
-    padding:    4;
+    padding: 4;
     text-color: @bordercolor;
     background-color: @background;
-    width: 440;
-    height: 480;
-    children:   [mainbox];
-    x-offset:   14px;
-    y-offset:   -16px;
+    width: 590;
+    height: 290;
+    children: [mainbox];
 }
 
 #mainbox {
-    border:  1;
+    border: 1;
     padding: 4;
 }
 
