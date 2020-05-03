@@ -1,9 +1,9 @@
 # ==============================================================
 #
 # $HOME/.bash_aliases FILE
-# By Brainfuck (brainfucksec)
+# By Brainfuck
 #
-# Last modified: Sun Apr 12 07:12:09 CEST 2020
+# Last modified: Sun May  3 08:05:11 CEST 2020
 # ==============================================================
 
 
@@ -23,8 +23,8 @@ alias lm='ls | more'
 alias lsn='ls | cat -n'
 alias mkdir='mkdir -p -v'
 alias cp='cp --preserve=all'
-alias cpv='cp -v'
-alias cpr='cp -R'
+alias cpv='cp --preserve=all -v'
+alias cpr='cp --preserve=all -R'
 alias cpp='rsync -ahv --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
@@ -54,7 +54,7 @@ alias m='mountdev'
 alias u='unmountdev'
 
 # other
-alias myip='curl -s http://ipinfo.io'
+alias myip='curl -s https://ipapi.co/json'
 
 # ==============================================================
 # Directories shortcuts
