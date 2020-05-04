@@ -29,8 +29,6 @@ Color Scheme:         > made with pywal with some changes
 
 ![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot.png)
 
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-neovim.png)
-
 Wallpaper: https://imgur.com/2OItlYE.jpg
 
 These dotfiles are modified according to my configuration, feel free to take what you need but don't install anything without checking first!
