@@ -14,7 +14,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.8.7 - 2020/02/28
+; Version: 0.9.0 - 2020/05/04
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;===============================================================
@@ -27,8 +27,8 @@
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 primary = ${xrdb:color6:#222}
-secondary = ${xrdb:color5:#222}
-alert = ${xrdb:color1:#222}
+secondary = ${xrdb:color3:#222}
+alert = ${xrdb:color8:#222}
 
 
 ;===============================================================
@@ -109,7 +109,7 @@ label-visible-padding = 1
 type = internal/cpu
 interval = 1.0
 format-prefix = " "
-format-prefix-foreground = ${colors.secondary}
+format-prefix-foreground = ${colors.primary}
 label = %percentage%%
 
 
@@ -117,7 +117,7 @@ label = %percentage%%
 type = internal/memory
 interval = 1.0
 format-prefix = " "
-format-prefix-foreground = ${colors.secondary}
+format-prefix-foreground = ${colors.primary}
 ;label = %percentage_used%%
 label = %gb_used% / %gb_total%
 
@@ -129,10 +129,10 @@ hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input
 warn-temperature = 60
 
 format-prefix = " "
-format-prefix-foreground = ${colors.secondary}
+format-prefix-foreground = ${colors.primary}
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.alert}
 
 
 [module/wired-network]
@@ -144,7 +144,7 @@ format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
 label-connected = %{F#4976a1} %{F-}eth
-;label-connected-foreground = ${colors.secondary}
+;label-connected-foreground = ${colors.primary}
 
 label-disconnected = [!] not connected
 label-disconnected-foreground = ${colors.alert}
@@ -159,7 +159,7 @@ date-alt = %a %d %b %H:%M:%S
 
 
 format-prefix = " "
-format-prefix-foreground = ${colors.secondary}
+format-prefix-foreground = ${colors.primary}
 
 label = %date% %time%
 label-foreground = ${colors.foreground}
@@ -170,11 +170,11 @@ type = custom/menu
 format-spacing = 1
 
 label-open = ""
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.primary}
 label-close = " undo"
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.primary}
 label-separator = |
-label-separator-foreground = ${colors.secondary}
+label-separator-foreground = ${colors.primary}
 
 menu-0-0 = lock
 menu-0-0-exec = xscreensaver-command -lock
@@ -196,15 +196,15 @@ label-muted = " mute"
 label-muted-foreground = "${colors.alert}"
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.secondary}
-bar-volume-foreground-1 = ${colors.secondary}
-bar-volume-foreground-2 = ${colors.secondary}
-bar-volume-foreground-3 = ${colors.secondary}
-bar-volume-foreground-4 = ${colors.secondary}
-bar-volume-foreground-5 = ${colors.secondary}
-bar-volume-foreground-6 = ${colors.secondary}
-bar-volume-foreground-7 = ${colors.secondary}
-bar-volume-foreground-8 = ${colors.secondary}
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-foreground-4 = ${colors.primary}
+bar-volume-foreground-5 = ${colors.primary}
+bar-volume-foreground-6 = ${colors.primary}
+bar-volume-foreground-7 = ${colors.primary}
+bar-volume-foreground-8 = ${colors.primary}
 bar-volume-foreground-9 = ${colors.alert}
 
 bar-volume-gradient = false

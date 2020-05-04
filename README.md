@@ -31,6 +31,8 @@ Color Scheme:         > made with pywal with some changes
 
 ![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-neovim.png)
 
-Wallpaper: https://whvn.cc/0j7lpm
+Wallpaper: https://imgur.com/2OItlYE.jpg
 
-Thanks to [/r/unixporn](https://www.reddit.com/r/unixporn/) subreddit users!
+These dotfiles are modified according to my configuration, feel free to take what you need but don't install anything without checking first!
+
+Thanks to [/r/unixporn](https://www.reddit.com/r/unixporn/) subreddit users for the examples and ideas that have given me.

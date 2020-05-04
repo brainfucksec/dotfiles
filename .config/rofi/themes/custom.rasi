@@ -4,14 +4,13 @@
  * Author: Brainfuck
  */
 * {
-    text-color:                  #9abac7;
-    background-color:            #070b10;
+    text-color:                  #a7bacd;
+    background-color:            #080b13;
     lightbg:                     #554344;
     red:                         #FF3333;
     orange:                      #4976a1;
     blue:                        #36A3D9;
-    grey:						             #274f71; //foreground selected
-    //font:                        "Terminus 10";
+    grey:						             #32506e; //foreground selected
     font:                        "GohuFont 11";
 
     selected-normal-foreground:  @foreground;
