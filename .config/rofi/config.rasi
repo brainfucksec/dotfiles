@@ -1,5 +1,3 @@
 configuration {
-theme: "themes/custom";
+theme: "~/.cache/wal/colors-rofi-dark";
 }
-
-/* vim:ft=css
