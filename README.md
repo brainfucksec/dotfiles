@@ -14,7 +14,7 @@ Setup
 ```
 Bar                   > polybar
 Compositor            > picom
-File Manager          > fff
+File Manager          > gnu/coreutils, fff
 Media Player          > ncmpcpp, vlc
 Image Viewer          > feh
 Program Launcher      > rofi
@@ -25,6 +25,7 @@ Window Manager        > i3-gaps
 Browser               > firefox, w3m
 Process Viewer        > htop, gotop
 Color Scheme:         > made with pywal with some changes
+Preferred Fonts:      > cozette, gohufont
 ```
 
 ![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot.png)
