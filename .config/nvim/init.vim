@@ -75,14 +75,14 @@ set splitbelow
 
 " Terminal options
 set t_Co=256
-"set termguicolors
+set termguicolors
 
 " Set transparent background
 "au ColorScheme * hi Normal ctermbg=none guibg=none
 "au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
 " Colorscheme
-colorscheme wal
+colorscheme molokai
 
 
 " =========================================================
@@ -237,7 +237,7 @@ set noshowmode
 
 " Settings
 let g:lightline = {
-    \ 'colorscheme': 'wal',
+    \ 'colorscheme': 'molokai',
     \ 'component_function': {
     \     'filetype': 'MyFiletype',
     \     'fileformat': 'MyFileformat',

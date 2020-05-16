@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Fri May  8 16:19:58 CEST 2020
+# Last modified: Sat May 16 20:46:13 CEST 2020
 # ==============================================================
 
 
@@ -38,12 +38,12 @@ export endc=$'\e[0m'
 if [[ "$UID" -eq 0 ]]; then
     usercolor="${red}"
 else
-    usercolor="${yellow}"
+    usercolor="${green}"
 fi
 
 #PS1='[\u@\h \W]\$ '
-PS1='┌──[\[${usercolor}\]\u\[${endc}\]]───[\[${usercolor}\]\h\[${endc}\]] \[${blue}[\w]\[${endc}\]
-└───╼ \[${usercolor}\]\$\[${endc}\] '
+PS1='┌─╼ \[${usercolor}\]\u\[${endc}\] ╺─╸ \[${usercolor}\]\h\[${endc}\] \[${blue}[\w]\[${endc}\]
+└───╼ \[${usercolor}\]>>\[${endc}\] '
 
 # ==============================================================
 # Colors
@@ -165,6 +165,3 @@ f() {
     fff "$@"
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
-
-# Import colorscheme from 'wal' asynchronously
-(cat ~/.cache/wal/sequences &)

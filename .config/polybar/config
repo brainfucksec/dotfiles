@@ -24,11 +24,11 @@
 ; colors
 ;===============================================================
 [colors]
-background = ${xrdb:color0:#222}
-foreground = ${xrdb:color7:#222}
-primary = ${xrdb:color6:#222}
-secondary = ${xrdb:color3:#222}
-alert = ${xrdb:color8:#222}
+background = #141c21
+foreground = #bdcfe3
+primary = ${xrdb:color4:#222}
+secondary = ${xrdb:color8:#222}
+alert = ${xrdb:color1:#222}
 
 
 ;===============================================================
@@ -143,7 +143,7 @@ interval = 3.0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = %{F#4976a1} %{F-}eth
+label-connected = %{F#2587cc} %{F-}eth
 ;label-connected-foreground = ${colors.primary}
 
 label-disconnected = [!] not connected
@@ -189,7 +189,7 @@ type = internal/volume
 
 ;format-volume = <label-volume> <bar-volume>
 format-volume = <label-volume>
-label-volume = %{F#4976a1}%{F-} %percentage%%
+label-volume = %{F#2587cc}%{F-} %percentage%%
 label-volume-foreground = ${colors.foreground}
 
 label-muted = " mute"

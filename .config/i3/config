@@ -17,10 +17,10 @@
 # you can import Xresources file to: https://terminal.sexy
 #
 # Class                  border  backgr  text     indicator child_border
-client.focused           #74828f #74828f #080b13  #74828f   #74828f
-client.focused_inactive  #2e445b #2e445b #a7bacd  #2e445b   #2e445b
-client.unfocused         #2e445b #2e445b #a7bacd  #2e445b   #2e445b
-client.urgent            #74828f #74828f #080b13  #74828f   #74828f
+client.focused           #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
+client.focused_inactive  #263640 #263640 #141c21  #263640   #263640
+client.unfocused         #263640 #263640 141c211  #263640   #263640
+client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 
 
 # ===================================================================
@@ -286,14 +286,14 @@ exec --no-startup-id setxkbmap it
 # picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
+# Wallpaper
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/norway_lofoten_2048x1367.jpg
+
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # dunst notification-daemon
 exec --no-startup-id dunst
-
-# Wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/landscape_mist_Moon_1600x1035.jpg
 
 # Xscreensaver
 exec --no-startup-id xscreensaver -nosplash
