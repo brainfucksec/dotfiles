@@ -27,6 +27,8 @@ Process Viewer          > htop, gotop
 Terminal Fonts          > gohufont
 ```
 
+![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screenshot-1-float.png)
+
 Wallpaper: https://wallhaven.cc/w/492vjx
 
 These dotfiles are modified according to my configuration, feel free to take what you need but don't install anything without checking first!
