@@ -12,27 +12,27 @@
 *color9: #fa3935
 
 ! green
-*color2: #819400
+*color2:  #819400
 *color10: #a4bd00
 
 ! yellow
-*color3: #b08500
+*color3:  #b08500
 *color11: #d9a400
 
 ! blue
-*color4: #2587cc
+*color4:  #2587cc
 *color12: #2ca2f5
 
 ! magenta
-*color5: #696ebf
+*color5:  #696ebf
 *color13: #8086e8
 
 ! cyan
-*color6: #289c93
+*color6:  #289c93
 *color14: #33c5ba
 
 ! white
-*color7: #bfbaac
+*color7:  #bfbaac
 *color15: #fdf6e3
 !}}}
 
@@ -50,23 +50,23 @@ xscreensaver.Dialog.dateFont:           -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
 xscreensaver.passwd.passwdFont:         -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
 
 !general dialog box (affects main hostname, username, password text)
-xscreensaver.Dialog.foreground:         #ddddee
-xscreensaver.Dialog.background:         #1b2a36
-xscreensaver.Dialog.topShadowColor:     #0f171d
-xscreensaver.Dialog.bottomShadowColor:  #0f171d
-xscreensaver.Dialog.Button.foreground:  #ddddee
-xscreensaver.Dialog.Button.background:  #0f171d
+xscreensaver.Dialog.foreground:         #bdcfe3
+xscreensaver.Dialog.background:         #263640
+xscreensaver.Dialog.topShadowColor:     #141c21
+xscreensaver.Dialog.bottomShadowColor:  #141c21
+xscreensaver.Dialog.Button.foreground:  #bdcfe3
+xscreensaver.Dialog.Button.background:  #141c21
 
 !username/password input box and date text colour
-xscreensaver.Dialog.text.foreground:    #ddddee
-xscreensaver.Dialog.text.background:    #0f171d
+xscreensaver.Dialog.text.foreground:    #bdcfe3
+xscreensaver.Dialog.text.background:    #141c21
 xscreensaver.Dialog.internalBorderWidth:24
 xscreensaver.Dialog.borderWidth:        0
 xscreensaver.Dialog.shadowThickness:    2
 
 !timeout bar (background is actually determined by Dialog.text.background)
-xscreensaver.passwd.thermometer.foreground:  #0f171d
-xscreensaver.passwd.thermometer.background:  #0f171d
+xscreensaver.passwd.thermometer.foreground:  #141c21
+xscreensaver.passwd.thermometer.background:  #141c21
 xscreensaver.passwd.thermometer.width:       0
 
 !datestamp format--see the strftime(3) manual page for details
