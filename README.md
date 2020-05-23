@@ -27,8 +27,7 @@ Process Viewer          > htop, gotop
 Terminal Fonts          > gohufont
 ```
 
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screen-1-float.png)
-![alt text](https://github.com/brainfucksec/dotfiles/blob/master/screen-2-tab.png)
+![.](img/screenshot-1.png)
 
 Wallpaper: https://wallhaven.cc/w/492vjx
 
