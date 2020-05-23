@@ -1,10 +1,18 @@
 # ===================================================================
 #
+# ██╗██████╗ ██╗    ██╗███╗   ███╗
+# ██║╚════██╗██║    ██║████╗ ████║
+# ██║ █████╔╝██║ █╗ ██║██╔████╔██║
+# ██║ ╚═══██╗██║███╗██║██║╚██╔╝██║
+# ██║██████╔╝╚███╔███╔╝██║ ╚═╝ ██║
+# ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
+#
+#
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.9.0 - 2020/05/05
+# Version: 2.9.1 - 2020/05/23
 # Maintainer: Brainfuck
-# Webpage: https://github.com/brainfucksec/dotfiles
+# Website: https://github.com/brainfucksec/dotfiles
 # ===================================================================
 
 
@@ -12,9 +20,7 @@
 # Colors
 # ===================================================================
 
-# For colors codes see `wal` color scheme:
-# $HOME/.cache/wal/colors.Xresources
-# you can import Xresources file to: https://terminal.sexy
+# For colors see `~/.Xresources`:
 #
 # Class                  border  backgr  text     indicator child_border
 client.focused           #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
@@ -280,14 +286,14 @@ for_window [class="SimpleScreenRecorder"]   $float
 # Start Up commands
 # ===================================================================
 
-# Keyboard layout
+# keyboard layout
 exec --no-startup-id setxkbmap it
 
 # picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
-# Wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/norway_lofoten_2048x1367.jpg
+# wallpaper
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/dark_nature_p2elep_crop_2048x1174.jpg
 
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -295,5 +301,5 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # dunst notification-daemon
 exec --no-startup-id dunst
 
-# Xscreensaver
+# xscreensaver
 exec --no-startup-id xscreensaver -nosplash
