@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.9.1 - 2020/05/23
+# Version: 2.10.0 - 2020/05/23
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # ===================================================================
@@ -43,19 +43,19 @@ default_orientation auto
 for_window [class="^.*"] border pixel 2
 #new_window pixel 4
 
-#gaps inner 15
-#gaps outer 3
 gaps inner 16
 gaps outer 4
 
 
-# Toggle gaps on selected workspaces
+# Toggle/reduce gaps on selected workspaces
+# workspace 2: web browser
 workspace 2 gaps inner 0
 workspace 2 gaps outer 0
-workspace 7 gaps inner 0
-workspace 7 gaps outer 0
+workspace 2 gaps top 10
+# workspace 8: virtual machines
 workspace 8 gaps inner 0
 workspace 8 gaps outer 0
+workspace 8 gaps top 10
 
 # Only enable gaps on a workspace when there is at least one container
 #smart_gaps on
