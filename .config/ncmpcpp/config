@@ -19,7 +19,7 @@ ncmpcpp_directory = "~/.config/ncmpcpp"
 ## MPD clients (eg. ncmpc) also use that location.
 ##
 #
-#lyrics_directory = ~/.lyrics
+lyrics_directory = "~/.config/mpd/lyrics"
 #
 ##### connection settings #####
 #
@@ -114,7 +114,7 @@ playlist_disable_highlight_delay = "1"
 #
 ## Defines how long messages are supposed to be visible.
 ##
-#message_delay_time = 5
+message_delay_time = "1"
 #
 ##### song format #####
 ##
@@ -183,9 +183,10 @@ playlist_disable_highlight_delay = "1"
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{%a - }{%t}|{$8%f$9}$R{$5(%l)$9}"
+song_list_format = "{$5%f$R%l$9}"
 #
-song_status_format = "{{%a{ '%b'{ (%y)}} - }{%t}}|{%f}"
+#song_status_format = "{{%a{ '%b'{ (%y)}} - }{%t}}|{%f}"
+song_status_format = "{%a - %t (%y)}"
 #
 #song_library_format = {%n - }{%t}|{%f}
 #
@@ -193,7 +194,7 @@ alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #
 alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}"
 #
-current_item_prefix = $(green)$r
+current_item_prefix = "$(green)$r"
 #
 #current_item_suffix = $/r$(end)
 #
@@ -201,13 +202,13 @@ current_item_prefix = $(green)$r
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = "$b"
+now_playing_prefix = "$(white)"
 #
-#now_playing_suffix = $/b
+now_playing_suffix = "$(white)"
 #
-#browser_playlist_prefix = "$2playlist$9 "
+browser_playlist_prefix = "$5>>$9 "
 #
-#selected_item_prefix = $6
+selected_item_prefix = "$(5)"
 #
 #selected_item_suffix = $9
 #
@@ -292,7 +293,7 @@ song_columns_list_format = "(20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20
 ##
 ## Note: Possible display modes: classic, columns.
 ##
-playlist_display_mode = classic
+playlist_display_mode = "classic"
 #
 #browser_display_mode = classic
 #
@@ -300,7 +301,7 @@ playlist_display_mode = classic
 #
 #playlist_editor_display_mode = classic
 #
-#discard_colors_if_item_is_selected = yes
+discard_colors_if_item_is_selected = "yes"
 #
 #show_duplicate_tags = true
 #
@@ -342,11 +343,11 @@ user_interface = "classic"
 #
 #default_tag_editor_pattern = %n - %t
 #
-header_visibility = "yes"
+header_visibility = "no"
 #
 statusbar_visibility = "yes"
 #
-titles_visibility = "yes"
+titles_visibility = "no"
 #
 #header_text_scrolling = yes
 #
@@ -473,11 +474,11 @@ titles_visibility = "yes"
 #
 #search_engine_default_search_mode = 1
 #
-#external_editor = nano
+external_editor = "nvim"
 #
 ## Note: set to yes if external editor is a console application.
 ##
-#use_console_editor = yes
+use_console_editor = "yes"
 #
 ##### colors definitions #####
 ##
@@ -511,9 +512,9 @@ titles_visibility = "yes"
 #
 colors_enabled = "yes"
 #
-#empty_tag_color = cyan
+empty_tag_color = "blue"
 #
-header_window_color = "blue"
+header_window_color = "black"
 #
 volume_color = "white"
 #
@@ -537,7 +538,7 @@ progressbar_elapsed_color = "blue"
 #
 #player_state_color = default:b
 #
-#alternative_ui_separator_color = black:b
+alternative_ui_separator_color = "black"
 #
 #window_border_color = green
 #
