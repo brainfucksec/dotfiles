@@ -9,7 +9,7 @@
 
 ## My Arch Linux dotfiles
 
-![.](img/screenshot-1.png)
+![.](img/screenshot.png)
 
 Setup
 -----
