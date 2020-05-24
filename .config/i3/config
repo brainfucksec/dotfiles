@@ -1,24 +1,24 @@
-# ===================================================================
+# =========================================================
 #
-# ██╗██████╗ ██╗    ██╗███╗   ███╗
-# ██║╚════██╗██║    ██║████╗ ████║
-# ██║ █████╔╝██║ █╗ ██║██╔████╔██║
-# ██║ ╚═══██╗██║███╗██║██║╚██╔╝██║
-# ██║██████╔╝╚███╔███╔╝██║ ╚═╝ ██║
-# ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
+#   ██╗██████╗ ██╗    ██╗███╗   ███╗
+#   ██║╚════██╗██║    ██║████╗ ████║
+#   ██║ █████╔╝██║ █╗ ██║██╔████╔██║
+#   ██║ ╚═══██╗██║███╗██║██║╚██╔╝██║
+#   ██║██████╔╝╚███╔███╔╝██║ ╚═╝ ██║
+#   ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
 #
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.10.0 - 2020/05/23
+# Version: 2.11.0 - 2020/05/24
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
-# ===================================================================
+# =========================================================
 
 
-# ===================================================================
+# =========================================================
 # Colors
-# ===================================================================
+# =========================================================
 
 # For colors see `~/.Xresources`:
 #
@@ -29,9 +29,9 @@ client.unfocused         #263640 #263640 141c211  #263640   #263640
 client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 
 
-# ===================================================================
+# =========================================================
 # Windows style
-# ===================================================================
+# =========================================================
 
 # Font for window titles
 font xft:Misc Ohsnap 12
@@ -48,11 +48,11 @@ gaps outer 4
 
 
 # Toggle/reduce gaps on selected workspaces
-# workspace 2: web browser
+# 2 web browser
 workspace 2 gaps inner 0
 workspace 2 gaps outer 0
 workspace 2 gaps top 10
-# workspace 8: virtual machines
+# 8 virtual machines
 workspace 8 gaps inner 0
 workspace 8 gaps outer 0
 workspace 8 gaps top 10
@@ -215,15 +215,15 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 # use variables to avoid repeating the names and for adding custom
 # characters or icons
 set $ws1 1:1 
-set $ws2 2:2 
-set $ws3 3:3 
+set $ws2 2:2 󰈹
+set $ws3 3:3 󰉋
 set $ws4 4:4 
 set $ws5 5:5 
-set $ws6 6:6 
+set $ws6 6:6 󰝚
 set $ws7 7:7 
 set $ws8 8:8 
-set $ws9 9:9 
-set $ws10 10:10 
+set $ws9 9:9 󰝰
+set $ws10 10:10 󰭹
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

@@ -1,13 +1,15 @@
 ```
- #####   ####  ##### ###### # #      ######  ####
- #    # #    #   #   #      # #      #      #
- #    # #    #   #   #####  # #      #####   ####
- #    # #    #   #   #      # #      #           #
- #    # #    #   #   #      # #      #      #    #
- #####   ####    #   #      # ###### ######  ####
+██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗
+██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝
+██║  ██║██║   ██║   ██║   █████╗  ██║██║     █████╗  ███████╗
+██║  ██║██║   ██║   ██║   ██╔══╝  ██║██║     ██╔══╝  ╚════██║
+██████╔╝╚██████╔╝   ██║   ██║     ██║███████╗███████╗███████║
+╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝
 ```
 
 ## My Arch Linux dotfiles
+
+![.](img/screenshot-1.png)
 
 Setup
 -----
@@ -24,10 +26,11 @@ Terminal Emulator       > termite
 Window Manager          > i3-gaps
 Browser                 > firefox, w3m
 Process Viewer          > htop, gotop
-Terminal Fonts          > gohufont
 ```
 
-![.](img/screenshot-1.png)
+Fonts:
+    * polybar   > ohsnap, material design icons, font awesome
+    * terminal  > gohufont
 
 Wallpaper: https://wallhaven.cc/w/492vjx
 

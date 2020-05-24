@@ -183,10 +183,9 @@ message_delay_time = "1"
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{$5%f$R%l$9}"
+song_list_format = "{$(8)%f$R%l$9}"
 #
-#song_status_format = "{{%a{ '%b'{ (%y)}} - }{%t}}|{%f}"
-song_status_format = "{%a - %t (%y)}"
+song_status_format = "{{%a{ '%b'{ (%y)}} - }{%t}}|{%f}"
 #
 #song_library_format = {%n - }{%t}|{%f}
 #
@@ -194,7 +193,7 @@ alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #
 alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}"
 #
-current_item_prefix = "$(green)$r"
+current_item_prefix = "$(blue)$r"
 #
 #current_item_suffix = $/r$(end)
 #
@@ -208,7 +207,7 @@ now_playing_suffix = "$(white)"
 #
 browser_playlist_prefix = "$5>>$9 "
 #
-selected_item_prefix = "$(5)"
+selected_item_prefix = "$(8)"
 #
 #selected_item_suffix = $9
 #
