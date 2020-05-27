@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Sat May 16 20:46:13 CEST 2020
+# Last modified: Wed May 27 20:10:00 CEST 2020
 # ==============================================================
 
 
@@ -29,8 +29,8 @@ export red=$'\e[1;31m'
 export green=$'\e[1;32m'
 export yellow=$'\e[1;33m'
 export blue=$'\e[1;34m'
-export purple=$'\e[1;33m'
-export cyan=$'\e[1;35m'
+export purple=$'\e[1;35m'
+export cyan=$'\e[1;36m'
 export white=$'\e[1;37m'
 export endc=$'\e[0m'
 
@@ -38,7 +38,7 @@ export endc=$'\e[0m'
 if [[ "$UID" -eq 0 ]]; then
     usercolor="${red}"
 else
-    usercolor="${green}"
+    usercolor="${cyan}"
 fi
 
 #PS1='[\u@\h \W]\$ '
