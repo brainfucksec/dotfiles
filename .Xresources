@@ -41,25 +41,26 @@
 xscreensaver.splash: false
 
 !font settings
-xscreensaver.Dialog.headingFont:        -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.headingFont:    -misc-fixed-bold-r-normal--15-140-75-75-c-90-iso8859-1
+xscreensaver.Dialog.bodyFont:       -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
+xscreensaver.Dialog.labelFont:      -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
+xscreensaver.Dialog.unameFont:      -misc-fixed-bold-r-normal--15-140-75-75-c-90-iso8859-1
+xscreensaver.Dialog.buttonFont:     -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
+xscreensaver.Dialog.dateFont:       -misc-fixed-bold-r-normal--13-120-75-75-c-70-iso8859-1
+xscreensaver.passwd.passwdFont:     -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
 
 !general dialog box (affects main hostname, username, password text)
 xscreensaver.Dialog.foreground:         #bdcfe3
 xscreensaver.Dialog.background:         #263640
-xscreensaver.Dialog.topShadowColor:     #141c21
-xscreensaver.Dialog.bottomShadowColor:  #141c21
 xscreensaver.Dialog.Button.foreground:  #bdcfe3
 xscreensaver.Dialog.Button.background:  #141c21
 
-!username/password input box and date text colour
 xscreensaver.Dialog.text.foreground:    #bdcfe3
 xscreensaver.Dialog.text.background:    #141c21
+
+xscreensaver.Dialog.topShadowColor:     #141c21
+xscreensaver.Dialog.bottomShadowColor:  #141c21
+
 xscreensaver.Dialog.internalBorderWidth:24
 xscreensaver.Dialog.borderWidth:        0
 xscreensaver.Dialog.shadowThickness:    2
@@ -68,6 +69,11 @@ xscreensaver.Dialog.shadowThickness:    2
 xscreensaver.passwd.thermometer.foreground:  #141c21
 xscreensaver.passwd.thermometer.background:  #141c21
 xscreensaver.passwd.thermometer.width:       0
+
+!header
+xscreensaver.passwd.heading.label: XScreenSaver
+xscreensaver.passwd.body.label: Session locked
+xscreensaver.passwd.uname: False
 
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %Y-%m-%d  %R
