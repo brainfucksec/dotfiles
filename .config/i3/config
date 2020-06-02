@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.12.0 - 2020/06/02
+# Version: 2.12.1 - 2020/06/02
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -205,7 +205,7 @@ bindsym --release $mod+q exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e '
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym $mod+e exec --no-startup-id pulseaudio-equalizer-gtk
+bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
 bindsym $mod+p exec --no-startup-id pavucontrol
 
 
@@ -258,7 +258,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Automatically make a specific window show up on a specific workspace
 # command for get window class name: xprop | awk '/WM_CLASS/{print $4}'
-
 #assign [class="Termite"]                $ws1
 assign [class="firefox"]                $ws2
 assign [class="Tor"]                    $ws2
