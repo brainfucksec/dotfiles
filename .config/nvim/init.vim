@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.6.1 - 2020/05/24
+" Version: 0.6.2 - 2020/06/05
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -210,18 +210,6 @@ let g:javascript_plugin_flow = 1
 " HTML/CSS -> vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
-" Go -> vim-go
-" disable `auto |:GoFmt|` on save
-let g:go_fmt_autosave = 0
-
-" enable some features for syntax highlighting
-let g:go_highlight_operators = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-
-
 
 " =========================================================
 " Status line
@@ -241,15 +229,6 @@ let g:lightline = {
     \     'fileformat': 'MyFileformat',
     \ }
     \ }
-
-" functions for vim-devicons
-"function! MyFiletype()
-"    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-"endfunction
-"
-"function! MyFileformat()
-"    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-"endfunction
 
 
 " =========================================================
