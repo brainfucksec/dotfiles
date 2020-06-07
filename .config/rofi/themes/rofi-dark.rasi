@@ -4,7 +4,7 @@
  */
 
 * {
-    font: "GohuFont 11";
+    font: "Gohu GohuFont 11";
 
     background: #141c21;
     background-color: @background;
@@ -40,7 +40,7 @@
     border: 2;
     border-color: @selected-active-background;
     padding: 2ch;
-    width: 590;
+    width: 490;
     height: 290;
 }
 

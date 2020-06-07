@@ -1,10 +1,10 @@
 [options]
 allow_bold = true
-font = GohuFont 10
+font = Gohu GohuFont 11
 icon_name = terminal
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # and setting it to a negative value means "infinite scrollback"
-scrollback_lines = 1000
+scrollback_lines = 2000
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = xdg-open
