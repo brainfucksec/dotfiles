@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.6.3 - 2020/06/07
+" Version: 0.6.4 - 2020/06/07
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -28,6 +28,9 @@ filetype on
 " The mapleader has to be set before plugin manager starts loading all
 " the plugins.
 let mapleader = ","
+
+" Enable mouse support
+set mouse=a
 
 
 " =========================================================
