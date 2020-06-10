@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Wed May 27 20:10:00 CEST 2020
+# Last modified: Wed Jun 10 12:37:40 CEST 2020
 # ==============================================================
 
 
@@ -38,12 +38,12 @@ export endc=$'\e[0m'
 if [[ "$UID" -eq 0 ]]; then
     usercolor="${red}"
 else
-    usercolor="${cyan}"
+    usercolor="${green}"
 fi
 
 #PS1='[\u@\h \W]\$ '
 PS1='┌─╼ \[${usercolor}\]\u\[${endc}\] ╺─╸ \[${usercolor}\]\h\[${endc}\] \[${blue}[\w]\[${endc}\]
-└───╼ \[${usercolor}\]>>\[${endc}\] '
+└───╼ '
 
 # ==============================================================
 # Colors
@@ -146,10 +146,10 @@ gitupdate() {
             cd "$cwd"
             for i in $(find . -maxdepth 3 -name ".git" | cut -c 3-); do
                 echo ""
-                echo "${i}" | sed -e 's/.git//g'
+                echo "$i" | sed -e 's/.git//g'
                 cd "$i"
                 cd ..
-                git pull
+                git pull --rebase=false
                 cd "$cwd"
             done
             cd "$HOME"
