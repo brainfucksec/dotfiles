@@ -1,5 +1,6 @@
 " =========================================================
 "
+"
 "   ██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
 "   ██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
 "   ██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
@@ -10,7 +11,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.6.4 - 2020/06/07
+" Version: 0.7.0 - Sun Jun 14 10:44:51 CEST 2020
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -31,6 +32,9 @@ let mapleader = ","
 
 " Enable mouse support
 set mouse=a
+
+" Copy all yanking/pasting operations to the system clipboard
+set clipboard=unnamedplus
 
 
 " =========================================================
@@ -201,7 +205,7 @@ let g:clang_library_path = '/usr/lib'
 let g:clang_complete_auto = 1
 
 " Python -> jedi-vim
-" use tabs when going to a definition etc
+" use tabs when going to a definition
 let g:jedi#use_tabs_not_buffers = 1
 
 " Disable docstring window to popup during completion
@@ -268,7 +272,7 @@ nnoremap <C-l> <C-w>l
 " ========
 "
 " Open NERDTree automatically when neovim starts up
-"autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree
 
 " Open/close NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
