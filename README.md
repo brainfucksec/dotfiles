@@ -13,6 +13,7 @@
 
 ![.](img/screenshot-2-browser.png)
 
+![.](img/screenshot-3-neovim.png)
 
 Setup
 -----
