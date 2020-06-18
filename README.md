@@ -20,7 +20,7 @@ Setup
 ```
 Bar                     > polybar
 Compositor              > picom
-File Manager            > gnu/coreutils, fff
+File Manager            > pcmanfm, fff
 Media Player            > ncmpcpp, vlc
 Image Viewer            > feh
 Program Launcher        > rofi

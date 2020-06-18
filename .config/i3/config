@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.12.1 - 2020/06/02
+# Version: 2.13.0 - Thu Jun 18 18:00:08 CEST 2020
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -183,10 +183,11 @@ bindsym $mod+Shift+e exec i3-msg exit
 # Applications
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id vlc
-bindsym $mod+F3 exec --no-startup-id liferea
-bindsym $mod+F4 exec --no-startup-id virtualbox
-bindsym $mod+F5 exec --no-startup-id keepassxc
-bindsym $mod+F6 exec --no-startup-id gimp
+bindsym $mod+F3 exec --no-startup-id Pcmanfm
+bindsym $mod+F4 exec --no-startup-id liferea
+bindsym $mod+F5 exec --no-startup-id virtualbox
+bindsym $mod+F6 exec --no-startup-id keepassxc
+bindsym $mod+F7 exec --no-startup-id gimp
 bindsym $mod+d exec rofi -show run
 bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
 bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
@@ -261,6 +262,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 #assign [class="Termite"]                $ws1
 assign [class="firefox"]                $ws2
 assign [class="Tor"]                    $ws2
+assign [class="Pcmanfm"]                $ws3
 assign [class="Zathura"]                $ws5
 assign [class="Pulseaudio-equalizer"]   $ws6
 assign [class="Pavucontrol"]            $ws6
