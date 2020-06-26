@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Sun May  3 08:05:11 CEST 2020
+# Last modified: Fri Jun 26 17:15:57 CEST 2020
 # ==============================================================
 
 
@@ -54,17 +54,14 @@ alias m='mountdev'
 alias u='unmountdev'
 
 # other
-alias myip='curl -s https://ipapi.co/json'
+alias myip='curl -s http://ip-api.com/'
 
 # ==============================================================
 # Directories shortcuts
 # ==============================================================
-alias h='cd ~/'
 alias gm='cd /run/media/"$(whoami)" && ls -1'
-alias a='cd ~/archive'
 alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
-alias c='cd ~/code'
 
 # ==============================================================
 # Applications shortcuts
