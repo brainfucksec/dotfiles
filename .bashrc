@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Wed Jun 10 12:37:40 CEST 2020
+# Last modified: Tue Jul 14 10:07:52 CEST 2020
 # ==============================================================
 
 
@@ -149,7 +149,7 @@ gitupdate() {
                 echo "$i" | sed -e 's/.git//g'
                 cd "$i"
                 cd ..
-                git pull --rebase=false
+                git pull #--rebase=false
                 cd "$cwd"
             done
             cd "$HOME"
@@ -158,10 +158,4 @@ gitupdate() {
             return 1
         fi
     fi
-}
-
-# fff file manager, CD on exit
-f() {
-    fff "$@"
-    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
