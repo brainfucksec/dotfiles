@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "250x300-10+10"
+    geometry = "260x400-10+40"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -64,7 +64,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#6b828b"
+    frame_color = "#4a697d"
 
     # Define a color for the separator.
     # possible values are:
@@ -252,8 +252,8 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#2B4255"
-    foreground = "#ffffff"
+    background = "#141c21"
+    foreground = "#bdcfe3"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
