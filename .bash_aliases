@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Fri Jun 26 17:15:57 CEST 2020
+# Last modified: Sun Aug 30 23:26:28 CEST 2020
 # ==============================================================
 
 
@@ -71,5 +71,4 @@ alias z='zathura --fork'
 alias e='nvim'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
-alias vb='vboxmanage'
 alias gu='gitupdate'
