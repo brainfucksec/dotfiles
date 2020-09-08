@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Tue Jul 14 10:07:52 CEST 2020
+# Last modified: Tue Sep  8 07:24:19 CEST 2020
 # ==============================================================
 
 
@@ -48,11 +48,12 @@ PS1='┌─╼ \[${usercolor}\]\u\[${endc}\] ╺─╸ \[${usercolor}\]\h\[${end
 # ==============================================================
 # Colors
 # ==============================================================
-# enable color support of ls and grep and also add handy aliases
+# enable color support of ls, grep and ip, also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='ls --color=auto'
     alias grep='grep --color=auto'
+    alias ip='ip -color=auto'
 fi
 
 # ==============================================================
