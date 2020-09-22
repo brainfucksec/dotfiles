@@ -4,7 +4,7 @@
  */
 
 * {
-    font: "Gohu GohuFont 11";
+    font: "Cozette 10";
 
     background: #141c21;
     background-color: @background;
