@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Tue Sep  8 07:24:19 CEST 2020
+# Last modified: Sat Oct  3 05:34:07 PM CEST 2020
 # ==============================================================
 
 
@@ -25,14 +25,16 @@ HISTFILESIZE=2000
 # Default prompt
 # ==============================================================
 # define colors
-export red=$'\e[1;31m'
-export green=$'\e[1;32m'
-export yellow=$'\e[1;33m'
-export blue=$'\e[1;34m'
-export purple=$'\e[1;35m'
-export cyan=$'\e[1;36m'
-export white=$'\e[1;37m'
-export endc=$'\e[0m'
+export red="$(tput setaf 1)"
+export green="$(tput setaf 2)"
+export yellow="$(tput setaf 3)"
+export blue="$(tput setaf 4)"
+export magenta="$(tput setaf 5)"
+export cyan="$(tput setaf 6)"
+export white="$(tput setaf 7)"
+export b="$(tput bold)"
+export reset="$(tput sgr0)"
+
 
 # set color for current user
 if [[ "$UID" -eq 0 ]]; then
@@ -42,14 +44,14 @@ else
 fi
 
 #PS1='[\u@\h \W]\$ '
-PS1='┌─╼ \[${usercolor}\]\u\[${endc}\] ╺─╸ \[${usercolor}\]\h\[${endc}\] \[${blue}[\w]\[${endc}\]
+PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${usercolor}\]\h\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
 └───╼ '
 
 # ==============================================================
 # Colors
 # ==============================================================
 # enable color support of ls, grep and ip, also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
+if [[ -x /usr/bin/dircolors ]]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='ls --color=auto'
     alias grep='grep --color=auto'
@@ -63,7 +65,7 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 # ==============================================================
-if [ -f ~/.bash_aliases ]; then
+if [[ -f ~/.bash_aliases ]]; then
 	. ~/.bash_aliases
 fi
 
