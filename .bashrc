@@ -45,7 +45,7 @@ fi
 
 #PS1='[\u@\h \W]\$ '
 PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${usercolor}\]\h\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
-└───╼ ${b}${usercolor}${reset} '
+└───╼ ${b}${usercolor}λ${reset} '
 
 # ==============================================================
 # Colors
