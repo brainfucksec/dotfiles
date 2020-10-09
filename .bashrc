@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Sat Oct  3 05:34:07 PM CEST 2020
+# Last modified: Fri Oct  9 05:20:02 PM CEST 2020
 # ==============================================================
 
 
@@ -45,7 +45,7 @@ fi
 
 #PS1='[\u@\h \W]\$ '
 PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${usercolor}\]\h\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
-└───╼ ${b}${usercolor}λ${reset} '
+└───╼ \[${b}${usercolor}\]λ\[${reset}\] '
 
 # ==============================================================
 # Colors
