@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.16.0 - Thu Oct 15 08:41:00 AM CEST 2020
+# Version: 2.16.1 - Thu Oct 15 09:28:45 AM CEST 2020
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -187,9 +187,9 @@ bindsym $mod+F3 exec --no-startup-id pcmanfm
 bindsym $mod+F4 exec --no-startup-id liferea
 bindsym $mod+F5 exec --no-startup-id virt-manager
 bindsym $mod+F6 exec --no-startup-id gimp
+bindsym $mod+F7 exec --no-startup-id keepassxc
 
 bindsym $mod+d exec rofi -show run
-bindsym $mod+k exec --no-startup-id keepassxc
 bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
 bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+u exec --no-startup-id android-file-transfer
