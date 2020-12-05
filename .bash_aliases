@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Sun Aug 30 23:26:28 CEST 2020
+# Last modified: Sat Dec  5 08:06:59 PM CET 2020
 # ==============================================================
 
 
@@ -25,7 +25,7 @@ alias mkdir='mkdir -p -v'
 alias cp='cp --preserve=all'
 alias cpv='cp --preserve=all -v'
 alias cpr='cp --preserve=all -R'
-alias cpp='rsync -ahv --info=progress2'
+alias cpp='rsync -ahvW --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 
@@ -54,7 +54,7 @@ alias m='mountdev'
 alias u='unmountdev'
 
 # other
-alias myip='curl -s http://ip-api.com/'
+alias myip='curl -s https://ipinfo.io/'
 
 # ==============================================================
 # Directories shortcuts
@@ -72,3 +72,4 @@ alias e='nvim'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias gu='gitupdate'
+alias clean='bleachbit -c --preset'
