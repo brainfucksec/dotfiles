@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Sat Dec  5 08:59:38 AM CET 2020
+# Last modified: Sun Dec 20 01:51:13 PM CET 2020
 # ==============================================================
 
 
@@ -27,13 +27,12 @@ HISTFILESIZE=2000
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-# cd only with directory name
-shopt -s autocd
+shopt -s extglob    # necessary for programmable completion
+shopt -s autocd     # cd only with directory name
 
 # ==============================================================
-# Default prompt
+# Color definitions
 # ==============================================================
-# define colors
 export red="$(tput setaf 1)"
 export green="$(tput setaf 2)"
 export yellow="$(tput setaf 3)"
@@ -51,13 +50,6 @@ else
     usercolor="${green}"
 fi
 
-#PS1='[\u@\h \W]\$ '
-PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${usercolor}\]\h\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
-└──╼ \[${b}${usercolor}\]λ\[${reset}\] '
-
-# ==============================================================
-# Colors
-# ==============================================================
 # enable color support of ls, grep and ip, also add handy aliases
 if [[ -x /usr/bin/dircolors ]]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -67,24 +59,27 @@ if [[ -x /usr/bin/dircolors ]]; then
 fi
 
 # ==============================================================
-# Alias definitions:
+# Default prompt
+# ==============================================================
+#PS1='[\u@\h \W]\$ '
+PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${usercolor}\]\h\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
+└──╼ \[${b}${usercolor}\]λ\[${reset}\] '
+
+# ==============================================================
+# Aliases and Functions
 #
-# You may want to put all your additions into a separate file like
+# You may want to put all your aliases into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# If you want to make this file smaller, the functions can
+# be converted into scripts and removed from here (i.e. ~/bin
+# folder).
 # ==============================================================
 if [[ -f ~/.bash_aliases ]]; then
 	. ~/.bash_aliases
 fi
 
-# ==============================================================
-# Functions:
-#
-# If you want to make this file smaller, these functions can
-# be converted into scripts and removed from here (i.e. ~/bin
-# folder).
-# ==============================================================
-# Function extract for common archive formats
+# function extract for common archive formats
 extract() {
     if [[ -z "$1" ]]; then
         # display usage if no parameters given
