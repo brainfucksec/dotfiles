@@ -21,6 +21,15 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# Autocompletion:
+#
+# cycle through all matches with 'TAB' key
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
+# cd only with directory name
+shopt -s autocd
+
 # ==============================================================
 # Default prompt
 # ==============================================================
@@ -34,7 +43,6 @@ export cyan="$(tput setaf 6)"
 export white="$(tput setaf 7)"
 export b="$(tput bold)"
 export reset="$(tput sgr0)"
-
 
 # set color for current user
 if [[ "$UID" -eq 0 ]]; then
