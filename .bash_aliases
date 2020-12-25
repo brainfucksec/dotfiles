@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Sat Dec  5 08:06:59 PM CET 2020
+# Last modified: Fri Dec 25 07:46:30 PM CET 2020
 # ==============================================================
 
 
@@ -14,12 +14,13 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias lm='ls | more'
 alias ll='ls -lFh'
 alias la='ls -alFh'
+alias lf='ls -alF --group-directories-first'
 alias l1='ls -1F --group-directories-first'
+alias l1m='ls -1F --group-directories-first | more'
 alias lh='ls -ld .??*'
-alias l1m='ls -1 | more'
-alias lm='ls | more'
 alias lsn='ls | cat -n'
 alias mkdir='mkdir -p -v'
 alias cp='cp --preserve=all'
