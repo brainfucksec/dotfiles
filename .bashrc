@@ -3,13 +3,19 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Sun Dec 20 01:51:13 PM CET 2020
+# Last modified: Sat Dec 26 07:58:01 AM CET 2020
 # ==============================================================
 
 
+# ==============================================================
+# General
+# ==============================================================
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# ==============================================================
+# History settings
+# ==============================================================
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -21,14 +27,15 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# Autocompletion:
-#
+# ==============================================================
+# Autocompletion
+# ==============================================================
 # cycle through all matches with 'TAB' key
-bind 'set show-all-if-ambiguous on'
+#bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 shopt -s extglob    # necessary for programmable completion
-shopt -s autocd     # cd only with directory name
+shopt -s autocd     # cd when entering just a path in the shell
 
 # ==============================================================
 # Color definitions
