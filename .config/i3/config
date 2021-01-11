@@ -1,16 +1,16 @@
 # =========================================================
 #
-#   ██╗██████╗ ██╗    ██╗███╗   ███╗
-#   ██║╚════██╗██║    ██║████╗ ████║
-#   ██║ █████╔╝██║ █╗ ██║██╔████╔██║
-#   ██║ ╚═══██╗██║███╗██║██║╚██╔╝██║
-#   ██║██████╔╝╚███╔███╔╝██║ ╚═╝ ██║
-#   ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
+# ██╗██████╗ ██╗    ██╗███╗   ███╗
+# ██║╚════██╗██║    ██║████╗ ████║
+# ██║ █████╔╝██║ █╗ ██║██╔████╔██║
+# ██║ ╚═══██╗██║███╗██║██║╚██╔╝██║
+# ██║██████╔╝╚███╔███╔╝██║ ╚═╝ ██║
+# ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
 #
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.16.1 - Thu Oct 15 09:28:45 AM CEST 2020
+# Version: 2.17.0 - 11 Jan 2021
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -19,7 +19,6 @@
 # =========================================================
 # Colors
 # =========================================================
-
 # For colors see: `~/.Xresources`
 #
 # Class                  border  backgr  text     indicator child_border
@@ -32,7 +31,6 @@ client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 # =========================================================
 # Windows style
 # =========================================================
-
 # Font for window titles
 font xft:Misc Ohsnap 12
 
@@ -96,7 +94,6 @@ bindsym $mod+r mode "resize"
 # ===================================================================
 # Keybindings
 # ===================================================================
-
 # Mod4 = Super Key
 set $mod Mod4
 
@@ -179,7 +176,6 @@ bindsym $mod+Shift+e exec i3-msg exit
 # ===================================================================
 # My Shortcuts
 # ===================================================================
-
 # Applications
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id vlc
@@ -191,8 +187,6 @@ bindsym $mod+F7 exec --no-startup-id keepassxc
 
 bindsym $mod+d exec rofi -show run
 bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
-bindsym $mod+t exec --no-startup-id sh -c ~/bin/tor-browser_en-US/Browser/start-tor-browser
-bindsym $mod+u exec --no-startup-id android-file-transfer
 bindsym $mod+x exec xscreensaver-command -lock
 
 # screenshot (scrot)
@@ -211,7 +205,6 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 # ===================================================================
 # Workspaces
 # ===================================================================
-
 # Customize workspace name
 # use variables to avoid repeating the names and for adding custom characters
 # or icons.  Insert and/or paste fonts and icons as variable values.
@@ -254,12 +247,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # ===================================================================
 # Workspaces Assignment
 # ===================================================================
-
 # Automatically make a specific window show up on a specific workspace
 # command for get window class name: xprop | awk '/WM_CLASS/{print $4}'
 #assign [class="Termite"]                $ws1
 assign [class="firefox"]                $ws2
-assign [class="Tor"]                    $ws2
 assign [class="Pcmanfm"]                $ws3
 assign [class="Zathura"]                $ws5
 assign [class="Pulseaudio-equalizer"]   $ws6
@@ -278,7 +269,6 @@ assign [class="Virt-manager"]           $ws7
 set $float floating enable border
 for_window [class="Bleachbit"]              $float
 for_window [class="Lxappearance"]           $float
-for_window [class="Tor Browser"]            $float
 for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
 for_window [class="SimpleScreenRecorder"]   $float
@@ -288,7 +278,6 @@ for_window [class="vlc"]                    $float
 # ===================================================================
 # Start Up commands
 # ===================================================================
-
 # keyboard layout
 exec --no-startup-id setxkbmap it
 
