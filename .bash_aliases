@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Fri Dec 25 07:46:30 PM CET 2020
+# Last modified: Thu Jan 14 07:50:19 AM CET 2021
 # ==============================================================
 
 
@@ -51,8 +51,8 @@ alias cputemp='sensors | grep Core'
 
 # archives and volumes management
 alias ex='extract'
-alias m='mountdev'
-alias u='unmountdev'
+alias md='mountdev'
+alias ud='unmountdev'
 
 # other
 alias myip='curl -s https://ipinfo.io/'

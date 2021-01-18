@@ -85,7 +85,7 @@ visualizer_type = "wave_filled"
 #
 visualizer_look = "█▋"
 #
-visualizer_color = "blue"
+visualizer_color = "green"
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
@@ -185,7 +185,7 @@ message_delay_time = "1"
 #
 song_list_format = "{$(8)%f$R%l$9}"
 #
-song_status_format = "{{%a{ '%b'{ (%y)}} - }{%t}}|{%f}"
+song_status_format = "{{%a - {{%b (%y)}} - }{%t}}|{%f}"
 #
 #song_library_format = {%n - }{%t}|{%f}
 #
