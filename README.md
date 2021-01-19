@@ -15,12 +15,12 @@
 
 ![.](img/screenshot-3-neovim.png)
 
-Setup
+### Setup
 -----
 ```
 Bar                     > polybar
 Compositor              > picom
-File Manager            > pcmanfm, fff
+File Manager            > pcmanfm
 Media Player            > ncmpcpp, vlc
 Image Viewer            > feh
 Program Launcher        > rofi
