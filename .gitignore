@@ -1,0 +1,10 @@
+bin/
+.bundle/
+.gem/
+.thumbnails/
+
+# other general file extensions
+*.log
+*.tmp
+*history
+
