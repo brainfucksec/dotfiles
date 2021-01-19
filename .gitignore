@@ -1,10 +1,12 @@
+# directory and files to exclude
 bin/
 .bundle/
 .gem/
 .thumbnails/
+.wget-hsts
 
-# other general file extensions
+# other general file extensions and folder names
 *.log
+*tmp*
 *.tmp
-*history
-
+*.cache*
