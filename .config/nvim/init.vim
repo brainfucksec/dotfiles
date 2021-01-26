@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.7.0 - Sun Jun 14 10:44:51 CEST 2020
+" Version: 0.7.1 - 26 Jan 2021
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -149,7 +149,6 @@ au BufEnter * set fo-=c fo-=r fo-=o
 
 " indentLine
 " ==========
-"
 " indent lines style
 let g:indentLine_char = '│'
 "let g:indentLine_setColors = 0
@@ -171,14 +170,12 @@ set shortmess+=c
 " Workaround for auto-pairs issue
 let g:AutoPairsMapCR = 0
 
-
 " MUcomplete
 " ==========
 let g:mucomplete#enable_auto_at_startup = 1
 
 " endwise compatibility
 imap <Plug>MyCR <Plug>(MUcompleteCR)
-
 
 " ALE (Linter)
 " ============
@@ -194,10 +191,8 @@ let g:ale_lint_on_enter = 0
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-
 " Omnicompletion languages plugins
 " ================================
-"
 " C/C++ -> clang-complete
 " path to directory where library can be found
 let g:clang_library_path = '/usr/lib'
@@ -218,12 +213,9 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
 " =========================================================
-" Status line
+" Status line (lightline)
 " =========================================================
 
-" lightline
-" =========
-"
 " Disable mode information under status line
 set noshowmode
 
@@ -244,8 +236,8 @@ let g:lightline = {
 " Reload neovim config with Ctrl+r without restart
 map \r :source ~/.config/nvim/init.vim<CR>
 
-" Cancel a search with F3
-nnoremap <silent> <F3> :nohl<CR>
+" Cancel a search with Space
+nnoremap <silent> <Space>> :noh<CR>
 
 " Press kk to exit.
 inoremap kk <Esc>
@@ -266,19 +258,15 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
 " NerdTree
 " ========
-"
 " Open NERDTree automatically when neovim starts up
 "autocmd vimenter * NERDTree
 
 " Open/close NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
-
 " tagbar
 " ======
-"
 " Open/close tagbar with Ctrl+m
 nmap <C-m> :TagbarToggle<CR>
