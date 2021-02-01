@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Thu Jan 14 07:50:19 AM CET 2021
+# Last modified: Mon Feb  1 05:37:37 PM CET 2021
 # ==============================================================
 
 
@@ -26,6 +26,8 @@ alias mkdir='mkdir -p -v'
 alias cp='cp --preserve=all'
 alias cpv='cp --preserve=all -v'
 alias cpr='cp --preserve=all -R'
+alias rmf='rm -rf'
+alias rmi='rm -i'
 alias cpp='rsync -ahvW --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
