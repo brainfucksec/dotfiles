@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.7.1 - 26 Jan 2021
+" Version: 0.7.2 - 06 Feb 2021
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -235,9 +235,6 @@ let g:lightline = {
 
 " Reload neovim config with Ctrl+r without restart
 map \r :source ~/.config/nvim/init.vim<CR>
-
-" Cancel a search with Space
-nnoremap <silent> <Space>> :noh<CR>
 
 " Press kk to exit.
 inoremap kk <Esc>
