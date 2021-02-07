@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.7.2 - 06 Feb 2021
+" Version: 0.7.3 - 07 Feb 2021
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 " =========================================================
@@ -20,19 +20,19 @@
 " General
 " =========================================================
 
-" Enable filetype detection
+" enable filetype detection
 filetype on
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before plugin manager starts loading all
+" change leader to a comma because the backslash is too far away
+" that means all \x commands turn into ,x
+" the mapleader has to be set before plugin manager starts loading all
 " the plugins.
 let mapleader = ","
 
-" Enable mouse support
+" enable mouse support
 set mouse=a
 
-" Copy all yanking/pasting operations to the system clipboard
+" copy all yanking/pasting operations to the system clipboard
 set clipboard=unnamedplus
 
 
@@ -40,35 +40,35 @@ set clipboard=unnamedplus
 " nvim UI
 " =========================================================
 
-" Turn on syntax highlighting
+" turn on syntax highlighting
 syntax on
 
-" Add a bit extra margin to the left
+" add a bit extra margin to the left
 "set foldcolumn=1
 
-" Show line number
+" show line number
 set number
 
-" Highlight current line
+" highlight current line
 "set cursorline
 
-" Highlight matching parenthesis
+" highlight matching parenthesis
 set showmatch
 
-" Enable folding manually with 'marker' option
-" Use default 'foldmarker' (three consecutive open/closed curly braces)
+" enable folding manually with 'marker' option
+" use default 'foldmarker' (three consecutive open/closed curly braces)
 set foldmethod=marker
 
-" Remove whitespace on save
+" remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Line lenght marker at 80 columns
+" line lenght marker at 80 columns
 set colorcolumn=80
 
-" Open vertical split to the right
+" open vertical split to the right
 set splitright
 
-" Open horizontal split to the bottom
+" open horizontal split to the bottom
 set splitbelow
 
 
@@ -76,15 +76,15 @@ set splitbelow
 " Colors and fonts
 " =========================================================
 
-" Terminal options
+" terminal options
 set t_Co=256
 set termguicolors
 
-" Set transparent background
+" set transparent background
 "au ColorScheme * hi Normal ctermbg=none guibg=none
 "au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
-" Colorscheme
+" colorscheme
 let g:rehash256 = 1
 colorscheme molokai
 
@@ -93,14 +93,14 @@ colorscheme molokai
 " Files, backups
 " =========================================================
 
-" Use Unix for new files and autodetect the rest
+" use Unix for new files and autodetect the rest
 set ffs=unix,dos,mac
 
-" Turn backup off, swap file off
+" turn backup off, swap file off
 set nobackup
 set noswapfile
 
-" Remove line lenght marker for selected filetypes
+" remove line lenght marker for selected filetypes
 autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal colorcolumn=0
 
 
@@ -108,19 +108,19 @@ autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal colorcolumn=0
 " Memory, CPU
 " =========================================================
 
-" This makes neovim act like all other editors, buffers can
+" this makes neovim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-" Sets how many lines of history neovim has to remember
+" sets how many lines of history neovim has to remember
 set history=100
 
-" Faster scrolling
+" faster scrolling
 set ttyfast
 set lazyredraw
 
-" Syntax highlight only for N colums
+" syntax highlight only for N colums
 set synmaxcol=240
 
 
@@ -128,7 +128,7 @@ set synmaxcol=240
 " Text, tabs, indent
 " =========================================================
 
-" Use spaces instead of tabs
+" use spaces instead of tabs
 set expandtab
 
 " 1 tab == 4 spaces
@@ -144,7 +144,7 @@ autocmd FileType go setlocal shiftwidth=8 tabstop=8
 set si "Smart indent
 set wrap "Wrap lines
 
-" Stop annying auto commenting on new lines
+" stop annying auto commenting on new lines
 au BufEnter * set fo-=c fo-=r fo-=o
 
 " indentLine
@@ -158,16 +158,16 @@ let g:indentLine_char = '│'
 " Autocompletion, linting
 " =========================================================
 
-" Avoids scanning of 'tags (t)' and 'included files (i)' during completion
+" avoids scanning of 'tags (t)' and 'included files (i)' during completion
 set complete-=t,i
 
-" Completion popup settings (:help 'completeopt')
+" completion popup settings (:help 'completeopt')
 set completeopt+=menuone,noselect,noinsert
 
-" Shut off completion messages
+" shut off completion messages
 set shortmess+=c
 
-" Workaround for auto-pairs issue
+" workaround for auto-pairs issue
 let g:AutoPairsMapCR = 0
 
 " MUcomplete
@@ -181,34 +181,34 @@ imap <Plug>MyCR <Plug>(MUcompleteCR)
 " ============
 let g:ale_enabled = 1
 
-" Run linter only after save the file
+" run linter only after save the file
 let g:ale_lint_on_text_changed = 'never'
 
-" Don't run linter after open a file
+" don't run linter after open a file
 let g:ale_lint_on_enter = 0
 
-" Navigate between errors
+" navigate between errors
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Omnicompletion languages plugins
 " ================================
-" C/C++ -> clang-complete
+" c/c++ -> clang-complete
 " path to directory where library can be found
 let g:clang_library_path = '/usr/lib'
 let g:clang_complete_auto = 1
 
-" Python -> jedi-vim
+" python -> jedi-vim
 " use tabs when going to a definition
 let g:jedi#use_tabs_not_buffers = 1
 
-" Disable docstring window to popup during completion
+" disable docstring window to popup during completion
 autocmd FileType python setlocal completeopt-=preview
 
-" JavaScript -> vim-javascript
+" javascript -> vim-javascript
 let g:javascript_plugin_flow = 1
 
-" HTML/CSS -> vim-closetag
+" html/css -> vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
@@ -216,10 +216,10 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 " Status line (lightline)
 " =========================================================
 
-" Disable mode information under status line
+" disable mode information under status line
 set noshowmode
 
-" Settings
+" settings
 let g:lightline = {
     \ 'colorscheme': 'molokai',
     \ 'component_function': {
@@ -233,23 +233,26 @@ let g:lightline = {
 " Keymapping
 " =========================================================
 
-" Reload neovim config with Ctrl+r without restart
+" reload neovim config with Ctrl+r without restart
 map \r :source ~/.config/nvim/init.vim<CR>
 
-" Press kk to exit.
+" clear search highlighting
+nnoremap <silent> <leader>c :nohl<CR>
+
+" press kk to exit.
 inoremap kk <Esc>
 
-" Don't use arrow keys
+" don't use arrow keys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-" Fast saving
+" fast saving
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
 
-" Move around splits using Ctrl + {h,j,k,l}
+" move around splits using Ctrl + {h,j,k,l}
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -257,13 +260,13 @@ nnoremap <C-l> <C-w>l
 
 " NerdTree
 " ========
-" Open NERDTree automatically when neovim starts up
+" open NERDTree automatically when neovim starts up
 "autocmd vimenter * NERDTree
 
-" Open/close NerdTree with Ctrl+n
+" open/close NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
 " tagbar
 " ======
-" Open/close tagbar with Ctrl+m
+" open/close tagbar with Ctrl+m
 nmap <C-m> :TagbarToggle<CR>
