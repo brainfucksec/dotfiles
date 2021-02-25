@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Fri Feb 12 09:11:22 AM CET 2021
+# Last modified: Thu Feb 25 09:14:17 PM UTC 2021
 # ==============================================================
 
 
@@ -56,7 +56,8 @@ alias md='mountdev'
 alias ud='unmountdev'
 
 # other
-alias myip='curl -s https://ipinfo.io/'
+alias myip='curl -s http://ip-api.com'
+alias lkf='lsblk -f'
 
 # ==============================================================
 # Directories shortcuts
@@ -75,3 +76,4 @@ alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias gu='gitupdate'
 alias clean='bleachbit -c --preset'
+alias w3m='w3m https://duckduckgo.com'
