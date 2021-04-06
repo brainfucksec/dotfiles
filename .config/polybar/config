@@ -1,16 +1,16 @@
 ;==========================================================
 ;
-; ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-; ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-; ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-; ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-; ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-; ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ;
 ;
 ; polybar configuration file
 ;
-; Version: 0.11.0 - 2020/05/24
+; Version: 0.12.0 - 2021/04/06
 ; Maintainer: Brainfuck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;==========================================================
@@ -126,7 +126,7 @@ label = %gb_used% / %gb_total%
 [module/temperature]
 type = internal/temperature
 interval = 1.0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 warn-temperature = 60
 
 format-prefix = "󱃃 "
@@ -138,7 +138,7 @@ label-warn-foreground = ${colors.alert}
 
 [module/wired-network]
 type = internal/network
-interface = enp0s25
+interface = eno1
 interval = 3.0
 
 format-connected = <label-connected>
@@ -152,9 +152,9 @@ label-disconnected-foreground = ${colors.alert}
 [module/date]
 type = internal/date
 interval = 1.0
-date = %d/%m/%Y
+date = %a %d %b
 time = %H:%M
-date-alt = %a %d %b %H:%M:%S
+date-alt = %Y/%m/%d %H:%M:%S
 
 
 format-prefix = " "
@@ -168,7 +168,7 @@ label-foreground = ${colors.foreground}
 type = custom/menu
 format-spacing = 1
 
-label-open = " "
+label-open = "  "
 label-open-foreground = ${colors.primary}
 label-close = " undo"
 label-close-foreground = ${colors.primary}
@@ -184,7 +184,9 @@ menu-0-2-exec = poweroff
 
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+interval = 1
 
 ;format-volume = <label-volume> <bar-volume>
 format-volume = <label-volume>
