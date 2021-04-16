@@ -10,9 +10,10 @@
 "
 " neovim configuration file
 "
-" Version: 0.8.0 - 2021/04/06
+" Version: 0.8.1 - 2021/04/16
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
+"
 " =========================================================
 
 
@@ -37,7 +38,7 @@ set clipboard=unnamedplus
 
 
 " =========================================================
-" nvim UI
+" Neovim UI
 " =========================================================
 
 " turn on syntax highlighting
@@ -71,6 +72,9 @@ set splitright
 " open horizontal split to the bottom
 set splitbelow
 
+" search settings
+set incsearch ignorecase smartcase hlsearch
+
 
 " =========================================================
 " Colors and fonts
@@ -99,9 +103,6 @@ set ffs=unix,dos,mac
 " turn backup off, swap file off
 set nobackup
 set noswapfile
-
-" remove line lenght marker for selected filetypes
-autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal colorcolumn=0
 
 
 " =========================================================
@@ -135,20 +136,23 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 
+" remove line lenght marker for selected filetypes
+autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal colorcolumn=0
+
 " 2 spaces for selected filetypes
 autocmd FileType xml,html,xhtml,css,scss,javascript setlocal shiftwidth=2 tabstop=2
 
 " 8 spaces for `go` filetypes
 autocmd FileType go setlocal shiftwidth=8 tabstop=8
 
-set si "Smart indent
-set wrap "Wrap lines
+set smartindent "Smart indent
+set wrap        "Wrap lines
 
 " stop annying auto commenting on new lines
 au BufEnter * set fo-=c fo-=r fo-=o
 
 " indentLine
-" ==========
+"
 " indent lines style
 let g:indentLine_char = '│'
 "let g:indentLine_setColors = 0
@@ -171,14 +175,12 @@ set shortmess+=c
 let g:AutoPairsMapCR = 0
 
 " MUcomplete
-" ==========
 let g:mucomplete#enable_auto_at_startup = 1
 
 " endwise compatibility
 imap <Plug>MyCR <Plug>(MUcompleteCR)
 
 " ALE (Linter)
-" ============
 let g:ale_enabled = 1
 
 " run linter only after save the file
@@ -192,23 +194,23 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Omnicompletion languages plugins
-" ================================
-" c/c++ -> clang-complete
+"
+" C/C++ -> clang-complete
 " path to directory where library can be found
 let g:clang_library_path = '/usr/lib'
 let g:clang_complete_auto = 1
 
-" python -> jedi-vim
+" Python -> jedi-vim
 " use tabs when going to a definition
 let g:jedi#use_tabs_not_buffers = 1
 
 " disable docstring window to popup during completion
 autocmd FileType python setlocal completeopt-=preview
 
-" javascript -> vim-javascript
+" JavaScript -> vim-javascript
 let g:javascript_plugin_flow = 1
 
-" html/css -> vim-closetag
+" HTML/CSS -> vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
@@ -259,14 +261,13 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " NerdTree
-" ========
-" open NERDTree automatically when neovim starts up
+"open NERDTree automatically when neovim starts up
 "autocmd vimenter * NERDTree
 
 " open/close NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
 " tagbar
-" ======
 " open/close tagbar with Ctrl+m
 nmap <C-m> :TagbarToggle<CR>
+
