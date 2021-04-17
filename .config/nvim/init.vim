@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.8.3 - 2021/04/17
+" Version: 0.8.4 - 2021/04/17
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -31,7 +31,14 @@ let mapleader = ","
 set mouse=a
 
 " copy all yanking/pasting operations to the system clipboard
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
+
+" use Unix for new files and autodetect the rest
+set ffs=unix,dos,mac
+
+" turn backup off, swap file off
+set nobackup
+set noswapfile
 
 
 " =========================================================
@@ -71,13 +78,6 @@ set splitbelow
 
 " search settings (case insensitive, highlights)
 set incsearch ignorecase smartcase hlsearch
-
-" use Unix for new files and autodetect the rest
-set ffs=unix,dos,mac
-
-" turn backup off, swap file off
-set nobackup
-set noswapfile
 
 
 " =========================================================
