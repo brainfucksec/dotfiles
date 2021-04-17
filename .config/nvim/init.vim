@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.8.4 - 2021/04/17
+" Version: 0.8.5 - 2021/04/17
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -81,11 +81,10 @@ set incsearch ignorecase smartcase hlsearch
 
 
 " =========================================================
-" Colors and fonts
+" Colorscheme
 " =========================================================
 
-" terminal options
-set t_Co=256
+" enable 24-bit RGB colors
 set termguicolors
 
 " set transparent background
@@ -110,7 +109,6 @@ set hidden
 set history=100
 
 " faster scrolling
-set ttyfast
 set lazyredraw
 
 " syntax highlight only for N colums
@@ -118,7 +116,7 @@ set synmaxcol=240
 
 
 " =========================================================
-" Text, tabs, indent
+" Tabs, indent
 " =========================================================
 
 " use spaces instead of tabs
@@ -127,6 +125,12 @@ set expandtab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+
+" autoindent new lines
+set smartindent
+
+" stop annying auto commenting on new lines
+au BufEnter * set fo-=c fo-=r fo-=o
 
 " remove line lenght marker for selected filetypes
 autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal colorcolumn=0
@@ -137,14 +141,7 @@ autocmd FileType xml,html,xhtml,css,scss,javascript setlocal shiftwidth=2 tabsto
 " 8 spaces for `go` filetypes
 autocmd FileType go setlocal shiftwidth=8 tabstop=8
 
-set smartindent "Smart indent
-set wrap        "Wrap lines
-
-" stop annying auto commenting on new lines
-au BufEnter * set fo-=c fo-=r fo-=o
-
 " indentLine
-"
 " indent lines style
 let g:indentLine_char = '│'
 "let g:indentLine_setColors = 0
@@ -207,9 +204,10 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
 " =========================================================
-" Status line (lightline)
+" Status line
 " =========================================================
 
+" lightline
 " disable mode information under status line
 set noshowmode
 
