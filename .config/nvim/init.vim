@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.8.2 - 2021/04/17
+" Version: 0.8.3 - 2021/04/17
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -18,11 +18,8 @@
 
 
 " =========================================================
-" General
+" General settings
 " =========================================================
-
-" enable filetype detection
-filetype on
 
 " change leader to a comma because the backslash is too far away
 " that means all \x commands turn into ,x
@@ -41,8 +38,8 @@ set clipboard=unnamedplus
 " Neovim UI
 " =========================================================
 
-" turn on syntax highlighting
-syntax on
+" enable syntax highlighting
+syntax enable
 
 " add a bit extra margin to the left
 "set foldcolumn=1
