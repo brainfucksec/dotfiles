@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.8.1 - 2021/04/16
+" Version: 0.8.2 - 2021/04/17
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -72,8 +72,15 @@ set splitright
 " open horizontal split to the bottom
 set splitbelow
 
-" search settings
+" search settings (case insensitive, highlights)
 set incsearch ignorecase smartcase hlsearch
+
+" use Unix for new files and autodetect the rest
+set ffs=unix,dos,mac
+
+" turn backup off, swap file off
+set nobackup
+set noswapfile
 
 
 " =========================================================
@@ -91,18 +98,6 @@ set termguicolors
 " colorscheme
 let g:rehash256 = 1
 colorscheme molokai
-
-
-" =========================================================
-" Files, backups
-" =========================================================
-
-" use Unix for new files and autodetect the rest
-set ffs=unix,dos,mac
-
-" turn backup off, swap file off
-set nobackup
-set noswapfile
 
 
 " =========================================================
