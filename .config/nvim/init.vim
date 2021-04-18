@@ -10,16 +10,16 @@
 "
 " neovim configuration file
 "
-" Version: 0.8.6 - 2021/04/18
+" Version: 0.9.0 - 2021/04/18
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
+"
 " =========================================================
 
 
 " =========================================================
 " General settings
 " =========================================================
-
 " change leader to a comma because the backslash is too far away
 " that means all \x commands turn into ,x
 " the mapleader has to be set before plugin manager starts loading all
@@ -39,11 +39,9 @@ set ffs=unix,dos,mac
 set nobackup
 set noswapfile
 
-
 " =========================================================
 " Neovim UI
 " =========================================================
-
 " enable syntax highlighting
 syntax enable
 
@@ -78,11 +76,9 @@ set splitbelow
 " ignore case letters when search
 set ignorecase smartcase
 
-
 " =========================================================
 " Colorscheme
 " =========================================================
-
 " enable 24-bit RGB colors
 set termguicolors
 
@@ -94,11 +90,9 @@ set termguicolors
 let g:rehash256 = 1
 colorscheme molokai
 
-
 " =========================================================
 " Memory, CPU
 " =========================================================
-
 " this makes neovim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -113,11 +107,9 @@ set lazyredraw
 " syntax highlight only for N colums
 set synmaxcol=240
 
-
 " =========================================================
 " Tabs, indent
 " =========================================================
-
 " use spaces instead of tabs
 set expandtab
 
@@ -128,7 +120,7 @@ set tabstop=4
 " autoindent new lines
 set smartindent
 
-" stop annying auto commenting on new lines
+" don't auto commenting new lines
 au BufEnter * set fo-=c fo-=r fo-=o
 
 " remove line lenght marker for selected filetypes
@@ -140,23 +132,21 @@ autocmd FileType xml,html,xhtml,css,scss,javascript setlocal shiftwidth=2 tabsto
 " 8 spaces for `go` filetypes
 autocmd FileType go setlocal shiftwidth=8 tabstop=8
 
-" indentLine
-" indent lines style
+" plugin: indentLine
+" change indent char
 let g:indentLine_char = '│'
 "let g:indentLine_setColors = 0
-
 
 " =========================================================
 " Autocompletion, linting
 " =========================================================
-
-" avoids scanning of 'tags (t)' and 'included files (i)' during completion
+" don't include tags, files during completion
 set complete-=t,i
 
-" completion popup settings (:help 'completeopt')
+" completion settings (:help 'completeopt')
 set completeopt+=menuone,noselect,noinsert
 
-" shut off completion messages
+" don't show completion messages
 set shortmess+=c
 
 " workaround for auto-pairs issue
@@ -168,23 +158,10 @@ let g:mucomplete#enable_auto_at_startup = 1
 " endwise compatibility
 imap <Plug>MyCR <Plug>(MUcompleteCR)
 
-" ALE (Linter)
-let g:ale_enabled = 1
-
-" run linter only after save the file
-let g:ale_lint_on_text_changed = 'never'
-
-" don't run linter after open a file
-let g:ale_lint_on_enter = 0
-
-" navigate between errors
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" Omnicompletion languages plugins
+" Omnicompletion plugins
 "
 " C/C++ -> clang-complete
-" path to directory where library can be found
+" path to clang library
 let g:clang_library_path = '/usr/lib'
 let g:clang_complete_auto = 1
 
@@ -201,12 +178,23 @@ let g:javascript_plugin_flow = 1
 " HTML/CSS -> vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
+" plugin ALE (Linter)
+let g:ale_enabled = 1
+
+" run linter only after save the file
+let g:ale_lint_on_text_changed = 'never'
+
+" don't run linter after open a file
+let g:ale_lint_on_enter = 0
+
+" navigate between errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " =========================================================
 " Status line
 " =========================================================
-
-" lightline
+" plugin: lightline
 " disable mode information under status line
 set noshowmode
 
@@ -219,11 +207,9 @@ let g:lightline = {
     \ }
     \ }
 
-
 " =========================================================
 " Keymapping
 " =========================================================
-
 " reload neovim config with Ctrl+r without restart
 map \r :source ~/.config/nvim/init.vim<CR>
 
@@ -249,7 +235,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" NerdTree
+" plugin: NerdTree
 "open NERDTree automatically when neovim starts up
 "autocmd vimenter * NERDTree
 
