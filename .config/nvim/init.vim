@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.9.0 - 2021/04/18
+" Version: 0.9.1 - 2021/04/18
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -138,6 +138,22 @@ let g:indentLine_char = '│'
 "let g:indentLine_setColors = 0
 
 " =========================================================
+" Status line
+" =========================================================
+" plugin: lightline
+" disable mode information under status line
+set noshowmode
+
+" settings
+let g:lightline = {
+    \ 'colorscheme': 'molokai',
+    \ 'component_function': {
+    \     'filetype': 'MyFiletype',
+    \     'fileformat': 'MyFileformat',
+    \ }
+    \ }
+
+" =========================================================
 " Autocompletion, linting
 " =========================================================
 " don't include tags, files during completion
@@ -190,22 +206,6 @@ let g:ale_lint_on_enter = 0
 " navigate between errors
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" =========================================================
-" Status line
-" =========================================================
-" plugin: lightline
-" disable mode information under status line
-set noshowmode
-
-" settings
-let g:lightline = {
-    \ 'colorscheme': 'molokai',
-    \ 'component_function': {
-    \     'filetype': 'MyFiletype',
-    \     'fileformat': 'MyFileformat',
-    \ }
-    \ }
 
 " =========================================================
 " Keymapping
