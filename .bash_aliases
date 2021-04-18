@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Fri Mar 26 11:01:27 AM UTC 2021
+# Last modified: Sun Apr 18 10:49:45 AM UTC 2021
 # ==============================================================
 
 
@@ -66,6 +66,18 @@ alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
 
 # ==============================================================
+# Git aliases
+# ==============================================================
+alias g='git'
+alias gp='git push'
+alias gl='git pull'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gcm='git commit -m'
+alias gcv='git commit -v -m'
+
+# ==============================================================
 # Applications shortcuts
 # ==============================================================
 alias n='note'
@@ -76,3 +88,4 @@ alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias gu='gitupdate'
 alias clean='bleachbit -c --preset'
 alias w3m='w3m https://duckduckgo.com'
+
