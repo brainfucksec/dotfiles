@@ -10,10 +10,9 @@
 "
 " neovim configuration file
 "
-" Version: 0.8.5 - 2021/04/17
+" Version: 0.8.6 - 2021/04/18
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
-"
 " =========================================================
 
 
@@ -76,8 +75,8 @@ set splitright
 " open horizontal split to the bottom
 set splitbelow
 
-" search settings (case insensitive, highlights)
-set incsearch ignorecase smartcase hlsearch
+" ignore case letters when search
+set ignorecase smartcase
 
 
 " =========================================================
