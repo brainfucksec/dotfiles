@@ -10,16 +10,16 @@
 "
 " neovim configuration file
 "
-" Version: 0.9.1 - 2021/04/18
+" Version: 0.9.2 - 2021/04/18
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
 " =========================================================
 
-
 " =========================================================
 " General settings
 " =========================================================
+
 " change leader to a comma because the backslash is too far away
 " that means all \x commands turn into ,x
 " the mapleader has to be set before plugin manager starts loading all
@@ -42,6 +42,7 @@ set noswapfile
 " =========================================================
 " Neovim UI
 " =========================================================
+
 " enable syntax highlighting
 syntax enable
 
@@ -79,6 +80,7 @@ set ignorecase smartcase
 " =========================================================
 " Colorscheme
 " =========================================================
+
 " enable 24-bit RGB colors
 set termguicolors
 
@@ -93,6 +95,7 @@ colorscheme molokai
 " =========================================================
 " Memory, CPU
 " =========================================================
+
 " this makes neovim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -110,6 +113,7 @@ set synmaxcol=240
 " =========================================================
 " Tabs, indent
 " =========================================================
+
 " use spaces instead of tabs
 set expandtab
 
@@ -140,6 +144,7 @@ let g:indentLine_char = '│'
 " =========================================================
 " Status line
 " =========================================================
+
 " plugin: lightline
 " disable mode information under status line
 set noshowmode
@@ -156,6 +161,7 @@ let g:lightline = {
 " =========================================================
 " Autocompletion, linting
 " =========================================================
+
 " don't include tags, files during completion
 set complete-=t,i
 
@@ -210,6 +216,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " =========================================================
 " Keymapping
 " =========================================================
+
 " reload neovim config with Ctrl+r without restart
 map \r :source ~/.config/nvim/init.vim<CR>
 
