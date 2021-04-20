@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Sun Apr 18 10:49:45 AM UTC 2021
+# Last modified: Tue Apr 20 06:12:27 AM UTC 2021
 # ==============================================================
 
 
@@ -61,7 +61,7 @@ alias lkf='lsblk -f'
 # ==============================================================
 # Directories shortcuts
 # ==============================================================
-alias gm='cd /run/media/"$(whoami)" && ls -1'
+alias cm='cd /run/media/"$(whoami)" && ls -1'
 alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
 
