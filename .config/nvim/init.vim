@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.9.2 - 2021/04/18
+" Version: 0.9.3 - 2021/04/22
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
