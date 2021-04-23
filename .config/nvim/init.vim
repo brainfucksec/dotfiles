@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.10.0 - 2021/04/23
+" Version: 0.10.1 - 2021/04/23
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -158,6 +158,23 @@ let g:lightline = {
     \ }
     \ }
 
+" add vim-devicons
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
+      \ }
+      \ }
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
+
 " =========================================================
 " Autocompletion, linting
 " =========================================================
@@ -246,14 +263,14 @@ nnoremap <C-l> <C-w>l
 "open NERDTree automatically when neovim starts up
 "autocmd vimenter * NERDTree
 
+" open/close NerdTree with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
+
 " start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
-" open/close NerdTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
-
-" remove default arrows symbol
+" remove default arrows symbols
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
