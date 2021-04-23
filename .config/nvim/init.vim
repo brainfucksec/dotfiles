@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.9.3 - 2021/04/22
+" Version: 0.10.0 - 2021/04/23
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -136,16 +136,16 @@ autocmd FileType xml,html,xhtml,css,scss,javascript setlocal shiftwidth=2 tabsto
 " 8 spaces for `go` filetypes
 autocmd FileType go setlocal shiftwidth=8 tabstop=8
 
-" plugin: indentLine
+" indentLine
 " change indent char
 let g:indentLine_char = '│'
 "let g:indentLine_setColors = 0
 
 " =========================================================
-" Status line
+" Statusline
 " =========================================================
 
-" plugin: lightline
+" lightline
 " disable mode information under status line
 set noshowmode
 
@@ -180,7 +180,7 @@ let g:mucomplete#enable_auto_at_startup = 1
 " endwise compatibility
 imap <Plug>MyCR <Plug>(MUcompleteCR)
 
-" Omnicompletion plugins
+" Omnicompletion plugins:
 "
 " C/C++ -> clang-complete
 " path to clang library
@@ -200,7 +200,7 @@ let g:javascript_plugin_flow = 1
 " HTML/CSS -> vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
-" plugin ALE (Linter)
+" ALE (Linter)
 let g:ale_enabled = 1
 
 " run linter only after save the file
@@ -242,12 +242,20 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" plugin: NerdTree
+" NerdTree
 "open NERDTree automatically when neovim starts up
 "autocmd vimenter * NERDTree
 
+" start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
 " open/close NerdTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+
+" remove default arrows symbol
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " tagbar
 " open/close tagbar with Ctrl+m
