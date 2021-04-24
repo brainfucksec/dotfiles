@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: Tue Apr 20 06:12:27 AM UTC 2021
+# Last modified: 2021/04/24 07:16
 # ==============================================================
 
 
@@ -75,7 +75,6 @@ alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
 alias gcm='git commit -m'
-alias gcv='git commit -v -m'
 
 # ==============================================================
 # Applications shortcuts
