@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.10.1 - 2021/04/23
+" Version: 0.10.2 - 2021/04/25
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -139,7 +139,12 @@ autocmd FileType go setlocal shiftwidth=8 tabstop=8
 " indentLine
 " change indent char
 let g:indentLine_char = '│'
+
+" background color
 "let g:indentLine_setColors = 0
+
+" disable concealing in markdown files
+let g:indentLine_fileTypeExclude = ['markdown']
 
 " =========================================================
 " Statusline
@@ -159,13 +164,6 @@ let g:lightline = {
     \ }
 
 " add vim-devicons
-let g:lightline = {
-      \ 'component_function': {
-      \   'filetype': 'MyFiletype',
-      \   'fileformat': 'MyFileformat',
-      \ }
-      \ }
-
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
