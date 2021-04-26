@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.10.2 - 2021/04/25
+" Version: 0.10.3 - 2021/04/26
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -172,7 +172,6 @@ function! MyFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
-
 " =========================================================
 " Autocompletion, linting
 " =========================================================
@@ -262,7 +261,7 @@ nnoremap <C-l> <C-w>l
 "autocmd vimenter * NERDTree
 
 " open/close NerdTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+map <silent> <C-n> :NERDTreeToggle<CR>
 
 " start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
@@ -274,5 +273,5 @@ let g:NERDTreeDirArrowCollapsible = ''
 
 " tagbar
 " open/close tagbar with Ctrl+m
-nmap <C-m> :TagbarToggle<CR>
+nmap <silent> <C-m> :TagbarToggle<CR>
 
