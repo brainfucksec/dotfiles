@@ -11,9 +11,7 @@
 
 ![.](img/screenshot-1.png)
 
-![.](img/screenshot-2-browser.png)
-
-![.](img/screenshot-3-neovim.png)
+![.](img/screenshot-2-neovim.png)
 
 ### Setup
 -----
