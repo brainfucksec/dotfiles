@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.10.3 - 2021/04/26
+" Version: 0.11.0 - 2021/04/30
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -185,9 +185,6 @@ set completeopt+=menuone,noselect,noinsert
 " don't show completion messages
 set shortmess+=c
 
-" workaround for auto-pairs issue
-let g:AutoPairsMapCR = 0
-
 " MUcomplete
 let g:mucomplete#enable_auto_at_startup = 1
 
@@ -230,6 +227,14 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " =========================================================
 " Keymapping
 " =========================================================
+
+" basic autopair
+inoremap " ""<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 " reload neovim config with Ctrl+r without restart
 map \r :source ~/.config/nvim/init.vim<CR>
