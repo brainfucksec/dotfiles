@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: Sat Dec 26 07:58:01 AM CET 2020
+# Last modified: 2021/05/05 20:12
 # ==============================================================
 
 
@@ -62,14 +62,15 @@ if [[ -x /usr/bin/dircolors ]]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='ls --color=auto'
     alias grep='grep --color=auto'
-    alias ip='ip -color=auto'
+    alias diff='diff --color=auto'
+    alias ip='ip -color'
 fi
 
 # ==============================================================
 # Default prompt
 # ==============================================================
 #PS1='[\u@\h \W]\$ '
-PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${usercolor}\]\h\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
+PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
 └──╼ \[${b}${usercolor}\]λ\[${reset}\] '
 
 # ==============================================================
@@ -154,18 +155,18 @@ gitupdate() {
         return 1
     else
         local cwd="$1"
-        if [[ -d "$cwd" ]]; then
+        if [[ -d "${cwd}" ]]; then
             echo "[i] Updating git packages, it may take some time..."
-            cd "$cwd"
+            cd "${cwd}"
             for i in $(find . -maxdepth 3 -name ".git" | cut -c 3-); do
                 echo ""
                 echo "$i" | sed -e 's/.git//g'
                 cd "$i"
                 cd ..
                 git pull #--rebase=false
-                cd "$cwd"
+                cd "${cwd}"
             done
-            cd "$HOME"
+            cd "${HOME}"
         else
             echo "[Error] there are no git repositories here :("
             return 1
