@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.11.0 - 2021/04/30
+" Version: 0.11.1 - 2021/05/07
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -230,6 +230,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " basic autopair
 inoremap " ""<left>
+inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
