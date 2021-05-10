@@ -1,3 +1,24 @@
+!{{{ URxvt
+URxvt.termName: rxvt-unicode-256color
+URxvt.loginShell: true
+URxvt.scrollstyle: plain
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+URxvt.font: xft:Cozette:size=10
+!URxvt.letterSpace: -1
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+!}}}
+
 !{{{ Colors
 ! special
 *foreground: #bdcfe3
@@ -36,7 +57,7 @@
 *color15: #fdf6e3
 !}}}
 
-!{{{ X11 Cursor
+!{{{ Xcursor theme
 Xcursor.theme: Breeze-Obsidian
 Xcursor.size: 16
 !}}}

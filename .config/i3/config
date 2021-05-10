@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.19.0 - 2021/04/06
+# Version: 2.20.0 - 2021/05/10
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -108,7 +108,7 @@ set $right semicolon
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # kill focused window (default `$mod+Shift+q`)
 bindsym $mod+Shift+p kill
@@ -186,7 +186,7 @@ bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id keepassxc
 
 bindsym $mod+d exec rofi -show run
-bindsym $mod+n exec --no-startup-id termite -e "bash -ic ncmpcpp"
+bindsym $mod+n exec --no-startup-id urxvt -e "bash -ic ncmpcpp"
 bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
 
 # screenshot (scrot)
@@ -249,7 +249,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # ===================================================================
 # Automatically make a specific window show up on a specific workspace
 # command for get window class name: xprop | awk '/WM_CLASS/{print $4}'
-#assign [class="Termite"]                $ws1
+#assign [class="URxvt"]                  $ws1
 assign [class="firefox"]                $ws2
 assign [class="Pcmanfm"]                $ws3
 assign [class="Zathura"]                $ws5

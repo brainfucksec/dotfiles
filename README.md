@@ -24,7 +24,7 @@ Image Viewer            > feh
 Program Launcher        > rofi
 PDF Viewer              > zathura
 Text Editor             > neovim
-Terminal Emulator       > termite
+Terminal Emulator       > urxvt
 Window Manager          > i3-gaps
 Browser                 > firefox, w3m
 Process Viewer          > htop, gotop

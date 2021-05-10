@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.11.1 - 2021/05/07
+" Version: 0.12.0 - 2021/05/10
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -82,7 +82,7 @@ set ignorecase smartcase
 " =========================================================
 
 " enable 24-bit RGB colors
-set termguicolors
+"set termguicolors
 
 " set transparent background
 "au ColorScheme * hi Normal ctermbg=none guibg=none
