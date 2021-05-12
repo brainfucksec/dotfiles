@@ -10,7 +10,7 @@
 "
 " neovim configuration file
 "
-" Version: 0.12.0 - 2021/05/10
+" Version: 0.13.0 - 2021/05/12
 " Maintainer: Brainfuck
 " Website: https://github.com/brainfucksec/dotfiles
 "
@@ -131,7 +131,7 @@ au BufEnter * set fo-=c fo-=r fo-=o
 autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal colorcolumn=0
 
 " 2 spaces for selected filetypes
-autocmd FileType xml,html,xhtml,css,scss,javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
 
 " 8 spaces for `go` filetypes
 autocmd FileType go setlocal shiftwidth=8 tabstop=8
