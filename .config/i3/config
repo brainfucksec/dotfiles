@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.20.0 - 2021/05/10
+# Version: 2.20.1 - 2021/05/12
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -186,7 +186,7 @@ bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id keepassxc
 
 bindsym $mod+d exec rofi -show run
-bindsym $mod+n exec --no-startup-id urxvt -e "bash -ic ncmpcpp"
+bindsym $mod+n exec --no-startup-id urxvt -e ncmpcpp
 bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
 
 # screenshot (scrot)

@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainfuck
 #
-# Last modified: 2021/04/24 07:16
+# Last modified: 2021/05/12 11:07
 # ==============================================================
 
 
@@ -64,6 +64,8 @@ alias lkf='lsblk -f'
 alias cm='cd /run/media/"$(whoami)" && ls -1'
 alias dc='cd ~/documents'
 alias dl='cd ~/downloads'
+alias ccd='cd ~/code/dev'
+alias ccg='cd ~/code/git'
 
 # ==============================================================
 # Git aliases
