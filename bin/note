@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+
+#####################################################################
+# note.sh
+# KISS Terminal note taker
+# Copyright (C) 2021 Brainfuck
+#
+#
+# DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+#
+# This work is free. You can redistribute it and/or modify it under the
+# terms of the Do What The Fuck You Want To Public License, Version 2,
+# as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+#####################################################################
+
+
+# Program information
+readonly prog_name="note"
+readonly version="0.4"
+readonly signature="Copyright (C) 2021 Brainfuck"
+
+# Set program directory and files
+#
+# insert the directory where to save notes
+readonly note_dir="${HOME}/documents/notes"
+
+readonly todo="${note_dir}/todo.md"
+readonly quicknote="${note_dir}/quicknote.md"
+readonly commands="${note_dir}/commands.md"
+
+
+# Function for error handling, print an error message and exit with (1).
+die() {
+    echo "Error: file not exists :(" >&2
+    exit 1
+}
+
+
+# Edit/add (files will be opened with your $EDITOR)
+open_file() {
+    local cwfile="$1"
+
+    if [[ -f "${cwfile}" ]]; then
+        "${EDITOR}" "${cwfile}"
+        exit 0
+    else
+        die
+    fi
+}
+
+
+# help menù
+help_menu() {
+cat << EOF
+${prog_name} ${version}
+KISS Terminal note taker
+${signature}
+
+Usage: ${prog_name} <argument>
+
+Arguments:
+-h, help        Show this help menù and exit
+-t, todo        Edit/add todo
+-m, quicknote   Edit/add note (quick note)
+-c, commands    Edit/add commands
+EOF
+}
+
+
+# Main function
+main() {
+    if [[ "$#" == 0 ]]; then
+        echo "${prog_name}: please insert an argument"
+        echo "Try '${prog_name} help' for more information."
+        exit 1
+    fi
+
+    while [[ "$#" -gt 0 ]]; do
+        case "$1" in
+            -h | help)
+                help_menu
+                exit 0
+                ;;
+            -t | todo)
+                open_file "${todo}"
+               ;;
+            -q | quicknote)
+                open_file "${quicknote}"
+                ;;
+            -c | commands)
+                open_file "${commands}"
+                ;;
+            -* | *)
+                echo "${prog_name}: invalid argument!"
+                echo "Try '${prog_name} help' for more information."
+                exit 1
+                ;;
+            esac
+    done
+}
+
+main "$@"

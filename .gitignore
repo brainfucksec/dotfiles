@@ -1,5 +1,4 @@
 # directory and files to exclude
-bin/
 .thumbnails/
 
 # other general file extensions and folder names

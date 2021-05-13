@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# pwgen.sh
+#
+# Shell script for generate passwords with `apg`
+# see: `man apg` -- `apg --help`
+#
+# by Brainf+ck
+
+# Characters to exclude when generate passwords.  Use backslashes
+# to include special symbols that can be recognized by shell.
+readonly char_exclude="\\\'\\\ \\\"\\\ \\\,\\\ \\\;\\\ \\\.\\\ \\\:\\\ \\\`\\\ \\\~\\\ o0O1lIi"
+
+# Options:
+# -a algorithm  1 - random character password generation
+# -M mode
+#       S      generator must use special symbol set for every generated password.
+#       N      generator must use numeral symbol set for every generated password.
+#       C      generator must use capital symbol set for every generated password.
+#       L      generator  must  use  small  letters symbol set for every generated password
+#
+# -n num_of_pass
+# -m min_pass_len
+# -x max_pass_len
+# -E exclude characters
+#
+# Generate n 10 passwords with a lenght between 11-17 characters, for
+# longer and more secure passwords you should use `apg` manually.
+apg -a 1 -M SNCL -n 10 -m 11 -x 17 -E "${char_exclude}"
