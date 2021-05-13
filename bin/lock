@@ -1,11 +1,17 @@
 #!/bin/sh
 
-B='#00000000'  # blank
-C='#ffffff22'  # clear ish
-D='#ff00ffcc'  # default
-T='#ee00eeee'  # text
-W='#880000bb'  # wrong
-V='#bb00bbbb'  # verifying
+# lock.sh - script for i3lock configuration
+# See: https://github.com/Raymo111/i3lock-color/blob/master/examples/lock.sh
+# and `man i3lock`
+
+B="#00000000"  # blank
+C="#ffffff22"  # clear ish
+T="#03c0ffff"  # text
+W="#880000bb"  # wrong
+V="#03a1d6d6"  # verifying
+
+img_path="~/media/images/wallpapers/misc/elliot_mr_robot_fsociety_1920x1080.png"
+
 
 i3lock \
 --insidevercolor=$C   \
@@ -15,12 +21,12 @@ i3lock \
 --ringwrongcolor=$W   \
 \
 --insidecolor=$B      \
---ringcolor=$D        \
+--ringcolor=$T        \
 --linecolor=$B        \
---separatorcolor=$D   \
+--separatorcolor=$T   \
 \
---verifcolor=$T        \
---wrongcolor=$T        \
+--verifcolor=$T       \
+--wrongcolor=$T       \
 --timecolor=$T        \
 --datecolor=$T        \
 --layoutcolor=$T      \
@@ -33,4 +39,3 @@ i3lock \
 --indicator           \
 --timestr="%H:%M:%S"  \
 --datestr="%A, %m %Y" \
---keylayout 1         \
