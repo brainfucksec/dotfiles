@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.21.0-3 - 2021/05/18
+# Version: 2.22.0 - 2021/05/19
 # Maintainer: Brainfuck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -183,11 +183,11 @@ bindsym $mod+F3 exec --no-startup-id pcmanfm
 bindsym $mod+F4 exec --no-startup-id liferea
 bindsym $mod+F5 exec --no-startup-id virt-manager
 bindsym $mod+F6 exec --no-startup-id gimp
-bindsym $mod+F7 exec --no-startup-id keepassxc
+bindsym $mod+F7 exec --no-startup-id libreoffice
 
 bindsym $mod+d exec rofi -show run
 bindsym $mod+n exec --no-startup-id urxvt -e ncmpcpp
-bindsym $mod+x exec --no-startup-id ~/bin/lock #launch i3lock-color
+bindsym $mod+x exec --no-startup-id betterlockscreen -l blur
 
 # screenshot (scrot)
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
@@ -249,18 +249,17 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # ===================================================================
 # Automatically make a specific window show up on a specific workspace
 # command for get window class name: xprop | awk '/WM_CLASS/{print $4}'
-#assign [class="URxvt"]                  $ws1
-assign [class="firefox"]                $ws2
-assign [class="Pcmanfm"]                $ws3
-assign [class="Zathura"]                $ws5
-assign [class="Pulseaudio-equalizer"]   $ws6
-assign [class="Pavucontrol"]            $ws6
-assign [class="SimpleScreenRecorder"]   $ws6
-assign [class="vlc"]                    $ws6
-assign [class="Liferea"]                $ws9
-
-# android-file-transfer
-#assign [class="aft-linux-qt"]           $ws3
+#assign [class="URxvt"]                      $ws1
+assign [class="firefox"]                    $ws2
+assign [class="Pcmanfm"]                    $ws3
+assign [class="Zathura"]                    $ws5
+assign [class="libreoffice-startcenter"]    $ws5
+assign [class="Gimp"]                       $ws5
+assign [class="Pulseaudio-equalizer"]       $ws6
+assign [class="Pavucontrol"]                $ws6
+assign [class="SimpleScreenRecorder"]       $ws6
+assign [class="vlc"]                        $ws6
+assign [class="Liferea"]                    $ws9
 
 # QEMU virt-manager
 assign [class="Virt-manager"]           $ws7
