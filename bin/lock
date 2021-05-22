@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Launch i3lock
+# See: man i3lock
+
+readonly image="$(scrot -z)"
+readonly textcolor="#ffffffee"
+
+
+i3lock -i "${image}"            \
+--blur                          \
+--insidecolor="${textcolor}"    \
+--timecolor="${textcolor}"      \
+--datecolor="${textcolor}"      \
+--clock                         \
+--indicator                     \
+--timestr="%H:%M:%S"            \
+--datestr="%a %d %b - %Y"       \
+
