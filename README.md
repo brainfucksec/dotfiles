@@ -11,7 +11,9 @@
 
 ![.](img/screenshot-1.png)
 
-![.](img/screenshot-2-neovim.png)
+![.](img/screenshot-2-tiling.png)
+
+![.](img/screenshot-3-neovim.png)
 
 ### Setup
 -----
