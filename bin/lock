@@ -3,11 +3,10 @@
 # Launch i3lock
 # See: man i3lock
 
-readonly image="$(scrot -z)"
+readonly screenshot="$(scrot -z -e 'mv $f ~/.cache/i3lock')"
 readonly textcolor="#ffffffee"
 
-
-i3lock -i "${image}"            \
+i3lock -i "${screenshot}"       \
 --blur                          \
 --insidecolor="${textcolor}"    \
 --timecolor="${textcolor}"      \
