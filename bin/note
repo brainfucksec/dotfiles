@@ -61,7 +61,7 @@ Usage: ${prog_name} <argument>
 Arguments:
 -h, help        Show this help menù and exit
 -t, todo        Edit/add todo
--m, quicknote   Edit/add note (quick note)
+-q, quicknote   Edit/add note (quick note)
 -c, commands    Edit/add commands
 EOF
 }
