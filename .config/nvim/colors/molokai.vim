@@ -69,8 +69,6 @@ hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
 hi Operator        guifg=#F92672
 
-hi markdownCode    guifg=#66D9EF
-
 " complete menu
 hi Pmenu           guifg=#66D9EF guibg=#000000
 hi PmenuSel                      guibg=#808080

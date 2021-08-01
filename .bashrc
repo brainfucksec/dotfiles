@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: 2021/05/05 20:12
+# Last modified: 2021/06/06 22:42
 # ==============================================================
 
 
@@ -143,7 +143,6 @@ unmountdev() {
     else
         udisksctl unmount -b "/dev/$1" &&
         udisksctl power-off -b "/dev/$1"
-        echo "Ejected /dev/$1."
     fi
 }
 
@@ -158,7 +157,7 @@ gitupdate() {
         if [[ -d "${cwd}" ]]; then
             echo "[i] Updating git packages, it may take some time..."
             cd "${cwd}"
-            for i in $(find . -maxdepth 3 -name ".git" | cut -c 3-); do
+            for i in $(find . -maxdepth 3 -type d -name ".git" | cut -c 3-); do
                 echo ""
                 echo "$i" | sed -e 's/.git//g'
                 cd "$i"
