@@ -7,42 +7,22 @@
   ██║██║ ╚████║██║   ██║██╗███████╗╚██████╔╝██║  ██║
   ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 
+Neovim init file
 
-neovim configuration file
-
-Version: 0.3.0_alpha - 2021/07/30
-Maintainer: Brainfuck
-Website: https://github.com/brainfucksec/dotfiles
+Version: 0.9.0_alpha - 2021/08/29
+Maintainer: Brainf+ck
+Website: https://github.com/brainfucksec/neovim-lua
 
 --]]
-
-
------------------------------------------------------------
--- Plugins
------------------------------------------------------------
--- paq-nvim
-vim.cmd 'packadd paq-nvim'      -- load package
-local paq = require('paq-nvim').paq   -- import module with `paq` function
-
--- add packages
-require 'paq'{
-  'savq/paq-nvim';  -- let paq manage itself
-
-  'Yggdroot/indentLine';
-  'hoob3rt/lualine.nvim';
-  'hrsh7th/nvim-compe';
-  'neovim/nvim-lspconfig';
-  'kyazdani42/nvim-tree.lua';
-  'kyazdani42/nvim-web-devicons';
-  'preservim/tagbar';
-}
 
 -----------------------------------------------------------
 -- Import Lua modules
 -----------------------------------------------------------
-require('settings')         -- settings
-require('keymapping')       -- keymapping
-require('statusline')   	  -- statusline
-require('nvim-compe/main') 	-- autocomplete
-require('nvim-tree/main')	  -- file manager
-require('nvim-lspconfig/main') 	-- LSP settings
+require('settings')               -- settings
+require('keymaps')                -- keymaps
+require('plugins/paq-nvim')       -- plugin manager
+require('plugins/nvim-tree')	    -- file manager
+require('plugins/lualine')        -- statusline
+require('plugins/nvim-cmp')       -- autocomplete
+require('plugins/nvim-lspconfig') -- LSP settings
+require('plugins/vista')          -- tag viewer
