@@ -56,7 +56,8 @@ URxvt.scrollTtyOutput: false
 URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
 URxvt.font: xft:Cozette:size=10
-!URxvt.letterSpace: -1
+URxvt.letterSpace: -1
+URxvt.internalBorder: 4
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
@@ -64,7 +65,7 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
-URxvt*altSendsEscape: true
+URxvt.altSendsEscape: true
 URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Left: \033[1;5D
@@ -75,3 +76,4 @@ URxvt.keysym.Control-Right: \033[1;5C
 Xcursor.theme: Breeze-Obsidian
 Xcursor.size: 16
 !}}}
+
