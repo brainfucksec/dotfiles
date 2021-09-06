@@ -56,8 +56,8 @@ opt.synmaxcol = 240       -- max column for syntax highlight
 -----------------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------------
-opt.termguicolors = true    -- enable 24-bit RGB colors
-cmd[[colorscheme monokai]]  -- set colorscheme
+opt.termguicolors = true      -- enable 24-bit RGB colors
+cmd[[colorscheme monokai]]    -- set colorscheme
 
 -----------------------------------------------------------
 -- Tabs, indent
@@ -71,26 +71,19 @@ opt.smartindent = true    -- autoindent new lines
 cmd[[au BufEnter * set fo-=c fo-=r fo-=o]]
 
 -- remove line lenght marker for selected filetypes
-cmd[[
-  autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal cc=0
-]]
+cmd[[autocmd FileType text,markdown,xml,html,xhtml,javascript setlocal cc=0]]
 
 -- 2 spaces for selected filetypes
 cmd[[
   autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
 ]]
 
--- 8 spaces for Go files
-cmd[[autocmd FileType go setlocal shiftwidth=8 tabstop=8]]
-
 -- IndentLine
 --g.indentLine_setColors = 0  -- set indentLine color
 g.indentLine_char = '|'       -- set indentLine character
 
 -- disable IndentLine for markdown files (avoid concealing)
-cmd[[
-	autocmd FileType markdown let g:indentLine_enabled=0
-]]
+cmd[[autocmd FileType markdown let g:indentLine_enabled=0]]
 
 -----------------------------------------------------------
 -- Autocompletion

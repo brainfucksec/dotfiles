@@ -40,8 +40,8 @@ map('n', '<C-j>', '<C-w>j', default_opts)
 map('n', '<C-k>', '<C-w>k', default_opts)
 map('n', '<C-l>', '<C-w>l', default_opts)
 
--- close all windows and exit from neovim
-map('n', '<leader>q', ':qa<CR>', default_opts)
+-- Close all windows and exit from neovim
+map('n', '<leader>q', ':quitall<CR>', default_opts)
 
 -----------------------------------------------------------
 -- Plugins shortcuts:

@@ -7,6 +7,7 @@
 require('lualine').setup {
   options = {
     theme = 'molokai',
-    icons_enabled = true
+    icons_enabled = true,
+    extensions = {'nvim-tree'},
   };
 }
