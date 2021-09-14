@@ -10,8 +10,8 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.22.0_2 - 2021/05/22
-# Maintainer: Brainfuck
+# Version: 2.22.0_3 - 2021/09/14
+# Maintainer: Brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
 
@@ -38,7 +38,7 @@ font xft:Misc Ohsnap 12
 default_orientation auto
 
 # i3-gaps settings
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 #new_window pixel 4
 
 gaps inner 16

@@ -1,4 +1,6 @@
 # directory and files to exclude
+.backups/
+.ssh/
 .thumbnails/
 
 # other general file extensions and folder names
@@ -6,3 +8,4 @@
 *tmp*
 *.tmp
 *.cache*
+*history*

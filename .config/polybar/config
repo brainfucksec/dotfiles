@@ -10,8 +10,8 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.12.0 - 2021/04/06
-; Maintainer: Brainfuck
+; Version: 0.12.0_1 - 2021/09/14
+; Maintainer: Brainf+ck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;==========================================================
 
@@ -46,7 +46,7 @@ foreground = ${colors.foreground}
 underline-size = 4
 ;underline-color = ${colors.primary}
 
-border-size = 2
+border-size = 3
 border-color = #4a697d
 
 padding-left = 2
@@ -64,6 +64,7 @@ modules-left = i3
 modules-right = volume cpu temperature memory wired-network date powermenu
 
 ;override-redirect = false
+;wm-restack = i3
 
 tray-position = right
 tray-detached = false
@@ -156,7 +157,6 @@ date = %a %d %b
 time = %H:%M
 date-alt = %Y/%m/%d %H:%M:%S
 
-
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 
@@ -216,5 +216,3 @@ bar-volume-fill-font = 1
 bar-volume-empty = ━
 bar-volume-empty-font = 2
 
-
-; vim:ft=dosini
