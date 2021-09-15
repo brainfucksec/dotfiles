@@ -11,11 +11,6 @@
 
 ![.](img/screenshot-1.png)
 
-![.](img/screenshot-2.png)
-
-![.](img/neovim.png)
-
-For Neovim configuration see: https://github.com/brainfucksec/neovim-lua
 
 ### Setup
 -----
