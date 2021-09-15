@@ -11,23 +11,28 @@
 
 ![.](img/screenshot-1.png)
 
+![.](img/screenshot-2.png)
+
 ![.](img/neovim.png)
+
+For Neovim configuration see: https://github.com/brainfucksec/neovim-lua
 
 ### Setup
 -----
 ```
-Bar                     > polybar
-Compositor              > picom
-File Manager            > pcmanfm
-Media Player            > ncmpcpp, vlc
-Image Viewer            > feh
-Program Launcher        > rofi
-PDF Viewer              > zathura
-Text Editor             > neovim
-Terminal Emulator       > urxvt
-Window Manager          > i3-gaps
-Browser                 > firefox, w3m
-Process Viewer          > htop, gotop
+Window Manager      > i3-gaps
+Bar                 > polybar
+Program Launcher    > rofi
+Compositor          > picom
+Terminal Emulator   > urxvt
+File Manager        > pcmanfm
+Media Player        > ncmpcpp, vlc
+Image Viewer        > feh
+PDF Viewer          > zathura
+Text Editor         > neovim
+Browser             > firefox, w3m
+Process Viewer      > htop, gotop
+Fonts:              > cozette (Terminal), ohsnap (Bar)
 ```
 
 **These dotfiles are modified according to my configuration, feel free to take what you need but don't install anything without checking first!**
