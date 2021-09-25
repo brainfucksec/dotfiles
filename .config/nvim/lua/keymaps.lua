@@ -1,6 +1,6 @@
 -----------------------------------------------------------
 -- Keymaps configuration file: keymaps of neovim
---- and plugins.
+-- and plugins.
 -----------------------------------------------------------
 
 local map = vim.api.nvim_set_keymap
@@ -9,14 +9,6 @@ local default_opts = {noremap = true, silent = true}
 -----------------------------------------------------------
 -- Neovim shortcuts:
 -----------------------------------------------------------
--- basic autopair
-map('i', '"', '""<left>', default_opts)
-map('i', '`', '``<left>', default_opts)
-map('i', '(', '()<left>', default_opts)
-map('i', '[', '[]<left>', default_opts)
-map('i', '{', '{}<left>', default_opts)
-map('i', '{<CR>', '{<CR}<ESC>0', default_opts)
-map('i', '{;<CR>', '{<CR};<ESC>0', default_opts)
 
 -- clear search highlighting
 map('n', '<leader>c', ':nohl<CR>', default_opts)
@@ -40,8 +32,22 @@ map('n', '<C-j>', '<C-w>j', default_opts)
 map('n', '<C-k>', '<C-w>k', default_opts)
 map('n', '<C-l>', '<C-w>l', default_opts)
 
--- Close all windows and exit from neovim
+-- close all windows and exit from neovim
 map('n', '<leader>q', ':quitall<CR>', default_opts)
+
+-- basic autopair
+-- Use this if you don't want a plugin for brackets autopairs
+-- slow when closing "{}" :(
+
+--[[
+map('i', '"', '""<left>', default_opts)
+map('i', '`', '``<left>', default_opts)
+map('i', '(', '()<left>', default_opts)
+map('i', '[', '[]<left>', default_opts)
+map('i', '{', '{}<left>', default_opts)
+map('i', '{<CR>', '{<CR}<ESC>0', default_opts)
+map('i', '{;<CR>', '{<CR};<ESC>0', default_opts)
+--]]
 
 -----------------------------------------------------------
 -- Plugins shortcuts:
