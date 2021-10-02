@@ -1,9 +1,9 @@
 # ==============================================================
 #
 # $HOME/.bash_aliases FILE
-# By Brainfuck
+# By Brainf+ck
 #
-# Last modified: 2021/05/12 11:07
+# Last modified: 2021/09/17
 # ==============================================================
 
 
@@ -29,6 +29,7 @@ alias rmi='rm -i'
 alias cpp='rsync -ahW --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
+alias q='exit'
 
 # ==============================================================
 # System administration commands:
@@ -53,9 +54,6 @@ alias cputemp='sensors | grep Core'
 alias ex='extract'
 alias md='mountdev'
 alias ud='unmountdev'
-
-# other
-alias myip='curl -s http://ip-api.com'
 alias lkf='lsblk -f'
 
 # ==============================================================
@@ -81,6 +79,7 @@ alias gcm='git commit -m'
 # ==============================================================
 # Applications shortcuts
 # ==============================================================
+alias myip='curl -s http://ip-api.com'
 alias n='note'
 alias z='zathura --fork'
 alias e='nvim'
