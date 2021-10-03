@@ -11,8 +11,6 @@
 
 ![.](img/1-selfie.png)
 
-![.](img/2-tiled.png)
-
 
 ### Setup
 -----
