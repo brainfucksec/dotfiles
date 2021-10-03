@@ -11,6 +11,8 @@
 
 ![.](img/1-selfie.png)
 
+![.](img/2-fake-dirty.png)
+
 
 ### Setup
 -----
