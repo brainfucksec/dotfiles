@@ -10,7 +10,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.12.0_1 - 2021/09/14
+; Version: 0.13.0 - 2021/10/03
 ; Maintainer: Brainf+ck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;==========================================================
@@ -37,9 +37,6 @@ offset-x = 0
 offset-y = 0
 fixed-center = false
 
-;locale = it_IT.UTF-8
-locale = en_US.UTF-8
-
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -63,13 +60,14 @@ font-3 = "Font Awesome 5 Free Solid:pixelsize=8;1"
 modules-left = i3
 modules-right = volume cpu temperature memory wired-network date powermenu
 
-;override-redirect = false
-;wm-restack = i3
+wm-name = i3
+
+locale = en_US.UTF-8
 
 tray-position = right
 tray-detached = false
-tray-padding = 2
 tray-background = ${colors.background}
+tray-padding = 0
 
 
 ;==========================================================
