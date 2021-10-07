@@ -10,9 +10,10 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.22.1- 2021/10/05
+# Version: 2.23.0_1 - 2021/10/07
 # Maintainer: Brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
+#
 # =========================================================
 
 
@@ -183,7 +184,8 @@ bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id libreoffice
 
 bindsym $mod+d exec rofi -show run
-bindsym $mod+n exec --no-startup-id urxvt -e ncmpcpp
+# urxvt -g = $float window geometry
+bindsym $mod+n exec --no-startup-id urxvt -g 90x15+20+60 -e ncmpcpp
 #bindsym $mod+x exec --no-startup-id ~/bin/lock
 
 # screenshot (scrot)
