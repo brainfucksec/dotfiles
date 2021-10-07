@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.22.0_3 - 2021/09/14
+# Version: 2.22.1- 2021/10/05
 # Maintainer: Brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 # =========================================================
@@ -26,7 +26,6 @@ client.focused           #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 client.focused_inactive  #263640 #263640 #141c21  #263640   #263640
 client.unfocused         #263640 #263640 141c211  #263640   #263640
 client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
-
 
 # =========================================================
 # Windows style
@@ -90,7 +89,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
 # ===================================================================
 # Keybindings
 # ===================================================================
@@ -148,7 +146,7 @@ bindsym $mod+o fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+y layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -172,7 +170,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec i3-msg exit
 
-
 # ===================================================================
 # My Shortcuts
 # ===================================================================
@@ -187,7 +184,7 @@ bindsym $mod+F7 exec --no-startup-id libreoffice
 
 bindsym $mod+d exec rofi -show run
 bindsym $mod+n exec --no-startup-id urxvt -e ncmpcpp
-bindsym $mod+x exec --no-startup-id ~/bin/lock
+#bindsym $mod+x exec --no-startup-id ~/bin/lock
 
 # screenshot (scrot)
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
@@ -200,7 +197,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
 bindsym $mod+p exec --no-startup-id pavucontrol
-
 
 # ===================================================================
 # Workspaces
@@ -243,7 +239,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-
 # ===================================================================
 # Workspaces Assignment
 # ===================================================================
@@ -272,7 +267,6 @@ for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
 for_window [class="SimpleScreenRecorder"]   $float
 for_window [class="vlc"]                    $float
-
 
 # ===================================================================
 # Start Up commands
