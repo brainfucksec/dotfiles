@@ -13,7 +13,6 @@
 
 ![.](img/2-fake-dirty.png)
 
-
 ### Setup
 -----
 ```
