@@ -83,9 +83,10 @@ visualizer_sync_interval = "30"
 ##
 visualizer_type = "wave_filled"
 #
-visualizer_look = "█▋"
+#visualizer_look = "█▋"
+visualizer_look = "▄▄"
 #
-visualizer_color = "green"
+visualizer_color = "blue"
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
@@ -183,7 +184,7 @@ message_delay_time = "1"
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{$(8)%f$R%l$9}"
+song_list_format = "{$8%f$R$3%l$9}"
 #
 song_status_format = "{{%a - {{%b (%y)}} - }{%t}}|{%f}"
 #
@@ -193,7 +194,7 @@ alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #
 alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}"
 #
-current_item_prefix = "$(blue)$r"
+current_item_prefix = "$3$r"
 #
 #current_item_suffix = $/r$(end)
 #
@@ -201,13 +202,13 @@ current_item_prefix = "$(blue)$r"
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = "$(white)"
+now_playing_prefix = "$3"
 #
-now_playing_suffix = "$(white)"
+now_playing_suffix = "$3"
 #
 browser_playlist_prefix = "$5>>$9 "
 #
-selected_item_prefix = "$(8)"
+selected_item_prefix = "$8"
 #
 #selected_item_suffix = $9
 #
@@ -318,7 +319,8 @@ centered_cursor = "yes"
 ## Note: You can specify third character which will be used to build 'empty'
 ## part of progressbar.
 ##
-progressbar_look = "▃▃▃"
+#progressbar_look = "▃▃▃"
+progressbar_look = "▄▄"
 #
 ## Available values: database, playlist.
 ##
@@ -382,7 +384,7 @@ titles_visibility = "no"
 ##
 ## How shall screen switcher work?
 ##
-"1"# - "previous" - switch between the current and previous screen.
+# - "previous" - switch between the current and previous screen.
 ## - "screen1,...,screenN" - switch between given sequence of screens.
 ##
 ## Screens available for use: help, playlist, browser, search_engine,
