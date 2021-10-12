@@ -184,17 +184,17 @@ message_delay_time = "1"
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{$8%f$R$3%l$9}"
+song_list_format = "{$8%f$R$5%l$9}"
 #
 song_status_format = "{{%a - {{%b (%y)}} - }{%t}}|{%f}"
 #
 #song_library_format = {%n - }{%t}|{%f}
 #
-alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b"
+alternative_header_first_line_format = "$b$1$au$/a$9 {%t}|{%f} $1$at$/a$9$/b"
 #
-alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}"
+alternative_header_second_line_format = "{{$5$b%a$/b$9}{ - $8%b$9}{ ($5%y$9)}}|{%D}"
 #
-current_item_prefix = "$3$r"
+current_item_prefix = "$(9)$r"
 #
 #current_item_suffix = $/r$(end)
 #
@@ -202,13 +202,13 @@ current_item_prefix = "$3$r"
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = "$3"
+now_playing_prefix = "$(9)"
 #
-now_playing_suffix = "$3"
+now_playing_suffix = "$(9)"
 #
 browser_playlist_prefix = "$5>>$9 "
 #
-selected_item_prefix = "$8"
+selected_item_prefix = "$5"
 #
 #selected_item_suffix = $9
 #
@@ -264,7 +264,7 @@ selected_item_prefix = "$8"
 ##   available.
 ##
 #
-song_columns_list_format = "(20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}"
+song_columns_list_format = "(20)[]{a} (6f)[blue]{NE} (50)[blue]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}"
 #
 ##### various settings #####
 #
@@ -301,7 +301,7 @@ playlist_display_mode = "classic"
 #
 #playlist_editor_display_mode = classic
 #
-discard_colors_if_item_is_selected = "yes"
+#discard_colors_if_item_is_selected = "yes"
 #
 #show_duplicate_tags = true
 #
@@ -513,11 +513,11 @@ use_console_editor = "yes"
 #
 colors_enabled = "yes"
 #
-empty_tag_color = "blue"
+empty_tag_color = 9
 #
 header_window_color = "black"
 #
-volume_color = "white"
+volume_color = 9
 #
 #state_line_color = default
 #
@@ -531,11 +531,12 @@ main_window_color = "white"
 #
 progressbar_color = "black"
 #
-progressbar_elapsed_color = "blue"
+progressbar_elapsed_color = 9
 #
 #statusbar_color = default
 #
 #statusbar_time_color = default:b
+statusbar_time_color = blue
 #
 #player_state_color = default:b
 #
