@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainf+ck
 #
-# Last modified: 2021/09/17
+# Last modified: 2021/10/16
 # ==============================================================
 
 
@@ -59,9 +59,9 @@ alias lkf='lsblk -f'
 # ==============================================================
 # Directories shortcuts
 # ==============================================================
-alias cm='cd /run/media/"$(whoami)" && ls -1'
-alias dc='cd ~/documents'
-alias dl='cd ~/downloads'
+alias ccm='cd /run/media/"$(whoami)" && ls -1'
+alias cdc='cd ~/documents'
+alias cdl='cd ~/downloads'
 alias ccd='cd ~/code/dev'
 alias ccg='cd ~/code/git'
 
@@ -86,6 +86,6 @@ alias e='nvim'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
 alias gu='gitupdate'
-alias clean='bleachbit -c --preset'
+alias cl='bleachbit -c --preset'
 alias w3m='w3m https://duckduckgo.com'
 
