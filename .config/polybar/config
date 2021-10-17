@@ -10,7 +10,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.13.0 - 2021/10/03
+; Version: 0.14.0 - 2021/10/17
 ; Maintainer: Brainf+ck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;==========================================================
@@ -20,8 +20,8 @@
 ; colors
 ;==========================================================
 [colors]
-background = #141c21
-foreground = #bdcfe3
+foreground = ${xrdb:foreground:#222}
+background = ${xrdb:background:#222}
 primary = ${xrdb:color12:#222}
 secondary = ${xrdb:color8:#222}
 alert = ${xrdb:color1:#222}
@@ -95,7 +95,7 @@ label-focused-underline = ${colors.primary}
 
 label-unfocused = %name%
 label-unfocused-padding = 1
-label-unfocused-foreground = ${colors.secondary}
+label-unfocused-foreground = ${colors.foreground}
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.alert}
@@ -116,10 +116,10 @@ label = %percentage%%
 [module/memory]
 type = internal/memory
 interval = 1.0
-format-prefix = " "
+format-prefix = "󰍵 "
 format-prefix-foreground = ${colors.primary}
 ;label = %percentage_used%%
-label = %gb_used% / %gb_total%
+label = %gb_used%/%gb_total%
 
 
 [module/temperature]
