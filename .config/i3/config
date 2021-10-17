@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.23.0_1 - 2021/10/07
+# Version: 2.24.0 - 2021/10/17
 # Maintainer: Brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -185,7 +185,7 @@ bindsym $mod+F7 exec --no-startup-id libreoffice
 
 bindsym $mod+d exec rofi -show run
 # urxvt -g = $float window geometry
-bindsym $mod+n exec --no-startup-id urxvt -g 90x15+20+60 -e ncmpcpp
+bindsym $mod+n exec --no-startup-id urxvt -g 95x15+20+60 -e ncmpcpp
 #bindsym $mod+x exec --no-startup-id ~/bin/lock
 
 # screenshot (scrot)
@@ -206,15 +206,19 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 # Customize workspace name
 # use variables to avoid repeating the names and for adding custom characters
 # or icons.  Insert and/or paste fonts and icons as variable values.
+#
+# See cheatsheets at:
+# https://pictogrammers.github.io/@mdi/font/6.2.95/
+# https://fontawesome.com/v5/cheatsheet/free
 set $ws1 1:1 
 set $ws2 2:2 󰈹
 set $ws3 3:3 󰉋
-set $ws4 4:4 
+set $ws4 4:4 󰅪
 set $ws5 5:5 
 set $ws6 6:6 󰝚
 set $ws7 7:7 
-set $ws8 8:8 
-set $ws9 9:9 󰝰
+set $ws8 8:8 󰍹
+set $ws9 9:9 󰉕
 set $ws10 10:10 󰭹
 
 # switch to workspace
