@@ -7,10 +7,14 @@
 Plugin: feline.nvim
 https://github.com/famiu/feline.nvim
 
-Thanks to ibhagwan for the example to follow
-see: https://github.com/ibhagwan/nvim-lua
+For the configuration see the Usage section:
+https://github.com/famiu/feline.nvim/blob/master/USAGE.md
+
+Thanks to ibhagwan for the example to follow:
+https://github.com/ibhagwan/nvim-lua
 
 --]]
+
 
 local colors = {
   bg = '#1d1f22',
@@ -26,7 +30,7 @@ local colors = {
 }
 
 local vi_mode_colors = {
-  NORMAL = colors.cyan,
+  NORMAL = colors.pink,
   INSERT = colors.green,
   VISUAL = colors.yellow,
   OP = colors.cyan,
@@ -36,7 +40,7 @@ local vi_mode_colors = {
   ENTER = colors.orange,
   MORE = colors.orange,
   SELECT = colors.pink,
-  COMMAND = colors.green,
+  COMMAND = colors.cyan,
   SHELL = colors.cyan,
   TERM = colors.green,
   NONE = colors.blue
@@ -50,10 +54,8 @@ local lsp_get_diag = function(str)
   return (count > 0) and ' '..count..' ' or ''
 end
 
-
 -- My components
 local comps = {
-  -- VI mode label
   vi_mode = {
     left = {
       provider = function()
@@ -61,32 +63,28 @@ local comps = {
         return label
       end,
       hl = function()
-        local val = {
+        local set_color = {
           name = vi_mode_utils.get_mode_highlight_name(),
           fg = colors.bg,
           bg = vi_mode_utils.get_mode_color(),
           style = 'bold'
         }
-        return val
+        return set_color
       end,
       left_sep = ' ',
       right_sep = ' '
     }
   },
-  -- File info
   file = {
     info = {
       provider = {
         name = 'file_info',
         opts = {
-          type = 'unique',
+          type = 'relative',
           file_modified_icon = ''
         }
       },
-      hl = {
-        fg = colors.cyan,
-        --style = 'bold'
-      },
+      hl = { fg = colors.cyan },
       icon = '',
     },
   type = {
@@ -94,21 +92,18 @@ local comps = {
     },
     os = {
       provider = function()
-        local os = vim.bo.fileformat:upper()
+        local os = vim.bo.fileformat:lower()
         local icon
-        if os == 'UNIX' then
+        if os == 'unix' then
           icon = '  '
-        elseif os == 'MAC' then
+        elseif os == 'mac' then
           icon = '  '
         else
           icon = '  '
         end
         return icon .. os
       end,
-      hl = {
-        fg = colors.fg,
-        --style = 'bold'
-      },
+      hl = { fg = colors.fg },
       left_sep = ' ',
       right_sep = ' '
     },
@@ -119,21 +114,16 @@ local comps = {
         style = 'bold'
       },
       left_sep = ' ',
-      right_sep = ' '
     },
     line_percentage = {
       provider = { name = 'line_percentage' },
-      hl = {
-        fg = colors.fg,
-        style = 'bold'
-      },
+      hl = { fg = colors.pink },
       left_sep = ' ',
+      right_sep = ' '
     },
     scroll_bar = {
       provider = { name = 'scroll_bar' },
-      hl = {
-        fg = colors.green
-      },
+      hl = { fg = colors.green },
       left_sep = ' ',
       right_sep = ' '
     },
@@ -168,10 +158,9 @@ local comps = {
   lsp = {
     name = {
       provider = 'lsp_client_names',
-      icon = ' lsp: ',
-      hl = { fg = colors.yellow },
+      icon = ' ',
+      hl = { fg = colors.pink },
       left_sep = '  ',
-      --right_sep = ' ',
     }
   },
   -- git info
@@ -179,10 +168,7 @@ local comps = {
     branch = {
       provider = 'git_branch',
       icon = ' ',
-      hl = {
-        fg = colors.pink,
-        style = 'bold'
-      },
+      hl = { fg = colors.pink },
       left_sep = '  ',
     },
     add = {
@@ -217,6 +203,7 @@ table.insert(components.active, {})
 table.insert(components.inactive, {})
 table.insert(components.inactive, {})
 
+-- Right section
 table.insert(components.active[1], comps.vi_mode.left)
 table.insert(components.active[1], comps.file.info)
 table.insert(components.active[1], comps.git.branch)
@@ -224,6 +211,8 @@ table.insert(components.active[1], comps.git.add)
 table.insert(components.active[1], comps.git.change)
 table.insert(components.active[1], comps.git.remove)
 table.insert(components.inactive[1], comps.file.info)
+
+-- Left Section
 table.insert(components.active[2], comps.diagnos.err)
 table.insert(components.active[2], comps.diagnos.warn)
 table.insert(components.active[2], comps.diagnos.hint)
@@ -232,10 +221,21 @@ table.insert(components.active[2], comps.lsp.name)
 table.insert(components.active[2], comps.file.os)
 table.insert(components.active[2], comps.file.position)
 table.insert(components.active[2], comps.file.line_percentage)
-table.insert(components.active[2], comps.file.scroll_bar)
 
 require('feline').setup {
-  colors = { bg = colors.bg, fg = colors.fg  },
+  colors = {
+    bg = colors.bg,
+    fg = colors.fg
+  },
   components = components,
-  vi_mode_colors = vi_mode_colors
+  vi_mode_colors = vi_mode_colors,
+  force_inactive = {
+    filetypes = {
+      'NvimTree',
+      'vista',
+      'term'
+    },
+    buftypes = {},
+    bufnames = {},
+  },
 }
