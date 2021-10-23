@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainf+ck
 #
-# Last modified: 2021/10/16
+# Last modified: 2021/10/23
 # ==============================================================
 
 
@@ -75,6 +75,7 @@ alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
 alias gcm='git commit -m'
+alias gc='git clone'
 
 # ==============================================================
 # Applications shortcuts
@@ -84,8 +85,9 @@ alias n='note'
 alias z='zathura --fork'
 alias e='nvim'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
-alias ytmp3="youtube-dl --config-location ~/.config/youtube-dl/config"
+alias ytmp3="yt-dlp --config-location ~/.config/yt-dlp/config"
 alias gu='gitupdate'
 alias cl='bleachbit -c --preset'
 alias w3m='w3m https://duckduckgo.com'
+alias sv='sudo virsh'
 
