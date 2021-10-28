@@ -95,7 +95,7 @@ label-focused-underline = ${colors.primary}
 
 label-unfocused = %name%
 label-unfocused-padding = 1
-label-unfocused-foreground = ${colors.foreground}
+label-unfocused-foreground = ${colors.secondary}
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.alert}

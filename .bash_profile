@@ -15,5 +15,8 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export VISUAL="nvim"
 
+# Colored man
+export MANPAGER="less -R --use-color -Dd+g -Du+b"
+
 # Appearance of QT5 applications
 #QT_QPA_PLATFORMTHEME="gtk2"

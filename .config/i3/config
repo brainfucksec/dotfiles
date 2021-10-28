@@ -186,7 +186,7 @@ bindsym $mod+F7 exec --no-startup-id libreoffice
 bindsym $mod+d exec rofi -show run
 # urxvt -g = $float window geometry
 bindsym $mod+n exec --no-startup-id urxvt -g 95x15+20+60 -e ncmpcpp
-#bindsym $mod+x exec --no-startup-id ~/bin/lock
+bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
 
 # screenshot (scrot)
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'

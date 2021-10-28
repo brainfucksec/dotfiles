@@ -107,19 +107,21 @@ local comps = {
       left_sep = ' ',
       right_sep = ' '
     },
+    line_percentage = {
+      provider = { name = 'line_percentage' },
+      hl = {
+        fg = colors.pink
+      },
+      left_sep = ' ',
+      right_sep = ' '
+    },
     position = {
       provider = {name = 'position'},
       hl = {
         fg = colors.cyan,
         style = 'bold'
       },
-      left_sep = ' ',
-    },
-    line_percentage = {
-      provider = { name = 'line_percentage' },
-      hl = { fg = colors.pink },
-      left_sep = ' ',
-      right_sep = ' '
+      right_sep = ' ',
     },
     scroll_bar = {
       provider = { name = 'scroll_bar' },
@@ -158,7 +160,7 @@ local comps = {
   lsp = {
     name = {
       provider = 'lsp_client_names',
-      icon = ' ',
+      icon = '  ',
       hl = { fg = colors.pink },
       left_sep = '  ',
     }
@@ -219,8 +221,8 @@ table.insert(components.active[2], comps.diagnos.hint)
 table.insert(components.active[2], comps.diagnos.info)
 table.insert(components.active[2], comps.lsp.name)
 table.insert(components.active[2], comps.file.os)
-table.insert(components.active[2], comps.file.position)
 table.insert(components.active[2], comps.file.line_percentage)
+table.insert(components.active[2], comps.file.position)
 
 require('feline').setup {
   colors = {

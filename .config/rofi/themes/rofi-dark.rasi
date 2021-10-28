@@ -91,7 +91,7 @@
 #inputbar {
     spacing: 0;
     text-color: @normal-foreground;
-    padding: 1px;
+    padding: 4px;
 }
 
 #entry {
