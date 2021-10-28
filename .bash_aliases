@@ -3,9 +3,8 @@
 # $HOME/.bash_aliases FILE
 # By Brainf+ck
 #
-# Last modified: 2021/10/23
+# Last modified: 2021/10/28 08:19
 # ==============================================================
-
 
 # ==============================================================
 # Common commands
@@ -59,11 +58,12 @@ alias lkf='lsblk -f'
 # ==============================================================
 # Directories shortcuts
 # ==============================================================
-alias ccm='cd /run/media/"$(whoami)" && ls -1'
-alias cdc='cd ~/documents'
-alias cdl='cd ~/downloads'
-alias ccd='cd ~/code/dev'
-alias ccg='cd ~/code/git'
+alias d='cd ~/code/dev'
+alias cg='cd ~/code/git'
+alias dc='cd ~/documents'
+alias dl='cd ~/downloads'
+alias s='cd ~/study'
+alias mm='cd /run/media/"$(whoami)" && ls -1'
 
 # ==============================================================
 # Git aliases
