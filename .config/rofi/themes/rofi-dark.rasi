@@ -16,8 +16,8 @@
     alternate-normal-foreground: @foreground;
 
     selected-normal-background: #4a697d;
-    selected-normal-foreground: @foreground;
-    spacing: 6;
+    selected-normal-foreground: @background;
+    spacing: 4;
 }
 
 #window {
