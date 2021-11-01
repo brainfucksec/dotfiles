@@ -1,37 +1,23 @@
------------------------------------------------------------
+
 -- Statusline configuration file
 -----------------------------------------------------------
 
---[[
+-- Plugin: feline.nvim
+-- https://github.com/famiu/feline.nvim
 
-Plugin: feline.nvim
-https://github.com/famiu/feline.nvim
+-- For the configuration see the Usage section:
+--- https://github.com/famiu/feline.nvim/blob/master/USAGE.md
 
-For the configuration see the Usage section:
-https://github.com/famiu/feline.nvim/blob/master/USAGE.md
-
-Thanks to ibhagwan for the example to follow:
-https://github.com/ibhagwan/nvim-lua
-
---]]
+-- Thanks to ibhagwan for the example to follow:
+--- https://github.com/ibhagwan/nvim-lua
 
 
-local colors = {
-  bg = '#1d1f22',
-  fg = '#f8f8f0',
-  yellow = '#e6db74',
-  cyan = '#78dce8',
-  blue = '#27406b',
-  green = '#a6e22e',
-  orange = '#fa8419',
-  violet = '#9c64fe',
-  pink = '#f92672',
-  red = '#e95678',
-}
+-- load colors from: ~/.config/nvim/lua/colors.lua
+local colors = require('colors')
 
 local vi_mode_colors = {
-  NORMAL = colors.pink,
-  INSERT = colors.green,
+  NORMAL = colors.green,
+  INSERT = colors.cyan,
   VISUAL = colors.yellow,
   OP = colors.cyan,
   BLOCK = colors.cyan,
@@ -39,10 +25,10 @@ local vi_mode_colors = {
   ['V-REPLACE'] = colors.red,
   ENTER = colors.orange,
   MORE = colors.orange,
-  SELECT = colors.pink,
+  SELECT = colors.yellow,
   COMMAND = colors.cyan,
   SHELL = colors.cyan,
-  TERM = colors.green,
+  TERM = colors.cyan,
   NONE = colors.blue
 }
 
@@ -109,9 +95,7 @@ local comps = {
     },
     line_percentage = {
       provider = { name = 'line_percentage' },
-      hl = {
-        fg = colors.pink
-      },
+      hl = { fg = colors.pink },
       left_sep = ' ',
       right_sep = ' '
     },
@@ -121,7 +105,6 @@ local comps = {
         fg = colors.cyan,
         style = 'bold'
       },
-      left_sep = ' ',
       right_sep = ' ',
     },
     scroll_bar = {
