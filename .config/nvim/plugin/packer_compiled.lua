@@ -98,9 +98,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
-  indentLine = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/indentLine"
+    path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   ["monokai.nvim"] = {
     loaded = true,
