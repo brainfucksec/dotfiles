@@ -102,6 +102,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/monokai.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
@@ -125,10 +129,6 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
-  },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
