@@ -27,7 +27,7 @@ Image Viewer        > feh
 PDF Viewer          > zathura
 Text Editor         > neovim
 Browser             > firefox, w3m
-Process Viewer      > htop, gotop
+Process Viewer      > htop, bottom
 Fonts:              > cozette (Terminal), ohsnap (Bar)
 ```
 
