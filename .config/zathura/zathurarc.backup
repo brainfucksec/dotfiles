@@ -39,40 +39,45 @@ set guioptions "sv"
 set font "Cantarell Bold 10"
 
 # Colors
-# https://github.com/rose-pine/rose-pine-theme
-# Soho vibes for Zathura: Rosé Pine
-set default-bg                  "#191724"
-set default-fg                  "#e0def4"
+# Light theme
+set default-bg "#0b0d0f"
+set default-fg "#e8f6fd"
 
-set statusbar-fg                "#e0def4"
-set statusbar-bg                "#555169"
+set statusbar-fg "#e8f6fd"
+set statusbar-bg "#161b1d"
 
-set inputbar-bg                 "#6e6a86"
-set inputbar-fg                 "#ebbcba"
+set inputbar-bg "#161b1d" #00 currently not used
+set inputbar-fg "#e8f6fd"
 
-set notification-bg             "#e0def4"
-set notification-fg             "#555169"
+set notification-bg "#1b5d80"
+set notification-fg "#ffffff"
 
-set notification-error-bg       "#f6c177"
-set notification-error-fg       "#555169"
+set notification-error-bg "#b31212"
+set notification-error-fg "#ffffff"
 
-set notification-warning-bg     "#ebbcba"
-set notification-warning-fg     "#555169"
+set notification-warning-bg "#b31212"
+set notification-warning-fg "#ffffff"
 
-set highlight-color             "#ebbcba"
-set highlight-active-color      "#eb6f92"
+set completion-bg "#161b1d"
+set completion-fg "#73a2b4"
 
-set completion-bg               "#6e6a86"
-set completion-fg               "#ebbcba"
+set completion-highlight-fg "#161b1d"
+set completion-highlight-bg "#73a2b4"
 
-set completion-highlight-fg     "#26233a"
-set completion-highlight-bg     "#ebbcba"
+set highlight-color "#2d8f6f"
+set highlight-active-color "#2d8f6f"
 
-set recolor-lightcolor          "#191724"
-set recolor-darkcolor           "#e0def4"
+#set index-fg "#73a2b4"
+set index-fg "#e8f6fd"
+set index-bg "#161b1d"
 
-set recolor                     "true"
-set recolor-keephue             "true"
+set index-active-fg "#ffffff"
+set index-active-bg "#1f6b93"
+
+set recolor-lightcolor "#000000"
+set recolor-darkcolor "#ffffff"
+set recolor "false"
+
 
 ## Key bindings
 map [normal]     <F11> toggle_fullscreen
