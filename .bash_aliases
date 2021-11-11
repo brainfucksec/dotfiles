@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainf+ck
 #
-# Last modified: 2021/11/05
+# Last modified: 2021/11/11_1
 # ==============================================================
 
 # ==============================================================
@@ -80,7 +80,7 @@ alias gc='git clone'
 # ==============================================================
 # Applications shortcuts
 # ==============================================================
-alias myip='curl -s http://ip-api.com'
+alias myip='curl -s https://ipleak.net/json/'
 alias n='note'
 alias z='zathura --fork'
 alias e='nvim'
