@@ -10,7 +10,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.14.0 - 2021/10/17
+; Version: 0.20.0 - 2021/11/10
 ; Maintainer: Brainf+ck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;==========================================================
@@ -54,8 +54,8 @@ module-margin-right = 1
 
 font-0 = "Misc Ohsnap:pixelsize=12;1"
 font-1 = unifont:pixelsize=10:Tewi:fontformat=truetype;1
-font-2 = "Material Design Icons:pixelsize=10;2"
-font-3 = "Font Awesome 5 Free Solid:pixelsize=8;1"
+font-2 = "Material Design Icons:pixelsize=11;2"
+font-3 = "Font Awesome 5 Free Solid:pixelsize=8;2"
 
 modules-left = i3
 modules-right = volume cpu temperature memory wired-network date powermenu
@@ -128,7 +128,7 @@ interval = 1.0
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 warn-temperature = 60
 
-format-prefix = "󱃃 "
+format-prefix = "󰔏 "
 format-prefix-foreground = ${colors.primary}
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -144,7 +144,7 @@ format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
 label-connected = %{F#2ca2f5}󰈀 %{F-}eth
-label-disconnected = [!] not connected
+label-disconnected = 󰳤 not connected
 label-disconnected-foreground = ${colors.alert}
 
 
@@ -155,7 +155,7 @@ date = %a %d %b
 time = %H:%M
 date-alt = %Y/%m/%d %H:%M:%S
 
-format-prefix = " "
+format-prefix = "󱑎 "
 format-prefix-foreground = ${colors.primary}
 
 label = %date% %time%
@@ -166,7 +166,7 @@ label-foreground = ${colors.foreground}
 type = custom/menu
 format-spacing = 1
 
-label-open = "  "
+label-open = "󰐥 "
 label-open-foreground = ${colors.primary}
 label-close = " undo"
 label-close-foreground = ${colors.primary}

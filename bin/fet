@@ -249,7 +249,7 @@ print() {
 
 # default value
 #: "${info:=n user os sh wm up gtk cpu mem host kern pkgs term col n}"
-: "${info:=n os wm sh term col n}"
+: "${info:=n os sh wm up kern pkgs term col n}"
 
 for i in $info; do
 	case $i in

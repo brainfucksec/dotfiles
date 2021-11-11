@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.24.0 - 2021/10/17
+# Version: 2.30.0 - 2021/11/10
 # Maintainer: Brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -214,10 +214,10 @@ set $ws1 1:1 
 set $ws2 2:2 󰈹
 set $ws3 3:3 󰉋
 set $ws4 4:4 󰅨
-set $ws5 5:5 
+set $ws5 5:5 󰂽
 set $ws6 6:6 󰝚
-set $ws7 7:7 
-set $ws8 8:8 󰍹
+set $ws7 7:7 󰟀
+set $ws8 8:8 󰍺
 set $ws9 9:9 󰉕
 set $ws10 10:10 󰭹
 
@@ -284,7 +284,7 @@ exec --no-startup-id setxkbmap it
 exec --no-startup-id xscreensaver -nosplash
 
 # picom
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # wallpaper
 exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/dark_nature_p2elep_crop_2048x1174.jpg
