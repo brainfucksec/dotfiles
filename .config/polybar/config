@@ -10,7 +10,7 @@
 ;
 ; polybar configuration file
 ;
-; Version: 0.20.0 - 2021/11/10
+; Version: 0.20.1 - 2021/11/12
 ; Maintainer: Brainf+ck
 ; Website: https://github.com/brainfucksec/dotfiles
 ;==========================================================
@@ -166,7 +166,7 @@ label-foreground = ${colors.foreground}
 type = custom/menu
 format-spacing = 1
 
-label-open = "󰐥 "
+label-open = "󰐥"
 label-open-foreground = ${colors.primary}
 label-close = " undo"
 label-close-foreground = ${colors.primary}
