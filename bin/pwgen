@@ -9,7 +9,7 @@
 
 # Characters to exclude when generate passwords.  Use backslashes
 # to include special symbols that can be recognized by shell.
-readonly char_exclude="\\\'\\\ \\\"\\\ \\\,\\\ \\\;\\\ \\\.\\\ \\\:\\\ \\\`\\\ \\\~\\\ o0O1lIi"
+readonly char_exclude="\\\'\\\ \\\"\\\ \\\,\\\ \\\;\\\ \\\.\\\ \\\`\\\ o0O1lIi"
 
 # Options:
 # -a algorithm  1 - random character password generation
