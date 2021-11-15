@@ -142,7 +142,7 @@ unmountdev() {
         return 1
     else
         udisksctl unmount -b "/dev/$1" &&
-        udisksctl power-off -b "/dev/$1"
+        #udisksctl power-off -b "/dev/$1"
     fi
 }
 
