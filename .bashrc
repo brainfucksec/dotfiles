@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: 2021/06/06 22:42
+# Last modified: 2021/11/15
 # ==============================================================
 
 
