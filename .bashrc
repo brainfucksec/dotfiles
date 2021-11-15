@@ -141,8 +141,7 @@ unmountdev() {
         echo "Example: unmountdev sdc1"
         return 1
     else
-        udisksctl unmount -b "/dev/$1" &&
-        #udisksctl power-off -b "/dev/$1"
+        udisksctl unmount -b "/dev/$1"
     fi
 }
 
