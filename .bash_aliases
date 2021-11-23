@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By Brainf+ck
 #
-# Last modified: 2021/11/11_1
+# Last modified: 2021/11/23
 # ==============================================================
 
 # ==============================================================
@@ -36,6 +36,7 @@ alias q='exit'
 # Aliases for functions defined on $HOME/.bashrc FILE
 # and for executables in ~/bin and ~/usr/local/bin directories
 # ==============================================================
+
 # systemctl
 alias ssc='sudo systemctl'
 alias sc='systemctl'

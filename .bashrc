@@ -3,19 +3,20 @@
 # $HOME/.bashrc FILE
 # By Brainfuck
 #
-# Last modified: 2021/11/15
+# Last modified: 2021/11/23
 # ==============================================================
-
 
 # ==============================================================
 # General
 # ==============================================================
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # ==============================================================
 # History settings
 # ==============================================================
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -30,6 +31,7 @@ HISTFILESIZE=2000
 # ==============================================================
 # Autocompletion
 # ==============================================================
+
 # cycle through all matches with 'TAB' key
 #bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
@@ -38,8 +40,10 @@ shopt -s extglob    # necessary for programmable completion
 shopt -s autocd     # cd when entering just a path in the shell
 
 # ==============================================================
-# Color definitions
+# Colors
 # ==============================================================
+
+# set colors
 export red="$(tput setaf 1)"
 export green="$(tput setaf 2)"
 export yellow="$(tput setaf 3)"
@@ -67,8 +71,9 @@ if [[ -x /usr/bin/dircolors ]]; then
 fi
 
 # ==============================================================
-# Default prompt
+# Prompt
 # ==============================================================
+
 #PS1='[\u@\h \W]\$ '
 PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
 └──╼ \[${b}${usercolor}\]λ\[${reset}\] '
@@ -79,10 +84,12 @@ PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
 # You may want to put all your aliases into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+#
 # If you want to make this file smaller, the functions can
 # be converted into scripts and removed from here (i.e. ~/bin
 # folder).
 # ==============================================================
+
 if [[ -f ~/.bash_aliases ]]; then
 	. ~/.bash_aliases
 fi
