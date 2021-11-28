@@ -1,3 +1,5 @@
 configuration {
-	theme: "~/.config/rofi/themes/rofi-dark";
+
 }
+
+@theme "~/.config/rofi/themes/rofi-dark"
