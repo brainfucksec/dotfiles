@@ -1,10 +1,9 @@
 /**
- * rofi color scheme
- * rofi-dark
+ * rofi theme - rofi-dark
  */
 
 * {
-    font: "Cozette 10";
+    font: "GohuNew 10";
     background: #141c21;
     background-color: @background;
     foreground: #bdcfe3;
@@ -17,7 +16,7 @@
 
     selected-normal-background: #4a697d;
     selected-normal-foreground: @background;
-    spacing: 4;
+    spacing: 2;
 }
 
 #window {
