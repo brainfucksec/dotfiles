@@ -3,7 +3,7 @@
  */
 
 * {
-    font: "GohuNew 10";
+    font: "Misc Ohsnap 12";
     background: #141c21;
     background-color: @background;
     foreground: #bdcfe3;
