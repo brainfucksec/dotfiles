@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.30.1 - 2021/11/11
+# Version: 2.31.0 - 2021/12/07
 # Maintainer: Brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -182,9 +182,9 @@ bindsym $mod+F4 exec --no-startup-id liferea
 bindsym $mod+F5 exec --no-startup-id virt-manager
 bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id libreoffice
+bindsym $mod+F8 exec --no-startup-id freetube
 
 bindsym $mod+d exec rofi -show run
-# urxvt -g = $float window geometry
 bindsym $mod+n exec --no-startup-id urxvt -g 95x15+20+60 -e ncmpcpp
 bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
 
@@ -216,8 +216,8 @@ set $ws3 3:3 󰉋
 set $ws4 4:4 󰅨
 set $ws5 5:5 󰂽
 set $ws6 6:6 󰝚
-set $ws7 7:7 󰒍
-set $ws8 8:8 󰍺
+set $ws7 7:7 󰌽
+set $ws8 8:8 󰄷
 set $ws9 9:9 󰝰
 set $ws10 10:10 󰭹
 
@@ -260,6 +260,7 @@ assign [class="Pulseaudio-equalizer"]       $ws6
 assign [class="Pavucontrol"]                $ws6
 assign [class="SimpleScreenRecorder"]       $ws6
 assign [class="vlc"]                        $ws6
+assign [class="FreeTube"]                   $ws6
 assign [class="Liferea"]                    $ws9
 
 # QEMU virt-manager
