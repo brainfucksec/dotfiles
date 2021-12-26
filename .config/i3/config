@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.31.0 - 2021/12/07
+# Version: 2.32.0 - 2021/12/26
 # Maintainer: Brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -176,13 +176,14 @@ bindsym $mod+Shift+e exec i3-msg exit
 # ===================================================================
 # Applications
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id vlc
+bindsym $mod+F2 exec --no-startup-id urxvt -e nvim
 bindsym $mod+F3 exec --no-startup-id pcmanfm
 bindsym $mod+F4 exec --no-startup-id liferea
 bindsym $mod+F5 exec --no-startup-id virt-manager
 bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id libreoffice
-bindsym $mod+F8 exec --no-startup-id freetube
+bindsym $mod+F8 exec --no-startup-id vlc
+bindsym $mod+F9 exec --no-startup-id freetube
 
 bindsym $mod+d exec rofi -show run
 bindsym $mod+n exec --no-startup-id urxvt -g 95x15+20+60 -e ncmpcpp
