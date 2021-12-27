@@ -39,8 +39,8 @@ set guioptions "sv"
 set font "Cantarell Bold 10"
 
 # Colors
+# Rosé Pine custom
 # https://github.com/rose-pine/rose-pine-theme
-# Soho vibes for Zathura: Rosé Pine
 set default-bg                  "#191724"
 set default-fg                  "#e0def4"
 
@@ -68,11 +68,15 @@ set completion-fg               "#ebbcba"
 set completion-highlight-fg     "#26233a"
 set completion-highlight-bg     "#ebbcba"
 
+set index-fg                    "#e0def4"
+set index-bg                    "#191724"
+
 set recolor-lightcolor          "#191724"
 set recolor-darkcolor           "#e0def4"
 
 set recolor                     "true"
 set recolor-keephue             "true"
+
 
 ## Key bindings
 map [normal]     <F11> toggle_fullscreen
