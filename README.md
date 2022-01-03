@@ -1,4 +1,4 @@
-![.](img/dotfiles.png)
+![.](img/logo.png)
 
 ## My Arch Linux dotfiles
 
