@@ -56,7 +56,7 @@ URxvt.scrollTtyOutput: false
 URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
 URxvt.font: xft:Cozette:size=10
-!URxvt.letterSpace: -1
+URxvt.letterSpace: -1
 !URxvt.internalBorder: 6
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
