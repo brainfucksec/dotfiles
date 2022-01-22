@@ -1,9 +1,9 @@
 # ==============================================================
 #
 # $HOME/.bash_aliases FILE
-# By Brainf+ck
+# By brainf+ck
 #
-# Last modified: 2021/11/23
+# Last modified: 2022/01/22
 # ==============================================================
 
 # ==============================================================
@@ -91,4 +91,4 @@ alias gu='gitupdate'
 alias cl='bleachbit -c --preset'
 alias w3m='w3m https://duckduckgo.com'
 alias sv='sudo virsh'
-
+alias pfetch='PF_INFO="ascii os kernel uptime shell editor wm" pfetch'
