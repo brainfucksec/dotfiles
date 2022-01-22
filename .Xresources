@@ -1,4 +1,4 @@
-!{{{ Fonts
+!{{{ Font settings
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
@@ -21,24 +21,24 @@ Xft.rgba: rgb
 *color9: #fa3935
 
 ! green
-*color2:  #819400
-*color10: #a4bd00
+*color2:  #009b2e
+*color10: #00c931
 
 ! yellow
-*color3:  #b08500
-*color11: #d9a400
+*color3:  #b09400
+*color11: #c7c91f
 
 ! blue
 *color4:  #2587cc
 *color12: #2ca2f5
 
 ! magenta
-*color5:  #696ebf
-*color13: #8086e8
+*color5:  #a552b9
+*color13: #c08ae5
 
 ! cyan
-*color6:  #289c93
-*color14: #33c5ba
+*color6:  #2db1ad
+*color14: #39ded9
 
 ! white
 *color7:  #bfbaac
