@@ -14,7 +14,7 @@
 
 local colors = require 'colors'
 
--- monokai colors
+-- Rose Pinè theme
 local vi_mode_colors = {
   NORMAL = colors.cyan,
   INSERT = colors.green,
@@ -94,25 +94,29 @@ local comps = {
         end
         return icon .. os
       end,
-      hl = { fg = colors.fg },
+      hl = { fg = colors.gray },
       left_sep = ' ',
       right_sep = ' '
+    },
+    -- line-column
+    position = {
+      provider = {name = 'position'},
+      hl = {
+        fg = colors.fg,
+      },
+      left_sep = ' ',
+      right_sep = ' ',
     },
     -- cursor position in %
     line_percentage = {
       provider = { name = 'line_percentage' },
-      hl = { fg = colors.pink },
+      hl = {
+        fg = colors.bg,
+        bg = colors.cyan,
+        style = 'bold',
+      },
       left_sep = ' ',
       right_sep = ' '
-    },
-    -- raw-column
-    position = {
-      provider = {name = 'position'},
-      hl = {
-        fg = colors.cyan,
-        style = 'bold'
-      },
-      right_sep = ' ',
     },
     -- simple scrollbar (inactive)
     scroll_bar = {
@@ -214,12 +218,12 @@ table.insert(components.active[2], comps.diagnos.hint)
 table.insert(components.active[2], comps.diagnos.info)
 table.insert(components.active[2], comps.lsp.name)
 table.insert(components.active[2], comps.file.os)
-table.insert(components.active[2], comps.file.line_percentage)
 table.insert(components.active[2], comps.file.position)
+table.insert(components.active[2], comps.file.line_percentage)
 
 -- call feline
 require('feline').setup {
-  colors = {
+  theme = {
     bg = colors.bg,
     fg = colors.fg
   },
