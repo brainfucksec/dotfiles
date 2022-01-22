@@ -4,10 +4,16 @@
 
 ![.](img/1-selfie.png)
 
-![.](img/2-fake-dirty.png)
+![.](img/2-dirty.png)
 
-### Setup
------
+![.](img/3-rofi_ncmpcpp.png)
+
+![.](img/4-zathura.png)
+
+---
+
+### Setup:
+
 ```
 Window Manager      > i3-gaps
 Bar                 > polybar
