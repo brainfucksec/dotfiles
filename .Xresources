@@ -33,8 +33,8 @@ Xft.rgba: rgb
 *color12: #2ca2f5
 
 ! magenta
-*color5:  #a552b9
-*color13: #c08ae5
+*color5:  #6f4eff
+*color13: #8b75ff
 
 ! cyan
 *color6:  #2db1ad
