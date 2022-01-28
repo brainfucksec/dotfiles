@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2022/01/22
+# Last modified: 2022/01/28
 # ==============================================================
 
 # ==============================================================
@@ -54,6 +54,7 @@ alias cputemp='sensors | grep Core'
 alias ex='extract'
 alias md='mountdev'
 alias ud='unmountdev'
+alias pd='poweroff_dev'
 alias lkf='lsblk -f'
 
 # ==============================================================
@@ -91,4 +92,3 @@ alias gu='gitupdate'
 alias cl='bleachbit -c --preset'
 alias w3m='w3m https://duckduckgo.com'
 alias sv='sudo virsh'
-alias pfetch='PF_INFO="ascii os kernel uptime shell editor wm" pfetch'
