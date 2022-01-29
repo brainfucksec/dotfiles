@@ -6,7 +6,7 @@
 
 ![.](img/2-dirty.png)
 
-![.](img/3-rofi_ncmpcpp.png)
+![.](img/3-float.png)
 
 ![.](img/4-zathura.png)
 
