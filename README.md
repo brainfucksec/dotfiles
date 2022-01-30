@@ -10,8 +10,6 @@
 
 ![.](img/4-zathura.png)
 
-![.](img/5-float.png)
-
 ---
 
 ### Setup:
