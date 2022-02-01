@@ -170,6 +170,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/vista.vim",
     url = "https://github.com/liuchengxu/vista.vim"
+  },
+  ["xresources-nvim"] = {
+    loaded = true,
+    path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/xresources-nvim",
+    url = "https://github.com/nekonako/xresources-nvim"
   }
 }
 
