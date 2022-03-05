@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2022/01/28
+# Last modified: 2022/03/04
 # ==============================================================
 
 # ==============================================================
@@ -20,11 +20,11 @@ alias l1='ls -1F --group-directories-first'
 alias l1m='ls -1F --group-directories-first | more'
 alias lh='ls -ld .??*'
 alias lsn='ls | cat -n'
-alias mkdir='mkdir -p -v'
+alias mkdir='mkdir -pv'
 alias cp='cp --preserve=all'
 alias cpv='cp --preserve=all -v'
 alias cpr='cp --preserve=all -R'
-alias rmi='rm -i'
+alias rmi='rm -iv'
 alias cpp='rsync -ahW --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
@@ -61,11 +61,14 @@ alias lkf='lsblk -f'
 # Directories shortcuts
 # ==============================================================
 alias ccd='cd ~/code/dev'
-alias ccs='cd ~/study'
-alias ccm='cd /run/media/"$(whoami)" && ls -1'
 alias ccg='cd ~/code/git'
 alias cdc='cd ~/documents'
 alias cdl='cd ~/downloads'
+alias cdm='cd ~/media/music'
+alias cdv='cd ~/media/video'
+alias cds='cd ~/study'
+alias ccm='cd /run/media/"$(whoami)" && ls -1'
+alias cdf='cd ~/.config'
 
 # ==============================================================
 # Git aliases
