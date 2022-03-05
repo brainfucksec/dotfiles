@@ -13,7 +13,7 @@
 
 
 -- Set colorscheme (Monokai classic)
-local colors = require('colors').monokai
+local colors = require('core/colors').monokai
 
 local vi_mode_colors = {
   NORMAL = colors.cyan,
@@ -56,12 +56,12 @@ local comps = {
           name = vi_mode_utils.get_mode_highlight_name(),
           fg = colors.bg,
           bg = vi_mode_utils.get_mode_color(),
-          style = 'bold'
+          style = 'bold',
         }
         return set_color
       end,
       left_sep = ' ',
-      right_sep = ' '
+      right_sep = ' ',
     }
   },
   -- Parse file information:
@@ -72,7 +72,7 @@ local comps = {
         name = 'file_info',
         opts = {
           type = 'relative',
-          file_modified_icon = ''
+          file_modified_icon = '',
         }
       },
       hl = { fg = colors.cyan },
@@ -82,10 +82,16 @@ local comps = {
     type = {
       provider = function()
         local type = vim.bo.filetype:lower()
-        return type
+        local extension = vim.fn.expand '%:e'
+        local icon = require('nvim-web-devicons').get_icon(extension)
+        if icon == nil then
+          icon = ' '
+        end
+        return ' ' .. icon .. ' ' .. type
       end,
-      hl = { fg = colors.cyan },
-      left_sep = ' '
+      hl = { fg = colors.fg },
+      left_sep = ' ',
+      righ_sep = ' ',
     },
     -- Operating system
     os = {
@@ -102,8 +108,8 @@ local comps = {
         return icon .. os
       end,
       hl = { fg = colors.fg },
-      left_sep = ' ',
-      right_sep = ' '
+      --left_sep = ' ',
+      right_sep = ' ',
     },
     -- Line-column
     position = {
@@ -119,19 +125,18 @@ local comps = {
     line_percentage = {
       provider = { name = 'line_percentage' },
       hl = {
-        fg = colors.bg,
-        bg = colors.cyan,
+        fg = colors.cyan,
         style = 'bold',
       },
       left_sep = ' ',
-      right_sep = ' '
+      right_sep = ' ',
     },
     -- Simple scrollbar
     scroll_bar = {
       provider = { name = 'scroll_bar' },
       hl = { fg = colors.fg },
       left_sep = ' ',
-      right_sep = ' '
+      right_sep = ' ',
     },
   },
   -- LSP info
@@ -167,6 +172,7 @@ local comps = {
       icon = '  ',
       hl = { fg = colors.pink },
       left_sep = '  ',
+      right_sep = ' ',
     }
   },
   -- git info
@@ -234,17 +240,20 @@ table.insert(components.active[2], comps.file.line_percentage)
 require('feline').setup {
   theme = {
     bg = colors.bg,
-    fg = colors.fg
+    fg = colors.fg,
   },
   components = components,
   vi_mode_colors = vi_mode_colors,
   force_inactive = {
     filetypes = {
-      'NvimTree',
-      'vista',
-      'term'
+      '^NvimTree$',
+      '^packer$',
+      '^vista$',
+      '^help$',
     },
-    buftypes = {},
+    buftypes = {
+      '^terminal$'
+    },
     bufnames = {},
   },
 }
