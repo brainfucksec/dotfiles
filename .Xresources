@@ -1,10 +1,11 @@
 !{{{ Font settings
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
-Xft.hinting: 1
-Xft.antialias: 1
+Xft.autohint: false
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.antialias: true
+Xft.dpi: 96
 Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
 !}}}
 
 !{{{ Colors
@@ -76,3 +77,4 @@ URxvt.keysym.Control-Right: \033[1;5C
 Xcursor.theme: Breeze-Obsidian
 Xcursor.size: 16
 !}}}
+
