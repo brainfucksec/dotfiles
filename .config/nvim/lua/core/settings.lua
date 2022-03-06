@@ -56,7 +56,15 @@ opt.synmaxcol = 240                   -- Max column for syntax highlight
 -- Colorscheme
 -----------------------------------------------------------
 opt.termguicolors = true              -- Enable 24-bit RGB colors
-cmd [[colorscheme monokai]]
+
+-- Load colorscheme
+--require('monokai').setup {}
+
+-- OneDark styles: dark, darker, cool, deep, warm, warmer, light
+require('onedark').setup {
+    style = 'darker'
+}
+require('onedark').load()
 
 -----------------------------------------------------------
 -- Autocommands
