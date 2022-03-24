@@ -48,7 +48,7 @@ set statusbar-bg                "#263640"
 set inputbar-bg                 "#263640"
 set inputbar-fg                 "#bdcfe3"
 
-set notification-bg             "#2587cc"
+set notification-bg             "#2996e2"
 set notification-fg             "#141c21"
 
 set notification-error-bg       "#cb3331"
@@ -60,7 +60,7 @@ set notification-warning-fg     "#bdcfe3"
 set highlight-color             "#caaa00"
 set highlight-active-color      "#caaa00"
 
-set completion-bg               "#2ea9ff"
+set completion-bg               "#2996e2"
 set completion-fg               "#bdcfe3"
 
 set completion-highlight-fg     "#bdcfe3"
