@@ -60,7 +60,7 @@ set notification-warning-fg     "#bdcfe3"
 set highlight-color             "#caaa00"
 set highlight-active-color      "#caaa00"
 
-set completion-bg               "#2da4f7"
+set completion-bg               "#2ea9ff"
 set completion-fg               "#bdcfe3"
 
 set completion-highlight-fg     "#bdcfe3"
