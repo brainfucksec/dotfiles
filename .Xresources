@@ -19,31 +19,31 @@ Xft.lcdfilter: lcddefault
 
 ! red
 *color1: #cb3331
-*color9: #ee3c3a
+*color9: #cb3331
 
 ! green
 *color2:  #009b43
 *color10: #00c656
 
 ! yellow
-*color3:  #b09400
-*color11: #c7c91f
+*color3:  #caaa00
+*color11: #caaa00
 
 ! blue
-*color4:  #2996e2
-*color12: #2ea9ff
+*color4:  #2da4f7
+*color12: #2da4f7
 
-! purple
+! magenta
 *color5:  #a250ff
-*color13: #a95dff
+*color13: #a25dff
 
 ! cyan
 *color6:  #2caeaa
-*color14: #34cec9
+*color14: #2caeaa
 
 ! white
-*color7:  #bfbaac
-*color15: #fdf6e3
+*color7:  #bdcfe3
+*color15: #bdcfe3
 !}}}
 
 !{{{ URxvt
