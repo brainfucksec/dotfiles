@@ -51,17 +51,17 @@ set inputbar-fg                 "#bdcfe3"
 set notification-bg             "#2587cc"
 set notification-fg             "#141c21"
 
-set notification-error-bg       "#d12f2c"
-set notification-error-fg       "#fdf6e3"
+set notification-error-bg       "#cb3331"
+set notification-error-fg       "#bdcfe3"
 
-set notification-warning-bg     "#b09400"
-set notification-warning-fg     "#fdf6e3"
+set notification-warning-bg     "#caaa00"
+set notification-warning-fg     "#bdcfe3"
 
-set highlight-color             "#c7c91f"
-set highlight-active-color      "#b09400"
+set highlight-color             "#caaa00"
+set highlight-active-color      "#caaa00"
 
-set completion-bg               "#6e6a86"
-set completion-fg               "#ebbcba"
+set completion-bg               "#2da4f7"
+set completion-fg               "#bdcfe3"
 
 set completion-highlight-fg     "#bdcfe3"
 set completion-highlight-bg     "#263640"
