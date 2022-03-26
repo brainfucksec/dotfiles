@@ -64,6 +64,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+URxvt.disablePasteBrackets: true
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 URxvt.altSendsEscape: true
