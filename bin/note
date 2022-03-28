@@ -95,7 +95,7 @@ main() {
                 echo "Try '${prog_name} help' for more information."
                 exit 1
                 ;;
-            esac
+        esac
     done
 }
 

@@ -9,7 +9,7 @@
 
 # Characters to exclude when generate passwords.  Use backslashes
 # to include special symbols that can be recognized by shell.
-readonly char_exclude="\\\'\\\ \\\"\\\ \\\,\\\ \\\;\\\ \\\.\\\ \\\`\\\ o0O1lIi"
+readonly char_exclude="\\\'\\\ \\\"\\\ \\\`\\\ o0O1lIi"
 
 # Options:
 # -a algorithm  1 - random character password generation
@@ -26,4 +26,4 @@ readonly char_exclude="\\\'\\\ \\\"\\\ \\\,\\\ \\\;\\\ \\\.\\\ \\\`\\\ o0O1lIi"
 #
 # Generate n 10 passwords with a lenght between 11-17 characters, for
 # longer and more secure passwords you should use `apg` manually.
-apg -a 1 -M SNCL -n 10 -m 11 -x 17 -E "${char_exclude}"
+apg -a 1 -M SNCL -n 10 -m 12 -x 17 -E "${char_exclude}"

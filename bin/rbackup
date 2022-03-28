@@ -6,7 +6,7 @@
 #
 # Shell script for make encrypted backups with rsync and GnuPG
 #
-# Copyright (C) 2018-2021 Brainfuck
+# Copyright (C) 2018-2021 Brainf+ck
 #
 #
 # GNU GENERAL PUBLIC LICENSE
@@ -33,12 +33,8 @@
 
 # Program information
 readonly prog_name="rbackup"
-readonly version="0.6.1"
-readonly signature="Copyright (C) 2021 Brainfuck"
-
-# Initialize arguments
-readonly args="$*"
-readonly argnum="$#"
+readonly version="0.7.0"
+readonly signature="Copyright (C) 2021 Brainf+ck"
 
 # Date format used for entries in the log file: `YYYY/mm/dd H:M:S`
 readonly current_date="$(date +'%Y/%m/%d %T')"
@@ -83,7 +79,7 @@ readonly log_file="${dest_dir}/rbackup-$(date +'%Y-%m-%d').log"
 
 ## Error except: write a message in the log file and exit with (1)
 die() {
-    printf "%s\\n" "${current_date} $@" >>"${log_file}"
+    printf "%s\\n" "${current_date} $*" >>"${log_file}"
     exit 1
 }
 
@@ -155,24 +151,26 @@ start_backup() {
     # date format: `YYYY-mm-dd`
     local filename="${label}-$(date +'%Y-%m-%d')"
 
-    # TODO: Insert rsync options in the config file
-    #
-    # exec rsync command:
-    #
-    # -ahv --delete --log-file=<file> --exclude-file=<file>
+    # run rsync main command:
     #
     # --archive, -a            archive mode; equals -rlptgoD (no -H,-A,-X)
     # --human-readable, -h     output numbers in a human-readable format
     # --one-file-system, -x    don't cross filesystem boundaries
-    # --verbose, -v            increase verbosity
     # --delete                 delete extraneous files from dest dirs
+    # --info=progress2         show total transfer progress
     # --log-file=FILE          log what we're doing to the specified FILE
     # --exclude-from=FILE      read exclude patterns from FILE
     #
     # rsync --help | man rsync for more information
-    if ! rsync -ahxv --delete --log-file="${log_file}" --exclude-from="${exclude_file}" \
-               "${source_dir}" "${dest_dir}/${filename}"; then
-        die " [Error]: rsync command failed."
+    if ! rsync \
+        -ahx \
+        --delete \
+        --info=progress2 \
+        --log-file="${log_file}" \
+        --exclude-from="${exclude_file}" \
+        "${source_dir}" "${dest_dir}/${filename}"; then
+
+        die "[Error]: rsync command failed."
     fi
 
     # create tar/gzip archive
@@ -250,4 +248,5 @@ main() {
     done
 }
 
-main "$@"
+# Call main
+main "${@}"
