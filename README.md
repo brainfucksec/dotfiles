@@ -6,9 +6,9 @@
 
 ![.](img/2-dirty.png)
 
-![.](img/3-float.png)
+![.](img/3-zathura.png)
 
-![.](img/4-zathura.png)
+![.](img/4-neovim.png)
 
 ---
 
