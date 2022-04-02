@@ -92,7 +92,7 @@ client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 ## Windows style
 #
 # Set default orientation, <horizontal|vertical|auto>
-default_orientation vertical
+default_orientation horizontal
 
 # Gaps settings
 for_window [class="^.*"] border pixel 3
