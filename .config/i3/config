@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.32.1 - 2022/04/02
+# Version: 2.33.0 - 2022/04/02
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -211,16 +211,16 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 # Icons:
 # Material Design Icons: https://pictogrammers.github.io/@mdi/font/6.2.95/
 # Font Awesome: https://fontawesome.com/icons/
-set $ws1 1:1 󰞷
+set $ws1 1:1 
 set $ws2 2:2 󰈹
 set $ws3 3:3 󰉋
 set $ws4 4:4 󰅨
 set $ws5 5:5 󰂽
 set $ws6 6:6 󰝚
-set $ws7 7:7 󰌽
-set $ws8 8:8 󰄷
+set $ws7 7:7 󰆦
+set $ws8 8:8 󰆏
 set $ws9 9:9 󰝰
-set $ws10 10:10 󰭹
+set $ws10 10:10 󰍡
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
