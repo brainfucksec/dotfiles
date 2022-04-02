@@ -10,8 +10,8 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 2.32.0 - 2021/12/26
-# Maintainer: Brainf+ck
+# Version: 2.32.1 - 2022/04/02
+# Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
 # =========================================================
@@ -25,7 +25,7 @@
 # Class                  border  backgr  text     indicator child_border
 client.focused           #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 client.focused_inactive  #263640 #263640 #141c21  #263640   #263640
-client.unfocused         #263640 #263640 141c211  #263640   #263640
+client.unfocused         #263640 #263640 #141c21  #263640   #263640
 client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 
 # =========================================================
@@ -208,9 +208,9 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 # use variables to avoid repeating the names and for adding custom characters
 # or icons.  Insert and/or paste fonts and icons as variable values.
 #
-# See cheatsheets at:
-# https://pictogrammers.github.io/@mdi/font/6.2.95/
-# https://fontawesome.com/v5/cheatsheet/free
+# Icons:
+# Material Design Icons: https://pictogrammers.github.io/@mdi/font/6.2.95/
+# Font Awesome: https://fontawesome.com/icons/
 set $ws1 1:1 󰞷
 set $ws2 2:2 󰈹
 set $ws3 3:3 󰉋
@@ -286,6 +286,7 @@ exec --no-startup-id setxkbmap it
 exec --no-startup-id xscreensaver -nosplash
 
 # picom
+#exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # wallpaper
