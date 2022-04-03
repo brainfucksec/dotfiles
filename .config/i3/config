@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.0.0 - 2022/04/02
+# Version: 3.0.1 - 2022/04/03
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -94,10 +94,10 @@ client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal
 
-# Gaps settings
+# Set windows border
 for_window [class="^.*"] border pixel 3
-#new_window pixel 4
 
+# Gaps settings
 gaps inner 16
 gaps outer 4
 
