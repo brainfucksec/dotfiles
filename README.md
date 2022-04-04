@@ -29,9 +29,7 @@ Text Editor | neovim
 Browser | firefox, w3m
 Process Viewer | htop, bottom
 Fonts | Terminal: [cozette](https://github.com/slavfox/Cozette), Bar: [ohsnap](https://aur.archlinux.org/packages/ohsnap-otb/)
-Color Scheme | [Custom](https://github.com/brainfucksec/dotfiles/blob/master/.Xresources#L10)
+Color Scheme | [OneDark](https://github.com/navarasu/onedark.nvim)
 
 
 These dotfiles are modified according to my configuration, feel free to take what you need but don't install anything without checking first!
-
-Thanks to [/r/unixporn](https://www.reddit.com/r/unixporn/) subreddit users for the examples and ideas, and to [Addy](https://addy-dclxvi.github.io/post/configuring-urxvt/) for the `.Xresources` color scheme.
