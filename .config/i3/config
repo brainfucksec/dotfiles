@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.0.1 - 2022/04/03
+# Version: 3.1.0 - 2022/04/04
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -81,13 +81,15 @@ for_window [class="vlc"]                    $float
 
 ## Colors
 #
-# For colors see: ~/.Xresources
+# Based on OneDark (Darker) Neovim theme by navarasu
+# See: https://github.com/navarasu/onedark.nvim
+# and .Xresource colors
 #
 # Class                  border  backgr  text     indicator child_border
-client.focused           #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
-client.focused_inactive  #263640 #263640 #141c21  #263640   #263640
-client.unfocused         #263640 #263640 #141c21  #263640   #263640
-client.urgent            #4a697d #4a697d #bdcfe3  #4a697d   #4a697d
+client.focused           #535965 #535965 #b2bbcc  #535965   #535965
+client.focused_inactive  #31353f #31353f #1f2329  #31353f   #31353f
+client.unfocused         #31353f #31353f #1f2329  #31353f   #31353f
+client.urgent            #535965 #535965 #b2bbcc  #535965   #535965
 
 ## Windows style
 #
@@ -293,7 +295,7 @@ exec --no-startup-id xscreensaver -nosplash
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # Set wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/landscapes/dark_nature_p2elep_crop_2048x1174.jpg
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/mr_robot/fsociety-3840x1260.jpg
 
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh

@@ -9,41 +9,42 @@ Xft.lcdfilter: lcddefault
 !}}}
 
 !{{{ Colors
+! OneDark (Darker) Theme
 ! special
-*foreground: #bdcfe3
-*background: #141c21
+*foreground: #b2bbcc
+*background: #1f2329
 
 ! black
-*color0: #263640
-*color8: #4a697d
+*color0: #0e1013
+*color8: #535965
 
 ! red
-*color1: #d63634
-*color9: #d63634
+*color1: #e55561
+*color9: #e55561
 
 ! green
-*color2:  #00bc62
-*color10: #00bc62
+*color2:  #8ebd6b
+*color10: #8ebd6b
 
 ! yellow
-*color3:  #caaa00
-*color11: #caaa00
+*color3:  #e2b86b
+*color11: #e2b86b
 
 ! blue
-*color4:  #2ea9ff
-*color12: #2ea9ff
+*color4:  #4fa6ed
+*color12: #4fa6ed
 
 ! magenta
-*color5:  #a250ff
-*color13: #a25dff
+*color5:  #bf68d9
+*color13: #bf68d9
 
 ! cyan
-*color6:  #2caeaa
-*color14: #2caeaa
+*color6:  #48b0bd
+*color14: #48b0bd
 
 ! white
-*color7:  #bdcfe3
-*color15: #bdcfe3
+*color7:  #b2bbcc
+*color15: #ffffff
 !}}}
 
 !{{{ URxvt
