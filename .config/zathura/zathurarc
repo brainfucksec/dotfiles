@@ -39,38 +39,38 @@ set guioptions "sv"
 set font "Cantarell Bold 10"
 
 # Colors (from .Xresources)
-set default-bg                  "#141c21"
-set default-fg                  "#bdcfe3"
+set default-bg                  "#1f2329"
+set default-fg                  "#b2bbcc"
 
-set statusbar-fg                "#bdcfe3"
-set statusbar-bg                "#263640"
+set statusbar-fg                "#b2bbcc"
+set statusbar-bg                "#1f2329"
 
-set inputbar-bg                 "#263640"
-set inputbar-fg                 "#bdcfe3"
+set inputbar-bg                 "#1f2329"
+set inputbar-fg                 "#b2bbcc"
 
-set notification-bg             "#2996e2"
-set notification-fg             "#141c21"
+set notification-bg             "#4fa6ed"
+set notification-fg             "#1f2329"
 
-set notification-error-bg       "#cb3331"
-set notification-error-fg       "#bdcfe3"
+set notification-error-bg       "#e55561"
+set notification-error-fg       "#b2bbcc"
 
-set notification-warning-bg     "#caaa00"
-set notification-warning-fg     "#bdcfe3"
+set notification-warning-bg     "#e2b86b"
+set notification-warning-fg     "#b2bbcc"
 
-set highlight-color             "#caaa00"
-set highlight-active-color      "#caaa00"
+set highlight-color             "#e2b86b"
+set highlight-active-color      "#e2b86b"
 
-set completion-bg               "#2996e2"
-set completion-fg               "#bdcfe3"
+set completion-bg               "#4fa6ed"
+set completion-fg               "#b2bbcc"
 
-set completion-highlight-fg     "#bdcfe3"
-set completion-highlight-bg     "#263640"
+set completion-highlight-fg     "#b2bbcc"
+set completion-highlight-bg     "#535965"
 
-set index-fg                    "#bdcfe3"
-set index-bg                    "#141c21"
+set index-fg                    "#b2bbcc"
+set index-bg                    "#1f2329"
 
-set recolor-lightcolor          "#141c21"
-set recolor-darkcolor           "#bdcfe3"
+set recolor-lightcolor          "#1f2329"
+set recolor-darkcolor           "#b2bbcc"
 
 set recolor                     "true"
 set recolor-keephue             "true"
