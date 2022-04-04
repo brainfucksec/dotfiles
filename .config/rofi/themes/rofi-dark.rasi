@@ -3,10 +3,10 @@
  */
 
 * {
-    font: "Misc Ohsnap 12";
-    background: #141c21;
+    font: "Cozette 10";
+    background: #1f2329;
     background-color: @background;
-    foreground: #bdcfe3;
+    foreground: #b2bbcc;
 
     normal-background: @background;
     normal-foreground: @foreground;
@@ -14,7 +14,7 @@
     alternate-normal-background: @background;
     alternate-normal-foreground: @foreground;
 
-    selected-normal-background: #4a697d;
+    selected-normal-background: #535965;
     selected-normal-foreground: @background;
     spacing: 2;
 }
