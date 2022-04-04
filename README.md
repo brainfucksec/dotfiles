@@ -1,7 +1,5 @@
 <p align="center"><img src="img/logo.png" alt="logo"></p>
 
-## My Arch Linux dotfiles
-
 ![.](img/1-selfie.png)
 
 ![.](img/2-dirty.png)
