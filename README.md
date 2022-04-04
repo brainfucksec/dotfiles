@@ -1,12 +1,10 @@
 <p align="center"><img src="img/logo.png" alt="logo"></p>
 
-![.](img/1-selfie.png)
+![alt text](img/1-selfie.png)
 
-![.](img/2-dirty.png)
+![alt text](img/2-dirty.png)
 
-![.](img/3-zathura.png)
-
-![.](img/4-neovim.png)
+![alt text](img/3-neovim.png)
 
 ---
 
