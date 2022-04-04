@@ -1,4 +1,4 @@
-![.](img/logo.png)
+<p align="center"><img src="img/logo.png" alt="logo"></p>
 
 ## My Arch Linux dotfiles
 
