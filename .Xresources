@@ -1,4 +1,4 @@
-!{{{ Font settings
+! Font settings
 Xft.autohint: false
 Xft.hinting: true
 Xft.hintstyle: hintfull
@@ -6,9 +6,8 @@ Xft.antialias: true
 Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
-!}}}
 
-!{{{ Colors
+! Colors
 ! OneDark (Darker) Theme
 ! special
 *foreground: #b2bbcc
@@ -45,9 +44,9 @@ Xft.lcdfilter: lcddefault
 ! white
 *color7:  #b2bbcc
 *color15: #ffffff
-!}}}
 
-!{{{ URxvt
+
+! URxvt
 URxvt.termName: rxvt-unicode-256color
 URxvt.loginShell: true
 URxvt.scrollstyle: plain
@@ -57,8 +56,9 @@ URxvt.scrollBar_floating: false
 URxvt.scrollTtyOutput: false
 URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
-URxvt.font: xft:Cozette:size=10
-!URxvt.letterSpace: -1
+!URxvt.font: xft:Cozette:size=10
+URxvt.font: xft:JetBrainsMono Nerd Font Mono:size=10
+URxvt.letterSpace: -1
 !URxvt.internalBorder: 6
 URxvt.perl-ext-common: default,-confirm-paste,matcher,selection-to-clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
@@ -73,10 +73,9 @@ URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Left: \033[1;5D
 URxvt.keysym.Control-Right: \033[1;5C
-!}}}
 
-!{{{ Xcursor theme
+
+! Xcursor theme
 Xcursor.theme: Breeze-Obsidian
 Xcursor.size: 16
-!}}}
 
