@@ -35,6 +35,7 @@ opt.splitbelow = true                 -- Orizontal split to the bottom
 opt.ignorecase = true                 -- Ignore case letters when search
 opt.smartcase = true                  -- Ignore lowercase for the whole pattern
 opt.linebreak = true                  -- Wrap on word boundary
+opt.termguicolors = true              -- Enable 24-bit RGB colors
 
 -----------------------------------------------------------
 -- Tabs, indent
@@ -51,27 +52,44 @@ opt.hidden = true                     -- Enable background buffers
 opt.history = 100                     -- Remember N lines in history
 opt.lazyredraw = true                 -- Faster scrolling
 opt.synmaxcol = 240                   -- Max column for syntax highlight
+opt.updatetime = 400                  -- ms to wait for trigger 'document_highlight'
 
 -----------------------------------------------------------
--- Colorscheme
+-- Startup
 -----------------------------------------------------------
-opt.termguicolors = true              -- Enable 24-bit RGB colors
 
--- Load colorscheme
---require('monokai').setup {}
+-- Disable nvim intro
+opt.shortmess:append "sI"
 
--- OneDark styles: dark, darker, cool, deep, warm, warmer, light
-require('onedark').setup {
-    style = 'darker'
+-- Disable builtins plugins
+local disabled_built_ins = {
+  "netrw",
+  "netrwPlugin",
+  "netrwSettings",
+  "netrwFileHandlers",
+  "gzip",
+  "zip",
+  "zipPlugin",
+  "tar",
+  "tarPlugin",
+  "getscript",
+  "getscriptPlugin",
+  "vimball",
+  "vimballPlugin",
+  "2html_plugin",
+  "logipat",
+  "rrhelper",
+  "spellfile_plugin",
+  "matchit"
 }
-require('onedark').load()
+
+for _, plugin in pairs(disabled_built_ins) do
+  g["loaded_" .. plugin] = 1
+end
 
 -----------------------------------------------------------
 -- Autocommands
 -----------------------------------------------------------
-
--- Remove whitespace on save
-cmd [[au BufWritePre * :%s/\s\+$//e]]
 
 -- Highlight on yank
 exec([[
@@ -81,11 +99,16 @@ exec([[
   augroup end
 ]], false)
 
+-- Remove whitespace on save
+cmd [[autocmd BufWritePre * :%s/\s\+$//e]]
+
 -- Don't auto commenting new lines
-cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
+cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]]
 
 -- Remove line lenght marker for selected filetypes
-cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
+cmd [[
+  autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
+]]
 
 -- 2 spaces for selected filetypes
 cmd [[
@@ -103,41 +126,8 @@ cmd [[command Term :botright vsplit term://$SHELL]]
 --- enter insert mode when switching to terminal
 --- close terminal buffer on process exit
 cmd [[
-    autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
-    autocmd TermOpen * startinsert
-    autocmd BufLeave term://* stopinsert
+  autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
+  autocmd TermOpen * startinsert
+  autocmd BufLeave term://* stopinsert
 ]]
-
------------------------------------------------------------
--- Startup
------------------------------------------------------------
-
--- Disable nvim intro
-opt.shortmess:append "sI"
-
--- Disable builtins plugins
-local disabled_built_ins = {
-    "netrw",
-    "netrwPlugin",
-    "netrwSettings",
-    "netrwFileHandlers",
-    "gzip",
-    "zip",
-    "zipPlugin",
-    "tar",
-    "tarPlugin",
-    "getscript",
-    "getscriptPlugin",
-    "vimball",
-    "vimballPlugin",
-    "2html_plugin",
-    "logipat",
-    "rrhelper",
-    "spellfile_plugin",
-    "matchit"
-}
-
-for _, plugin in pairs(disabled_built_ins) do
-    g["loaded_" .. plugin] = 1
-end
 
