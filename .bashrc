@@ -1,9 +1,9 @@
 # ==============================================================
 #
 # $HOME/.bashrc FILE
-# By Brainfuck
+# By brainf+ck
 #
-# Last modified: 2021/11/23
+# Last modified: 2022/01/24
 # ==============================================================
 
 # ==============================================================
@@ -78,6 +78,7 @@ fi
 PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
 └──╼ \[${b}${usercolor}\]λ\[${reset}\] '
 
+
 # ==============================================================
 # Aliases and Functions
 #
@@ -94,7 +95,7 @@ if [[ -f ~/.bash_aliases ]]; then
 	. ~/.bash_aliases
 fi
 
-# function extract for common archive formats
+# Function extract for common archive formats
 extract() {
     if [[ -z "$1" ]]; then
         # display usage if no parameters given
@@ -113,7 +114,7 @@ extract() {
                     *.zip)      unzip ./"$n"       ;;
                     *.z)        uncompress ./"$n"  ;;
                     *.7z|*.arj|*.cab|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.rpm|*.udf|*.wim|*.xar)
-                                7z x ./"$n"        ;;
+                                7zz x ./"$n"       ;;
                     *.xz)       unxz ./"$n"        ;;
                     *.exe)      cabextract ./"$n"  ;;
                     *)
@@ -140,7 +141,7 @@ mountdev() {
     fi
 }
 
-# Unmount and eject device with udisksctl
+# Unmount device with udisksctl
 unmountdev() {
     if [[ -z "$1" ]]; then
         echo "unmountdev: No argument supplied"
@@ -151,6 +152,19 @@ unmountdev() {
         udisksctl unmount -b "/dev/$1"
     fi
 }
+
+# Poweroff device with udisksctl
+poweroff_dev() {
+    if [[ -z "$1" ]]; then
+        echo "poweroff_dev: No argument supplied"
+        echo "Usage: poweroff_dev <sdxX>"
+        echo "Example: poweroff_dev sdc1"
+        return 1
+    else
+        udisksctl power-off -b "/dev/$1"
+    fi
+}
+
 
 # Update git packages
 gitupdate() {

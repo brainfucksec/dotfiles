@@ -18,9 +18,6 @@ export VISUAL="nvim"
 # Colored man
 export MANPAGER="less -R --use-color -Dd+g -Du+b"
 
-# Appearance of QT5 applications
-#QT_QPA_PLATFORMTHEME="gtk2"
-
 # pfetch:
 # Which information to display.
 # NOTE: If 'ascii' will be used, it must come first.
@@ -28,5 +25,7 @@ export MANPAGER="less -R --use-color -Dd+g -Du+b"
 # Valid: space separated string
 #
 # OFF by default: shell editor wm de palette
-export PF_INFO="ascii os kernel uptime pkgs shell editor wm palette"
+export PF_INFO="ascii os kernel uptime pkgs shell editor wm"
 
+# Override style of Qt applications
+export QT_STYLE_OVERRIDE="kvantum"

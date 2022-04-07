@@ -7,6 +7,7 @@ Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
+
 ! Colors
 ! OneDark (Darker) Theme
 ! special
@@ -56,10 +57,8 @@ URxvt.scrollBar_floating: false
 URxvt.scrollTtyOutput: false
 URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
-!URxvt.font: xft:Cozette:size=10
-URxvt.font: xft:JetBrainsMono Nerd Font Mono:size=10
-URxvt.letterSpace: -1
-!URxvt.internalBorder: 6
+URxvt.font: xft:Cozette:size=10
+!URxvt.letterSpace: -1
 URxvt.perl-ext-common: default,-confirm-paste,matcher,selection-to-clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
