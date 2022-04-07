@@ -11,20 +11,23 @@
 ### Setup:
 
 Component | Application
-------------- | -------------
+--- | ---
+Shell | bash
+Terminal Emulator | urxvt ([rxvt-unicode-256xresources](https://aur.archlinux.org/packages/rxvt-unicode-256xresources/))
 Window Manager | i3-gaps ([i3-gaps-next-git](https://aur.archlinux.org/packages/i3-gaps-next-git/))
 Bar | polybar
 Program Launcher | rofi
 Compositor | picom
-Terminal Emulator | urxvt ([rxvt-unicode-256xresources](https://aur.archlinux.org/packages/rxvt-unicode-256xresources/))
 File Manager | pcmanfm
 Media Player | ncmpcpp, vlc
 Image Viewer | feh
-PDF Viewer | zathura
+PDF Reader | zathura
 Text Editor | neovim
 Browser | firefox, w3m
+RSS Reader | newsboat
 Process Viewer | htop, bottom
-Fonts | Terminal: [cozette](https://github.com/slavfox/Cozette), Bar: [ohsnap](https://aur.archlinux.org/packages/ohsnap-otb/)
+Notification Daemon | dunst
+Fonts | Terminal: [Cozette](https://github.com/slavfox/Cozette), Bar: [ohsnap](https://aur.archlinux.org/packages/ohsnap-otb/)
 Color Scheme | [OneDark](https://github.com/navarasu/onedark.nvim)
 
 
