@@ -1,0 +1,50 @@
+###########################################################
+#
+# newsboat configuration file
+#
+# date: 2022-04-07
+# maintainer: brainf+ck
+# website: https://github.com/brainfucksec/dotfiles
+#
+# info:
+#   - https://newsboat.org/
+#   - https://wiki.archlinux.org/title/Newsboat
+#   - man newsboat
+#
+###########################################################
+
+### General ###
+browser "/usr/bin/firefox %u"
+download-retries 2
+html-renderer "w3m -dump -T text/html -cols 100"
+refresh-on-startup yes
+reload-threads 30
+reload-time 120
+
+### Keybindings ###
+# vim keybinds
+unbind-key k
+unbind-key j
+unbind-key l
+unbind-key h
+
+bind-key k up
+bind-key j down
+bind-key l open
+bind-key h quit
+
+### Formatting ###
+feedlist-format "%?T?  %8u  %t  %4S & %t ?"
+articlelist-format "%D  %t"
+
+### Colors / Highlighting ###
+# color <element> <fgcolor> <bgcolor> [<attribute>]
+color listnormal            white default
+color listfocus             black cyan standout
+color listfocus_unread      black cyan standout
+color info                  cyan  black bold
+color title                 cyan  black bold
+
+highlight feedlist "___.*___"   green   default bold
+highlight feedlist ".*0/0.."    default default invis
+
