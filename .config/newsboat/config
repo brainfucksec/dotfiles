@@ -39,8 +39,9 @@ articlelist-format "%D  %t"
 
 ### Colors / Highlighting ###
 # color <element> <fgcolor> <bgcolor> [<attribute>]
-color listnormal            white default
+color listnormal            green default
 color listfocus             black cyan standout
+color listnormal_unread     white default
 color listfocus_unread      black cyan standout
 color info                  cyan  black bold
 color title                 cyan  black bold
