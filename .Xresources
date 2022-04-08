@@ -44,7 +44,7 @@ Xft.lcdfilter: lcddefault
 
 ! white
 *color7:  #b2bbcc
-*color15: #ffffff
+*color15: #c3cde0
 
 
 ! URxvt
