@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.1.1 - 2022/04/06
+# Version: 3.2.1 - 2022/04/08
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -67,7 +67,6 @@ assign [class="Pavucontrol"]                $ws6
 assign [class="SimpleScreenRecorder"]       $ws6
 assign [class="vlc"]                        $ws6
 assign [class="FreeTube"]                   $ws6
-assign [class="Liferea"]                    $ws9
 # QEMU virt-manager
 assign [class="Virt-manager"]               $ws7
 
@@ -236,7 +235,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id $term -e nvim
 bindsym $mod+F3 exec --no-startup-id pcmanfm
-bindsym $mod+F4 exec --no-startup-id liferea
+bindsym $mod+F4 exec --no-startup-id $term -e newsboat
 bindsym $mod+F5 exec --no-startup-id virt-manager
 bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id libreoffice
