@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By brainf+ck
 #
-# Last modified: 2022/01/24
+# Last modified: 2022/04/12
 # ==============================================================
 
 # ==============================================================
@@ -43,7 +43,7 @@ shopt -s autocd     # cd when entering just a path in the shell
 # Colors
 # ==============================================================
 
-# set colors
+# set tput colors
 export red="$(tput setaf 1)"
 export green="$(tput setaf 2)"
 export yellow="$(tput setaf 3)"
@@ -53,13 +53,6 @@ export cyan="$(tput setaf 6)"
 export white="$(tput setaf 7)"
 export b="$(tput bold)"
 export reset="$(tput sgr0)"
-
-# set color for current user
-if [[ "$UID" -eq 0 ]]; then
-    usercolor="${red}"
-else
-    usercolor="${green}"
-fi
 
 # enable color support of ls, grep and ip, also add handy aliases
 if [[ -x /usr/bin/dircolors ]]; then
@@ -74,9 +67,16 @@ fi
 # Prompt
 # ==============================================================
 
+# set color for current user, red for root user
+if [[ "$EUID" -eq 0 ]]; then
+    usercolor="${red}"
+else
+    usercolor="${blue}"
+fi
+
 #PS1='[\u@\h \W]\$ '
-PS1='┌─╼ \[${b}${usercolor}\]\u\[${reset}\] \[${b}${blue}[\w]\[${reset}\]
-└──╼ \[${b}${usercolor}\]λ\[${reset}\] '
+PS1='┌──╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${blue}\]\h [\[${white}\]\w\[${b}${blue}\]]\[${reset}\]
+└╼ \[${b}${usercolor}\]λ\[${reset}\] '
 
 
 # ==============================================================
@@ -165,7 +165,6 @@ poweroff_dev() {
     fi
 }
 
-
 # Update git packages
 gitupdate() {
     if [[ -z "$1" ]]; then
@@ -192,3 +191,4 @@ gitupdate() {
         fi
     fi
 }
+
