@@ -71,11 +71,11 @@ fi
 if [[ "$EUID" -eq 0 ]]; then
     prompt_color="${red}"
 else
-    prompt_color="${blue}"
+    prompt_color="${green}"
 fi
 
 #PS1='[\u@\h \W]\$ '
-PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] ╺─╸ \[${b}${prompt_color}\]\h \[${b}${blue}\][\[${reset}${b}\]\w\[${b}${blue}\]]\[${reset}\]
+PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] ╺─╸ \[${b}${prompt_color}\]\h \[${b}${blue}\][\[\w]\[${reset}\]
 └╼ \[${b}${prompt_color}\]λ\[${reset}\] '
 
 
