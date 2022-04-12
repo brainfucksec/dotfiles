@@ -69,14 +69,14 @@ fi
 
 # set color for current user, red for root user
 if [[ "$EUID" -eq 0 ]]; then
-    usercolor="${red}"
+    prompt_color="${red}"
 else
-    usercolor="${blue}"
+    prompt_color="${blue}"
 fi
 
 #PS1='[\u@\h \W]\$ '
-PS1='┌──╼ \[${b}${usercolor}\]\u\[${reset}\] ╺─╸ \[${b}${blue}\]\h [\[${white}\]\w\[${b}${blue}\]]\[${reset}\]
-└╼ \[${b}${usercolor}\]λ\[${reset}\] '
+PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] ╺─╸ \[${b}${prompt_color}\]\h \[${b}${blue}\][\[${reset}${b}\]\w\[${b}${blue}\]]\[${reset}\]
+└╼ \[${b}${prompt_color}\]λ\[${reset}\] '
 
 
 # ==============================================================
