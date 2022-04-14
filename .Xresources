@@ -11,7 +11,7 @@ Xft.lcdfilter: lcddefault
 ! Colors
 ! OneDark (Darker) Theme
 ! special
-*foreground: #b2bbcc
+*foreground: #a0a8b7
 *background: #1f2329
 
 ! black
@@ -43,8 +43,8 @@ Xft.lcdfilter: lcddefault
 *color14: #48b0bd
 
 ! white
-*color7:  #b2bbcc
-*color15: #c3cde0
+*color7:  #a0a8b7
+*color15: #b2bbcc
 
 
 ! URxvt
