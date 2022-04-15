@@ -1,0 +1,235 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+#
+# v0.3_alpha - 2022-04-14
+# by brainf+ck
+#
+# For the example config file (on Arch Linux) see: /usr/share/doc/alacritty/example/alacritty.yml
+
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: alacritty
+
+window:
+  # Window dimensions (changes require restart)
+  #
+  # Number of lines/columns (not pixels) in the terminal. The number of columns
+  # must be at least `2`, while using a value of `0` for columns and lines will
+  # fall back to the window manager's recommended size.
+  dimensions:
+    columns: 80
+    lines: 30
+
+  # Window position (changes require restart)
+  #
+  # Specified in number of pixels.
+  # If the position is not set, the window manager will handle the placement.
+  #position:
+  #  x: 0
+  #  y: 0
+
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 2
+    y: 2
+
+  # Spread additional padding evenly around the terminal content.
+  #dynamic_padding: false
+
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #
+  # Values for `decorations` (macOS only):
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background and no title bar buttons
+  #decorations: none
+
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  #opacity: 1.0
+
+  # Window title
+  title: Alacritty
+
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
+  # Window class (Linux/BSD only):
+  class:
+    # Application instance name
+    instance: Alacritty
+    # General application class
+    general: Alacritty
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 2000
+
+  # Scrolling distance multiplier.
+  #multiplier: 3
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: JetBrains Mono
+
+    # The `style` can be specified to pick a specific face.
+    style: Regular
+
+  # Bold font face
+  bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: JetBrains Mono
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold
+
+  # Italic font face
+  italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: JetBrains Mono
+
+      # The `style` can be specified to pick a specific face.
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+      # Font family
+      #
+      # If the bold italic family is not specified, it will fall back to the
+      # value specified for the normal font.
+      family: JetBrains Mono
+
+      # The `style` can be specified to pick a specific face.
+      style: Bold italic
+
+  # Point size
+  size: 6.5
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+# Colors (One Dark)
+#colors:
+  # Default colors
+  #primary:
+  #  background: '#1e2127'
+  #  foreground: '#abb2bf'
+
+  # Normal colors
+  #normal:
+  #  black:    '#1e2127'
+  #  red:      '#e06c75'
+  #  green:    '#98c379'
+  #  yellow:   '#d19a66'
+  #  blue:     '#61afef'
+  #  magenta:  '#c678dd'
+  #  cyan:     '#56b6c2'
+  #  white:    '#abb2bf'
+
+  # Bright colors
+  #bright:
+  #  black:    '#5c6370'
+  #  red:      '#e06c75'
+  #  green:    '#98c379'
+  #  yellow:   '#d19a66'
+  #  blue:     '#61afef'
+  #  magenta:  '#c678dd'
+  #  cyan:     '#56b6c2'
+  #  white:    '#ffffff'
+
+# Colors (One Dark darker)
+colors:
+  # Default colors
+  primary:
+    background: '#1f2329'
+    foreground: '#b2bbcc'
+
+  # Normal colors
+  normal:
+    black:    '#0e1013'
+    red:      '#e55561'
+    green:    '#8ebd6b'
+    yellow:   '#e2b86b'
+    blue:     '#4fa6ed'
+    magenta:  '#bf68d9'
+    cyan:     '#48b0bd'
+    white:    '#b2bbcc'
+
+  # Bright colors:
+  bright:
+    black:    '#535965'
+    red:      '#e55561'
+    green:    '#8ebd6b'
+    yellow:   '#e2b86b'
+    blue:     '#4fa6ed'
+    magenta:  '#bf68d9'
+    cyan:     '#48b0bd'
+    white:    '#b2bbcc'
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Block
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: Off
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
