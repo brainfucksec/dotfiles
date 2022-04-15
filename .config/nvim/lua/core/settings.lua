@@ -3,8 +3,8 @@
 -----------------------------------------------------------
 
 -- Default options are not included
---- See: https://neovim.io/doc/user/vim_diff.html
---- [2] Defaults - *nvim-defaults*
+-- See: https://neovim.io/doc/user/vim_diff.html
+-- [2] Defaults - *nvim-defaults*
 
 -----------------------------------------------------------
 -- Neovim API aliases
@@ -52,7 +52,7 @@ opt.hidden = true                     -- Enable background buffers
 opt.history = 100                     -- Remember N lines in history
 opt.lazyredraw = true                 -- Faster scrolling
 opt.synmaxcol = 240                   -- Max column for syntax highlight
-opt.updatetime = 400                  -- ms to wait for trigger 'document_highlight'
+opt.updatetime = 250                  -- ms to wait for trigger an event
 
 -----------------------------------------------------------
 -- Startup
@@ -112,7 +112,7 @@ cmd [[
 
 -- 2 spaces for selected filetypes
 cmd [[
-  autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
+  autocmd FileType xml,html,xhtml,css,scss,javascript,json,lua,yaml setlocal shiftwidth=2 tabstop=2
 ]]
 
 -----------------------------------------------------------
@@ -123,8 +123,8 @@ cmd [[
 cmd [[command Term :botright vsplit term://$SHELL]]
 
 -- Terminal visual tweaks:
---- enter insert mode when switching to terminal
---- close terminal buffer on process exit
+-- enter insert mode when switching to terminal
+-- close terminal buffer on process exit
 cmd [[
   autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
   autocmd TermOpen * startinsert

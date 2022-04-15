@@ -5,10 +5,34 @@
 -- Plugin: nvim-lspconfig
 -- url: https://github.com/neovim/nvim-lspconfig
 
-local nvim_lsp = require 'lspconfig'
+-- For configuration see the Wiki: https://github.com/neovim/nvim-lspconfig/wiki
+-- Autocompletion settings of "nvim-cmp" are defined in plugins/nvim-cmp.lua
+
+
+local lsp_status_ok, lspconfig = pcall(require, 'lspconfig')
+if not lsp_status_ok then
+  return
+end
+
+local cmp_status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if not cmp_status_ok then
+  return
+end
+
+-- Diagnostic options, see: `:help vim.diagnostic.config`
+vim.diagnostic.config({
+  virtual_text = false
+})
+
+-- Show line diagnostics automatically in hover window
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 
 -- Add additional capabilities supported by nvim-cmp
+-- See: https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+
 capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.preselectSupport = true
@@ -34,7 +58,7 @@ local on_attach = function(client, bufnr)
   -- Highlighting references
   if client.resolved_capabilities.document_highlight then
     vim.api.nvim_exec(
-    [[
+      [[
       augroup lsp_document_highlight
         autocmd! * <buffer>
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
@@ -83,7 +107,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 Python --> pyright
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
 
-C-C++ -->  clangd
+C-C++ --> clangd
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd
 
 HTML/CSS/JSON --> vscode-html-languageserver
@@ -101,7 +125,7 @@ local servers = { 'bashls', 'pyright', 'clangd', 'html', 'tsserver' }
 
 -- Call setup
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+  lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {
