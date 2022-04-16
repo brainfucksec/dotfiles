@@ -13,7 +13,7 @@
 Component | Application
 --- | ---
 Shell | bash
-Terminal Emulator | urxvt ([rxvt-unicode-256xresources](https://aur.archlinux.org/packages/rxvt-unicode-256xresources/))
+Terminal Emulator | alacritty
 Window Manager | i3-gaps ([i3-gaps-next-git](https://aur.archlinux.org/packages/i3-gaps-next-git/))
 Bar | polybar
 Program Launcher | rofi
