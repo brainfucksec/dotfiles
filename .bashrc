@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By brainf+ck
 #
-# Last modified: 2022/04/12
+# Last modified: 2022/04/16
 # ==============================================================
 
 # ==============================================================
@@ -71,13 +71,15 @@ fi
 if [[ "$EUID" -eq 0 ]]; then
     prompt_color="${red}"
 else
-    prompt_color="${green}"
+    prompt_color="${white}"
 fi
 
 #PS1='[\u@\h \W]\$ '
-PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] ╺─╸ \[${b}${prompt_color}\]\h \[${b}${blue}\][\[\w]\[${reset}\]
-└╼ \[${b}${prompt_color}\]λ\[${reset}\] '
+#PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] ╺─╸ \[${b}${prompt_color}\]\h \[${b}${blue}\][\w]\[${reset}\]
+#└╼ \[${b}${prompt_color}\]λ\[${reset}\] '
 
+PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] \[${b}${blue}\][\w]\[${reset}\]
+└╼ \[${b}${prompt_color}\]λ\[${reset}\] '
 
 # ==============================================================
 # Aliases and Functions
