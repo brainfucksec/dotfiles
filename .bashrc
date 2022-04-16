@@ -71,15 +71,14 @@ fi
 if [[ "$EUID" -eq 0 ]]; then
     prompt_color="${red}"
 else
-    prompt_color="${white}"
+    prompt_color="${green}"
 fi
 
+# Default prompt
 #PS1='[\u@\h \W]\$ '
-#PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] ╺─╸ \[${b}${prompt_color}\]\h \[${b}${blue}\][\w]\[${reset}\]
-#└╼ \[${b}${prompt_color}\]λ\[${reset}\] '
 
-PS1='┌──╼ \[${b}${prompt_color}\]\u\[${reset}\] \[${b}${blue}\][\w]\[${reset}\]
-└╼ \[${b}${prompt_color}\]λ\[${reset}\] '
+PS1='┌──(\[${b}${prompt_color}\]\u\[${reset}\])──\[${b}${blue}\][\w]\[${reset}\]
+└─\[${b}${prompt_color}\]λ\[${reset}\] '
 
 # ==============================================================
 # Aliases and Functions
