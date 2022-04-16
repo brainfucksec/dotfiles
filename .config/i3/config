@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.2.1 - 2022/04/08
+# Version: 3.3.0 - 2022/04/12
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -22,11 +22,11 @@
 # Mod1 = Alt Key
 set $mod Mod4
 
-# Terminal emulator (default: foot)
-set $term urxvt
+# Terminal emulator
+set $term alacritty
 
 # Font for window titles / title bars
-font pango:JetBrains Mono 10
+#font pango:JetBrains Mono 10
 
 # Customize workspace name:
 # Use variables to avoid repeating the names and for adding custom characters
@@ -242,7 +242,8 @@ bindsym $mod+F7 exec --no-startup-id libreoffice
 bindsym $mod+F8 exec --no-startup-id vlc
 bindsym $mod+F9 exec --no-startup-id freetube
 
-bindsym $mod+n exec --no-startup-id $term -g 95x15+20+60 -e ncmpcpp
+#bindsym $mod+n exec --no-startup-id $term -g 95x15+20+60 -e ncmpcpp
+bindsym $mod+n exec --no-startup-id $term -e ncmpcpp
 bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
 
 # Screenshot (scrot)
