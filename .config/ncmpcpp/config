@@ -50,7 +50,7 @@ mpd_crossfade_time = "5"
 ## }
 ##
 #
-visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_data_source = "/tmp/mpd.fifo"
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp to determine which output
@@ -72,6 +72,7 @@ visualizer_in_stereo = "no"
 ## that sane values start with >=10.
 ##
 #
+# NOTE: deprecated and will be removed in 0.10
 visualizer_sync_interval = "30"
 #
 ##
@@ -194,7 +195,7 @@ alternative_header_first_line_format = "$b$1$au$/a$9 {%t}|{%f} $1$at$/a$9$/b"
 #
 alternative_header_second_line_format = "{{$5$b%a$/b$9}{ - $8%b$9}{ ($5%y$9)}}|{%D}"
 #
-current_item_prefix = "$(9)$r"
+current_item_prefix = "$9$r"
 #
 #current_item_suffix = $/r$(end)
 #
@@ -202,9 +203,9 @@ current_item_prefix = "$(9)$r"
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = "$(9)"
+now_playing_prefix = "$9"
 #
-now_playing_suffix = "$(9)"
+now_playing_suffix = "$9"
 #
 browser_playlist_prefix = "$5>>$9 "
 #
@@ -515,9 +516,9 @@ colors_enabled = "yes"
 #
 empty_tag_color = 9
 #
-header_window_color = "black"
+header_window_color = "blue"
 #
-volume_color = 9
+volume_color = 8
 #
 #state_line_color = default
 #
@@ -536,7 +537,7 @@ progressbar_elapsed_color = 9
 #statusbar_color = default
 #
 #statusbar_time_color = default:b
-statusbar_time_color = blue
+statusbar_time_color = "blue:b"
 #
 #player_state_color = default:b
 #
