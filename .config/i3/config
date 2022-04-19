@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.4.0 - 2022/04/19
+# Version: 3.4.1 - 2022/04/19
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -61,7 +61,7 @@ set $ws10 10:10 󰍡
 # Based on OneDark (Darker) Neovim theme by navarasu
 # See: https://github.com/navarasu/onedark.nvim
 # and .Xresource colors
-#
+
 # Class                  border  backgr  text     indicator child_border
 client.focused           #535965 #535965 #b2bbcc  #535965   #535965
 client.focused_inactive  #31353f #31353f #1f2329  #31353f   #31353f
@@ -284,7 +284,7 @@ bindsym $mod+F8 exec --no-startup-id vlc
 bindsym $mod+F9 exec --no-startup-id freetube
 
 #bindsym $mod+n exec --no-startup-id $term -g 95x15+20+60 -e ncmpcpp
-bindsym $mod+n exec --no-startup-id $float $term -e ncmpcpp
+bindsym $mod+n exec --no-startup-id $term -e ncmpcpp
 bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
 
 # Screenshot (scrot)
