@@ -10,16 +10,19 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.3.0 - 2022/04/12
+# Version: 3.4.0 - 2022/04/19
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
 ###########################################################
 
-## Global variables
-#
-# Mod4 = Super Key
+
+###########################################################
+# General settings
+###########################################################
+
 # Mod1 = Alt Key
+# Mod4 = Super Key
 set $mod Mod4
 
 # Terminal emulator
@@ -40,7 +43,6 @@ set $term alacritty
 # See cheat sheets at:
 # https://pictogrammers.github.io/@mdi/font/6.2.95/
 # https://fontawesome.com/icons
-
 set $ws1 1:1 󰞷
 set $ws2 2:2 󰈹
 set $ws3 3:3 󰉋
@@ -52,35 +54,10 @@ set $ws8 8:8 󰟀
 set $ws9 9:9 󰝰
 set $ws10 10:10 󰍡
 
-## Workspaces Assignment
-#
-# Automatically make a specific window show up on a specific workspace
-# command for get window class name: xprop | awk '/WM_CLASS/{print $4}'
-#assign [class="URxvt"]                      $ws1
-assign [class="firefox"]                    $ws2
-assign [class="Pcmanfm"]                    $ws3
-assign [class="Zathura"]                    $ws5
-assign [class="libreoffice-startcenter"]    $ws5
-assign [class="Gimp"]                       $ws5
-assign [class="Pulseaudio-equalizer"]       $ws6
-assign [class="Pavucontrol"]                $ws6
-assign [class="SimpleScreenRecorder"]       $ws6
-assign [class="vlc"]                        $ws6
-assign [class="FreeTube"]                   $ws6
-# QEMU virt-manager
-assign [class="Virt-manager"]               $ws7
+###########################################################
+# Colors
+###########################################################
 
-# Enable floating mode for selected windows
-set $float floating enable border
-for_window [class="Bleachbit"]              $float
-for_window [class="Lxappearance"]           $float
-for_window [class="Pulseaudio-equalizer"]   $float
-for_window [class="Pavucontrol"]            $float
-for_window [class="SimpleScreenRecorder"]   $float
-for_window [class="vlc"]                    $float
-
-## Colors
-#
 # Based on OneDark (Darker) Neovim theme by navarasu
 # See: https://github.com/navarasu/onedark.nvim
 # and .Xresource colors
@@ -91,8 +68,10 @@ client.focused_inactive  #31353f #31353f #1f2329  #31353f   #31353f
 client.unfocused         #31353f #31353f #1f2329  #31353f   #31353f
 client.urgent            #535965 #535965 #b2bbcc  #535965   #535965
 
-## Windows style
-#
+###########################################################
+# Windows style
+###########################################################
+
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal
 
@@ -122,14 +101,42 @@ workspace 8 gaps top 12
 # Back and forth workplace switching
 workspace_auto_back_and_forth yes
 
-## Keybindings
-#
-## Basics:
-# Direction keys, like Vim
-set $up k
-set $down j
-set $left h
-set $right l
+###########################################################
+# Workspaces settings
+###########################################################
+
+# Automatically make a specific window show up on a specific workspace.
+# You can get window class name with:  xprop | awk '/WM_CLASS/{print $4}'
+
+#assign [class="Alacritty"]                  $ws1
+assign [class="firefox"]                    $ws2
+assign [class="Pcmanfm"]                    $ws3
+assign [class="Zathura"]                    $ws5
+assign [class="libreoffice-startcenter"]    $ws5
+assign [class="Gimp"]                       $ws5
+assign [class="Pulseaudio-equalizer"]       $ws6
+assign [class="Pavucontrol"]                $ws6
+assign [class="SimpleScreenRecorder"]       $ws6
+assign [class="vlc"]                        $ws6
+assign [class="FreeTube"]                   $ws6
+# QEMU virt-manager
+assign [class="Virt-manager"]               $ws7
+
+# Enable floating mode for selected windows
+set $float floating enable border
+for_window [class="Bleachbit"]              $float
+for_window [class="Lxappearance"]           $float
+for_window [class="Pulseaudio-equalizer"]   $float
+for_window [class="Pavucontrol"]            $float
+for_window [class="SimpleScreenRecorder"]   $float
+for_window [class="vlc"]                    $float
+
+###########################################################
+# Keybindings
+###########################################################
+
+# Basic keys:
+#############
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -152,15 +159,22 @@ bindsym $mod+Shift+r restart
 # Exit sway (log out from your session)
 bindsym $mod+Shift+e exec i3-msg exit
 
-## Moving around:
-#
+# Moving keys:
+##############
+
+# Set direction keys like Vim
+set $left h
+set $down j
+set $up k
+set $right l
+
 # Change focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-# Alternatively, you can use the arrow keys:
+# Alternatively, you can always use the arrow keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -178,8 +192,33 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-## Layout:
-#
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Layout:
+#########
+
 # Split in horizontal orientation
 bindsym $mod+b split h
 
@@ -231,7 +270,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-## Applications:
+# Launch applications:
+######################
+
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id $term -e nvim
 bindsym $mod+F3 exec --no-startup-id pcmanfm
@@ -243,7 +284,7 @@ bindsym $mod+F8 exec --no-startup-id vlc
 bindsym $mod+F9 exec --no-startup-id freetube
 
 #bindsym $mod+n exec --no-startup-id $term -g 95x15+20+60 -e ncmpcpp
-bindsym $mod+n exec --no-startup-id $term -e ncmpcpp
+bindsym $mod+n exec --no-startup-id $float $term -e ncmpcpp
 bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
 
 # Screenshot (scrot)
@@ -258,34 +299,11 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
 bindsym $mod+p exec --no-startup-id pavucontrol
 
-## Workspaces:
-#
-# Switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
-# Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+###########################################################
+# Start Up commands and applications
+###########################################################
 
-## Start Up commands and applications
-#
 # Keyboard layout
 exec --no-startup-id setxkbmap it
 
