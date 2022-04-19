@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.5.0 - 2022/04/19
+# Version: 3.5.1 - 2022/04/19
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -123,10 +123,10 @@ bindsym $mod+Shift+p kill
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
-# Restart sway inplace (preserves your layout/session, can be used to upgrade i3)
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# Exit sway (log out from your session)
+# Exit i3 (log out from your session)
 bindsym $mod+Shift+e exec i3-msg exit
 
 # Moving keys:
