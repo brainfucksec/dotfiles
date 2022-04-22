@@ -1,5 +1,9 @@
 configuration {
-
+    modi: "combi,window,drun,run";
+    font: "Cozette 10";
+    //show-icons: true;
+    terminal: "alacritty";
+    combi-modi: "window,drun,run";
 }
 
 @theme "~/.config/rofi/themes/rofi-dark"

@@ -115,7 +115,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id $term
 
 # Start launcher
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # Kill focused window (default `$mod+Shift+q`)
 bindsym $mod+Shift+p kill

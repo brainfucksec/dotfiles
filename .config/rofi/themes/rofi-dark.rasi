@@ -3,7 +3,6 @@
  */
 
 * {
-    font: "Cozette 10";
     background: #1f2329;
     background-color: @background;
     foreground: #b2bbcc;
