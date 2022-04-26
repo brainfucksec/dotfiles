@@ -171,10 +171,10 @@ _G.packer_plugins = {
     path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["vista.vim"] = {
+  tagbar = {
     loaded = true,
-    path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/vista.vim",
-    url = "https://github.com/liuchengxu/vista.vim"
+    path = "/home/brainfuck/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/preservim/tagbar"
   }
 }
 
