@@ -10,7 +10,7 @@
 #
 # i3 configuration file (i3-gaps)
 #
-# Version: 3.5.1 - 2022/04/19
+# Version: 3.5.2 - 2022/05/01
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -29,7 +29,7 @@ set $mod Mod4
 set $term alacritty
 
 # Font for window titles / title bars
-#font pango:JetBrains Mono 10
+font pango:JetBrains Mono 10
 
 # Customize workspace name:
 # Use variables to avoid repeating the names and for adding custom characters
@@ -252,11 +252,10 @@ bindsym $mod+F5 exec --no-startup-id virt-manager
 bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id libreoffice
 bindsym $mod+F8 exec --no-startup-id vlc
-bindsym $mod+F9 exec --no-startup-id freetube
 
-#bindsym $mod+n exec --no-startup-id $term -g 95x15+20+60 -e ncmpcpp
-bindsym $mod+n exec --no-startup-id $term -e ncmpcpp
-bindsym $mod+x exec --no-startup-id xscreensaver-command -lock
+#bindsym $mod+n exec --no-startup-id urxvt -g 95x15+20+60 -e ncmpcpp
+bindsym $mod+n exec --no-startup-id alacritty --class "ncmpcpp" -o "window.dimensions.columns=95" -o "window.dimensions.lines=15" -e ncmpcpp
+bindsym $mod+x exec --no-startup-id sxlock
 
 # Screenshot (scrot)
 bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
@@ -287,7 +286,6 @@ assign [class="Pulseaudio-equalizer"]       $ws6
 assign [class="Pavucontrol"]                $ws6
 assign [class="SimpleScreenRecorder"]       $ws6
 assign [class="vlc"]                        $ws6
-assign [class="FreeTube"]                   $ws6
 # QEMU virt-manager
 assign [class="Virt-manager"]               $ws7
 
@@ -299,6 +297,7 @@ for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
 for_window [class="SimpleScreenRecorder"]   $float
 for_window [class="vlc"]                    $float
+for_window [instance="ncmpcpp"] floating enable move absolute position 20 px 60 px
 
 ###########################################################
 # Start Up commands and applications
