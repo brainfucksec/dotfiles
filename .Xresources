@@ -11,7 +11,7 @@ Xft.lcdfilter: lcddefault
 ! Colors
 ! OneDark (Darker) Theme
 ! special
-*foreground: #a0a8b7
+*foreground: #b2bbcc
 *background: #1f2329
 
 ! black
@@ -43,35 +43,34 @@ Xft.lcdfilter: lcddefault
 *color14: #48b0bd
 
 ! white
-*color7:  #a0a8b7
+*color7:  #b2bbcc
 *color15: #b2bbcc
 
 
 ! URxvt
-URxvt.termName: rxvt-unicode-256color
-URxvt.loginShell: true
-URxvt.scrollstyle: plain
-URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.scrollBar_floating: false
-URxvt.scrollTtyOutput: false
-URxvt.scrollWithBuffer: true
-URxvt.scrollTtyKeypress: true
-URxvt.font: xft:Cozette:size=10
-!URxvt.letterSpace: -1
-URxvt.perl-ext-common: default,-confirm-paste,matcher,selection-to-clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-URxvt.disablePasteBrackets: true
-URxvt.url-launcher: /usr/bin/firefox
-URxvt.matcher.button: 1
-URxvt.altSendsEscape: true
-URxvt.keysym.Control-Up: \033[1;5A
-URxvt.keysym.Control-Down: \033[1;5B
-URxvt.keysym.Control-Left: \033[1;5D
-URxvt.keysym.Control-Right: \033[1;5C
+!URxvt.termName: rxvt-unicode-256color
+!URxvt.loginShell: true
+!URxvt.scrollstyle: plain
+!URxvt.scrollBar: false
+!URxvt.scrollBar_right: false
+!URxvt.scrollBar_floating: false
+!URxvt.scrollTtyOutput: false
+!URxvt.scrollWithBuffer: true
+!URxvt.scrollTtyKeypress: true
+!URxvt.font: xft:Cozette:size=10
+!URxvt.perl-ext-common: default,-confirm-paste,matcher,selection-to-clipboard
+!URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+!URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+!URxvt.iso14755: false
+!URxvt.iso14755_52: false
+!URxvt.disablePasteBrackets: true
+!URxvt.url-launcher: /usr/bin/firefox
+!URxvt.matcher.button: 1
+!URxvt.altSendsEscape: true
+!URxvt.keysym.Control-Up: \033[1;5A
+!URxvt.keysym.Control-Down: \033[1;5B
+!URxvt.keysym.Control-Left: \033[1;5D
+!URxvt.keysym.Control-Right: \033[1;5C
 
 
 ! Xcursor theme
