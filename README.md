@@ -2,16 +2,13 @@
 
 ![alt text](img/1-selfie.png)
 
-![alt text](img/2-dirty.png)
-
-![alt text](img/3-neovim.png)
-
 ---
 
 ### Setup:
 
 Component | Application
 --- | ---
+OS | Arch Linux
 Shell | bash
 Terminal Emulator | alacritty
 Window Manager | i3-gaps ([i3-gaps-next-git](https://aur.archlinux.org/packages/i3-gaps-next-git/))
@@ -28,7 +25,22 @@ RSS Reader | newsboat
 Process Viewer | htop, bottom
 Notification Daemon | dunst
 Fonts | Terminal: [Cozette](https://github.com/slavfox/Cozette), Bar: [ohsnap](https://aur.archlinux.org/packages/ohsnap-otb/)
-Color Scheme | [OneDark](https://github.com/navarasu/onedark.nvim)
+Color Scheme | [OneDark](.Xresources) from [OneDark.nvim](https://github.com/navarasu/onedark.nvim)
 
+### Screenshots
 
-These dotfiles are modified according to my configuration, feel free to take what you need but don't install anything without checking first!
+<details><summary><b>Click to expand</b></summary>
+
+![alt_text](img/1-selfie.png)
+
+![alt text](img/2-dirty.png)
+
+![alt text](img/3-neovim.png)
+
+![alt text](img/4-zathura.png)
+</details>
+
+---
+
+**These are the dotfiles of my daily setup, you can get what you need but check before installing anything :)**
+
