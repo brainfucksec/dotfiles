@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2022/03/04
+# Last modified: 2022/04/12
 # ==============================================================
 
 # ==============================================================
@@ -24,7 +24,6 @@ alias mkdir='mkdir -pv'
 alias cp='cp --preserve=all'
 alias cpv='cp --preserve=all -v'
 alias cpr='cp --preserve=all -R'
-alias rmi='rm -iv'
 alias cpp='rsync -ahW --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
@@ -64,11 +63,10 @@ alias ccd='cd ~/code/dev'
 alias ccg='cd ~/code/git'
 alias cdc='cd ~/documents'
 alias cdl='cd ~/downloads'
-alias cdm='cd ~/media/music'
-alias cdv='cd ~/media/video'
+alias cdm='cd ~/media/'
 alias cds='cd ~/study'
-alias ccm='cd /run/media/"$(whoami)" && ls -1'
-alias cdf='cd ~/.config'
+alias cex='cd /run/media/"$(whoami)" && ls -1'
+alias ccf='cd ~/.config'
 
 # ==============================================================
 # Git aliases
@@ -85,8 +83,9 @@ alias gc='git clone'
 # ==============================================================
 # Applications shortcuts
 # ==============================================================
-alias myip='curl -s https://ipleak.net/json/'
+alias myip='curl -s -m 5 https://ipinfo.io/'
 alias n='note'
+alias nb='newsboat'
 alias z='zathura --fork'
 alias e='nvim'
 alias fl='feh -g 640x480 --scale-down -d -S filename'

@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By brainf+ck
 #
-# Last modified: 2022/05/02
+# Last modified: 2022/05/12
 # ==============================================================
 
 # ==============================================================
@@ -63,21 +63,24 @@ if [[ -x /usr/bin/dircolors ]]; then
     alias ip='ip -color'
 fi
 
-# ==============================================================
-# Prompt
-# ==============================================================
-
 # set color for current user, red for root user
 if [[ "$EUID" -eq 0 ]]; then
     prompt_color="${red}"
 else
-    prompt_color="${cyan}"
+    prompt_color="${white}"
 fi
+
+# color for info
+info_color="${blue}"
+
+# ==============================================================
+# Prompt
+# ==============================================================
 
 # Default prompt
 #PS1='[\u@\h \W]\$ '
 
-PS1='┌──(\[${b}${prompt_color}\]\u\[${reset}\])──[\[${b}${blue}\]\w\[${reset}\]]
+PS1='┌──(\[${b}${prompt_color}\]\u\[${reset}\])──[\[${b}${info_color}\]\w\[${reset}\]]
 └─\[${b}${prompt_color}\]λ\[${reset}\] '
 
 # ==============================================================
