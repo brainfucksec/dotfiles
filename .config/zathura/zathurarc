@@ -69,6 +69,9 @@ set completion-highlight-fg     "#d2ddf1"
 set index-bg                    "#1f2329"
 set index-fg                    "#d2ddf1"
 
+set index-active-bg             "#4fa6ed"
+set index-active-fg             "#1f2329"
+
 set recolor-lightcolor          "#1f2329"
 set recolor-darkcolor           "#d2ddf1"
 
