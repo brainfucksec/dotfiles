@@ -23,7 +23,7 @@ set pages-per-row 1
 set scroll-page-aware true
 
 # scroll velocity
-set scroll-step 70
+set scroll-step 40
 
 # enable copy to clipboard
 set selection-clipboard clipboard
@@ -38,39 +38,39 @@ set guioptions "sv"
 # Font
 set font "Cantarell Bold 10"
 
-# Colors (from .Xresources)
+# Colors (OneDark)
 set default-bg                  "#1f2329"
-set default-fg                  "#b2bbcc"
+set default-fg                  "#d2ddf1"
 
-set statusbar-fg                "#b2bbcc"
 set statusbar-bg                "#1f2329"
+set statusbar-fg                "#4fa6ed"
 
 set inputbar-bg                 "#1f2329"
-set inputbar-fg                 "#b2bbcc"
+set inputbar-fg                 "#d2ddf1"
 
 set notification-bg             "#4fa6ed"
 set notification-fg             "#1f2329"
 
 set notification-error-bg       "#e55561"
-set notification-error-fg       "#b2bbcc"
+set notification-error-fg       "#d2ddf1"
 
 set notification-warning-bg     "#e2b86b"
-set notification-warning-fg     "#b2bbcc"
+set notification-warning-fg     "#d2ddf1"
 
 set highlight-color             "#e2b86b"
 set highlight-active-color      "#e2b86b"
 
 set completion-bg               "#4fa6ed"
-set completion-fg               "#b2bbcc"
+set completion-fg               "#d2ddf1"
 
-set completion-highlight-fg     "#b2bbcc"
 set completion-highlight-bg     "#535965"
+set completion-highlight-fg     "#d2ddf1"
 
-set index-fg                    "#b2bbcc"
 set index-bg                    "#1f2329"
+set index-fg                    "#d2ddf1"
 
 set recolor-lightcolor          "#1f2329"
-set recolor-darkcolor           "#b2bbcc"
+set recolor-darkcolor           "#d2ddf1"
 
 set recolor                     "true"
 set recolor-keephue             "true"
@@ -119,4 +119,3 @@ map [fullscreen] <C-i> jumplist forward
 ## My shortcuts
 map g reload
 map c recolor
-map i toggle_index
