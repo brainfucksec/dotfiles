@@ -3,7 +3,7 @@
 # $HOME/.bashrc FILE
 # By brainf+ck
 #
-# Last modified: 2022/05/12
+# Last modified: 2022/05/17
 # ==============================================================
 
 # ==============================================================
@@ -70,7 +70,7 @@ else
     prompt_color="${white}"
 fi
 
-# color for info
+# set information color (i.e. pwd, etc.)
 info_color="${blue}"
 
 # ==============================================================
