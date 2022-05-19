@@ -2,7 +2,7 @@
 #
 # newsboat configuration file
 #
-# date: 2022-04-09
+# date: 2022-05-19
 # maintainer: brainf+ck
 # website: https://github.com/brainfucksec/dotfiles
 #
@@ -25,15 +25,15 @@ reload-time 60
 
 ### Keybindings ###
 # vim keybinds
-unbind-key k
-unbind-key j
-unbind-key l
 unbind-key h
+unbind-key j
+unbind-key k
+unbind-key l
 
-bind-key k up
-bind-key j down
-bind-key l open
 bind-key h quit
+bind-key j down
+bind-key k up
+bind-key l open
 
 ### Formatting ###
 feedlist-format "%?T?  %8u  %t  %4S & %t ?"
