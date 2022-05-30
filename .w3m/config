@@ -1,3 +1,4 @@
+user_agent Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0
 tabstop 4
 indent_incr 4
 pixel_per_char 7
@@ -97,9 +98,9 @@ pre_form_file ~/.w3m/pre_form
 siteconf_file ~/.w3m/siteconf
 user_agent
 no_referer 1
-accept_language en;q=1.0
-accept_encoding gzip, compress, bzip, bzip2, deflate
-accept_media text/html, text/*;q=0.5, image/*
+accept_language en-US,en;q=0.5
+accept_encoding gzip, deflate
+accept_media text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 argv_is_url 1
 retry_http 1
 default_url 1
