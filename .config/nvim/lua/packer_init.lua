@@ -23,6 +23,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     'https://github.com/wbthomason/packer.nvim',
     install_path
   })
+  vim.o.runtimepath = vim.fn.stdpath('data') .. '/site/pack/*/start/*,' .. vim.o.runtimepath
 end
 
 -- Autocommand that reloads neovim whenever you save the packer_init.lua file
@@ -89,7 +90,7 @@ return packer.startup(function(use)
 
   -- Statusline
   use {
-    'famiu/feline.nvim',
+    'feline-nvim/feline.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
 
