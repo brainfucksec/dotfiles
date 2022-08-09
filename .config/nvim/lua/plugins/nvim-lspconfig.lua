@@ -19,7 +19,17 @@ if not cmp_status_ok then
 end
 
 -- Diagnostic options, see: `:help vim.diagnostic.config`
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({
+  update_in_insert = true,
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+	},
+})
 
 -- Show line diagnostics automatically in hover window
 vim.cmd([[
@@ -97,20 +107,13 @@ Language servers setup:
 For language servers list see:
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
-Bash --> bashls
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls
+Language server installed:
 
-Python --> pyright
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
-
-C-C++ --> clangd
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd
-
-HTML/CSS/JSON --> vscode-html-languageserver
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html
-
-JavaScript/TypeScript --> tsserver
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
+Bash          -> bashls
+Python        -> pyright
+C-C++         -> clangd
+HTML/CSS/JSON -> vscode-html-languageserver
+JavaScript/TypeScript -> tsserver
 
 --]]
 
