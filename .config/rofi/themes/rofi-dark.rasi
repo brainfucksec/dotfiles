@@ -75,8 +75,8 @@
 }
 
 #element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color: @alternate-active-foreground;
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
 }
 
 #scrollbar {
