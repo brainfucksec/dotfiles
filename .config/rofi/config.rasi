@@ -1,6 +1,6 @@
 configuration {
     modi: "combi,window,drun,run";
-    font: "Cozette 10";
+    font: "JetBrainsMono Nerd Font Mono 9";
     //show-icons: true;
     terminal: "alacritty";
     combi-modi: "window,drun,run";
