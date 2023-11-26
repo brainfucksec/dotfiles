@@ -20,9 +20,9 @@ window:
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  dimensions:
-    columns: 80
-    lines: 30
+  #dimensions:
+  #  columns: 80
+  #  lines: 30
 
   # Window position (changes require restart)
   #
@@ -38,7 +38,7 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 1
-    y: 2
+    y: 1
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -91,52 +91,52 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Cozette
+    family: JetBrainsMono NFM
 
     # The `style` can be specified to pick a specific face.
     style: Medium
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: JetBrainsMono NFM
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: JetBrainsMono NFM
 
-      # The `style` can be specified to pick a specific face.
-      #style: Italic
+    # The `style` can be specified to pick a specific face.
+    style: Italic
 
   # Bold italic font face
-  #bold_italic:
+  bold_italic:
       # Font family
       #
       # If the bold italic family is not specified, it will fall back to the
       # value specified for the normal font.
-      #family: monospace
+      family: JetBrainsMono NFM
 
       # The `style` can be specified to pick a specific face.
-      #style: Bold italic
+      style: Bold italic
 
   # Point size
-  size: 10
+  size: 9
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  offset:
-    x: 1
+  #offset:
+  #  x: 0
   #  y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with

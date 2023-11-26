@@ -2,11 +2,11 @@
 -- Statusline configuration file
 -----------------------------------------------------------
 
--- Plugin: feline.nvim
--- url: https://github.com/feline-nvim/feline.nvim
+-- Plugin: feline.nvim (freddiehaddad fork)
+-- URL: https://github.com/freddiehaddad/feline.nvim
 
 -- For the configuration see the Usage section:
--- https://github.com/feline-nvim/feline.nvim/blob/master/USAGE.md
+-- https://github.com/freddiehaddad/feline.nvim/blob/master/USAGE.md
 
 -- Thanks to ibhagwan for the example to follow:
 -- https://github.com/ibhagwan/nvim-lua
@@ -91,18 +91,18 @@ local comps = {
         local extension = vim.fn.expand '%:e'
         local icon = require('nvim-web-devicons').get_icon(extension)
         if icon == nil then
-          icon = ' '
+          icon = ''
         end
         return ' ' .. icon .. ' ' .. type
       end,
-      hl = { fg = colors.fg },
+      hl = { fg = colors.cyan },
       left_sep = {
         str = ' ' .. separator,
         hl = { fg = colors.fg },
       },
       righ_sep = ' ',
     },
-    -- Operating system
+    -- Operating System
     os = {
       provider = function()
         local os = vim.bo.fileformat:lower()
@@ -114,13 +114,19 @@ local comps = {
         else
           icon = '  '
         end
-        return icon .. os
+        --return icon .. os
+        return icon
       end,
       hl = { fg = colors.fg },
       left_sep = {
         str = ' ' .. separator,
         hl = { fg = colors.fg },
       },
+    },
+    -- File encoding
+    encoding = {
+      provider = { name = 'file_encoding' },
+      hl = { fg = colors.fg },
       right_sep = {
         str = ' ' .. separator,
         hl = { fg = colors.fg },
@@ -248,6 +254,7 @@ table.insert(components.active[2], comps.diagnos.info)
 table.insert(components.active[2], comps.lsp.name)
 table.insert(components.active[2], comps.file.type)
 table.insert(components.active[2], comps.file.os)
+table.insert(components.active[2], comps.file.encoding)
 table.insert(components.active[2], comps.file.position)
 table.insert(components.active[2], comps.file.line_percentage)
 

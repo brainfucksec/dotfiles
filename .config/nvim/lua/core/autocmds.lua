@@ -8,6 +8,9 @@
 local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
 
+-- General settings:
+--------------------
+
 -- Highlight on yank
 augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
@@ -19,17 +22,19 @@ autocmd('TextYankPost', {
 
 -- Remove whitespace on save
 autocmd('BufWritePre', {
-  pattern = '*',
+  pattern = '',
   command = ":%s/\\s\\+$//e"
 })
 
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
-  pattern = '*',
+  pattern = '',
   command = 'set fo-=c fo-=r fo-=o'
 })
 
 -- Settings for filetypes:
+--------------------------
+
 -- Disable line length marker
 augroup('setLineLength', { clear = true })
 autocmd('Filetype', {
@@ -49,6 +54,8 @@ autocmd('Filetype', {
 })
 
 -- Terminal settings:
+---------------------
+
 -- Open a Terminal on the right tab
 autocmd('CmdlineEnter', {
   command = 'command! Term :botright vsplit term://$SHELL'
@@ -60,7 +67,7 @@ autocmd('TermOpen', {
 })
 
 autocmd('TermOpen', {
-  pattern = '*',
+  pattern = '',
   command = 'startinsert'
 })
 
@@ -69,3 +76,4 @@ autocmd('BufLeave', {
   pattern = 'term://*',
   command = 'stopinsert'
 })
+
