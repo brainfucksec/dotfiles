@@ -8,9 +8,9 @@
 #   ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
 #
 #
-# i3 configuration file (i3-gaps)
+# i3 configuration file
 #
-# Version: 3.5.4 - 2022/05/15
+# Version: 3.6.0 - 2024/02/03
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -288,13 +288,17 @@ assign [class="SimpleScreenRecorder"]       $ws6
 assign [class="vlc"]                        $ws6
 # QEMU virt-manager
 assign [class="Virt-manager"]               $ws7
+assign [class="Gajim"]                      $ws10
+assign [class="Signal"]                     $ws10
 
 # Enable floating mode for selected windows
 set $float floating enable border
 for_window [class="Bleachbit"]              $float
+for_window [class="Gajim"]                  $float
 for_window [class="Lxappearance"]           $float
 for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
+for_window [class="Signal"]                 $float
 for_window [class="SimpleScreenRecorder"]   $float
 for_window [class="vlc"]                    $float
 for_window [instance="ncmpcpp"] floating enable move absolute position 20 px 60 px
