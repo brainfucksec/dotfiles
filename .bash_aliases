@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2022/04/12
+# Last modified: 2024/08/05
 # ==============================================================
 
 # ==============================================================
@@ -14,7 +14,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias lm='ls | more'
-alias ll='ls -lFh'
+alias ll='ls -lFh --group-directories-first'
 alias la='ls -alFh --group-directories-first'
 alias l1='ls -1F --group-directories-first'
 alias l1m='ls -1F --group-directories-first | more'
@@ -24,7 +24,7 @@ alias mkdir='mkdir -pv'
 alias cp='cp --preserve=all'
 alias cpv='cp --preserve=all -v'
 alias cpr='cp --preserve=all -R'
-alias cpp='rsync -ahW --info=progress2'
+alias cpp='rsync -ahzXW --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 alias q='exit'
@@ -65,7 +65,7 @@ alias cdc='cd ~/documents'
 alias cdl='cd ~/downloads'
 alias cdm='cd ~/media/'
 alias cds='cd ~/study'
-alias cex='cd /run/media/"$(whoami)" && ls -1'
+alias cex='cd /mnt && ls -1'
 alias ccf='cd ~/.config'
 
 # ==============================================================
@@ -83,7 +83,8 @@ alias gc='git clone'
 # ==============================================================
 # Applications shortcuts
 # ==============================================================
-alias myip='curl -s -m 5 https://ipinfo.io/'
+alias bc='bc -l'
+alias myip='curl https://ipapi.co/json'
 alias n='note'
 alias nb='newsboat'
 alias z='zathura --fork'

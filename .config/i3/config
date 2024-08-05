@@ -10,7 +10,7 @@
 #
 # i3 configuration file
 #
-# Version: 3.6.0 - 2024/02/03
+# Version: 3.7.0 - 2024/08/05
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -252,6 +252,7 @@ bindsym $mod+F5 exec --no-startup-id virt-manager
 bindsym $mod+F6 exec --no-startup-id gimp
 bindsym $mod+F7 exec --no-startup-id libreoffice
 bindsym $mod+F8 exec --no-startup-id vlc
+bindsym $mod+F9 exec --no-startup-id torbrowser-launcher
 
 #bindsym $mod+n exec --no-startup-id urxvt -g 80x15+20+60 -e ncmpcpp
 bindsym $mod+n exec --no-startup-id alacritty --class "ncmpcpp" -o "window.dimensions.columns=80" -o "window.dimensions.lines=15" -e ncmpcpp
@@ -278,6 +279,7 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 
 #assign [class="Alacritty"]                  $ws1
 assign [class="firefox"]                    $ws2
+assign [class="Tor"]                        $ws2
 assign [class="Pcmanfm"]                    $ws3
 assign [class="Zathura"]                    $ws5
 assign [class="libreoffice-startcenter"]    $ws5
@@ -300,7 +302,9 @@ for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
 for_window [class="Signal"]                 $float
 for_window [class="SimpleScreenRecorder"]   $float
+for_window [class="Tor"]                    $float
 for_window [class="vlc"]                    $float
+# opens ncmpcpp in the top left corner
 for_window [instance="ncmpcpp"] floating enable move absolute position 20 px 60 px
 
 ###########################################################
