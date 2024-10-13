@@ -8,7 +8,7 @@
 export PATH="$PATH:$HOME/bin"
 
 # `grep default` highlight color
-export GREP_COLOR="1;32"
+export GREP_COLORS="mt=1;32"
 
 # EDITOR
 export EDITOR="nvim"
@@ -29,3 +29,6 @@ export PF_INFO="ascii os kernel uptime pkgs shell editor wm"
 
 # Override style of Qt applications
 export QT_STYLE_OVERRIDE="kvantum"
+
+# bat: set config file path
+export BAT_CONFIG_PATH="/home/brainfuck/.config/bat/config"
