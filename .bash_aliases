@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2024/08/05
+# Last modified: 2024/11/01
 # ==============================================================
 
 # ==============================================================
@@ -55,6 +55,9 @@ alias md='mountdev'
 alias ud='unmountdev'
 alias pd='poweroff_dev'
 alias lkf='lsblk -f'
+
+# journalctl
+sudo journalctl -b | grep -i "error\|warning\|failed"
 
 # ==============================================================
 # Directories shortcuts
