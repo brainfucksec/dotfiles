@@ -1,4 +1,28 @@
-live_config_reload = true
+# Alacritty - TOML configuration file format.
+#
+# Alacritty's configuration file uses the TOML format.
+# The format's specification can be found at https://toml.io/en/v1.0.0.
+#
+# See: man 5 alacritty or https://alacritty.org/config-alacritty.html
+#
+# by brainf+ck | Update: 2024/11/10
+
+[env]
+TERM = "alacritty"
+
+[window]
+#dimensions = { columns = 85, lines = 30 }
+padding = { x = 1, y = 1 }
+
+[scrolling]
+history = 10000
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Medium" }
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold italic" }
+size = 9
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -27,43 +51,5 @@ yellow = "#e2b86b"
 background = "#1f2329"
 foreground = "#b2bbcc"
 
-[cursor.style]
-blinking = "Off"
-shape = "Block"
-
-[env]
-TERM = "xterm-256color"
-
-[font]
-size = 9
-
-[font.bold]
-family = "JetBrainsMono NFM"
-style = "Bold"
-
-[font.bold_italic]
-family = "JetBrainsMono NFM"
-style = "Bold italic"
-
-[font.italic]
-family = "JetBrainsMono NFM"
-style = "Italic"
-
-[font.normal]
-family = "JetBrainsMono NFM"
-style = "Medium"
-
-[scrolling]
-history = 3000
-
-[window]
-dynamic_title = true
-title = "Alacritty"
-
-[window.class]
-general = "Alacritty"
-instance = "Alacritty"
-
-[window.padding]
-x = 1
-y = 1
+[cursor]
+style = { shape = "Block", blinking = "Off" }
