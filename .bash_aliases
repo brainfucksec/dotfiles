@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2024/11/01
+# Last modified: 2024/11/09
 # ==============================================================
 
 # ==============================================================
@@ -56,9 +56,6 @@ alias ud='unmountdev'
 alias pd='poweroff_dev'
 alias lkf='lsblk -f'
 
-# journalctl
-sudo journalctl -b | grep -i "error\|warning\|failed"
-
 # ==============================================================
 # Directories shortcuts
 # ==============================================================
@@ -87,14 +84,14 @@ alias gc='git clone'
 # Applications shortcuts
 # ==============================================================
 alias bc='bc -l'
+alias cl='bleachbit -c --preset'
+alias e='nvim'
+alias fl='feh -g 640x480 --scale-down -d -S filename'
+alias gu='gitupdate'
 alias myip='curl https://ipapi.co/json'
 alias n='note'
 alias nb='newsboat'
-alias z='zathura --fork'
-alias e='nvim'
-alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias ytmp3="yt-dlp --config-location ~/.config/yt-dlp/config"
-alias gu='gitupdate'
-alias cl='bleachbit -c --preset'
 alias w3m='w3m https://duckduckgo.com'
+alias z='zathura --fork'
 alias sv='sudo virsh'
