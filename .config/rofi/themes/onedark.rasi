@@ -72,6 +72,8 @@
     handle: @handle-color;
 }
 
+/***** [ Configuration ] *****/
+
 * {
   border: 0;
   margin: 0;
@@ -100,9 +102,9 @@ inputbar {
 }
 
 entry {
-    background-color: @entry-bg;
+    background-color: @blue-alt;
     padding: 10px;
-    text-color: @entry-fg;
+    text-color: @blue;
 }
 
 listview {
@@ -124,7 +126,7 @@ element-text {
 }
 
 element-text selected {
-    background-color: @bg-sel;
-    text-color: @fg-sel;
+    background-color: @bg;
+    text-color: @red;
 }
 
