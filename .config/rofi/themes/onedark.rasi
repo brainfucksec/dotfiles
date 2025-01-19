@@ -1,16 +1,68 @@
 /***************************************************
- * rofi Color Scheme
- * Name: OneDark
- * Maintainer: brainf+ck
- * Date: 2025-01-19
- *
- * colors.rasi
+ * rofi color scheme
+ * name: OneDark
+ * maintainer: brainf+ck
+ * date: 2025-01-19
  ***************************************************/
 
-/* Comment */
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+    width: 490;
+    height: 300;
+    border: 6px;
+    border-color: @color1;
+    padding: 6px;
+    transparency: "real";
+}
+
+mainbox {
+    children: [inputbar, listview];
+}
+
+inputbar {
+    border: 0 0 0 2px;
+    border-color: @blue;
+    children: [entry];
+    margin: 0 0 6px 0;
+}
+
+entry {
+    background-color: @entry-bg;
+    padding: 10px;
+    text-color: @entry-fg;
+}
+
+listview {
+    lines: 10;
+}
+
+element {
+    border: 0 0 0 2px;
+    border-color: @bg;
+    children: [element-text];
+}
+
+element selected {
+    border-color: @sel;
+}
+
+element-text {
+    padding: 10px;
+}
+
+element-text selected {
+    background-color: @bg-sel;
+    text-color: @fg-sel;
+}
 
 * {
-    /***** [ Custom Colors ] *****/
+    /***** [ Colors ] *****/
 
     color1:           #1F2329;
     color2:           #ABB2BF;

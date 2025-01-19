@@ -5,4 +5,4 @@ configuration {
     terminal: "alacritty";
 }
 
-@theme "~/.config/rofi/themes/onedark/style.rasi"
+@theme "~/.config/rofi/themes/onedark.rasi"
