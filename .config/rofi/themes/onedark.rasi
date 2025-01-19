@@ -11,36 +11,37 @@
     color1:           #1F2329;
     color2:           #ABB2BF;
 
-    blue:         #61AFEF;
-    blue-alt:     #61AFEF15;
+    blue:         #4FA6ED;
+    blue-alt:     #4FA6ED15;
     red:          #E06C75;
     red-alt:      #E06C7515;
+    white:        #B2BBCC;
 
     /***** [ Elements ] *****/
 
     background:             @color1;
-    background-alt:         white;
+    background-alt:         @white;
     background-selected:    @red-alt;
-    background-active:      white;
-    background-urgent:      white;
+    background-active:      @white;
+    background-urgent:      @white;
 
     foreground:             @color2;
-    foreground-alt:         white;
+    foreground-alt:         @white;
     foreground-selected:    @red;
-    foreground-active:      white;
-    foreground-urgent:      white;
+    foreground-active:      @white;
+    foreground-urgent:      @white;
 
     background-color:       @color1;
     text-color:             @color2;
-    border-color:           white;
-    separator-color:        white;
-    placeholder-color:      white; /* textbox placeholder */
+    border-color:           @white;
+    separator-color:        @white;
+    placeholder-color:      @white; /* textbox placeholder */
     handle-color:           transparent; /* scrollbar handle */
-    highlight:         bold white;
-    normal:                 white;
+    highlight:              @blue;
+    normal:                 @white;
     selected:               @red;
-    active:                 white;
-    urgent:                 white;
+    active:                 @white;
+    urgent:                 @white;
 
     entry-bg:               @blue-alt;
     entry-fg:               @blue;
@@ -95,7 +96,7 @@ mainbox {
 }
 
 inputbar {
-    border: 0 0 0 2px;
+    border: 0 0 0 3px;
     border-color: @blue;
     children: [entry];
     margin: 0 0 6px 0;
@@ -112,7 +113,7 @@ listview {
 }
 
 element {
-    border: 0 0 0 2px;
+    border: 0 0 0 3px;
     border-color: @bg;
     children: [element-text];
 }
@@ -127,6 +128,6 @@ element-text {
 
 element-text selected {
     background-color: @bg;
-    text-color: @red;
+    text-color: @fg;
 }
 

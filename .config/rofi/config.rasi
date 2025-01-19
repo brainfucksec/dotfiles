@@ -3,10 +3,6 @@ configuration {
     combi-modi: "window,drun,run";
     font: "JetBrainsMono Nerd Font Mono 9";
     terminal: "alacritty";
-    timeout {
-        delay: 10;
-        action: "kb-cancel";
-    }
 }
 
 @theme "~/.config/rofi/themes/onedark.rasi"
