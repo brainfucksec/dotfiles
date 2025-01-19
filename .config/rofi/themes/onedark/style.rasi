@@ -40,7 +40,7 @@ configuration {
 window {
     width: 490;
     height: 300;
-    border: 4px;
+    border: 6px;
     border-color: @color1;
     padding: 6px;
     transparency: "real";
