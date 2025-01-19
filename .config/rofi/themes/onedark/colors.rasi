@@ -1,0 +1,77 @@
+/***************************************************
+ * rofi Color Scheme
+ * Name: OneDark
+ * Maintainer: brainf+ck
+ * Date: 2025-01-19
+ *
+ * colors.rasi
+ ***************************************************/
+
+/* Comment */
+
+* {
+    /***** [ Custom Colors ] *****/
+
+    color1:           #1F2329;
+    color2:           #ABB2BF;
+
+    blue:         #61AFEF;
+    blue-alt:     #61AFEF15;
+    red:          #E06C75;
+    red-alt:      #E06C7515;
+
+    /***** [ Elements ] *****/
+
+    background:             @color1;
+    background-alt:         white;
+    background-selected:    @red-alt;
+    background-active:      white;
+    background-urgent:      white;
+
+    foreground:             @color2;
+    foreground-alt:         white;
+    foreground-selected:    @red;
+    foreground-active:      white;
+    foreground-urgent:      white;
+
+    background-color:       @color1;
+    text-color:             @color2;
+    border-color:           white;
+    separator-color:        white;
+    placeholder-color:      white; /* textbox placeholder */
+    handle-color:           transparent; /* scrollbar handle */
+    highlight:         bold white;
+    normal:                 white;
+    selected:               @red;
+    active:                 white;
+    urgent:                 white;
+
+    entry-bg:               @blue-alt;
+    entry-fg:               @blue;
+
+    /***** [ Aliases ] *****/
+
+    /* DO NOT TOUCH HERE */
+
+    bg: @background;
+    bg-alt: @background-alt;
+    bg-sel: @background-selected;
+    bg-act: @background-active;
+    bg-urg: @background-urgent;
+
+    fg: @foreground;
+    fg-alt: @foreground-alt;
+    fg-sel: @foreground-selected;
+    fg-act: @foreground-active;
+    fg-urg: @foreground-urgent;
+
+    sel: @selected;
+    act: @active;
+    urg: @urgent;
+    text: @text-color;
+    txt: @text-color;
+    border: @border-color;
+    separator: @separator-color;
+    placeholder: @placeholder-color;
+    handle: @handle-color;
+}

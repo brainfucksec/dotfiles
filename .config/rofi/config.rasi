@@ -1,9 +1,8 @@
 configuration {
     modi: "combi,window,drun,run";
     font: "JetBrainsMono Nerd Font Mono 9";
-    //show-icons: true;
     terminal: "alacritty";
     combi-modi: "window,drun,run";
 }
 
-@theme "~/.config/rofi/themes/rofi-dark"
+@theme "~/.config/rofi/themes/onedark/style.rasi"
