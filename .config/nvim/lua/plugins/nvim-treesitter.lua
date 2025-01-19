@@ -3,8 +3,7 @@
 ----------------------------------------------------------
 
 -- Plugin: nvim-treesitter
--- url: https://github.com/nvim-treesitter/nvim-treesitter
-
+-- URL: https://github.com/nvim-treesitter/nvim-treesitter
 
 local status_ok, nvim_treesitter = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then
@@ -14,9 +13,12 @@ end
 -- See: https://github.com/nvim-treesitter/nvim-treesitter#quickstart
 nvim_treesitter.setup {
   -- A list of parser names, or "all"
+  -- See: `TSInstallInfo` commmand
   ensure_installed = {
-    'bash', 'c', 'cpp', 'css', 'html', 'javascript', 'json', 'lua', 'python',
-    'rust', 'typescript', 'vim', 'yaml',
+    'angular', 'awk', 'bash', 'c', 'c_sharp', 'cmake', 'cpp', 'css', 'csv',
+    'go', 'haskell', 'html', 'http', 'java', 'javascript', 'json', 'lua',
+    'luadoc', 'make', 'markdown', 'markdown_inline', 'nix', 'perl', 'python',
+    'ruby','rust', 'sql', 'toml', 'typescript', 'vim', 'yaml',
   },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,

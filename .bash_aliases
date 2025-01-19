@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2024/11/09
+# Last modified: 2024/12/29
 # ==============================================================
 
 # ==============================================================
@@ -41,6 +41,9 @@ alias ssc='sudo systemctl'
 alias sc='systemctl'
 alias scr='systemctl -t service -a --state running --no-page --no-legend'
 alias scf='systemctl --failed | head -n -6 | tail -n -1'
+
+# network
+alias snm='sudo network-manager'
 
 # memory/cpu
 alias df='df -Tha --total'

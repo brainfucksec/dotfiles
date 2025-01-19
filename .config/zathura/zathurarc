@@ -43,7 +43,7 @@ set default-bg                  "#1f2329"
 set default-fg                  "#d2ddf1"
 
 set statusbar-bg                "#1f2329"
-set statusbar-fg                "#4fa6ed"
+set statusbar-fg                "#d2ddf1"
 
 set inputbar-bg                 "#1f2329"
 set inputbar-fg                 "#d2ddf1"
