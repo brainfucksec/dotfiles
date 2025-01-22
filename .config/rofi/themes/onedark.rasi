@@ -105,7 +105,7 @@ inputbar {
 entry {
     background-color: @blue-alt;
     padding: 10px;
-    text-color: @blue;
+    text-color: @fg;
 }
 
 listview {
