@@ -1,133 +1,111 @@
-/***************************************************
- * rofi color scheme
- * name: OneDark
- * maintainer: brainf+ck
- * date: 2025-01-19
- ***************************************************/
+/**********************************************************
 
- * {
-    /***** [ Colors ] *****/
+Rofi Theme: OneDark
+Description: Simple theme for rofi launcher with OneDark colors
+Author: brainf+ck
+Source: https://github.com/brainfucksec/dotfiles
+Last Update: Sun Jan 26 01:08:33 PM UTC 2025
 
-    color1:           #1F2329;
-    color2:           #ABB2BF;
-
-    blue:         #4FA6ED;
-    blue-alt:     #4FA6ED15;
-    red:          #E06C75;
-    red-alt:      #E06C7515;
-    white:        #B2BBCC;
-
-    /***** [ Elements ] *****/
-
-    background:             @color1;
-    background-alt:         @white;
-    background-selected:    @red-alt;
-    background-active:      @white;
-    background-urgent:      @white;
-
-    foreground:             @color2;
-    foreground-alt:         @white;
-    foreground-selected:    @red;
-    foreground-active:      @white;
-    foreground-urgent:      @white;
-
-    background-color:       @color1;
-    text-color:             @color2;
-    border-color:           @white;
-    separator-color:        @white;
-    placeholder-color:      @white; /* textbox placeholder */
-    handle-color:           transparent; /* scrollbar handle */
-    highlight:              @blue;
-    normal:                 @white;
-    selected:               @red;
-    active:                 @white;
-    urgent:                 @white;
-
-    entry-bg:               @blue-alt;
-    entry-fg:               @blue;
-
-    /***** [ Aliases ] *****/
-
-    /* DO NOT TOUCH HERE */
-
-    bg: @background;
-    bg-alt: @background-alt;
-    bg-sel: @background-selected;
-    bg-act: @background-active;
-    bg-urg: @background-urgent;
-
-    fg: @foreground;
-    fg-alt: @foreground-alt;
-    fg-sel: @foreground-selected;
-    fg-act: @foreground-active;
-    fg-urg: @foreground-urgent;
-
-    sel: @selected;
-    act: @active;
-    urg: @urgent;
-    text: @text-color;
-    txt: @text-color;
-    border: @border-color;
-    separator: @separator-color;
-    placeholder: @placeholder-color;
-    handle: @handle-color;
-}
-
-/***** [ Configuration ] *****/
+***********************************************************/
 
 * {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+    background: #1f2329;
+    background-alt: #4fa6ed;
+    background-color: @background;
+    foreground: #b2bbcc;
+    foreground-alt: #4e545f;
+
+    normal-background: @background;
+    normal-foreground: @foreground;
+
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+
+    selected-normal-background: @foreground-alt;
+    selected-normal-foreground: @background-alt;
+    spacing: 2;
 }
 
-window {
+#window {
+    background-color: @background;
+    border: 3;
+    border-color: @foreground-alt;
+    padding: 1.5ch;
     width: 490;
-    height: 300;
-    border: 6px;
-    border-color: @color1;
-    padding: 6px;
-    transparency: "real";
+    height: 290;
 }
 
-mainbox {
-    children: [inputbar, listview];
+#mainbox {
+    border: 3;
+    padding: 0;
 }
 
-inputbar {
-    border: 0 0 0 3px;
-    border-color: @blue;
-    children: [entry];
-    margin: 0 0 6px 0;
+#textbox {
+    text-color: @foreground;
 }
 
-entry {
-    background-color: @blue-alt;
-    padding: 10px;
-    text-color: @fg;
+#inputbar {
+    children: [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 
-listview {
-    lines: 10;
+#textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0px 0.3em 0em 0em;
+    text-color: @foreground;
 }
 
-element {
-    border: 0 0 0 3px;
-    border-color: @bg;
-    children: [element-text];
+#element {
+    border: 0;
+    padding: 1px;
 }
 
-element selected {
-    border-color: @sel;
+#element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
 }
 
-element-text {
-    padding: 10px;
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
 }
 
-element-text selected {
-    background-color: @bg;
-    text-color: @fg;
+
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
 }
 
+
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+
+#element.alternate.active {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+
+#scrollbar {
+    width: 2px;
+    border: 0px;
+    handle-width: 0px;
+    padding: 0px;
+}
+
+#inputbar {
+    spacing: 2;
+    text-color: @normal-foreground;
+    padding: 4px;
+}
+
+#entry {
+    spacing: 0;
+    text-color: @normal-foreground;
+}
+
+#prompt {
+    spacing: 0;
+    text-color: @normal-foreground;
+}
