@@ -11,7 +11,7 @@ Component | Application
 OS | Arch Linux
 Shell | bash
 Terminal Emulator | alacritty
-Window Manager | i3-gaps ([i3-gaps-next-git](https://aur.archlinux.org/packages/i3-gaps-next-git/))
+Window Manager | i3-wm
 Bar | polybar
 Program Launcher | rofi
 Compositor | picom
