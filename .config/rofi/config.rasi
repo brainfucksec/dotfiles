@@ -1,8 +1,9 @@
 configuration {
-    modes: [ combi, run, drun ];
-    combi-modes: [ run, drun ];
+    modes: [ combi, run, drun, window ];
+    combi-modes: [ run, drun, window ];
     font: "JetBrainsMono Nerd Font Mono 9";
     terminal: "alacritty";
+    //show-icons: true;
 }
 
 @theme "onedark.rasi"
