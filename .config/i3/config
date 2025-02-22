@@ -7,10 +7,9 @@
 #   ██║██████╔╝╚███╔███╔╝██║ ╚═╝ ██║
 #   ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
 #
-#
 # i3 configuration file
 #
-# Version: 3.7.0 - 2024/08/05
+# Version: 3.8.0 - 2025/02/22
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -264,9 +263,9 @@ bindsym Print exec --no-startup-id scrot -d 1 '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/t
 bindsym --release $mod+q exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/tmp'
 
 # Audio controls (PulseAudio)
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
 bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
 bindsym $mod+p exec --no-startup-id pavucontrol
 
@@ -290,13 +289,11 @@ assign [class="SimpleScreenRecorder"]       $ws6
 assign [class="vlc"]                        $ws6
 # QEMU virt-manager
 assign [class="Virt-manager"]               $ws7
-assign [class="Gajim"]                      $ws10
 assign [class="Signal"]                     $ws10
 
 # Enable floating mode for selected windows
 set $float floating enable border
 for_window [class="Bleachbit"]              $float
-for_window [class="Gajim"]                  $float
 for_window [class="Lxappearance"]           $float
 for_window [class="Pulseaudio-equalizer"]   $float
 for_window [class="Pavucontrol"]            $float
