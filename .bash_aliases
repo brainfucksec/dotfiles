@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2024/12/29
+# Last modified: 2025/01/05
 # ==============================================================
 
 # ==============================================================
@@ -24,7 +24,7 @@ alias mkdir='mkdir -pv'
 alias cp='cp --preserve=all'
 alias cpv='cp --preserve=all -v'
 alias cpr='cp --preserve=all -R'
-alias cpp='rsync -ahzXW --info=progress2'
+alias cpp='rsync -ahX --info=progress2'
 alias cs='printf "\033c"'
 alias src='source ~/.bashrc'
 alias q='exit'
@@ -62,6 +62,8 @@ alias lkf='lsblk -f'
 # ==============================================================
 # Directories shortcuts
 # ==============================================================
+alias h='cd ~/'
+alias cdh='cd ~/'
 alias ccd='cd ~/code/dev'
 alias ccg='cd ~/code/git'
 alias cdc='cd ~/documents'
