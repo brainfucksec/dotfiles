@@ -1,8 +1,14 @@
 ##############################################################################
 ##                                                                          ##
 ## ncmpcpp configuration file                                               ##
+## See example configuration file: /usr/share/doc/ncmpcpp/config            ##
+## This file must be on: $XDG_CONFIG_HOME/ncmpcpp/config or                 ##
+## $HOME/.ncmpcpp/config                                                    ##
 ##                                                                          ##
+## Maintainer: brainf+ck                                                    ##
+## Last Update: 2025-05-11                                                  ##
 ##############################################################################
+
 #
 ##### directories ######
 ##
@@ -27,6 +33,8 @@ mpd_host = "127.0.0.1"
 #
 mpd_port = "6600"
 #
+#mpd_password = ""
+#
 mpd_connection_timeout = "5"
 #
 ## Needed for tag editor and file operations to work.
@@ -34,6 +42,10 @@ mpd_connection_timeout = "5"
 mpd_music_dir = "~/media/music"
 #
 mpd_crossfade_time = "5"
+#
+# Exclude pattern for random song action
+# http://www.boost.org/doc/libs/1_46_1/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
+#random_exclude_pattern = "^(temp|midi_songs).*"
 #
 ##### music visualizer #####
 ##
@@ -48,6 +60,21 @@ mpd_crossfade_time = "5"
 ##        path            "/tmp/mpd.fifo"
 ##        format          "44100:16:2"
 ## }
+##
+## If the visualization on occasion diverges from the audio output, please set
+## 'buffer_time' parameter of your audio output in mpd.conf to '100000' (100ms)
+## or less to prevent that from happening.
+##
+## Note: If you're using Mopidy, an address of a udpsink gstreamer's output is
+## also accepted. For example, the following section in mopidy.conf:
+##
+## [audio]
+## output = tee name=t ! queue ! autoaudiosink t.
+##        ! queue ! audio/x-raw,rate=44100,channels=2,format=S16LE
+##        ! udpsink host=localhost port=5555
+##
+## will make localhost:5555 available as a source of data for the stereo
+## visualizer.
 ##
 #
 visualizer_data_source = "/tmp/mpd.fifo"
@@ -66,15 +93,13 @@ visualizer_output_name = "my_fifo"
 visualizer_in_stereo = "no"
 #
 ##
-## Note: Below parameter defines how often ncmpcpp has to "synchronize"
-## visualizer and audio outputs.  30 seconds is optimal value, but if you
-## experience synchronization problems, set it to lower value.  Keep in mind
-## that sane values start with >=10.
+## Note: set below to >=10 only if you have synchronization issues with
+## visualization and audio.
 ##
 #
-# NOTE: deprecated and will be removed in 0.10
-visualizer_sync_interval = "30"
+#visualizer_sync_interval = 0
 #
+##
 ##
 ## Note: To enable spectrum frequency visualization you need to compile ncmpcpp
 ## with fftw3 support.
@@ -83,6 +108,10 @@ visualizer_sync_interval = "30"
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
 visualizer_type = "wave_filled"
+#
+#visualizer_fps = 60
+#
+#visualizer_autoscale = no
 #
 #visualizer_look = "█▋"
 visualizer_look = "▄▄"
@@ -93,7 +122,48 @@ visualizer_color = "blue"
 ##
 #visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 #
+##
+## Note: The next few visualization options apply to the spectrum visualizer.
+##
+#
+## Use unicode block characters for a smoother, more continuous look.
+## This will override the visualizer_look option. With transparent terminals
+## and visualizer_in_stereo set, artifacts may be visible on the bottom half of
+## the visualization.
+#
+#visualizer_spectrum_smooth_look = yes
+#
+## Use unicode block characters from "symbols for legacy computing". This
+## improves the smooth look on transparent terminals by using special unicode
+## chars instead of reversing the background and foreground color on the bottom
+## edge of the spectrum. If it leads to a garbled output on the bottom edge of
+## the spectrum, you can either change the font or disable this option.
+#
+#visualizer_spectrum_smooth_look_legacy_chars = yes
+#
+## A value between 1 and 5 inclusive. Specifying a larger value makes the
+## visualizer look at a larger slice of time, which results in less jumpy
+## visualizer output.
+#
+#visualizer_spectrum_dft_size = 2
+#
+#visualizer_spectrum_gain = 10
+#
+## Left-most frequency of visualizer in Hz, must be less than HZ MAX
+#
+#visualizer_spectrum_hz_min = 20
+#
+## Right-most frequency of visualizer in Hz, must be greater than HZ MIN
+#
+#visualizer_spectrum_hz_max = 20000
+#
+## Use log scaling for the frequency spectrum axes
+#
+#visualizer_spectrum_log_scale_x = yes
+#visualizer_spectrum_log_scale_y = yes
+#
 ##### system encoding #####
+#
 ##
 ## ncmpcpp should detect your charset encoding but if it failed to do so, you
 ## can specify charset encoding you are using here.
@@ -226,7 +296,7 @@ selected_item_prefix = "$5"
 ## browser_sort_mode are "name", "mtime", "format" and "noop".
 ##
 #
-#browser_sort_mode = name
+#browser_sort_mode = type
 #
 #browser_sort_format = {%a - }{%t}|{%f} {(%l)}
 #
@@ -349,15 +419,16 @@ header_visibility = "no"
 #
 statusbar_visibility = "yes"
 #
+## Show the "Connected to ..." message on startup
+#connected_message_on_startup = yes
+#
 titles_visibility = "no"
 #
 #header_text_scrolling = yes
 #
 #cyclic_scrolling = no
 #
-#lines_scrolled = 2
-#
-#lyrics_fetchers = lyricwiki, azlyrics, genius, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet
+#lyrics_fetchers = tags, genius, tekstowo, plyrics, justsomelyrics, jahlyrics, zeneszoveg, internet
 #
 #follow_now_playing_lyrics = no
 #
@@ -414,6 +485,20 @@ titles_visibility = "no"
 #locked_screen_width_part = 50
 #
 #ask_for_locked_screen_width_part = yes
+#
+##
+## Width of media_library screen columns
+##
+#
+#media_library_column_width_ratio_two = 1:1
+#
+#media_library_column_width_ratio_three = 1:1:1
+#
+##
+## Width of playlist_editor screen columns
+##
+#
+#playlist_editor_column_width_ratio = 1:2
 #
 #jump_to_now_playing_song_at_start = yes
 #
