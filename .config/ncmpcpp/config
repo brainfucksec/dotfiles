@@ -6,7 +6,7 @@
 ## $HOME/.ncmpcpp/config                                                    ##
 ##                                                                          ##
 ## Maintainer: brainf+ck                                                    ##
-## Last Update: 2025-05-11                                                  ##
+## Last Update: 2025-05-11_Rev.1                                            ##
 ##############################################################################
 
 #
@@ -255,7 +255,7 @@ message_delay_time = "1"
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{$8%f$R$5%l$9}"
+song_list_format = "{$5 $8%f$R$5%l$9}"
 #
 song_status_format = "{{%a - {{%b (%y)}} - }{%t}}|{%f}"
 #
@@ -415,7 +415,7 @@ user_interface = "classic"
 #
 #default_tag_editor_pattern = %n - %t
 #
-header_visibility = "no"
+header_visibility = "yes"
 #
 statusbar_visibility = "yes"
 #
