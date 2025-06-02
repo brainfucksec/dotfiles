@@ -9,7 +9,7 @@
 #
 # i3 configuration file
 #
-# Version: 3.8.0 - 2025/02/22
+# Version: 3.8.1 - 2025/06/02
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 #
@@ -284,7 +284,7 @@ assign [class="Zathura"]                    $ws5
 assign [class="libreoffice-startcenter"]    $ws5
 assign [class="Gimp"]                       $ws5
 assign [class="Pulseaudio-equalizer"]       $ws6
-assign [class="Pavucontrol"]                $ws6
+assign [class="pavucontrol"]                $ws6
 assign [class="SimpleScreenRecorder"]       $ws6
 assign [class="vlc"]                        $ws6
 # QEMU virt-manager
@@ -296,7 +296,7 @@ set $float floating enable border
 for_window [class="Bleachbit"]              $float
 for_window [class="Lxappearance"]           $float
 for_window [class="Pulseaudio-equalizer"]   $float
-for_window [class="Pavucontrol"]            $float
+for_window [class="pavucontrol"]            $float
 for_window [class="Signal"]                 $float
 for_window [class="SimpleScreenRecorder"]   $float
 for_window [class="Tor"]                    $float
