@@ -9,7 +9,7 @@
 #
 # i3 configuration file
 #
-# Version: 3.8.2 - 2025/07/06
+# Version: 3.8.3 - 2025/07/06
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 ###############################################################
@@ -64,11 +64,9 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
-
 ###############################################################
 # Colors
 ###############################################################
-
 
 # Based on OneDark (Darker) Neovim theme by navarasu
 # See: https://github.com/navarasu/onedark.nvim
