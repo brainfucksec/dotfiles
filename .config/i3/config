@@ -1,4 +1,4 @@
-###########################################################
+###############################################################
 #
 #   ██╗██████╗ ██╗    ██╗███╗   ███╗
 #   ██║╚════██╗██║    ██║████╗ ████║
@@ -9,16 +9,15 @@
 #
 # i3 configuration file
 #
-# Version: 3.8.1 - 2025/06/02
+# Version: 3.8.2 - 2025/07/06
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
-#
-###########################################################
+###############################################################
 
 
-###########################################################
+###############################################################
 # General settings
-###########################################################
+###############################################################
 
 # Mod1 = Alt Key
 # Mod4 = Super Key
@@ -28,7 +27,7 @@ set $mod Mod4
 set $term alacritty
 
 # Font for window titles / title bars
-font pango:Misc Ohsnap 12
+font pango:Ubuntu Mono 10
 
 # Customize workspace name:
 # Use variables to avoid repeating the names and for adding custom characters
@@ -42,20 +41,34 @@ font pango:Misc Ohsnap 12
 # See cheat sheets at:
 # https://pictogrammers.github.io/@mdi/font/6.2.95/
 # https://fontawesome.com/icons
-set $ws1 1 󰞷
-set $ws2 2 󰈹
-set $ws3 3 󰉋
-set $ws4 4 󰅨
-set $ws5 5 󰂽
-set $ws6 6 󰝚
-set $ws7 7 󰆦
-set $ws8 8 󰟀
-set $ws9 9 󰝰
-set $ws10 10 󰍡
+#set $ws1 1 󰞷
+#set $ws2 2 󰈹
+#set $ws3 3 󰉋
+#set $ws4 4 󰅨
+#set $ws5 5 󰂽
+#set $ws6 6 󰝚
+#set $ws7 7 󰆦
+#set $ws8 8 󰟀
+#set $ws9 9 󰝰
+#set $ws10 10 󰍡
 
-###########################################################
+# No icons
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
+
+
+###############################################################
 # Colors
-###########################################################
+###############################################################
+
 
 # Based on OneDark (Darker) Neovim theme by navarasu
 # See: https://github.com/navarasu/onedark.nvim
@@ -67,9 +80,9 @@ client.focused_inactive  #31353f #31353f #1f2329  #31353f   #31353f
 client.unfocused         #31353f #31353f #1f2329  #31353f   #31353f
 client.urgent            #535965 #535965 #b2bbcc  #535965   #535965
 
-###########################################################
+###############################################################
 # Windows style
-###########################################################
+###############################################################
 
 # Set default orientation, <horizontal|vertical|auto>
 default_orientation horizontal
@@ -100,9 +113,9 @@ workspace 8 gaps top 12
 # Back and forth workplace switching
 workspace_auto_back_and_forth yes
 
-###########################################################
+###############################################################
 # Keybindings
-###########################################################
+###############################################################
 
 # Basic keys:
 #############
@@ -269,9 +282,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
 bindsym $mod+g exec --no-startup-id pulseaudio-equalizer-gtk
 bindsym $mod+p exec --no-startup-id pavucontrol
 
-###########################################################
+###############################################################
 # Workspaces assignments
-###########################################################
+###############################################################
 
 # Automatically make a specific window show up on a specific workspace.
 # You can get window class name with: xprop | awk '/WM_CLASS/{print $4}'
@@ -304,9 +317,9 @@ for_window [class="vlc"]                    $float
 # opens ncmpcpp in the top left corner
 for_window [instance="ncmpcpp"] floating enable move absolute position 20 px 60 px
 
-###########################################################
+###############################################################
 # Start Up commands and applications
-###########################################################
+###############################################################
 
 # Keyboard layout
 exec --no-startup-id setxkbmap it
