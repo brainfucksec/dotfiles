@@ -1,7 +1,7 @@
 ! Font settings
 Xft.autohint: false
 Xft.hinting: true
-Xft.hintstyle: hintfull
+Xft.hintstyle: hintslight
 Xft.antialias: true
 Xft.dpi: 96
 Xft.rgba: rgb
