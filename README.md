@@ -24,7 +24,7 @@ Browser | firefox, w3m
 RSS Reader | newsboat
 Process Viewer | htop, bottom
 Notification Daemon | dunst
-Fonts | Terminal: [Cozette](https://github.com/slavfox/Cozette), Bar: [ohsnap](https://aur.archlinux.org/packages/ohsnap-otb/)
+Fonts | Terminal: [JetBrainsMono Nerd Font](https://www.programmingfonts.org/#jetbrainsmono), Bar: [Ohsnap (ohsnapmod-otb)](https://codeberg.org/h3xx/ohsnapmod)
 Color Scheme | [OneDark](.Xresources) from [OneDark.nvim](https://github.com/navarasu/onedark.nvim)
 
 ### Screenshots
