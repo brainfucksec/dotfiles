@@ -337,3 +337,5 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # dunst notification-daemon
 exec --no-startup-id dunst
 
+# Set DISPLAY environment variable for systemd
+exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY

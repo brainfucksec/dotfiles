@@ -3,7 +3,7 @@
 # $HOME/.bash_aliases FILE
 # By brainf+ck
 #
-# Last modified: 2025/01/05
+# Last modified: 2026/08/28
 # ==============================================================
 
 # ==============================================================
@@ -93,10 +93,11 @@ alias cl='bleachbit -c --preset'
 alias e='nvim'
 alias fl='feh -g 640x480 --scale-down -d -S filename'
 alias gu='gitupdate'
+# Strip the "missingauth" warning from ipinfo.io
 alias myip="curl -s https://ipinfo.io | awk '!/readme/'"
 alias n='note'
 alias nb='newsboat'
 alias ytmp3="yt-dlp --config-location ~/.config/yt-dlp/config"
 alias w3m='w3m https://duckduckgo.com'
 alias z='zathura --fork'
-alias sv='sudo virsh'
+alias sv='sudo virsh' # libvirtd virsh
