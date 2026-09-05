@@ -9,7 +9,7 @@
 #
 # i3 configuration file
 #
-# Version: 3.8.3 - 2025/07/06
+# Version: 3.9.0 - 2025/09/05
 # Maintainer: brainf+ck
 # Website: https://github.com/brainfucksec/dotfiles
 ###############################################################
@@ -337,5 +337,5 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # dunst notification-daemon
 exec --no-startup-id dunst
 
-# Set DISPLAY environment variable for systemd
-exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY
+# Set DISPLAY environment variable for systemd (Not used: see .xinitrc)
+#exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY
