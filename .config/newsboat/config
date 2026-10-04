@@ -2,25 +2,29 @@
 #
 # newsboat configuration file
 #
-# date: 2022-05-19
+# date: 2026-10-04
 # maintainer: brainf+ck
 # website: https://github.com/brainfucksec/dotfiles
 #
 # info:
 #   - https://newsboat.org/
-#   - https://wiki.archlinux.org/title/Newsboat
+#   - https://github.com/newsboat/newsboat
+#
+# docs:
+#   - https://newsboat.org/releases/2.44/docs/newsboat.html
 #   - man newsboat
+#   - also see: https://wiki.archlinux.org/title/Newsboat
 #
 ###########################################################
 
 ### General ###
 auto-reload yes
-browser "/usr/bin/firefox --new-tab %u"
+browser "/usr/bin/firefox %u"
 confirm-mark-feed-read no
 download-retries 2
 html-renderer "w3m -dump -T text/html -cols 100"
 refresh-on-startup yes
-reload-threads 30
+reload-threads 60
 reload-time 60
 
 ### Keybindings ###
@@ -36,7 +40,7 @@ bind-key k up
 bind-key l open
 
 ### Formatting ###
-feedlist-format "%?T?  %8u  %t  %4S & %t ?"
+feedlist-format "%?T?  %8u  %t | %L %4S & %t ?"
 articlelist-format "%D      %t"
 
 ### Colors / Highlighting ###
